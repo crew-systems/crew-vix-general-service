@@ -7,13 +7,13 @@ describe("Services Data Registry", () => {
   it("should define exactly all 7 services including outdoor lighting and security systems", () => {
     const slugs = getAllServiceSlugs();
     expect(slugs).toEqual([
-      "outdoor-lighting",
-      "security-cameras",
-      "smart-automation",
       "hvac",
       "electrical",
       "solar",
       "ev-charging",
+      "outdoor-lighting",
+      "security-cameras",
+      "smart-automation",
     ]);
     expect(slugs.length).toBe(7);
   });

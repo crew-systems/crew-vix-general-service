@@ -74,566 +74,7 @@ export interface ServiceItem {
 }
 
 export const SERVICES: ServiceItem[] = [
-  {
-    slug: "outdoor-lighting",
-    name: "Outdoor & Landscape Lighting",
-    shortName: "Outdoor Lighting",
-    tagline: "Lighting that enhances your lifestyle",
-    headline: "ARCHITECTURAL OUTDOOR & LANDSCAPE LIGHTING IN SOUTH FLORIDA",
-    subheadline:
-      "Transform your home into a nighttime showpiece with commercial-grade brass LED spotlights, double-head pole fixtures, multi-zone control, and durable low-voltage infrastructure.",
-    shortDesc:
-      "Custom outdoor, pathway, facade, pool, and landscape lighting systems engineered with weatherproof brass fixtures, dusk-to-dawn sensors, and smart zone controls.",
-    longDesc:
-      "A professionally engineered outdoor lighting system elevates your home curb appeal, increases evening safety, and extends luxury outdoor living into the night. VIX General Services specializes in turn-key low-voltage architectural and landscape illumination across Boca Raton, Coral Springs, Parkland, and surrounding communities. From illuminating mature palms and garden features to poolside lounges, pergolas, and boundary pole lights, we design balanced lighting schemes that blend warmth, drama, and energy efficiency.",
-    whyChooseText:
-      "South Florida coastal salt air, extreme summer downpours, and high humidity destroy cheap aluminum fixtures within months. We exclusively install heavy-duty solid brass and marine-grade IP65 fixtures, sealed silicone gel wire connectors, Schedule 40 PVC conduit sleeves, and stainless-steel 12V transformers built to perform reliably year after year.",
-    heroImage: IMAGES.services.outdoorLighting,
-    icon: Lightbulb,
-    iconBg: "bg-[#D98E3E]",
-    badgeColor: "bg-[#D98E3E]/10 text-[#B86F21] border-[#D98E3E]/30",
-    featured: true,
-    estimateServiceKey: "outdoor-lighting",
-    metaTitle:
-      "Landscape & Outdoor Lighting Installation South Florida | VIX",
-    metaDescription:
-      "Custom architectural outdoor lighting and landscape lighting in South Florida. Solid brass spotlights, double-head pole lights, multi-zone control. Free estimate.",
-    schemaServiceType: "Landscape Lighting and Outdoor Illumination Services",
-    keywords: [
-      "landscape lighting South Florida",
-      "outdoor lighting installation Boca Raton",
-      "landscape spotlights Coral Springs",
-      "low voltage outdoor lighting Parkland FL",
-      "architectural lighting Broward County",
-      "pole light installation South Florida",
-    ],
-    galleryCategories: ["OUTDOOR LIGHTING", "ELECTRICAL CONTROLS"],
-    offerings: [
-      {
-        title: "Commercial-Grade Brass Landscape Spotlights",
-        description:
-          "High-performance 6W 3000K warm-white LED brass fixtures with adjustable knuckles, ideal for palm tree uplighting, facade washing, and garden focal points.",
-        features: [
-          "Solid cast-brass corrosion-resistant bodies",
-          "IP65 waterproof rating with double O-rings",
-          "High-CRI warm 3000K color temperature",
-          "5-year manufacturer LED light warranty",
-        ],
-      },
-      {
-        title: "Architectural Double-Head Pole Lighting",
-        description:
-          "Durable estate pole lights equipped with dual LED heads and dusk-to-dawn photocell sensors for comprehensive driveway, patio, and perimeter illumination.",
-        features: [
-          "Double-head wide-beam LED illumination",
-          "Dusk-to-dawn automated photocell operation",
-          "Heavy-duty mounting base & deep anchoring",
-          "Sleek matte-black architectural finish",
-        ],
-      },
-      {
-        title: "6-Zone Precision Lighting Distribution",
-        description:
-          "Tailored multi-zone layouts allowing independent control over Driveway, Pool/Lounge, Pergola/Deck, Facade, Garden/Backyard, and Fence lines.",
-        features: [
-          "Zone mapping matching your estate layout",
-          "Independent brightness and scheduling",
-          "No voltage drop on distant light runs",
-          "Balanced lumens for subtle luxury elegance",
-        ],
-      },
-      {
-        title: "Weatherproof 12V Transformers & Power Distribution",
-        description:
-          "Premium low-voltage magnetic transformers (100W–300W+) engineered for outdoor exposure, featuring multi-tap outputs and secondary breaker protection.",
-        features: [
-          "Outdoor-rated 300W and 100W 12V transformers",
-          "Secondary circuit protection & thermal cutoff",
-          "Stainless steel weatherproof housings",
-          "3-year manufacturer transformer warranty",
-        ],
-      },
-      {
-        title: "Deep Trenching & Schedule 40 PVC Conduits",
-        description:
-          "Clean underground wiring installation using direct-burial 12/2 low-voltage cables, Schedule 40 PVC conduits under hardscapes, and 3M waterproof gel wire nuts.",
-        features: [
-          "Manual and machine precision trenching",
-          "Conduit sleeves protecting under sidewalks & pavers",
-          "3M DBR/Y-6 waterproof marine-grade connectors",
-          "Meticulous turf restoration after burial",
-        ],
-      },
-      {
-        title: "Annual System Maintenance Plan ($780/Year)",
-        description:
-          "Comprehensive annual care including full system inspection, bulb cleaning, fixture re-aiming, wire check, timer recalibration, and priority support.",
-        features: [
-          "Multi-point fixture and transformer check",
-          "Lens cleaning and mineral deposit removal",
-          "Landscape growth trimming around fixtures",
-          "Small repairs and controller software updates",
-        ],
-      },
-    ],
-    benefits: [
-      {
-        icon: Award,
-        title: "Solid Brass & Marine Grade",
-        description:
-          "Fixtures forged from solid brass that develop an attractive natural patina and never rust or crack in Florida salt air.",
-      },
-      {
-        icon: ShieldCheck,
-        title: "1-Year Labor & 5-Year Fixture Warranty",
-        description:
-          "Full 1-year warranty on installation labor paired with up to 5 years manufacturer coverage on fixtures and LED lamps.",
-      },
-      {
-        icon: Clock,
-        title: "Turn-Key Design & Installation",
-        description:
-          "We handle night demonstration tests, underground trenching, electrical connections, and automated programming.",
-      },
-      {
-        icon: DollarSign,
-        title: "Low-Voltage Energy Efficiency",
-        description:
-          "6W high-efficiency LEDs deliver 85% energy savings compared to legacy halogen landscape fixtures.",
-      },
-    ],
-    process: [
-      {
-        step: "01",
-        title: "Nighttime Landscape Assessment",
-        description:
-          "We review your property layout, trees, architecture, and lighting goals to map out functional and aesthetic zones.",
-      },
-      {
-        step: "02",
-        title: "Zone Design & Itemized Proposal",
-        description:
-          "You receive a clear breakdown of fixtures, wattage, transformer sizes, conduit runs, and zone control options.",
-      },
-      {
-        step: "03",
-        title: "Underground Trenching & Fixture Mount",
-        description:
-          "Our crew trenches cable lines, sleeves conduits, installs solid brass fixtures, and wires transformers cleanly.",
-      },
-      {
-        step: "04",
-        title: "Nighttime Aiming & Client Walkthrough",
-        description:
-          "We fine-tune beam angles after dark, configure app scheduling, and ensure your property looks breathtaking.",
-      },
-    ],
-    faqs: [
-      {
-        question: "Why should I choose low-voltage 12V landscape lighting over 120V line voltage?",
-        answer:
-          "Low-voltage 12V landscape lighting is vastly safer around children, pets, pool areas, and wet garden soil. It poses zero electric shock hazard if a wire is accidentally nicked by lawn equipment, consumes a fraction of the electricity, and allows flexible repositioning as your palms and landscape plants grow over time.",
-      },
-      {
-        question: "How do your brass fixtures hold up against South Florida weather and irrigation?",
-        answer:
-          "Standard aluminum landscape lights corrode and peel when exposed to sprinkler water, fertilizers, and salty Florida air. Our cast brass fixtures feature IP65 watertight silicone O-ring seals and non-corrosive brass construction that will never rust, pit, or disintegrate.",
-      },
-      {
-        question: "What areas of my yard can be illuminated?",
-        answer:
-          "Our typical 6-zone layout covers: 1) Driveways & Entrances (pole lights and path lighting), 2) Pool & Patio areas, 3) Pergolas & Decks, 4) House Facade & architectural columns, 5) Palm trees & garden beds, and 6) Perimeter fence lines and side walkways.",
-      },
-      {
-        question: "What is included in the $780 Annual Maintenance Plan?",
-        answer:
-          "Our $780/year maintenance plan provides complete peace of mind. It includes full system electrical inspections, cleaning water spots and mineral deposits from lenses, adjusting beam angles as foliage grows, checking voltage at all terminals, firmware updates on smart controllers, and prompt repair of minor cable or fixture issues.",
-      },
-      {
-        question: "Will trenching damage my lawn or existing landscaping?",
-        answer:
-          "Not at all. We use specialized narrow trenching techniques that slice cleanly beneath sod. Once the low-voltage cables and Schedule 40 conduits are laid, the sod is carefully pressed back into place. Within days, the lawn looks completely untouched.",
-      },
-      {
-        question: "Can I control the lights from my smartphone?",
-        answer:
-          "Yes! We integrate smart controllers with Wi-Fi gateways that allow you to turn zones on and off, dim brightness, set astronomical dusk-to-dawn schedules, and create custom scenes directly from your iPhone or Android smartphone.",
-      },
-    ],
-  },
-  {
-    slug: "security-cameras",
-    name: "Security Camera & Surveillance Systems",
-    shortName: "Security Cameras",
-    tagline: "24/7 High-Definition Property Protection",
-    headline: "ADVANCED 360° PTZ & 4K CCTV SECURITY CAMERA SYSTEMS IN SOUTH FLORIDA",
-    subheadline:
-      "Protect your estate with commercial-grade 360° pan-tilt-zoom cameras, 4K network video recorders, smart AI human detection, and private local storage with remote smartphone viewing.",
-    shortDesc:
-      "Professional wired 4K security camera installations with 360° PTZ coverage, continuous local NVR recording, infrared night vision, and mobile app monitoring.",
-    longDesc:
-      "True perimeter security requires dependable, high-resolution surveillance that never misses a detail—day or night. VIX General Services designs and installs commercial-grade residential and business security camera systems across Boca Raton, Coral Springs, Parkland, and neighboring regions. Unlike fragile battery-powered Wi-Fi cameras that suffer from delayed alerts and monthly cloud fees, our hardwired PoE (Power over Ethernet) systems deliver 24/7 continuous 4K recording, optical zoom, and 360° pan-tilt-zoom motorization.",
-    whyChooseText:
-      "South Florida intense sun, driving rains, and lightning storms challenge exterior electronics. We use IP66 outdoor-rated aluminum-alloy dome cameras, direct-burial UV-shielded Cat6 cabling, Gigabit PoE distribution switches, and main-panel surge protection to ensure your surveillance system stays online when you need it most.",
-    heroImage: IMAGES.services.securityCameras,
-    icon: Camera,
-    iconBg: "bg-[#C0392B]",
-    badgeColor: "bg-[#C0392B]/10 text-[#C0392B] border-[#C0392B]/30",
-    estimateServiceKey: "security-cameras",
-    metaTitle:
-      "Security Camera Installation South Florida | 4K PTZ & CCTV | VIX",
-    metaDescription:
-      "Professional security camera installation in South Florida. 360° PTZ 4MP/4K cameras, NVR with 2TB storage, PoE wiring, 24/7 mobile access. Free consultation.",
-    schemaServiceType: "Security Camera Installation and Video Surveillance Services",
-    keywords: [
-      "security camera installation South Florida",
-      "PTZ camera installer Boca Raton",
-      "CCTV installation Coral Springs FL",
-      "wired security cameras Parkland FL",
-      "4K NVR security system Broward",
-      "commercial security camera contractor",
-    ],
-    galleryCategories: ["SECURITY", "ELECTRICAL CONTROLS"],
-    offerings: [
-      {
-        title: "360° Pan-Tilt-Zoom (PTZ) 4MP/4K Cameras",
-        description:
-          "High-resolution motorized cameras offering full 360° panoramic rotation, vertical tilt, and powerful optical zoom to capture crisp facial details and license plates.",
-        features: [
-          "IP66 weatherproof metal housing",
-          "Continuous 360° pan and 90° tilt rotation",
-          "Starlight color night vision & infrared LEDs",
-          "3-year manufacturer hardware warranty",
-        ],
-      },
-      {
-        title: "4K Network Video Recorders (NVR) with 2TB+ HDD",
-        description:
-          "Centralized 8-channel or 16-channel recording hub with enterprise-grade hard drives for weeks of continuous 24/7 recording with zero mandatory subscription fees.",
-        features: [
-          "4K Ultra HD video processing",
-          "2TB to 8TB surveillance-grade hard drives",
-          "HDMI / VGA direct monitor outputs",
-          "Encrypted local video storage",
-        ],
-      },
-      {
-        title: "High-Speed Gigabit PoE Switch & Cat6 Infrastructure",
-        description:
-          "Single-cable Power over Ethernet (PoE) architecture delivering both electric power and high-bandwidth gigabit data through heavy-duty outdoor Cat6 lines.",
-        features: [
-          "Industrial 8-port Gigabit PoE switches",
-          "UV-rated direct-burial outdoor Cat6 cabling",
-          "Zero video lag or wireless interference",
-          "Surge-isolated RJ45 ports",
-        ],
-      },
-      {
-        title: "Instant Mobile App & Remote Surveillance Access",
-        description:
-          "View live camera feeds, review recorded incident history, pan cameras remotely, and receive instant AI human/vehicle alerts on iOS and Android.",
-        features: [
-          "Real-time live multi-camera viewing",
-          "Instant push notifications on motion trigger",
-          "Quick export of video clips to smartphone",
-          "Multi-user family and management permissions",
-        ],
-      },
-      {
-        title: "Perimeter, Entryway & Driveway Coverage",
-        description:
-          "Strategic camera placement that eliminates blind spots across front driveways, pool gates, side walkways, boat docks, and rear patio access points.",
-        features: [
-          "Comprehensive blind spot site analysis",
-          "Concealed wiring for clean aesthetics",
-          "Tamper-resistant high-angle mounting",
-          "Overlapping camera sightlines",
-        ],
-      },
-      {
-        title: "Camera Lens Calibration & Annual Maintenance",
-        description:
-          "Routine cleaning of camera dome lenses, IR sensor testing, firmware security updates, and storage drive health checks included in our service plans.",
-        features: [
-          "Spiderweb, dust, and water spot cleaning",
-          "NVR hard drive diagnostic health scan",
-          "Recalibration of PTZ preset guard tours",
-          "Cybersecurity firmware update patching",
-        ],
-      },
-    ],
-    benefits: [
-      {
-        icon: ShieldCheck,
-        title: "100% Private Local Storage",
-        description:
-          "Your video footage is stored locally on your own NVR. No monthly cloud subscriptions and complete privacy protection.",
-      },
-      {
-        icon: Award,
-        title: "Wired PoE Reliability",
-        description:
-          "Direct hardwired Cat6 lines guarantee uninterrupted recording even when household Wi-Fi drops or is jammed.",
-      },
-      {
-        icon: Clock,
-        title: "24/7 Continuous Recording",
-        description:
-          "Record every second around the clock—not just short 10-second clips triggered after motion has already passed.",
-      },
-      {
-        icon: DollarSign,
-        title: "Zero Monthly Subscription Fees",
-        description:
-          "Own your equipment and software outright. Access your cameras forever without paying monthly cloud rental fees.",
-      },
-    ],
-    process: [
-      {
-        step: "01",
-        title: "Property Security Audit",
-        description:
-          "We inspect your perimeter, identify entry vectors and blind spots, and determine optimal camera locations.",
-      },
-      {
-        step: "02",
-        title: "System Design & NVR Sizing",
-        description:
-          "We specify PTZ camera models, field-of-view lenses, NVR channels, storage capacity, and cable pathways.",
-      },
-      {
-        step: "03",
-        title: "Clean Cat6 Pulling & Camera Mounting",
-        description:
-          "Our technicians pull concealed Cat6 lines, secure IP66 brackets, mount cameras, and connect the central PoE switch.",
-      },
-      {
-        step: "04",
-        title: "App Setup & Motion Zone Configuration",
-        description:
-          "We connect the system to your smartphone app, set up smart motion detection zones, and demonstrate full PTZ control.",
-      },
-    ],
-    faqs: [
-      {
-        question: "Why is a wired PoE system better than battery-powered Wi-Fi cameras (Ring/Arlo)?",
-        answer:
-          "Battery-operated Wi-Fi cameras often miss events due to sleep mode delays, suffer from weak Wi-Fi signals through concrete block walls, and are susceptible to wireless deauthentication jammers. A wired PoE system is powered continuously through Cat6 cable, records 24/7 at full 4K resolution, and never requires changing batteries or paying monthly cloud subscriptions.",
-      },
-      {
-        question: "Can I view my cameras on my phone when I am away from home?",
-        answer:
-          "Yes. Our systems include a dedicated mobile app for iOS and Android that allows you to stream live video, control 360° PTZ camera movement, review past recordings, and receive immediate motion notifications from anywhere in the world.",
-      },
-      {
-        question: "How long does a 2TB hard drive store video recordings?",
-        answer:
-          "With efficient H.265+ video compression, a 2TB to 4TB hard drive typically retains 2 to 4 weeks of continuous 24/7 recording across multiple cameras. Once full, the NVR automatically overwrites the oldest footage unless specific incident clips have been locked or exported.",
-      },
-      {
-        question: "Are these cameras weatherproof against Florida rain and hurricanes?",
-        answer:
-          "Yes. All external cameras feature heavy-duty IP66 or IP67 weatherproof aluminum housings engineered to withstand tropical downpours, hurricane-force winds, and direct high-temperature sunlight.",
-      },
-      {
-        question: "What does PTZ mean and why is it useful?",
-        answer:
-          "PTZ stands for Pan, Tilt, and Zoom. A PTZ camera has internal motorized gears allowing you to remotely rotate the camera 360° horizontally, tilt up and down, and optically zoom in on distant areas—such as gates, driveways, or pool areas—without losing image sharpness.",
-      },
-      {
-        question: "Do you provide training on how to use the system?",
-        answer:
-          "Yes! After installation, our technicians install the app on your devices, walk you through viewing, searching, and downloading footage, and ensure you are 100% comfortable operating the system.",
-      },
-    ],
-  },
-  {
-    slug: "smart-automation",
-    name: "Smart Control Hub & Automation Systems",
-    shortName: "Smart Automation",
-    tagline: "Centralized Smart Control for Lighting, Power & Security",
-    headline: "CENTRALIZED SMART HOME AUTOMATION & CONTROL HUBS IN SOUTH FLORIDA",
-    subheadline:
-      "Control your outdoor lighting zones, security cameras, pool illumination, and power distribution from a single intuitive smartphone app with automated scheduling.",
-    shortDesc:
-      "Centralized smart controllers, Wi-Fi gateways, and NEMA 3R distribution panels offering seamless smartphone control, dimming, and automation.",
-    longDesc:
-      "Modern luxury properties require sophisticated control systems that bring together lighting, security, and electrical management into one harmonious experience. VIX General Services designs and installs centralized smart control hubs, smart Wi-Fi gateways, and automated power distribution systems throughout South Florida. Whether you want your outdoor lights to turn on automatically at sunset, dim to 50% at midnight, or sync with your security cameras, our smart automation makes your home intuitive, secure, and energy-efficient.",
-    whyChooseText:
-      "Consumer smart plugs and Wi-Fi light bulbs frequently drop offline in outdoor Florida environments. We install commercial-grade AquaLink and centralized smart controllers inside weatherproof NEMA 3R enclosures, paired with external high-gain Wi-Fi gateways and main-panel surge protection for rock-solid reliability.",
-    heroImage: IMAGES.services.smartAutomation,
-    icon: Smartphone,
-    iconBg: "bg-[#17A2B8]",
-    badgeColor: "bg-[#17A2B8]/10 text-[#17A2B8] border-[#17A2B8]/30",
-    estimateServiceKey: "smart-automation",
-    metaTitle:
-      "Smart Home Automation & Control Hub Installation South Florida | VIX",
-    metaDescription:
-      "Centralized smart home automation and lighting control hubs in South Florida. Multi-zone Wi-Fi app control, dimming, surge protection. Free consultation.",
-    schemaServiceType: "Home Automation and Smart Control Installation Services",
-    keywords: [
-      "smart home automation South Florida",
-      "smart lighting control hub Boca Raton",
-      "home automation contractor Coral Springs",
-      "smart control system Parkland FL",
-      "NEMA 3R outdoor distribution panel",
-      "AquaLink smart controller installer",
-    ],
-    galleryCategories: ["SMART AUTOMATION", "ELECTRICAL CONTROLS"],
-    offerings: [
-      {
-        title: "Centralized Smart Lighting Controllers",
-        description:
-          "Installation of advanced AquaLink RS and commercial-grade automation controllers that consolidate multi-zone power delivery into an intelligent command center.",
-        features: [
-          "Multi-circuit high & low voltage control",
-          "Automated astronomical sunrise/sunset clock",
-          "App-controlled zone switching & dimming",
-          "3-year manufacturer controller warranty",
-        ],
-      },
-      {
-        title: "Long-Range Wi-Fi Gateway & Mobile App Interface",
-        description:
-          "High-power external Wi-Fi transceivers and antennas that ensure dependable wireless communication between your outdoor control panel and home network.",
-        features: [
-          "High-gain external antenna for estate coverage",
-          "iOS and Android smartphone integration",
-          "Cloud connectivity for global remote control",
-          "Secure encrypted local communication",
-        ],
-      },
-      {
-        title: "NEMA 3R Outdoor Distribution Panels",
-        description:
-          "Commercial-grade weatherproof electrical enclosures housing main disconnect breakers, individual 15A branch circuits, and low-voltage control hardware.",
-        features: [
-          "Heavy-duty galvanized NEMA 3R steel enclosure",
-          "6-zone independent circuit breaker protection",
-          "Waterproof door seals and padlock latch",
-          "5-year manufacturer panel warranty",
-        ],
-      },
-      {
-        title: "Main-Panel Surge Protective Devices (SPD)",
-        description:
-          "Eaton and Square D Type 2 surge protectors installed directly at the distribution hub to shield sensitive microprocessors from lightning spikes.",
-        features: [
-          "Eaton CHSPT2ULTRA or equivalent heavy-duty SPD",
-          "Up to 108kA surge current rating",
-          "LED status diagnostic indicators",
-          "Connected equipment protection warranty",
-        ],
-      },
-      {
-        title: "Multi-Zone Scheduling & Custom Scene Programming",
-        description:
-          "Personalized programming allowing you to create custom scenes like Evening Entertaining, Late Night Security, Vacation Away Mode, and energy-saving schedules.",
-        features: [
-          "One-tap scene activation from phone or tablet",
-          "Astronomical clock automatically tracking sunset",
-          "Integration with security cameras and sensors",
-          "Voice assistant compatibility options",
-        ],
-      },
-      {
-        title: "Annual Smart System Software & Diagnostic Care",
-        description:
-          "Controller firmware updates, Wi-Fi signal strength optimization, breaker torque testing, and scene adjustments included in our $780/yr maintenance plan.",
-        features: [
-          "Firmware updates and security patches",
-          "Wi-Fi gateway signal calibration",
-          "Panel terminal and breaker inspection",
-          "Seasonal scene adjustment support",
-        ],
-      },
-    ],
-    benefits: [
-      {
-        icon: Clock,
-        title: "Effortless Automation",
-        description:
-          "Your estate lights, pool accents, and security circuits turn on and off automatically based on sunset, sunrise, and your custom schedule.",
-      },
-      {
-        icon: ShieldCheck,
-        title: "Surge & Weather Shielded",
-        description:
-          "Commercial NEMA 3R enclosures and Eaton surge suppressors keep your investment safe from extreme Florida lightning and tropical storms.",
-      },
-      {
-        icon: Award,
-        title: "Single Unified App",
-        description:
-          "Control all outdoor zones, dimming, schedules, and power circuits from one clean interface on your phone.",
-      },
-      {
-        icon: DollarSign,
-        title: "Energy & Cost Savings",
-        description:
-          "Automated dimming and scheduled shutoffs prevent lights and transformers from running unnecessarily during daylight hours.",
-      },
-    ],
-    process: [
-      {
-        step: "01",
-        title: "Automation Needs & Wi-Fi Survey",
-        description:
-          "We survey your electrical distribution location, test exterior Wi-Fi signal strength, and discuss your control goals.",
-      },
-      {
-        step: "02",
-        title: "Hub & Panel Engineering",
-        description:
-          "We specify the NEMA 3R enclosure, number of controlled circuits, transformer integration, and surge protection device.",
-      },
-      {
-        step: "03",
-        title: "Panel Mounting & Circuit Wiring",
-        description:
-          "Our licensed electricians mount the hub, land branch circuits with dedicated breakers, install the SPD, and wire the Wi-Fi gateway.",
-      },
-      {
-        step: "04",
-        title: "App Programming & Handover",
-        description:
-          "We configure the app on your smartphone, program your custom schedules and scenes, and test every zone thoroughly.",
-      },
-    ],
-    faqs: [
-      {
-        question: "What happens to my smart automation schedules if the power goes out?",
-        answer:
-          "Our controllers feature internal non-volatile memory and battery-backed real-time clocks. When power is restored following a storm or grid blackout, all your zone settings, schedules, and astronomical timers resume automatically without needing reconfiguration.",
-      },
-      {
-        question: "Can I control the system if my home internet goes down temporarily?",
-        answer:
-          "Yes. While remote access outside your home requires an active internet connection, local automation schedules continue running on the hardware clock, and local smartphone control remains operational through your local home network.",
-      },
-      {
-        question: "Is surge protection really included with the automation panel?",
-        answer:
-          "Yes! We install heavy-duty Type 2 Surge Protective Devices (such as Eaton CHSPT2ULTRA) directly inside or adjacent to the distribution panel. This prevents South Florida lightning strikes from destroying sensitive controller boards, Wi-Fi gateways, and low-voltage transformers.",
-      },
-      {
-        question: "Can I add more zones or lights to the controller in the future?",
-        answer:
-          "Absolutely. We select modular distribution panels and controllers with expansion capacity, allowing you to easily add new landscape zones, patio fans, pool lights, or water features down the road.",
-      },
-      {
-        question: "Can multiple family members have the app on their phones?",
-        answer:
-          "Yes. The mobile app interface supports multiple authenticated user accounts, so everyone in your household can control lighting zones, trigger scenes, or view system status from their own phone.",
-      },
-      {
-        question: "Does the system adjust for daylight saving time automatically?",
-        answer:
-          "Yes. With astronomical clock synchronization, the system automatically adjusts for seasonal shifts in sunset and sunrise times, as well as daylight saving time transitions.",
-      },
-    ],
-  },
-  {
+{
     slug: "hvac",
     name: "HVAC & Air Conditioning Services",
     shortName: "HVAC",
@@ -820,7 +261,7 @@ export const SERVICES: ServiceItem[] = [
       },
     ],
   },
-  {
+{
     slug: "electrical",
     name: "Licensed Electrical Services",
     shortName: "Electrical",
@@ -1006,7 +447,7 @@ export const SERVICES: ServiceItem[] = [
       },
     ],
   },
-  {
+{
     slug: "solar",
     name: "Custom Solar Energy Systems",
     shortName: "Solar",
@@ -1192,7 +633,7 @@ export const SERVICES: ServiceItem[] = [
       },
     ],
   },
-  {
+{
     slug: "ev-charging",
     name: "EV Charging Station Installation",
     shortName: "EV Charging",
@@ -1378,6 +819,565 @@ export const SERVICES: ServiceItem[] = [
       },
     ],
   },
+{
+    slug: "outdoor-lighting",
+    name: "Outdoor & Landscape Lighting",
+    shortName: "Outdoor Lighting",
+    tagline: "Lighting that enhances your lifestyle",
+    headline: "ARCHITECTURAL OUTDOOR & LANDSCAPE LIGHTING IN SOUTH FLORIDA",
+    subheadline:
+      "Transform your home into a nighttime showpiece with commercial-grade brass LED spotlights, double-head pole fixtures, multi-zone control, and durable low-voltage infrastructure.",
+    shortDesc:
+      "Custom outdoor, pathway, facade, pool, and landscape lighting systems engineered with weatherproof brass fixtures, dusk-to-dawn sensors, and smart zone controls.",
+    longDesc:
+      "A professionally engineered outdoor lighting system elevates your home curb appeal, increases evening safety, and extends luxury outdoor living into the night. VIX General Services specializes in turn-key low-voltage architectural and landscape illumination across Boca Raton, Coral Springs, Parkland, and surrounding communities. From illuminating mature palms and garden features to poolside lounges, pergolas, and boundary pole lights, we design balanced lighting schemes that blend warmth, drama, and energy efficiency.",
+    whyChooseText:
+      "South Florida coastal salt air, extreme summer downpours, and high humidity destroy cheap aluminum fixtures within months. We exclusively install heavy-duty solid brass and marine-grade IP65 fixtures, sealed silicone gel wire connectors, Schedule 40 PVC conduit sleeves, and stainless-steel 12V transformers built to perform reliably year after year.",
+    heroImage: IMAGES.services.outdoorLighting,
+    icon: Lightbulb,
+    iconBg: "bg-[#D98E3E]",
+    badgeColor: "bg-[#D98E3E]/10 text-[#B86F21] border-[#D98E3E]/30",
+    featured: true,
+    estimateServiceKey: "outdoor-lighting",
+    metaTitle:
+      "Landscape & Outdoor Lighting Installation South Florida | VIX",
+    metaDescription:
+      "Custom architectural outdoor lighting and landscape lighting in South Florida. Solid brass spotlights, double-head pole lights, multi-zone control. Free estimate.",
+    schemaServiceType: "Landscape Lighting and Outdoor Illumination Services",
+    keywords: [
+      "landscape lighting South Florida",
+      "outdoor lighting installation Boca Raton",
+      "landscape spotlights Coral Springs",
+      "low voltage outdoor lighting Parkland FL",
+      "architectural lighting Broward County",
+      "pole light installation South Florida",
+    ],
+    galleryCategories: ["OUTDOOR LIGHTING", "ELECTRICAL CONTROLS"],
+    offerings: [
+      {
+        title: "Commercial-Grade Brass Landscape Spotlights",
+        description:
+          "High-performance 6W 3000K warm-white LED brass fixtures with adjustable knuckles, ideal for palm tree uplighting, facade washing, and garden focal points.",
+        features: [
+          "Solid cast-brass corrosion-resistant bodies",
+          "IP65 waterproof rating with double O-rings",
+          "High-CRI warm 3000K color temperature",
+          "5-year manufacturer LED light warranty",
+        ],
+      },
+      {
+        title: "Architectural Double-Head Pole Lighting",
+        description:
+          "Durable estate pole lights equipped with dual LED heads and dusk-to-dawn photocell sensors for comprehensive driveway, patio, and perimeter illumination.",
+        features: [
+          "Double-head wide-beam LED illumination",
+          "Dusk-to-dawn automated photocell operation",
+          "Heavy-duty mounting base & deep anchoring",
+          "Sleek matte-black architectural finish",
+        ],
+      },
+      {
+        title: "6-Zone Precision Lighting Distribution",
+        description:
+          "Tailored multi-zone layouts allowing independent control over Driveway, Pool/Lounge, Pergola/Deck, Facade, Garden/Backyard, and Fence lines.",
+        features: [
+          "Zone mapping matching your estate layout",
+          "Independent brightness and scheduling",
+          "No voltage drop on distant light runs",
+          "Balanced lumens for subtle luxury elegance",
+        ],
+      },
+      {
+        title: "Weatherproof 12V Transformers & Power Distribution",
+        description:
+          "Premium low-voltage magnetic transformers (100W–300W+) engineered for outdoor exposure, featuring multi-tap outputs and secondary breaker protection.",
+        features: [
+          "Outdoor-rated 300W and 100W 12V transformers",
+          "Secondary circuit protection & thermal cutoff",
+          "Stainless steel weatherproof housings",
+          "3-year manufacturer transformer warranty",
+        ],
+      },
+      {
+        title: "Deep Trenching & Schedule 40 PVC Conduits",
+        description:
+          "Clean underground wiring installation using direct-burial 12/2 low-voltage cables, Schedule 40 PVC conduits under hardscapes, and 3M waterproof gel wire nuts.",
+        features: [
+          "Manual and machine precision trenching",
+          "Conduit sleeves protecting under sidewalks & pavers",
+          "3M DBR/Y-6 waterproof marine-grade connectors",
+          "Meticulous turf restoration after burial",
+        ],
+      },
+      {
+        title: "Annual System Maintenance Plan ($780/Year)",
+        description:
+          "Comprehensive annual care including full system inspection, bulb cleaning, fixture re-aiming, wire check, timer recalibration, and priority support.",
+        features: [
+          "Multi-point fixture and transformer check",
+          "Lens cleaning and mineral deposit removal",
+          "Landscape growth trimming around fixtures",
+          "Small repairs and controller software updates",
+        ],
+      },
+    ],
+    benefits: [
+      {
+        icon: Award,
+        title: "Solid Brass & Marine Grade",
+        description:
+          "Fixtures forged from solid brass that develop an attractive natural patina and never rust or crack in Florida salt air.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "1-Year Labor & 5-Year Fixture Warranty",
+        description:
+          "Full 1-year warranty on installation labor paired with up to 5 years manufacturer coverage on fixtures and LED lamps.",
+      },
+      {
+        icon: Clock,
+        title: "Turn-Key Design & Installation",
+        description:
+          "We handle night demonstration tests, underground trenching, electrical connections, and automated programming.",
+      },
+      {
+        icon: DollarSign,
+        title: "Low-Voltage Energy Efficiency",
+        description:
+          "6W high-efficiency LEDs deliver 85% energy savings compared to legacy halogen landscape fixtures.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Nighttime Landscape Assessment",
+        description:
+          "We review your property layout, trees, architecture, and lighting goals to map out functional and aesthetic zones.",
+      },
+      {
+        step: "02",
+        title: "Zone Design & Itemized Proposal",
+        description:
+          "You receive a clear breakdown of fixtures, wattage, transformer sizes, conduit runs, and zone control options.",
+      },
+      {
+        step: "03",
+        title: "Underground Trenching & Fixture Mount",
+        description:
+          "Our crew trenches cable lines, sleeves conduits, installs solid brass fixtures, and wires transformers cleanly.",
+      },
+      {
+        step: "04",
+        title: "Nighttime Aiming & Client Walkthrough",
+        description:
+          "We fine-tune beam angles after dark, configure app scheduling, and ensure your property looks breathtaking.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Why should I choose low-voltage 12V landscape lighting over 120V line voltage?",
+        answer:
+          "Low-voltage 12V landscape lighting is vastly safer around children, pets, pool areas, and wet garden soil. It poses zero electric shock hazard if a wire is accidentally nicked by lawn equipment, consumes a fraction of the electricity, and allows flexible repositioning as your palms and landscape plants grow over time.",
+      },
+      {
+        question: "How do your brass fixtures hold up against South Florida weather and irrigation?",
+        answer:
+          "Standard aluminum landscape lights corrode and peel when exposed to sprinkler water, fertilizers, and salty Florida air. Our cast brass fixtures feature IP65 watertight silicone O-ring seals and non-corrosive brass construction that will never rust, pit, or disintegrate.",
+      },
+      {
+        question: "What areas of my yard can be illuminated?",
+        answer:
+          "Our typical 6-zone layout covers: 1) Driveways & Entrances (pole lights and path lighting), 2) Pool & Patio areas, 3) Pergolas & Decks, 4) House Facade & architectural columns, 5) Palm trees & garden beds, and 6) Perimeter fence lines and side walkways.",
+      },
+      {
+        question: "What is included in the $780 Annual Maintenance Plan?",
+        answer:
+          "Our $780/year maintenance plan provides complete peace of mind. It includes full system electrical inspections, cleaning water spots and mineral deposits from lenses, adjusting beam angles as foliage grows, checking voltage at all terminals, firmware updates on smart controllers, and prompt repair of minor cable or fixture issues.",
+      },
+      {
+        question: "Will trenching damage my lawn or existing landscaping?",
+        answer:
+          "Not at all. We use specialized narrow trenching techniques that slice cleanly beneath sod. Once the low-voltage cables and Schedule 40 conduits are laid, the sod is carefully pressed back into place. Within days, the lawn looks completely untouched.",
+      },
+      {
+        question: "Can I control the lights from my smartphone?",
+        answer:
+          "Yes! We integrate smart controllers with Wi-Fi gateways that allow you to turn zones on and off, dim brightness, set astronomical dusk-to-dawn schedules, and create custom scenes directly from your iPhone or Android smartphone.",
+      },
+    ],
+  },
+{
+    slug: "security-cameras",
+    name: "Security Camera & Surveillance Systems",
+    shortName: "Security Cameras",
+    tagline: "24/7 High-Definition Property Protection",
+    headline: "ADVANCED 360° PTZ & 4K CCTV SECURITY CAMERA SYSTEMS IN SOUTH FLORIDA",
+    subheadline:
+      "Protect your estate with commercial-grade 360° pan-tilt-zoom cameras, 4K network video recorders, smart AI human detection, and private local storage with remote smartphone viewing.",
+    shortDesc:
+      "Professional wired 4K security camera installations with 360° PTZ coverage, continuous local NVR recording, infrared night vision, and mobile app monitoring.",
+    longDesc:
+      "True perimeter security requires dependable, high-resolution surveillance that never misses a detail—day or night. VIX General Services designs and installs commercial-grade residential and business security camera systems across Boca Raton, Coral Springs, Parkland, and neighboring regions. Unlike fragile battery-powered Wi-Fi cameras that suffer from delayed alerts and monthly cloud fees, our hardwired PoE (Power over Ethernet) systems deliver 24/7 continuous 4K recording, optical zoom, and 360° pan-tilt-zoom motorization.",
+    whyChooseText:
+      "South Florida intense sun, driving rains, and lightning storms challenge exterior electronics. We use IP66 outdoor-rated aluminum-alloy dome cameras, direct-burial UV-shielded Cat6 cabling, Gigabit PoE distribution switches, and main-panel surge protection to ensure your surveillance system stays online when you need it most.",
+    heroImage: IMAGES.services.securityCameras,
+    icon: Camera,
+    iconBg: "bg-[#C0392B]",
+    badgeColor: "bg-[#C0392B]/10 text-[#C0392B] border-[#C0392B]/30",
+    estimateServiceKey: "security-cameras",
+    metaTitle:
+      "Security Camera Installation South Florida | 4K PTZ & CCTV | VIX",
+    metaDescription:
+      "Professional security camera installation in South Florida. 360° PTZ 4MP/4K cameras, NVR with 2TB storage, PoE wiring, 24/7 mobile access. Free consultation.",
+    schemaServiceType: "Security Camera Installation and Video Surveillance Services",
+    keywords: [
+      "security camera installation South Florida",
+      "PTZ camera installer Boca Raton",
+      "CCTV installation Coral Springs FL",
+      "wired security cameras Parkland FL",
+      "4K NVR security system Broward",
+      "commercial security camera contractor",
+    ],
+    galleryCategories: ["SECURITY", "ELECTRICAL CONTROLS"],
+    offerings: [
+      {
+        title: "360° Pan-Tilt-Zoom (PTZ) 4MP/4K Cameras",
+        description:
+          "High-resolution motorized cameras offering full 360° panoramic rotation, vertical tilt, and powerful optical zoom to capture crisp facial details and license plates.",
+        features: [
+          "IP66 weatherproof metal housing",
+          "Continuous 360° pan and 90° tilt rotation",
+          "Starlight color night vision & infrared LEDs",
+          "3-year manufacturer hardware warranty",
+        ],
+      },
+      {
+        title: "4K Network Video Recorders (NVR) with 2TB+ HDD",
+        description:
+          "Centralized 8-channel or 16-channel recording hub with enterprise-grade hard drives for weeks of continuous 24/7 recording with zero mandatory subscription fees.",
+        features: [
+          "4K Ultra HD video processing",
+          "2TB to 8TB surveillance-grade hard drives",
+          "HDMI / VGA direct monitor outputs",
+          "Encrypted local video storage",
+        ],
+      },
+      {
+        title: "High-Speed Gigabit PoE Switch & Cat6 Infrastructure",
+        description:
+          "Single-cable Power over Ethernet (PoE) architecture delivering both electric power and high-bandwidth gigabit data through heavy-duty outdoor Cat6 lines.",
+        features: [
+          "Industrial 8-port Gigabit PoE switches",
+          "UV-rated direct-burial outdoor Cat6 cabling",
+          "Zero video lag or wireless interference",
+          "Surge-isolated RJ45 ports",
+        ],
+      },
+      {
+        title: "Instant Mobile App & Remote Surveillance Access",
+        description:
+          "View live camera feeds, review recorded incident history, pan cameras remotely, and receive instant AI human/vehicle alerts on iOS and Android.",
+        features: [
+          "Real-time live multi-camera viewing",
+          "Instant push notifications on motion trigger",
+          "Quick export of video clips to smartphone",
+          "Multi-user family and management permissions",
+        ],
+      },
+      {
+        title: "Perimeter, Entryway & Driveway Coverage",
+        description:
+          "Strategic camera placement that eliminates blind spots across front driveways, pool gates, side walkways, boat docks, and rear patio access points.",
+        features: [
+          "Comprehensive blind spot site analysis",
+          "Concealed wiring for clean aesthetics",
+          "Tamper-resistant high-angle mounting",
+          "Overlapping camera sightlines",
+        ],
+      },
+      {
+        title: "Camera Lens Calibration & Annual Maintenance",
+        description:
+          "Routine cleaning of camera dome lenses, IR sensor testing, firmware security updates, and storage drive health checks included in our service plans.",
+        features: [
+          "Spiderweb, dust, and water spot cleaning",
+          "NVR hard drive diagnostic health scan",
+          "Recalibration of PTZ preset guard tours",
+          "Cybersecurity firmware update patching",
+        ],
+      },
+    ],
+    benefits: [
+      {
+        icon: ShieldCheck,
+        title: "100% Private Local Storage",
+        description:
+          "Your video footage is stored locally on your own NVR. No monthly cloud subscriptions and complete privacy protection.",
+      },
+      {
+        icon: Award,
+        title: "Wired PoE Reliability",
+        description:
+          "Direct hardwired Cat6 lines guarantee uninterrupted recording even when household Wi-Fi drops or is jammed.",
+      },
+      {
+        icon: Clock,
+        title: "24/7 Continuous Recording",
+        description:
+          "Record every second around the clock—not just short 10-second clips triggered after motion has already passed.",
+      },
+      {
+        icon: DollarSign,
+        title: "Zero Monthly Subscription Fees",
+        description:
+          "Own your equipment and software outright. Access your cameras forever without paying monthly cloud rental fees.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Property Security Audit",
+        description:
+          "We inspect your perimeter, identify entry vectors and blind spots, and determine optimal camera locations.",
+      },
+      {
+        step: "02",
+        title: "System Design & NVR Sizing",
+        description:
+          "We specify PTZ camera models, field-of-view lenses, NVR channels, storage capacity, and cable pathways.",
+      },
+      {
+        step: "03",
+        title: "Clean Cat6 Pulling & Camera Mounting",
+        description:
+          "Our technicians pull concealed Cat6 lines, secure IP66 brackets, mount cameras, and connect the central PoE switch.",
+      },
+      {
+        step: "04",
+        title: "App Setup & Motion Zone Configuration",
+        description:
+          "We connect the system to your smartphone app, set up smart motion detection zones, and demonstrate full PTZ control.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Why is a wired PoE system better than battery-powered Wi-Fi cameras (Ring/Arlo)?",
+        answer:
+          "Battery-operated Wi-Fi cameras often miss events due to sleep mode delays, suffer from weak Wi-Fi signals through concrete block walls, and are susceptible to wireless deauthentication jammers. A wired PoE system is powered continuously through Cat6 cable, records 24/7 at full 4K resolution, and never requires changing batteries or paying monthly cloud subscriptions.",
+      },
+      {
+        question: "Can I view my cameras on my phone when I am away from home?",
+        answer:
+          "Yes. Our systems include a dedicated mobile app for iOS and Android that allows you to stream live video, control 360° PTZ camera movement, review past recordings, and receive immediate motion notifications from anywhere in the world.",
+      },
+      {
+        question: "How long does a 2TB hard drive store video recordings?",
+        answer:
+          "With efficient H.265+ video compression, a 2TB to 4TB hard drive typically retains 2 to 4 weeks of continuous 24/7 recording across multiple cameras. Once full, the NVR automatically overwrites the oldest footage unless specific incident clips have been locked or exported.",
+      },
+      {
+        question: "Are these cameras weatherproof against Florida rain and hurricanes?",
+        answer:
+          "Yes. All external cameras feature heavy-duty IP66 or IP67 weatherproof aluminum housings engineered to withstand tropical downpours, hurricane-force winds, and direct high-temperature sunlight.",
+      },
+      {
+        question: "What does PTZ mean and why is it useful?",
+        answer:
+          "PTZ stands for Pan, Tilt, and Zoom. A PTZ camera has internal motorized gears allowing you to remotely rotate the camera 360° horizontally, tilt up and down, and optically zoom in on distant areas—such as gates, driveways, or pool areas—without losing image sharpness.",
+      },
+      {
+        question: "Do you provide training on how to use the system?",
+        answer:
+          "Yes! After installation, our technicians install the app on your devices, walk you through viewing, searching, and downloading footage, and ensure you are 100% comfortable operating the system.",
+      },
+    ],
+  },
+{
+    slug: "smart-automation",
+    name: "Smart Control Hub & Automation Systems",
+    shortName: "Smart Automation",
+    tagline: "Centralized Smart Control for Lighting, Power & Security",
+    headline: "CENTRALIZED SMART HOME AUTOMATION & CONTROL HUBS IN SOUTH FLORIDA",
+    subheadline:
+      "Control your outdoor lighting zones, security cameras, pool illumination, and power distribution from a single intuitive smartphone app with automated scheduling.",
+    shortDesc:
+      "Centralized smart controllers, Wi-Fi gateways, and NEMA 3R distribution panels offering seamless smartphone control, dimming, and automation.",
+    longDesc:
+      "Modern luxury properties require sophisticated control systems that bring together lighting, security, and electrical management into one harmonious experience. VIX General Services designs and installs centralized smart control hubs, smart Wi-Fi gateways, and automated power distribution systems throughout South Florida. Whether you want your outdoor lights to turn on automatically at sunset, dim to 50% at midnight, or sync with your security cameras, our smart automation makes your home intuitive, secure, and energy-efficient.",
+    whyChooseText:
+      "Consumer smart plugs and Wi-Fi light bulbs frequently drop offline in outdoor Florida environments. We install commercial-grade AquaLink and centralized smart controllers inside weatherproof NEMA 3R enclosures, paired with external high-gain Wi-Fi gateways and main-panel surge protection for rock-solid reliability.",
+    heroImage: IMAGES.services.smartAutomation,
+    icon: Smartphone,
+    iconBg: "bg-[#17A2B8]",
+    badgeColor: "bg-[#17A2B8]/10 text-[#17A2B8] border-[#17A2B8]/30",
+    estimateServiceKey: "smart-automation",
+    metaTitle:
+      "Smart Home Automation & Control Hub Installation South Florida | VIX",
+    metaDescription:
+      "Centralized smart home automation and lighting control hubs in South Florida. Multi-zone Wi-Fi app control, dimming, surge protection. Free consultation.",
+    schemaServiceType: "Home Automation and Smart Control Installation Services",
+    keywords: [
+      "smart home automation South Florida",
+      "smart lighting control hub Boca Raton",
+      "home automation contractor Coral Springs",
+      "smart control system Parkland FL",
+      "NEMA 3R outdoor distribution panel",
+      "AquaLink smart controller installer",
+    ],
+    galleryCategories: ["SMART AUTOMATION", "ELECTRICAL CONTROLS"],
+    offerings: [
+      {
+        title: "Centralized Smart Lighting Controllers",
+        description:
+          "Installation of advanced AquaLink RS and commercial-grade automation controllers that consolidate multi-zone power delivery into an intelligent command center.",
+        features: [
+          "Multi-circuit high & low voltage control",
+          "Automated astronomical sunrise/sunset clock",
+          "App-controlled zone switching & dimming",
+          "3-year manufacturer controller warranty",
+        ],
+      },
+      {
+        title: "Long-Range Wi-Fi Gateway & Mobile App Interface",
+        description:
+          "High-power external Wi-Fi transceivers and antennas that ensure dependable wireless communication between your outdoor control panel and home network.",
+        features: [
+          "High-gain external antenna for estate coverage",
+          "iOS and Android smartphone integration",
+          "Cloud connectivity for global remote control",
+          "Secure encrypted local communication",
+        ],
+      },
+      {
+        title: "NEMA 3R Outdoor Distribution Panels",
+        description:
+          "Commercial-grade weatherproof electrical enclosures housing main disconnect breakers, individual 15A branch circuits, and low-voltage control hardware.",
+        features: [
+          "Heavy-duty galvanized NEMA 3R steel enclosure",
+          "6-zone independent circuit breaker protection",
+          "Waterproof door seals and padlock latch",
+          "5-year manufacturer panel warranty",
+        ],
+      },
+      {
+        title: "Main-Panel Surge Protective Devices (SPD)",
+        description:
+          "Eaton and Square D Type 2 surge protectors installed directly at the distribution hub to shield sensitive microprocessors from lightning spikes.",
+        features: [
+          "Eaton CHSPT2ULTRA or equivalent heavy-duty SPD",
+          "Up to 108kA surge current rating",
+          "LED status diagnostic indicators",
+          "Connected equipment protection warranty",
+        ],
+      },
+      {
+        title: "Multi-Zone Scheduling & Custom Scene Programming",
+        description:
+          "Personalized programming allowing you to create custom scenes like Evening Entertaining, Late Night Security, Vacation Away Mode, and energy-saving schedules.",
+        features: [
+          "One-tap scene activation from phone or tablet",
+          "Astronomical clock automatically tracking sunset",
+          "Integration with security cameras and sensors",
+          "Voice assistant compatibility options",
+        ],
+      },
+      {
+        title: "Annual Smart System Software & Diagnostic Care",
+        description:
+          "Controller firmware updates, Wi-Fi signal strength optimization, breaker torque testing, and scene adjustments included in our $780/yr maintenance plan.",
+        features: [
+          "Firmware updates and security patches",
+          "Wi-Fi gateway signal calibration",
+          "Panel terminal and breaker inspection",
+          "Seasonal scene adjustment support",
+        ],
+      },
+    ],
+    benefits: [
+      {
+        icon: Clock,
+        title: "Effortless Automation",
+        description:
+          "Your estate lights, pool accents, and security circuits turn on and off automatically based on sunset, sunrise, and your custom schedule.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Surge & Weather Shielded",
+        description:
+          "Commercial NEMA 3R enclosures and Eaton surge suppressors keep your investment safe from extreme Florida lightning and tropical storms.",
+      },
+      {
+        icon: Award,
+        title: "Single Unified App",
+        description:
+          "Control all outdoor zones, dimming, schedules, and power circuits from one clean interface on your phone.",
+      },
+      {
+        icon: DollarSign,
+        title: "Energy & Cost Savings",
+        description:
+          "Automated dimming and scheduled shutoffs prevent lights and transformers from running unnecessarily during daylight hours.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Automation Needs & Wi-Fi Survey",
+        description:
+          "We survey your electrical distribution location, test exterior Wi-Fi signal strength, and discuss your control goals.",
+      },
+      {
+        step: "02",
+        title: "Hub & Panel Engineering",
+        description:
+          "We specify the NEMA 3R enclosure, number of controlled circuits, transformer integration, and surge protection device.",
+      },
+      {
+        step: "03",
+        title: "Panel Mounting & Circuit Wiring",
+        description:
+          "Our licensed electricians mount the hub, land branch circuits with dedicated breakers, install the SPD, and wire the Wi-Fi gateway.",
+      },
+      {
+        step: "04",
+        title: "App Programming & Handover",
+        description:
+          "We configure the app on your smartphone, program your custom schedules and scenes, and test every zone thoroughly.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What happens to my smart automation schedules if the power goes out?",
+        answer:
+          "Our controllers feature internal non-volatile memory and battery-backed real-time clocks. When power is restored following a storm or grid blackout, all your zone settings, schedules, and astronomical timers resume automatically without needing reconfiguration.",
+      },
+      {
+        question: "Can I control the system if my home internet goes down temporarily?",
+        answer:
+          "Yes. While remote access outside your home requires an active internet connection, local automation schedules continue running on the hardware clock, and local smartphone control remains operational through your local home network.",
+      },
+      {
+        question: "Is surge protection really included with the automation panel?",
+        answer:
+          "Yes! We install heavy-duty Type 2 Surge Protective Devices (such as Eaton CHSPT2ULTRA) directly inside or adjacent to the distribution panel. This prevents South Florida lightning strikes from destroying sensitive controller boards, Wi-Fi gateways, and low-voltage transformers.",
+      },
+      {
+        question: "Can I add more zones or lights to the controller in the future?",
+        answer:
+          "Absolutely. We select modular distribution panels and controllers with expansion capacity, allowing you to easily add new landscape zones, patio fans, pool lights, or water features down the road.",
+      },
+      {
+        question: "Can multiple family members have the app on their phones?",
+        answer:
+          "Yes. The mobile app interface supports multiple authenticated user accounts, so everyone in your household can control lighting zones, trigger scenes, or view system status from their own phone.",
+      },
+      {
+        question: "Does the system adjust for daylight saving time automatically?",
+        answer:
+          "Yes. With astronomical clock synchronization, the system automatically adjusts for seasonal shifts in sunset and sunrise times, as well as daylight saving time transitions.",
+      },
+    ],
+  }
 ];
 
 export const getServiceBySlug = (slug: string): ServiceItem | undefined => {

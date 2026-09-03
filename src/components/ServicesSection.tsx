@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { SERVICES } from "../data/servicesData";
 import {
   Carousel,
@@ -19,6 +19,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     if (!api) return;
@@ -31,140 +32,139 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
     });
   }, [api]);
 
+  // Autoplay: automatically scroll cards smoothly across services
+  useEffect(() => {
+    if (!api || isPaused) return;
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 3200);
+
+    return () => clearInterval(interval);
+  }, [api, isPaused]);
+
   return (
     <section id="services" className="section-pad bg-[#F5F6F8] overflow-hidden">
       <div className="container mx-auto gutter-x">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/30">
-              <Sparkles className="w-3.5 h-3.5 text-[#C99A55]" /> Our Specialized Services
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] tracking-tight">
-              One Trusted Team.{" "}
-              <span className="text-[#C99A55]">Complete Home Solutions.</span>
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mt-4">
-              Swipe or slide through our 7 specialized services—from architectural outdoor lighting and 4K security systems to smart automation, electrical, and HVAC.
-            </p>
+        {/* Section Header - no em-dash */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/30">
+            <Sparkles className="w-3.5 h-3.5 text-[#C99A55]" /> Our Specialized Services
           </div>
-
-          {/* Carousel Navigation Arrows */}
-          <div className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={() => api?.scrollPrev()}
-              className="w-12 h-12 rounded-full border-2 border-[#1A2B44]/20 bg-white text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] hover:border-[#1A2B44] flex items-center justify-center transition-all shadow-crisp hover:shadow-crisp-lg active:scale-95"
-              aria-label="Previous service"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={() => api?.scrollNext()}
-              className="w-12 h-12 rounded-full border-2 border-[#1A2B44]/20 bg-[#1A2B44] text-[#EDE4D6] hover:bg-[#C99A55] hover:text-[#1A2B44] hover:border-[#C99A55] flex items-center justify-center transition-all shadow-crisp hover:shadow-crisp-lg active:scale-95"
-              aria-label="Next service"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-4 tracking-tight">
+            One Trusted Team.{" "}
+            <span className="text-[#C99A55]">Complete Home Solutions.</span>
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Explore our 7 specialized services from HVAC and electrical to solar, EV charging, outdoor lighting, security cameras, and smart automation.
+          </p>
         </div>
 
-        {/* Carousel Slider */}
-        <Carousel
-          setApi={setApi}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
+        {/* Carousel Slider with automatic scrolling, touch swipe, and mouse drag */}
+        <div
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
           className="w-full"
         >
-          <CarouselContent className="-ml-4 sm:-ml-6 py-2">
-            {SERVICES.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <CarouselItem
-                  key={index}
-                  className="pl-4 sm:pl-6 basis-[88%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex"
-                >
-                  <div
-                    className={`rounded-xl overflow-hidden border shadow-crisp hover:shadow-crisp-lg transition-all duration-300 group flex flex-col w-full ${
-                      service.featured
-                        ? "bg-[#1A2B44] border-[#C99A55]/40"
-                        : "bg-white border-[#1A2B44]/12"
-                    }`}
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full cursor-grab active:cursor-grabbing"
+          >
+            <CarouselContent className="-ml-4 sm:-ml-6 py-2">
+              {SERVICES.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <CarouselItem
+                    key={index}
+                    className="pl-4 sm:pl-6 basis-[88%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex"
                   >
-                    {/* Image Container */}
-                    <Link
-                      to={`/services/${service.slug}`}
-                      className="relative h-56 overflow-hidden block shrink-0"
-                      aria-label={`View ${service.name}`}
+                    <div
+                      className={`rounded-xl overflow-hidden border shadow-crisp hover:shadow-crisp-lg transition-all duration-300 group flex flex-col w-full ${
+                        service.featured
+                          ? "bg-[#1A2B44] border-[#C99A55]/40"
+                          : "bg-white border-[#1A2B44]/12"
+                      }`}
                     >
-                      {service.featured && (
-                        <span className="absolute top-3 left-3 z-10 bg-[#C99A55] text-[#1A2B44] px-3 py-1.5 rounded-md text-[11px] font-extrabold uppercase tracking-wider shadow-crisp leading-none">
-                          Featured Service
-                        </span>
-                      )}
-                      <img
-                        src={service.heroImage}
-                        alt={`${service.shortName} services - VIX General Services`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy"
-                      />
-                      {/* Icon Badge - bottom left inside image */}
-                      <div
-                        className={`absolute bottom-3 left-3 w-12 h-12 rounded-full flex items-center justify-center shadow-crisp-lg border-[3px] ${
-                          service.featured ? "border-[#1A2B44]" : "border-white"
-                        } ${service.iconBg}`}
+                      {/* Image Container */}
+                      <Link
+                        to={`/services/${service.slug}`}
+                        className="relative h-56 overflow-hidden block shrink-0"
+                        aria-label={`View ${service.name}`}
                       >
-                        <Icon className="w-6 h-6 text-white" />
+                        {service.featured && (
+                          <span className="absolute top-3 left-3 z-10 bg-[#C99A55] text-[#1A2B44] px-3 py-1.5 rounded-md text-[11px] font-extrabold uppercase tracking-wider shadow-crisp leading-none">
+                            Featured Service
+                          </span>
+                        )}
+                        <img
+                          src={service.heroImage}
+                          alt={`${service.shortName} services - VIX General Services`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 select-none pointer-events-none"
+                          loading="lazy"
+                        />
+                        {/* Icon Badge - bottom left inside image */}
+                        <div
+                          className={`absolute bottom-3 left-3 w-12 h-12 rounded-full flex items-center justify-center shadow-crisp-lg border-[3px] ${
+                            service.featured ? "border-[#1A2B44]" : "border-white"
+                          } ${service.iconBg}`}
+                        >
+                          <Icon className="w-6 h-6 text-white" />
+                        </div>
+                      </Link>
+
+                      {/* Card Content */}
+                      <div className="pt-5 pb-5 px-5 flex flex-col flex-1">
+                        <h3
+                          className={`text-xl font-heading font-extrabold mb-2 group-hover:text-[#C99A55] transition-colors ${
+                            service.featured ? "text-white" : "text-[#1A2B44]"
+                          }`}
+                        >
+                          <Link to={`/services/${service.slug}`}>
+                            {service.shortName}
+                          </Link>
+                        </h3>
+                        <p
+                          className={`text-sm leading-relaxed mb-5 flex-1 line-clamp-3 ${
+                            service.featured
+                              ? "text-white/70"
+                              : "text-muted-foreground"
+                          }`}
+                        >
+                          {service.shortDesc}
+                        </p>
+
+                        {/* Dedicated Subpage Link */}
+                        {service.featured ? (
+                          <Link
+                            to={`/services/${service.slug}`}
+                            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp group/link"
+                          >
+                            <span>LEARN MORE</span>
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                          </Link>
+                        ) : (
+                          <Link
+                            to={`/services/${service.slug}`}
+                            className="inline-flex items-center text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors group/link pt-1"
+                          >
+                            <span>LEARN MORE</span>
+                            <ArrowRight className="ml-1.5 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                          </Link>
+                        )}
                       </div>
-                    </Link>
-
-                    {/* Card Content */}
-                    <div className="pt-5 pb-5 px-5 flex flex-col flex-1">
-                      <h3
-                        className={`text-xl font-heading font-extrabold mb-2 group-hover:text-[#C99A55] transition-colors ${
-                          service.featured ? "text-white" : "text-[#1A2B44]"
-                        }`}
-                      >
-                        <Link to={`/services/${service.slug}`}>
-                          {service.shortName}
-                        </Link>
-                      </h3>
-                      <p
-                        className={`text-sm leading-relaxed mb-5 flex-1 line-clamp-3 ${
-                          service.featured
-                            ? "text-white/70"
-                            : "text-muted-foreground"
-                        }`}
-                      >
-                        {service.shortDesc}
-                      </p>
-
-                      {/* Dedicated Subpage Link */}
-                      {service.featured ? (
-                        <Link
-                          to={`/services/${service.slug}`}
-                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp group/link"
-                        >
-                          <span>LEARN MORE</span>
-                          <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                        </Link>
-                      ) : (
-                        <Link
-                          to={`/services/${service.slug}`}
-                          className="inline-flex items-center text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors group/link pt-1"
-                        >
-                          <span>LEARN MORE</span>
-                          <ArrowRight className="ml-1.5 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                        </Link>
-                      )}
                     </div>
-                  </div>
-                </CarouselItem>
-              );
-            })}
-          </CarouselContent>
-        </Carousel>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+          </Carousel>
+        </div>
 
         {/* Carousel Pagination Dots & All Services Link */}
         <div className="flex flex-col sm:flex-row items-center justify-between mt-10 gap-4 pt-6 border-t border-[#1A2B44]/10">
