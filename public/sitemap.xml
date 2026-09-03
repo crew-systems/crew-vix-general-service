@@ -1,28 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
   <url>
-    <loc>https://www.mkfreitasllc.com/</loc>
+    <loc>https://www.vixgeneralservices.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.mkfreitasllc.com/service-areas</loc>
+    <loc>https://www.vixgeneralservices.com/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated Service Subpages -->
+  <url>
+    <loc>https://www.vixgeneralservices.com/services/hvac</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.vixgeneralservices.com/services/electrical</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.vixgeneralservices.com/services/solar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.vixgeneralservices.com/services/ev-charging</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Area Pages -->
+  <url>
+    <loc>https://www.vixgeneralservices.com/service-areas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mkfreitasllc.com/service-areas/tallahassee-fl</loc>
+    <loc>https://www.vixgeneralservices.com/service-areas/boca-raton-fl</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mkfreitasllc.com/service-areas/thomasville-ga</loc>
+    <loc>https://www.vixgeneralservices.com/service-areas/coral-springs-fl</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mkfreitasllc.com/service-areas/quincy-fl</loc>
+    <loc>https://www.vixgeneralservices.com/service-areas/parkland-fl</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>

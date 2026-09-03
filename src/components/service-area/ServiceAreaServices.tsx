@@ -2,32 +2,40 @@ import React from "react";
 import { Sparkles, Wrench, ArrowRight, Star, CheckCircle2 } from "lucide-react";
 import { type SERVICE_AREAS } from "../../data/landscapingData";
 
+import { Link } from "react-router-dom";
+
 type Area = (typeof SERVICE_AREAS)[number];
 
 const services = [
   {
     title: "HVAC Service",
     desc: "Installation, repair, and maintenance of cooling and heating systems.",
+    slug: "hvac",
   },
   {
     title: "Electrical Service",
     desc: "Panel upgrades, wiring, and lighting for safe, reliable home electrical systems.",
+    slug: "electrical",
   },
   {
     title: "Solar Installation",
     desc: "Custom solar solutions to save money and power your home sustainably.",
+    slug: "solar",
   },
   {
     title: "EV Charging",
     desc: "Home EV charging stations installed for convenience, speed, and safety.",
+    slug: "ev-charging",
   },
   {
     title: "System Upgrades",
     desc: "Modernizing outdated HVAC and electrical systems with quality guarantee.",
+    slug: "electrical",
   },
   {
     title: "Free Consultation",
     desc: "Professional assessment with a detailed no-obligation estimate.",
+    slug: "hvac",
   },
 ];
 
@@ -63,24 +71,37 @@ export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-[#F5F6F8] rounded-lg p-6 border border-[#1A2B44]/10 shadow-crisp hover:shadow-crisp-lg transition-all duration-300"
+                className="bg-[#F5F6F8] rounded-lg p-6 border border-[#1A2B44]/10 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 flex flex-col"
               >
                 <div className="w-11 h-11 rounded-md bg-[#C99A55]/10 text-[#C99A55] flex items-center justify-center mb-4">
                   <Wrench className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-heading font-extrabold text-[#1A2B44] mb-2">
-                  {service.title}
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="hover:text-[#C99A55] transition-colors"
+                  >
+                    {service.title}
+                  </Link>
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                   {service.desc}
                 </p>
-                <button
-                  onClick={onOpenEstimate}
-                  className="inline-flex items-center text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors"
-                >
-                  <span>Get Free Estimate</span>
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
+                <div className="flex items-center justify-between pt-2 border-t border-[#1A2B44]/10">
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="inline-flex items-center text-xs font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
+                  </Link>
+                  <button
+                    onClick={onOpenEstimate}
+                    className="text-xs font-bold text-[#C99A55] hover:underline"
+                  >
+                    Get Estimate
+                  </button>
+                </div>
               </div>
             ))}
           </div>

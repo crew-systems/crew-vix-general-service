@@ -6,7 +6,7 @@ import { Logo } from "../Logo";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/#services" },
+  { name: "Services", href: "/services" },
   { name: "Service Areas", href: "/service-areas" },
   { name: "Projects", href: "/#gallery" },
   { name: "Reviews", href: "/#reviews" },

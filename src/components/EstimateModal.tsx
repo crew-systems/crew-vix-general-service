@@ -13,20 +13,46 @@ import { postTrackingEvent } from "./tracking";
 interface EstimateModalProps {
   isOpen: boolean;
   onClose: () => void;
+  defaultService?: string;
 }
+
+const mapServiceKeyToLabel = (key?: string): string => {
+  if (!key) return "HVAC Service";
+  const lower = key.toLowerCase();
+  if (lower.includes("hvac") || lower.includes("air")) return "HVAC Service";
+  if (lower.includes("electr")) return "Electrical Service";
+  if (lower.includes("solar")) return "Solar Installation";
+  if (lower.includes("ev") || lower.includes("charg")) return "EV Charging Installation";
+  return key;
+};
 
 export const EstimateModal: React.FC<EstimateModalProps> = ({
   isOpen,
   onClose,
+  defaultService,
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    service: "HVAC Service",
+    service: mapServiceKeyToLabel(defaultService),
     details: "",
   });
+
+  // Reset or update selected service when opened with a defaultService
+  React.useEffect(() => {
+    if (isOpen) {
+      setSubmitted(false);
+      if (defaultService) {
+        setFormData((prev) => ({
+          ...prev,
+          service: mapServiceKeyToLabel(defaultService),
+        }));
+      }
+    }
+  }, [isOpen, defaultService]);
+
   // Add/remove modal-open class on body for chat widget hiding
   React.useEffect(() => {
     if (isOpen) {

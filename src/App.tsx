@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { ServiceAreasIndex } from "./pages/ServiceAreasIndex";
 import { ServiceAreaPage } from "./pages/ServiceAreaPage";
+import { ServicesIndex } from "./pages/ServicesIndex";
+import { ServiceDetailPage } from "./pages/ServiceDetailPage";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -18,8 +21,11 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/services" element={<ServicesIndex />} />
+            <Route path="/services/:slug" element={<ServiceDetailPage />} />
             <Route path="/service-areas" element={<ServiceAreasIndex />} />
             <Route path="/service-areas/:slug" element={<ServiceAreaPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

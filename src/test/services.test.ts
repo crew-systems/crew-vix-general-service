@@ -1,0 +1,73 @@
+import { describe, it, expect } from "vitest";
+import { SERVICES, getServiceBySlug, getAllServiceSlugs } from "../data/servicesData";
+import fs from "fs";
+import path from "path";
+
+describe("Services Data Registry", () => {
+  it("should define exactly the 4 primary services", () => {
+    const slugs = getAllServiceSlugs();
+    expect(slugs).toEqual(["hvac", "electrical", "solar", "ev-charging"]);
+  });
+
+  it("should have comprehensive SEO metadata for every service", () => {
+    SERVICES.forEach((service) => {
+      expect(service.slug).toBeTruthy();
+      expect(service.name).toBeTruthy();
+      expect(service.shortName).toBeTruthy();
+      expect(service.headline).toBeTruthy();
+      expect(service.metaTitle).toBeTruthy();
+      expect(service.metaTitle).toContain("VIX");
+      expect(service.metaDescription).toBeTruthy();
+      expect(service.metaDescription.length).toBeGreaterThan(50);
+      expect(service.schemaServiceType).toBeTruthy();
+      expect(service.heroImage).toBeTruthy();
+    });
+  });
+
+  it("should contain at least 4 offerings and 4 FAQs per service", () => {
+    SERVICES.forEach((service) => {
+      expect(service.offerings.length).toBeGreaterThanOrEqual(4);
+      service.offerings.forEach((offering) => {
+        expect(offering.title).toBeTruthy();
+        expect(offering.description).toBeTruthy();
+        expect(offering.features.length).toBeGreaterThanOrEqual(2);
+      });
+
+      expect(service.faqs.length).toBeGreaterThanOrEqual(4);
+      service.faqs.forEach((faq) => {
+        expect(faq.question).toBeTruthy();
+        expect(faq.answer).toBeTruthy();
+      });
+    });
+  });
+
+  it("should find service by slug case-insensitively and handle invalid slugs", () => {
+    expect(getServiceBySlug("HVAC")?.slug).toBe("hvac");
+    expect(getServiceBySlug("electrical")?.name).toBe("Licensed Electrical Services");
+    expect(getServiceBySlug("SOLAR")?.slug).toBe("solar");
+    expect(getServiceBySlug("EV-CHARGING")?.slug).toBe("ev-charging");
+    expect(getServiceBySlug("non-existent-service")).toBeUndefined();
+  });
+});
+
+describe("Sitemap & Robots.txt Parity", () => {
+  it("sitemap.xml should reference vixgeneralservices.com and all service subpages", () => {
+    const sitemapPath = path.resolve(__dirname, "../../public/sitemap.xml");
+    const sitemapContent = fs.readFileSync(sitemapPath, "utf8");
+
+    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/");
+    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services");
+    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/hvac");
+    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/electrical");
+    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/solar");
+    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/ev-charging");
+    expect(sitemapContent).not.toContain("mkfreitasllc.com");
+  });
+
+  it("robots.txt should declare the official sitemap URL", () => {
+    const robotsPath = path.resolve(__dirname, "../../public/robots.txt");
+    const robotsContent = fs.readFileSync(robotsPath, "utf8");
+
+    expect(robotsContent).toContain("Sitemap: https://www.vixgeneralservices.com/sitemap.xml");
+  });
+});

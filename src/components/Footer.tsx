@@ -19,9 +19,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           {/* Brand Info */}
           <div className="lg:col-span-3 space-y-4">
-            <a href="#hero" className="flex items-center group">
+            <Link to="/" className="flex items-center group">
               <Logo size="lg" theme="dark" />
-            </a>
+            </Link>
 
             <p className="text-xs text-[#EDE4D6]/70 leading-relaxed max-w-sm pt-1">
               Specialists in HVAC installation and repair, electrical services,
@@ -57,49 +57,58 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
             </h4>
             <ul className="space-y-2 text-xs text-[#EDE4D6]/75 font-medium">
               <li>
-                <a href="#hero" className="hover:text-white transition-colors">
+                <Link
+                  to="/#hero"
+                  onClick={(e) => {
+                    if (window.location.pathname === "/") {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  to="/services"
                   className="hover:text-white transition-colors"
                 >
                   Our Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#before-after"
+                <Link
+                  to="/#before-after"
                   className="hover:text-white transition-colors"
                 >
                   Results
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#why-us"
+                <Link
+                  to="/#why-us"
                   className="hover:text-white transition-colors"
                 >
                   Why Choose Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#gallery"
+                <Link
+                  to="/#gallery"
                   className="hover:text-white transition-colors"
                 >
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#reviews"
+                <Link
+                  to="/#reviews"
                   className="hover:text-white transition-colors"
                 >
                   Reviews
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -138,44 +147,44 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
             </h4>
             <ul className="space-y-2 text-xs text-[#EDE4D6]/75 font-medium">
               <li>
-                <a
-                  href="#services"
+                <Link
+                  to="/services/hvac"
                   className="hover:text-white transition-colors"
                 >
-                  HVAC
-                </a>
+                  HVAC Services
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  to="/services/electrical"
                   className="hover:text-white transition-colors"
                 >
-                  Electrical
-                </a>
+                  Electrical Services
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  to="/services/solar"
                   className="hover:text-white transition-colors"
                 >
-                  Solar
-                </a>
+                  Solar Solutions
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  to="/services/ev-charging"
                   className="hover:text-white transition-colors"
                 >
                   EV Charging
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
-                  className="hover:text-white transition-colors"
+                <Link
+                  to="/services"
+                  className="text-[#C99A55] hover:text-white transition-colors font-bold"
                 >
-                  Free Consultation
-                </a>
+                  All Services →
+                </Link>
               </li>
             </ul>
           </div>

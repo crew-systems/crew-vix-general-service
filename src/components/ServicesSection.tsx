@@ -1,57 +1,15 @@
 import React from "react";
-import {
-  ArrowRight,
-  Sparkles,
-  Snowflake,
-  Zap,
-  Sun,
-  PlugZap,
-} from "lucide-react";
-import { IMAGES } from "../data/landscapingData";
+import { Link } from "react-router-dom";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { SERVICES } from "../data/servicesData";
 
 interface ServicesSectionProps {
   onOpenEstimate: () => void;
 }
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({
-  onOpenEstimate,
+  onOpenEstimate: _onOpenEstimate,
 }) => {
-  const services = [
-    {
-      title: "HVAC",
-      description:
-        "Cooling, heating and indoor air quality solutions for year-round comfort and efficiency.",
-      image: IMAGES.services.hvac,
-      icon: Snowflake,
-      iconBg: "bg-[#2F6FED]",
-      featured: true,
-    },
-    {
-      title: "ELECTRICAL",
-      description:
-        "Safe, reliable electrical services for your home and peace of mind.",
-      image: IMAGES.services.electrical,
-      icon: Zap,
-      iconBg: "bg-[#F2B705]",
-    },
-    {
-      title: "SOLAR",
-      description:
-        "Custom solar solutions to save money and power your home sustainably.",
-      image: IMAGES.services.solar,
-      icon: Sun,
-      iconBg: "bg-[#3FA65B]",
-    },
-    {
-      title: "EV CHARGING",
-      description:
-        "Home charging stations installed for convenience, speed and safety.",
-      image: IMAGES.services.evCharging,
-      icon: PlugZap,
-      iconBg: "bg-[#7C5CFC]",
-    },
-  ];
-
   return (
     <section id="services" className="section-pad bg-[#F5F6F8] overflow-hidden">
       <div className="container mx-auto gutter-x">
@@ -72,7 +30,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {services.map((service, index) => {
+          {SERVICES.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
@@ -83,16 +41,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                     : "bg-white border-[#1A2B44]/12"
                 }`}
               >
-                {/* Image Container - Taller to match reference */}
-                <div className="relative h-56 overflow-hidden">
+                {/* Image Container */}
+                <Link
+                  to={`/services/${service.slug}`}
+                  className="relative h-56 overflow-hidden block"
+                  aria-label={`View ${service.name}`}
+                >
                   {service.featured && (
                     <span className="absolute top-3 left-3 z-10 bg-[#C99A55] text-[#1A2B44] px-3 py-1.5 rounded-md text-[11px] font-extrabold uppercase tracking-wider shadow-crisp leading-none">
                       Most Requested
                     </span>
                   )}
                   <img
-                    src={service.image}
-                    alt={`${service.title} services - VIX General Services`}
+                    src={service.heroImage}
+                    alt={`${service.shortName} services - VIX General Services`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Icon Badge - bottom left inside image */}
@@ -103,7 +65,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   >
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                </div>
+                </Link>
 
                 {/* Card Content */}
                 <div className="pt-5 pb-5 px-5 flex flex-col flex-1">
@@ -112,7 +74,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                       service.featured ? "text-white" : "text-[#1A2B44]"
                     }`}
                   >
-                    {service.title}
+                    <Link to={`/services/${service.slug}`}>
+                      {service.shortName}
+                    </Link>
                   </h3>
                   <p
                     className={`text-sm leading-relaxed mb-5 flex-1 ${
@@ -121,26 +85,26 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                         : "text-muted-foreground"
                     }`}
                   >
-                    {service.description}
+                    {service.shortDesc}
                   </p>
 
-                  {/* CTA Button */}
+                  {/* Dedicated Subpage Link */}
                   {service.featured ? (
-                    <button
-                      onClick={onOpenEstimate}
+                    <Link
+                      to={`/services/${service.slug}`}
                       className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp group/link"
                     >
                       <span>LEARN MORE</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                    </button>
+                    </Link>
                   ) : (
-                    <button
-                      onClick={onOpenEstimate}
+                    <Link
+                      to={`/services/${service.slug}`}
                       className="inline-flex items-center text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors group/link"
                     >
                       <span>LEARN MORE</span>
                       <ArrowRight className="ml-1.5 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                    </button>
+                    </Link>
                   )}
                 </div>
               </div>

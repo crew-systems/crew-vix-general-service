@@ -6,8 +6,9 @@ export interface SEOHeadProps {
   description: string;
   canonical: string;
   ogImage?: string;
+  ogImageAlt?: string;
   noIndex?: boolean;
-  schemaJson?: Record<string, unknown>;
+  schemaJson?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const SITE_BASE = "https://www.vixgeneralservices.com";
@@ -17,6 +18,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   description,
   canonical,
   ogImage,
+  ogImageAlt = "VIX General Services - HVAC, Electrical, Solar & EV Charging",
   noIndex = false,
   schemaJson,
 }) => {
@@ -29,6 +31,12 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       ? `${SITE_BASE}${ogImage}`
       : undefined;
 
+  const schemas = Array.isArray(schemaJson)
+    ? schemaJson
+    : schemaJson
+      ? [schemaJson]
+      : [];
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -36,19 +44,29 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={fullCanonical} />
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
-      {fullOgImage && <meta property="og:image" content={fullOgImage} />}
-      {fullOgImage && <meta name="twitter:image" content={fullOgImage} />}
+      {/* Open Graph */}
+      <meta property="og:site_name" content="VIX General Services" />
+      <meta property="og:locale" content="en_US" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={fullCanonical} />
+      {fullOgImage && <meta property="og:image" content={fullOgImage} />}
+      {fullOgImage && <meta property="og:image:alt" content={ogImageAlt} />}
+
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      {fullOgImage && <meta name="twitter:image" content={fullOgImage} />}
+      {fullOgImage && <meta name="twitter:image:alt" content={ogImageAlt} />}
 
-      {schemaJson && (
-        <script type="application/ld+json">{JSON.stringify(schemaJson)}</script>
-      )}
+      {/* Structured Data (JSON-LD) */}
+      {schemas.map((schema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 };

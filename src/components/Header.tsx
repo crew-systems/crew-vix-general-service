@@ -36,30 +36,34 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
+    { name: "Home", href: "/#hero" },
     {
       name: "Services",
-      href: "#services",
+      href: "/services",
       hasDropdown: true,
       items: [
-        { name: "HVAC", href: "#services" },
-        { name: "Electrical", href: "#services" },
-        { name: "Solar", href: "#services" },
-        { name: "EV Charging", href: "#services" },
+        { name: "HVAC Services", href: "/services/hvac" },
+        { name: "Electrical Services", href: "/services/electrical" },
+        { name: "Solar Energy", href: "/services/solar" },
+        { name: "EV Charging", href: "/services/ev-charging" },
+        { name: "View All Services →", href: "/services" },
       ],
     },
     {
       name: "Service Areas",
       href: "/service-areas",
       hasDropdown: true,
-      items: SERVICE_AREAS.map((a) => ({
-        name: a.city,
-        href: `/service-areas/${a.slug}`,
-      })),
+      items: [
+        ...SERVICE_AREAS.map((a) => ({
+          name: `${a.city}, ${a.state}`,
+          href: `/service-areas/${a.slug}`,
+        })),
+        { name: "View All Areas →", href: "/service-areas" },
+      ],
     },
-    { name: "Why Choose Us", href: "#why-us" },
-    { name: "Projects", href: "#gallery" },
-    { name: "Reviews", href: "#reviews" },
+    { name: "Why Choose Us", href: "/#why-us" },
+    { name: "Projects", href: "/#gallery" },
+    { name: "Reviews", href: "/#reviews" },
   ];
 
   return (
@@ -73,7 +77,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
       <div className="container mx-auto gutter-x">
         <div className="flex items-center justify-between">
           {/* Logo Area */}
-          <Link to="/" className="flex items-center group shrink-0">
+          <Link
+            to="/"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="flex items-center group shrink-0"
+          >
             <Logo size="lg" theme="dark" className="header-logo" />
           </Link>
 
@@ -161,12 +174,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                     </div>
                   </div>
                 ) : (
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     onClick={(e) => {
-                      if (link.href.startsWith("#")) {
+                      if (link.href === "/#hero" && window.location.pathname === "/") {
                         e.preventDefault();
-                        const el = document.querySelector(link.href);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      } else if (link.href.startsWith("/#") && window.location.pathname === "/") {
+                        e.preventDefault();
+                        const id = link.href.replace("/#", "");
+                        const el = document.getElementById(id);
                         if (el)
                           el.scrollIntoView({
                             behavior: "smooth",
@@ -177,7 +194,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                     className="text-sm font-semibold transition-colors py-2 relative text-white/90 hover:text-white"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
@@ -243,18 +260,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                   <Link
                     to={link.href}
                     onClick={(e) => {
-                      if (link.href.startsWith("#")) {
+                      setIsMobileMenuOpen(false);
+                      setOpenDropdown(null);
+                      if (link.href === "/#hero" && window.location.pathname === "/") {
                         e.preventDefault();
-                        setIsMobileMenuOpen(false);
-                        setOpenDropdown(null);
-                        const el = document.querySelector(link.href);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      } else if (link.href.startsWith("/#") && window.location.pathname === "/") {
+                        e.preventDefault();
+                        const id = link.href.replace("/#", "");
+                        const el = document.getElementById(id);
                         if (el)
                           el.scrollIntoView({
                             behavior: "smooth",
                             block: "start",
                           });
-                      } else {
-                        setIsMobileMenuOpen(false);
                       }
                     }}
                     className="block py-2.5 text-base font-bold text-[#1A2B44] hover:text-[#C99A55] border-b border-[#1A2B44]/12 flex-1"
