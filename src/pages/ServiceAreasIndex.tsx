@@ -55,8 +55,8 @@ export const ServiceAreasIndex: React.FC = () => {
   return (
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="Service Areas | VIX General Services"
-        description="VIX General Services proudly serves Boca Raton, Coral Springs, Parkland FL and surrounding South Florida areas. Find your city and discover our HVAC, electrical, solar, and EV charging services."
+        title="Service Areas in South Florida | VIX General Services"
+        description="VIX General Services proudly serves Boca Raton, Coral Springs, Parkland FL and surrounding South Florida areas with outdoor lighting, security cameras, smart automation, electrical, HVAC, and solar."
         canonical="/service-areas"
         ogImage={SERVICE_AREAS[0].heroImage}
         schemaJson={areasSchema}
@@ -198,7 +198,8 @@ export const ServiceAreasIndex: React.FC = () => {
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-7 max-w-2xl leading-relaxed">
               VIX General Services proudly serves homeowners across South
               Florida. Find your city below and discover how we can support your
-              HVAC, electrical, solar, and EV charging needs.
+              home with custom outdoor lighting, security camera systems, smart
+              automation, licensed electrical work, and high-efficiency HVAC.
             </p>
           </div>
         </div>

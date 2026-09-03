@@ -109,16 +109,16 @@ export const SERVICE_AREAS = [
     city: "Boca Raton",
     state: "FL",
     fullName: "Boca Raton, Florida",
-    heroImage: IMAGES.hero,
+    heroImage: IMAGES.services.outdoorLighting,
     galleryImages: [
-      IMAGES.services.hvac,
-      IMAGES.services.solar,
+      IMAGES.services.outdoorLighting,
+      IMAGES.services.securityCameras,
       IMAGES.services.electrical,
     ],
     shortDesc:
-      "Expert HVAC, electrical, solar, and EV charging services for Boca Raton homeowners, from Mizner Park to West Boca.",
+      "Premier outdoor landscape lighting, security camera systems, electrical, and HVAC services for Boca Raton estates.",
     longDesc:
-      "Boca Raton homeowners trust VIX General Services for expert HVAC installation and repair, electrical work, solar panel installation, and EV charger setup. With over 9 years of experience serving South Florida, we specialize in cooling and heating systems, electrical panel upgrades, custom solar solutions, and home EV charging stations. From Downtown Boca Raton to Boca Del Mar and Royal Palm Yacht & Country Club, we bring licensed, reliable service to every home.",
+      "From prestigious coastal estates to inland gated communities, Boca Raton homeowners choose VIX General Services for turnkey architectural outdoor lighting, 360° PTZ security cameras, smart home automation hubs, 200A electrical panel upgrades, and high-efficiency HVAC solutions. We understand Boca Raton architectural guidelines, coastal building codes, and tropical weather demands, delivering luxury results backed by comprehensive warranties.",
     neighborhoods: [
       "Downtown Boca Raton",
       "Boca Del Mar",
@@ -129,28 +129,28 @@ export const SERVICE_AREAS = [
     ],
     zipCodes: ["33431", "33432", "33433", "33434", "33486", "33487"],
     metaTitle:
-      "HVAC, Electrical & Solar Company Boca Raton FL | VIX General Services",
+      "Outdoor Lighting, Security, Electrical & HVAC Boca Raton FL | VIX",
     metaDescription:
-      "Top-rated HVAC, electrical, solar, and EV charging company in Boca Raton, FL. Installation, repair, and maintenance. Licensed & insured. Free estimates.",
+      "Premier outdoor landscape lighting, security camera installation, electrical, HVAC, and solar services in Boca Raton, FL. Licensed & insured. Free estimates.",
     reviewName: "Michael R.",
     reviewText:
-      "VIX installed our new AC system and did an amazing job. Professional, on time and very fair pricing! Highly recommend for any HVAC work.",
+      "VIX designed and installed our complete landscape lighting and outdoor security cameras. The transformation at night is stunning, and the app control is effortless!",
   },
   {
     slug: "coral-springs-fl",
     city: "Coral Springs",
     state: "FL",
     fullName: "Coral Springs, Florida",
-    heroImage: IMAGES.services.solar,
+    heroImage: IMAGES.services.securityCameras,
     galleryImages: [
+      IMAGES.services.securityCameras,
+      IMAGES.services.outdoorLighting,
       IMAGES.services.electrical,
-      IMAGES.services.evCharging,
-      IMAGES.gallery[4].url,
     ],
     shortDesc:
-      "Reliable HVAC, electrical, solar, and EV charging installation for Coral Springs homes with quality workmanship you can count on.",
+      "Trusted outdoor landscape lighting, 4K security camera installations, licensed electrical, and HVAC services for Coral Springs families.",
     longDesc:
-      "Coral Springs homeowners choose VIX General Services for their HVAC, electrical, solar, and EV charging needs. Our team regularly serves neighborhoods across Coral Springs with the same expert craftsmanship that has made us a trusted name throughout South Florida. Whether you need a new AC system, an electrical panel upgrade, rooftop solar, or a home EV charging station, we deliver dependable results with transparent pricing.",
+      "Coral Springs homeowners trust VIX General Services for dependable outdoor lighting, 4K security camera installations, smart automation, electrical panel replacements, and high-efficiency air conditioning. Our licensed technicians serve neighborhoods throughout Coral Springs with transparent upfront pricing, durable materials, and guaranteed craftsmanship.",
     neighborhoods: [
       "Eagle Trace",
       "Coral Springs Country Club",
@@ -160,28 +160,28 @@ export const SERVICE_AREAS = [
     ],
     zipCodes: ["33065", "33067", "33071", "33076"],
     metaTitle:
-      "HVAC, Electrical & Solar Company Coral Springs FL | VIX General Services",
+      "Outdoor Lighting, Security Cameras & Electrical Coral Springs FL | VIX",
     metaDescription:
-      "Professional HVAC, electrical, solar panel, and EV charging company serving Coral Springs, FL. Installation, repair, and maintenance. Free estimates available.",
+      "Expert outdoor lighting, 4K security camera installation, electrical, HVAC, and solar solutions in Coral Springs, FL. Licensed & insured. Free estimates available.",
     reviewName: "Jessica T.",
     reviewText:
-      "They installed our solar panels and the savings are real. Great team and excellent communication throughout the entire project.",
+      "They installed our 4K security camera system and outdoor lighting. Excellent communication, clean installation, and no monthly cloud fees!",
   },
   {
     slug: "parkland-fl",
     city: "Parkland",
     state: "FL",
     fullName: "Parkland, Florida",
-    heroImage: IMAGES.services.evCharging,
+    heroImage: IMAGES.services.smartAutomation,
     galleryImages: [
+      IMAGES.services.smartAutomation,
+      IMAGES.services.outdoorLighting,
       IMAGES.services.hvac,
-      IMAGES.gallery[2].url,
-      IMAGES.services.solar,
     ],
     shortDesc:
-      "Trusted HVAC, electrical, solar, and EV charging services for Parkland residents with quality work backed by a 5-star reputation.",
+      "Luxury landscape lighting, security surveillance, smart home automation, and HVAC services for Parkland equestrian and golf estates.",
     longDesc:
-      "Located in the heart of northwest Broward County, Parkland homeowners rely on VIX General Services for all their home comfort and energy needs. We specialize in installing and repairing HVAC systems, upgrading electrical panels, designing custom solar solutions, and installing EV charging stations. Our team brings 9+ years of experience to every Parkland project with licensed technicians and reliable scheduling.",
+      "Located in northwest Broward County, Parkland luxury estates and golf communities rely on VIX General Services for custom low-voltage landscape lighting, motorized 360° PTZ security cameras, centralized smart control hubs, electrical infrastructure, and high-SEER2 climate control. We bring 9+ years of Florida craftsmanship and attention to detail to every Parkland home.",
     neighborhoods: [
       "Heron Bay",
       "Parkland Golf & Country Club",
@@ -191,12 +191,12 @@ export const SERVICE_AREAS = [
     ],
     zipCodes: ["33067", "33076"],
     metaTitle:
-      "HVAC, Electrical & EV Charging Company Parkland FL | VIX General Services",
+      "Landscape Lighting, Security & Smart Automation Parkland FL | VIX",
     metaDescription:
-      "Trusted HVAC, electrical, solar, and EV charging company in Parkland, FL. Installation, repair, panel upgrades, and maintenance. Free estimates.",
+      "Custom landscape lighting, 4K security camera systems, smart automation, electrical, and HVAC company serving Parkland, FL. Free estimates.",
     reviewName: "Daniel S.",
     reviewText:
-      "The EV charger installation was quick and flawless. Highly recommend VIX General Services for any electrical or HVAC project.",
+      "The multi-zone outdoor lighting and smart automation controller work seamlessly together. Highly recommend VIX General Services for luxury home projects.",
   },
 ];
 
