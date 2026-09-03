@@ -86,11 +86,6 @@ export const IMAGES = {
       title: "360° PTZ 4K Security Camera Setup",
       category: "SECURITY",
     },
-    {
-      url: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop",
-      title: "Smart Lighting Hub & Multi-Zone Controller",
-      category: "SMART AUTOMATION",
-    },
   ],
 
   team: "https://vibe.filesafe.space/1787931819686809992/assets/bc154887-f728-4e55-90d3-ebaf87cd526b.png",
