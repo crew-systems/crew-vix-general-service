@@ -1,0 +1,390 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core palette extracted from MK Freitas logo */
+    --background: 222 18% 97%; /* #F5F6F8 Cool light gray */
+    --foreground: 212 45% 14%; /* #141B2D Navy-black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 212 45% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 45% 14%;
+
+    --primary: 213 42% 19%; /* #1A2B44 Deep navy (from logo background) */
+    --primary-foreground: 35 40% 92%; /* #EDE4D5 Warm cream */
+
+    --secondary: 35 35% 94%; /* #F2EAE0 Off-white cream */
+    --secondary-foreground: 213 42% 19%;
+
+    --muted: 215 15% 93%;
+    --muted-foreground: 212 8% 42%;
+
+    --accent: 32 38% 58%; /* #C99A55 Warm gold/tan (from logo MK letters) */
+    --accent-foreground: 0 0% 100%;
+
+    --gold: 34 45% 62%; /* #D4A55C Brighter gold accent */
+    --earth: 28 25% 42%; /* #8B7355 Muted bronze */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 213 20% 88%;
+    --input: 213 20% 88%;
+    --ring: 213 42% 19%;
+
+    /* Varied radius tokens to avoid AI-generic look */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.625rem;
+    --radius-lg: 0.875rem;
+    --radius-xl: 1rem;
+
+    /* Standardized responsive spacing rhythm.
+       One scale drives every section's vertical padding so the
+       layout breathes identically across iPhone X / XR / desktop. */
+    --section-py: 5rem; /* 80px base */
+    --section-py-lg: 6rem; /* 96px large screens */
+    --section-gap: 2.5rem; /* 40px between header & content */
+  }
+
+  /* Fluid section padding: scales smoothly with viewport width.
+     Eliminates the iPhone X vs XR proportion mismatch caused by
+     fixed rem values that look different at different DPRs. */
+  .section-pad {
+    padding-top: clamp(3.5rem, 9vw, var(--section-py));
+    padding-bottom: clamp(3.5rem, 9vw, var(--section-py));
+  }
+  @media (min-width: 1024px) {
+    .section-pad {
+      padding-top: var(--section-py-lg);
+      padding-bottom: var(--section-py-lg);
+    }
+  }
+
+  /* Consistent horizontal gutters everywhere */
+  .gutter-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .gutter-x {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .gutter-x {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#F5F6F8] text-[#141B2D] antialiased selection:bg-[#C99A55] selection:text-white;
+    font-family: "Sora", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-heading {
+    font-family: "Sora", sans-serif;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.text-shadow-sm {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Full-height that works consistently on iOS (100vh includes the
+   address bar on iPhone, so it clips differently on X vs XR).
+   dvh = dynamic viewport height; falls back to vh. */
+.min-h-screen-dvh {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.h-screen-dvh {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* === HERO RESPONSIVE BEHAVIOR ===
+   Desktop/tablet keep 100dvh with vertical centering.
+   Mobile: NO forced viewport height. Content flows from the top
+   and the section ends naturally right after the last element,
+   eliminating the large empty area under the trust badge. */
+.hero-section {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-section {
+    min-height: auto;
+    height: auto;
+    align-items: flex-start; /* top-align instead of vertical center */
+    padding-top: 5.5rem; /* clear fixed header */
+    padding-bottom: 1.75rem;
+  }
+  /* Left column: flow from top on mobile, not vertically centered */
+  .hero-left {
+    justify-content: flex-start;
+  }
+}
+
+/* Fluid hero content padding.
+   Mobile is tight; desktop keeps generous breathing room. */
+.hero-content {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 640px) {
+  .hero-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero-content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Fluid headline: scales smoothly from small phones to desktop. */
+.hero-headline {
+  font-size: clamp(1.6rem, 7.5vw, 2.25rem);
+  line-height: 1.05;
+}
+@media (min-width: 640px) {
+  .hero-headline {
+    font-size: clamp(2.25rem, 6vw, 2.5rem);
+  }
+}
+
+/* Sharper, more deliberate shadows */
+.shadow-crisp {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-crisp-lg {
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1a2b44;
+}
+::-webkit-scrollbar-thumb {
+  background: #c99a55;
+  border-radius: 5px;
+}
+::webkit-scrollbar-thumb:hover {
+  background: #d4a55c;
+}
+
+/* Hide LeadConnector / GHL chat widget when estimate modal is open on mobile */
+@media (max-width: 768px) {
+  body.modal-open #lc-chat-widget,
+  body.modal-open .lc-chat-widget,
+  body.modal-open [id*="chat-widget"],
+  body.modal-open [class*="lc-chat"] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+/* === MOBILE HEADER === */
+.site-header {
+  padding-top: max(0.625rem, env(safe-area-inset-top));
+}
+
+@media (max-width: 359px) {
+  .site-header {
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+    padding-bottom: 0.5rem;
+  }
+  /* Keep logo within viewport on the narrowest phones */
+  .header-logo {
+    max-height: 2.25rem;
+    max-width: 60vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    max-width: 62vw;
+  }
+}
+
+/* === MOBILE HERO RHYTHM ===
+   Scoped to smartphones (<= 767px). Desktop/tablet untouched.
+   Tight, deliberate vertical spacing — content flows top-to-bottom
+   with controlled gaps instead of being stretched to fill a viewport. */
+@media (max-width: 767px) {
+  .hero-compact {
+    gap: 0.75rem;
+  }
+  /* Location badge -> headline */
+  .hero-compact .hero-badge {
+    margin-bottom: 0.75rem;
+  }
+  /* Headline -> description */
+  .hero-compact h1 {
+    margin-bottom: 0.875rem;
+    line-height: 1.05;
+  }
+  /* Description -> CTAs */
+  .hero-compact p {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+  }
+  /* CTA row -> reviews */
+  .hero-compact .hero-cta-row {
+    margin-bottom: 1.375rem;
+    gap: 0.625rem;
+  }
+  /* Reviews / social proof block */
+  .hero-compact .hero-social {
+    padding-top: 0.875rem;
+    gap: 1rem;
+  }
+}
+
+/* Short-height devices (e.g. iPhone SE 375x667, landscape phones):
+   reduce vertical rhythm so nothing is clipped; allow natural scroll. */
+@media (max-width: 480px) and (max-height: 700px) {
+  .hero-section {
+    padding-top: 5rem;
+    padding-bottom: 1.25rem;
+  }
+  .hero-content {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  .hero-compact {
+    gap: 0.5rem;
+  }
+  .hero-compact .hero-badge {
+    margin-bottom: 0.5rem;
+  }
+  .hero-compact h1 {
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
+    margin-bottom: 0.5rem;
+  }
+  .hero-compact p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  .hero-compact .hero-cta-row {
+    margin-bottom: 1rem;
+  }
+  .hero-compact .hero-social {
+    padding-top: 0.625rem;
+  }
+  .hero-cta-btn {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small width devices (<= 359px, e.g. 320x568, 360x640). */
+@media (max-width: 359px) {
+  .hero-content {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  .hero-compact h1 {
+    font-size: 1.45rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .hero-compact p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+  .hero-compact .hero-badge {
+    margin-bottom: 0.5rem;
+  }
+  .hero-compact .hero-cta-row {
+    margin-bottom: 1rem;
+  }
+  .hero-cta-btn {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.78rem;
+  }
+  .hero-compact .avatar-sm {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  .hero-compact .hero-social {
+    gap: 0.625rem;
+  }
+  .hero-compact .text-sm {
+    font-size: 0.72rem;
+  }
+}
+
+/* Landscape smartphones: allow scroll, don't force one viewport. */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+  }
+}
