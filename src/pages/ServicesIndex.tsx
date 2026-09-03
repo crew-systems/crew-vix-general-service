@@ -77,11 +77,11 @@ export const ServicesIndex: React.FC = () => {
   return (
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="Our Services | HVAC, Electrical, Solar & EV Charging | VIX General Services"
-        description="Explore VIX General Services full range of solutions in South Florida: HVAC installation & repair, electrical services & panel upgrades, solar energy systems, and EV chargers."
+        title="Our Services | Outdoor Lighting, Security, Smart Automation, HVAC & Electrical | VIX"
+        description="Explore VIX General Services full range of residential and commercial solutions in South Florida: outdoor landscape lighting, 4K security cameras, smart automation hubs, electrical, HVAC, solar, and EV charging."
         canonical="/services"
         ogImage={SERVICES[0].heroImage}
-        ogImageAlt="VIX General Services - South Florida Home Services"
+        ogImageAlt="VIX General Services - South Florida Specialized Services"
         schemaJson={[itemListSchema, breadcrumbSchema]}
       />
 
@@ -89,7 +89,7 @@ export const ServicesIndex: React.FC = () => {
         isScrolled={isScrolled}
         isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
-        onOpenEstimate={() => handleOpenEstimate("hvac")}
+        onOpenEstimate={() => handleOpenEstimate("outdoor-lighting")}
       />
 
       {/* Hero */}
@@ -114,9 +114,9 @@ export const ServicesIndex: React.FC = () => {
               <span className="text-[#C99A55]">Services</span>
             </nav>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/10 backdrop-blur-md border border-white/20 mb-4 text-white text-xs sm:text-sm font-semibold">
-              <Sparkles className="w-4 h-4 text-[#C99A55]" />
-              <span>Full-Spectrum Residential & Commercial Contracting</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#C99A55]/15 border border-[#C99A55]/30 text-[#C99A55] text-xs font-bold uppercase tracking-wider mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Complete Residential & Commercial Solutions</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white leading-[1.1] mb-5 tracking-tight">
@@ -124,7 +124,7 @@ export const ServicesIndex: React.FC = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-7 max-w-2xl leading-relaxed">
-              From high-efficiency air conditioning and modern electrical panels to rooftop solar and rapid EV charging, our licensed technicians provide reliable, code-compliant solutions throughout South Florida.
+              From architectural outdoor lighting and 4K security surveillance to smart automation, electrical panels, HVAC, solar, and EV charging, our licensed technicians provide reliable, code-compliant solutions throughout South Florida.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-white/90">

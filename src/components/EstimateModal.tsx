@@ -17,13 +17,37 @@ interface EstimateModalProps {
 }
 
 const mapServiceKeyToLabel = (key?: string): string => {
-  if (!key) return "HVAC Service";
+  if (!key) return "Other Service";
   const lower = key.toLowerCase();
-  if (lower.includes("hvac") || lower.includes("air")) return "HVAC Service";
+  if (
+    lower.includes("light") ||
+    lower.includes("outdoor") ||
+    lower.includes("landscape")
+  )
+    return "Outdoor & Landscape Lighting";
+  if (
+    lower.includes("camera") ||
+    lower.includes("security") ||
+    lower.includes("cctv")
+  )
+    return "Security Camera Systems";
+  if (
+    lower.includes("auto") ||
+    lower.includes("smart") ||
+    lower.includes("hub")
+  )
+    return "Smart Control Hub & Automation";
+  if (
+    lower.includes("hvac") ||
+    lower.includes("air") ||
+    lower.includes("cool")
+  )
+    return "HVAC Service";
   if (lower.includes("electr")) return "Electrical Service";
   if (lower.includes("solar")) return "Solar Installation";
-  if (lower.includes("ev") || lower.includes("charg")) return "EV Charging Installation";
-  return key;
+  if (lower.includes("ev") || lower.includes("charg"))
+    return "EV Charging Installation";
+  return "Other Service";
 };
 
 export const EstimateModal: React.FC<EstimateModalProps> = ({
@@ -151,8 +175,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
             Get Your Free Estimate
           </h3>
           <p className="text-[#EDE4D6]/80 text-sm sm:text-base mt-2 max-w-lg">
-            Tell us about your project and our HVAC, electrical, solar, or EV
-            charging specialists will contact you to schedule your consultation.
+            Tell us about your project and our outdoor lighting, security camera, smart automation, electrical, or HVAC specialists will contact you to schedule your consultation.
           </p>
         </div>
 
@@ -271,10 +294,19 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                         }
                         className="w-full px-3.5 py-2.5 rounded-lg border border-[#1A2B44]/15 bg-[#F7F8FA] text-sm focus:outline-none focus:ring-2 focus:ring-[#C99A55]"
                       >
-                        <option value="HVAC Service">HVAC Service</option>
+                        <option value="Outdoor & Landscape Lighting">
+                          Outdoor & Landscape Lighting
+                        </option>
+                        <option value="Security Camera Systems">
+                          Security Camera Systems
+                        </option>
+                        <option value="Smart Control Hub & Automation">
+                          Smart Control Hub & Automation
+                        </option>
                         <option value="Electrical Service">
                           Electrical Service
                         </option>
+                        <option value="HVAC Service">HVAC Service</option>
                         <option value="Solar Installation">
                           Solar Installation
                         </option>

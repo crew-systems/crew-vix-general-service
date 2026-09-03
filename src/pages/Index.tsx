@@ -17,6 +17,10 @@ import { IMAGES, COMPANY_INFO } from "../data/landscapingData";
 const Index: React.FC = () => {
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
 
+  const [estimateService, setEstimateService] = useState<string | undefined>(
+    "hvac",
+  );
+
   // Hide chat widget when modal is open on mobile
   React.useEffect(() => {
     const chatWidget = document.querySelector<HTMLElement>(
@@ -34,7 +38,8 @@ const Index: React.FC = () => {
     }
   }, [isEstimateModalOpen]);
 
-  const handleOpenEstimate = () => {
+  const handleOpenEstimate = (service?: string) => {
+    setEstimateService(service || "hvac");
     setIsEstimateModalOpen(true);
   };
 
@@ -58,8 +63,8 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="VIX General Services | Expert HVAC, Electrical, Solar & EV Charging"
-        description="Expert HVAC installation, repair, and maintenance. Also providing electrical, solar, and EV charging services. 9+ years of trusted craftsmanship serving South Florida."
+        title="VIX General Services | Outdoor Lighting, Security Cameras, Smart Automation, HVAC & Electrical"
+        description="Expert architectural outdoor lighting, 4K security cameras, smart home automation, licensed electrical, HVAC, solar, and EV charging in South Florida. Free estimates."
         canonical="/"
         ogImage={IMAGES.ogMeta}
         schemaJson={homeSchema}
@@ -104,6 +109,7 @@ const Index: React.FC = () => {
       <EstimateModal
         isOpen={isEstimateModalOpen}
         onClose={handleCloseEstimate}
+        defaultService={estimateService}
       />
     </div>
   );

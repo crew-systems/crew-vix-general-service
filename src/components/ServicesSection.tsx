@@ -23,13 +23,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             <span className="text-[#C99A55]">Complete Home Solutions.</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            From HVAC installation to electrical, solar, and EV charging, our
-            specialized team delivers superior quality on every project.
+            From architectural outdoor lighting and 4K security camera systems to smart automation, electrical, HVAC, solar, and EV charging, our specialized team delivers superior quality on every project.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {SERVICES.map((service, index) => {
             const Icon = service.icon;
             return (

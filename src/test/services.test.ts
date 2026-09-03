@@ -4,9 +4,18 @@ import fs from "fs";
 import path from "path";
 
 describe("Services Data Registry", () => {
-  it("should define exactly the 4 primary services", () => {
+  it("should define exactly all 7 services including outdoor lighting and security systems", () => {
     const slugs = getAllServiceSlugs();
-    expect(slugs).toEqual(["hvac", "electrical", "solar", "ev-charging"]);
+    expect(slugs).toEqual([
+      "outdoor-lighting",
+      "security-cameras",
+      "smart-automation",
+      "hvac",
+      "electrical",
+      "solar",
+      "ev-charging",
+    ]);
+    expect(slugs.length).toBe(7);
   });
 
   it("should have comprehensive SEO metadata for every service", () => {
@@ -42,6 +51,9 @@ describe("Services Data Registry", () => {
   });
 
   it("should find service by slug case-insensitively and handle invalid slugs", () => {
+    expect(getServiceBySlug("OUTDOOR-LIGHTING")?.slug).toBe("outdoor-lighting");
+    expect(getServiceBySlug("security-cameras")?.name).toBe("Security Camera & Surveillance Systems");
+    expect(getServiceBySlug("smart-automation")?.slug).toBe("smart-automation");
     expect(getServiceBySlug("HVAC")?.slug).toBe("hvac");
     expect(getServiceBySlug("electrical")?.name).toBe("Licensed Electrical Services");
     expect(getServiceBySlug("SOLAR")?.slug).toBe("solar");
@@ -51,16 +63,18 @@ describe("Services Data Registry", () => {
 });
 
 describe("Sitemap & Robots.txt Parity", () => {
-  it("sitemap.xml should reference vixgeneralservices.com and all service subpages", () => {
+  it("sitemap.xml should reference vixgeneralservices.com and all 7 service subpages", () => {
     const sitemapPath = path.resolve(__dirname, "../../public/sitemap.xml");
     const sitemapContent = fs.readFileSync(sitemapPath, "utf8");
 
     expect(sitemapContent).toContain("https://www.vixgeneralservices.com/");
     expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services");
-    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/hvac");
-    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/electrical");
-    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/solar");
-    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services/ev-charging");
+    
+    // Test that every service slug has its canonical URL declared in sitemap.xml
+    getAllServiceSlugs().forEach((slug) => {
+      expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/services/${slug}`);
+    });
+
     expect(sitemapContent).not.toContain("mkfreitasllc.com");
   });
 

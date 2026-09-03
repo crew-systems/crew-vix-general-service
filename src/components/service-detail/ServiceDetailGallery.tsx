@@ -36,13 +36,13 @@ export const ServiceDetailGallery: React.FC<ServiceDetailGalleryProps> = ({ serv
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
             <Camera className="w-3.5 h-3.5 text-[#C99A55]" />
-            <span>Proven Craftsmanship</span>
+            <span>Project Showcase & Standards</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-4 tracking-tight">
-            RECENT {service.shortName.toUpperCase()} WORK & PROJECTS
+            RECENT {service.shortName.toUpperCase()} SHOWCASE & EXAMPLES
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Take a look at real installations and service work completed by our licensed technicians across South Florida.
+            Explore project examples and system architecture designed and installed by our licensed technicians across South Florida.
           </p>
         </div>
 

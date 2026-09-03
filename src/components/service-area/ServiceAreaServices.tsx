@@ -8,40 +8,45 @@ type Area = (typeof SERVICE_AREAS)[number];
 
 const services = [
   {
-    title: "HVAC Service",
-    desc: "Installation, repair, and maintenance of cooling and heating systems.",
-    slug: "hvac",
+    title: "Outdoor & Landscape Lighting",
+    desc: "Custom architectural brass LED spotlights, pole fixtures, and multi-zone dusk-to-dawn illumination.",
+    slug: "outdoor-lighting",
   },
   {
-    title: "Electrical Service",
-    desc: "Panel upgrades, wiring, and lighting for safe, reliable home electrical systems.",
+    title: "Security Cameras & 4K CCTV",
+    desc: "Commercial-grade 360° PTZ cameras, 4K local NVR recording, and 24/7 smartphone monitoring.",
+    slug: "security-cameras",
+  },
+  {
+    title: "Smart Control Hub & Automation",
+    desc: "Centralized smartphone app control, scheduling, and NEMA 3R weatherproof surge-protected panels.",
+    slug: "smart-automation",
+  },
+  {
+    title: "Licensed Electrical Services",
+    desc: "200A panel upgrades, rewiring, surge protection, and code-compliant installations.",
     slug: "electrical",
   },
   {
-    title: "Solar Installation",
-    desc: "Custom solar solutions to save money and power your home sustainably.",
+    title: "HVAC & Air Conditioning",
+    desc: "High-efficiency AC installation, emergency repair, and seasonal maintenance.",
+    slug: "hvac",
+  },
+  {
+    title: "Solar Energy Systems",
+    desc: "Turnkey Tier-1 solar panel installation, FPL net-metering, and battery backup storage.",
     slug: "solar",
   },
   {
-    title: "EV Charging",
-    desc: "Home EV charging stations installed for convenience, speed, and safety.",
+    title: "EV Charging Station Installation",
+    desc: "Level 2 home and commercial EV charger installations for Tesla and universal vehicles.",
     slug: "ev-charging",
-  },
-  {
-    title: "System Upgrades",
-    desc: "Modernizing outdated HVAC and electrical systems with quality guarantee.",
-    slug: "electrical",
-  },
-  {
-    title: "Free Consultation",
-    desc: "Professional assessment with a detailed no-obligation estimate.",
-    slug: "hvac",
   },
 ];
 
 interface ServiceAreaServicesProps {
   area: Area;
-  onOpenEstimate: () => void;
+  onOpenEstimate: (service?: string) => void;
 }
 
 export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
@@ -96,7 +101,7 @@ export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
                     <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
                   </Link>
                   <button
-                    onClick={onOpenEstimate}
+                    onClick={() => onOpenEstimate(service.slug)}
                     className="text-xs font-bold text-[#C99A55] hover:underline"
                   >
                     Get Estimate
@@ -108,7 +113,7 @@ export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
 
           <div className="mt-14 text-center">
             <button
-              onClick={onOpenEstimate}
+              onClick={() => onOpenEstimate()}
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] hover:bg-[#243652] font-bold text-base transition-all shadow-crisp hover:shadow-crisp-lg"
             >
               <span>Your Free Estimate in {area.city}</span>

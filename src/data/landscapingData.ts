@@ -17,6 +17,12 @@ export const IMAGES = {
       "https://vibe.filesafe.space/1787931819686809992/attachments/a4ee8ea8-c755-4fb8-ac08-0e96c7c4a372.png",
     evCharging:
       "https://vibe.filesafe.space/1787931819686809992/attachments/20d8b716-5308-409a-88ce-d2e6584009a1.png",
+    outdoorLighting:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+    securityCameras:
+      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1200&auto=format&fit=crop",
+    smartAutomation:
+      "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop",
   },
 
   gallery: [
@@ -64,6 +70,26 @@ export const IMAGES = {
       url: "https://vibe.filesafe.space/1787931819686809992/attachments/38de8e80-7296-4629-8d66-f8063a219817.jpg",
       title: "Commercial Interior Renovation",
       category: "COMMERCIAL INTERIOR",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop",
+      title: "Pool & Landscape Architectural Lighting",
+      category: "OUTDOOR LIGHTING",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+      title: "Estate Pathway & Palm Tree Uplighting",
+      category: "OUTDOOR LIGHTING",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=1200&auto=format&fit=crop",
+      title: "360° PTZ 4K Security Camera Setup",
+      category: "SECURITY",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop",
+      title: "Smart Lighting Hub & Multi-Zone Controller",
+      category: "SMART AUTOMATION",
     },
   ],
 
@@ -176,7 +202,7 @@ export const SERVICE_AREAS = [
 
 export const COMPANY_INFO = {
   name: "VIX General Services",
-  tagline: "Expert HVAC, Electrical, Solar & EV Charging Services",
+  tagline: "Expert Outdoor Lighting, Security Cameras, Smart Automation, HVAC & Electrical",
   phone: "(954) 330-9296",
   email: "info@vixgeneralservices.com",
   location:

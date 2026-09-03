@@ -148,10 +148,26 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
             <ul className="space-y-2 text-xs text-[#EDE4D6]/75 font-medium">
               <li>
                 <Link
-                  to="/services/hvac"
+                  to="/services/outdoor-lighting"
                   className="hover:text-white transition-colors"
                 >
-                  HVAC Services
+                  Outdoor & Landscape Lighting
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/security-cameras"
+                  className="hover:text-white transition-colors"
+                >
+                  Security Cameras & CCTV
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/smart-automation"
+                  className="hover:text-white transition-colors"
+                >
+                  Smart Control Automation
                 </Link>
               </li>
               <li>
@@ -164,10 +180,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
               </li>
               <li>
                 <Link
+                  to="/services/hvac"
+                  className="hover:text-white transition-colors"
+                >
+                  HVAC & Air Conditioning
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/services/solar"
                   className="hover:text-white transition-colors"
                 >
-                  Solar Solutions
+                  Solar Energy Solutions
                 </Link>
               </li>
               <li>
@@ -175,7 +199,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
                   to="/services/ev-charging"
                   className="hover:text-white transition-colors"
                 >
-                  EV Charging
+                  EV Charging Stations
                 </Link>
               </li>
               <li>
@@ -183,7 +207,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
                   to="/services"
                   className="text-[#C99A55] hover:text-white transition-colors font-bold"
                 >
-                  All Services →
+                  All 7 Services →
                 </Link>
               </li>
             </ul>

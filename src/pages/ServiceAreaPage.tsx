@@ -13,6 +13,9 @@ import { ServiceAreaWhyGallery } from "../components/service-area/ServiceAreaWhy
 export const ServiceAreaPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
+  const [estimateService, setEstimateService] = useState<string | undefined>(
+    "outdoor-lighting",
+  );
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -77,7 +80,10 @@ export const ServiceAreaPage: React.FC = () => {
     image: area.heroImage,
   };
 
-  const handleOpenEstimate = () => setIsEstimateModalOpen(true);
+  const handleOpenEstimate = (service?: string) => {
+    setEstimateService(service || "outdoor-lighting");
+    setIsEstimateModalOpen(true);
+  };
 
   return (
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
@@ -109,6 +115,7 @@ export const ServiceAreaPage: React.FC = () => {
       <EstimateModal
         isOpen={isEstimateModalOpen}
         onClose={() => setIsEstimateModalOpen(false)}
+        defaultService={estimateService}
       />
     </div>
   );

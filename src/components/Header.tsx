@@ -42,11 +42,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
       href: "/services",
       hasDropdown: true,
       items: [
-        { name: "HVAC Services", href: "/services/hvac" },
+        {
+          name: "Outdoor & Landscape Lighting",
+          href: "/services/outdoor-lighting",
+        },
+        {
+          name: "Security Camera Systems",
+          href: "/services/security-cameras",
+        },
+        {
+          name: "Smart Control Automation",
+          href: "/services/smart-automation",
+        },
         { name: "Electrical Services", href: "/services/electrical" },
-        { name: "Solar Energy", href: "/services/solar" },
-        { name: "EV Charging", href: "/services/ev-charging" },
-        { name: "View All Services →", href: "/services" },
+        { name: "HVAC & Air Conditioning", href: "/services/hvac" },
+        { name: "Solar Energy Systems", href: "/services/solar" },
+        { name: "EV Charging Stations", href: "/services/ev-charging" },
+        { name: "View All 7 Services →", href: "/services" },
       ],
     },
     {
@@ -133,7 +145,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                     {/* Dropdown Menu */}
                     <div
                       onMouseEnter={() => openMenu(link.name)}
-                      className={`absolute top-full left-0 w-56 pt-2 transition-all duration-200 ${
+                      className={`absolute top-full left-0 w-72 pt-2 transition-all duration-200 ${
                         openDropdown === link.name
                           ? "opacity-100 translate-y-0 pointer-events-auto"
                           : "opacity-0 translate-y-2 pointer-events-none"
