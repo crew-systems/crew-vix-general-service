@@ -124,8 +124,9 @@ export const ServiceAreaPage: React.FC = () => {
     ],
   };
 
-  const handleOpenEstimate = (service?: string) => {
-    setEstimateService(service || "outdoor-lighting");
+  const handleOpenEstimate = (service?: unknown) => {
+    const validService = typeof service === "string" ? service : "outdoor-lighting";
+    setEstimateService(validService);
     setIsEstimateModalOpen(true);
   };
 

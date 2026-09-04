@@ -13,11 +13,11 @@ import { GHLFormEmbed } from "./GHLFormEmbed";
 interface EstimateModalProps {
   isOpen: boolean;
   onClose: () => void;
-  defaultService?: string;
+  defaultService?: unknown;
 }
 
-const mapServiceKeyToLabel = (key?: string): string => {
-  if (!key) return "General Consultation";
+const mapServiceKeyToLabel = (key?: unknown): string => {
+  if (!key || typeof key !== "string") return "General Consultation";
   const lower = key.toLowerCase();
   if (lower.includes("light") || lower.includes("outdoor"))
     return "Outdoor & Landscape Lighting";
@@ -51,6 +51,8 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
 
   if (!isOpen) return null;
 
+  const isExplicitService =
+    typeof defaultService === "string" && defaultService.trim().length > 0;
   const serviceLabel = mapServiceKeyToLabel(defaultService);
 
   return (
@@ -77,7 +79,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#C99A55]/20 border border-[#C99A55]/40 text-[#C99A55] text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" /> Free &amp; No Obligation
             </span>
-            {defaultService && (
+            {isExplicitService && (
               <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/20 text-[#EDE4D6] text-xs font-medium">
                 Selected: <strong className="ml-1 text-white">{serviceLabel}</strong>
               </span>
@@ -88,7 +90,8 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
             Get Your Free Estimate
           </h3>
           <p className="text-[#EDE4D6]/80 text-xs sm:text-sm mt-1 max-w-lg">
-            Complete the form below for {serviceLabel.toLowerCase()} and our South Florida team will prepare a custom quote.
+            Complete the form below{isExplicitService ? ` for ${serviceLabel.toLowerCase()}` : ""}{" "}
+            and our South Florida team will prepare a custom quote.
           </p>
         </div>
 
@@ -109,7 +112,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
               <span>Need immediate assistance? Speak with our team directly:</span>
             </div>
             <a
-              href={`tel:${COMPANY_INFO.phone}`}
+              href={`tel:+1${COMPANY_INFO.phone.replace(/\D/g, "")}`}
               className="font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors underline shrink-0"
             >
               {COMPANY_INFO.phone}

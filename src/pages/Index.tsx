@@ -41,8 +41,9 @@ const Index: React.FC = () => {
     }
   }, [isEstimateModalOpen]);
 
-  const handleOpenEstimate = (service?: string) => {
-    setEstimateService(service || "hvac");
+  const handleOpenEstimate = (service?: unknown) => {
+    const validService = typeof service === "string" ? service : undefined;
+    setEstimateService(validService);
     setIsEstimateModalOpen(true);
   };
 

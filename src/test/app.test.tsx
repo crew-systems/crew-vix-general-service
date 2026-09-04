@@ -1,6 +1,6 @@
 import React from "react";
 import { describe, it, expect, beforeAll } from "vitest";
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import App from "../App";
 
 describe("App Render Test", () => {
@@ -30,5 +30,14 @@ describe("App Render Test", () => {
     expect(container).toBeDefined();
     expect(container.innerHTML).not.toContain("An unexpected error occurred");
     expect(container.innerHTML).toContain("VIX General Services");
+  });
+
+  it("opens estimate modal on clicking Free Estimate button without crashing", () => {
+    const { container, getAllByText } = render(<App />);
+    const buttons = getAllByText("Free Estimate");
+    expect(buttons.length).toBeGreaterThan(0);
+    fireEvent.click(buttons[0]);
+    expect(container.innerHTML).not.toContain("An unexpected error occurred");
+    expect(container.querySelector("#inline-ZPe9ADAkmygEVDdixGlE-modal")).not.toBeNull();
   });
 });
