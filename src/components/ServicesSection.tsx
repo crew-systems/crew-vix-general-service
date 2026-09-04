@@ -83,13 +83,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
-          className="w-full"
+          className="w-full carousel-edge-fade"
         >
           <Carousel
             setApi={setApi}
             opts={{
               align: "start",
               loop: true,
+              duration: 35,
             }}
             className="w-full cursor-grab active:cursor-grabbing"
           >
