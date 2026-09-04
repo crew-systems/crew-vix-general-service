@@ -218,6 +218,71 @@
     0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* === SECTION TRANSITIONS ===
+   Progressive enhancement only: existing section colors, type, spacing, and
+   layout stay untouched. JavaScript supplies the previous section's computed
+   background color so alternating light/dark boundaries blend naturally. */
+section[data-section-transition="true"] {
+  position: relative;
+}
+
+.section-transitions-ready section[data-section-transition="true"] {
+  opacity: 0;
+  transform: translate3d(0, 1.5rem, 0);
+  transition:
+    opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.section-transitions-ready section[data-section-transition="true"].is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+section[data-section-divider="true"]::before {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: clamp(1rem, 6vw, 6rem);
+  right: clamp(1rem, 6vw, 6rem);
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(201, 154, 85, 0.3),
+    transparent
+  );
+}
+
+section[data-section-blend="true"]::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: clamp(2rem, 5vw, 4rem);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--section-blend-from) 0%,
+    transparent 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-transitions-ready section[data-section-transition="true"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

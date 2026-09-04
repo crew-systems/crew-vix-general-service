@@ -12,6 +12,7 @@ import { ServicesIndex } from "./pages/ServicesIndex";
 import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { SectionTransitions } from "./components/SectionTransitions";
 
 import { ErrorBoundary } from "./components/ErrorBoundary";
 
@@ -39,6 +40,7 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <SectionTransitions />
           </BrowserRouter>
         </TooltipProvider>
       </QueryClientProvider>
