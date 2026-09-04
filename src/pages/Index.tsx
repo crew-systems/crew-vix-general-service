@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Sparkles } from "lucide-react";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { TrustMarquee } from "../components/TrustMarquee";
@@ -11,6 +12,7 @@ import { ReviewsSection } from "../components/ReviewsSection";
 import { FinalCta } from "../components/FinalCta";
 import { Footer } from "../components/Footer";
 import { EstimateModal } from "../components/EstimateModal";
+import { GHLFormEmbed } from "../components/GHLFormEmbed";
 import { SEOHead } from "../components/SEOHead";
 import { IMAGES, COMPANY_INFO } from "../data/landscapingData";
 import { SERVICES } from "../data/servicesData";
@@ -172,6 +174,26 @@ const Index: React.FC = () => {
 
         {/* Homeowner Reviews */}
         <ReviewsSection />
+
+        {/* On-Page Estimate Form Section */}
+        <section id="estimate" className="section-pad bg-white border-t border-[#1A2B44]/10">
+          <div className="container mx-auto gutter-x max-w-4xl">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#C99A55]/20 border border-[#C99A55]/40 text-[#C99A55] text-xs font-bold uppercase tracking-wider mb-3">
+                <Sparkles className="w-3.5 h-3.5" /> Free &amp; No Obligation
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-3">
+                Request Your Free Estimate
+              </h2>
+              <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto">
+                Tell us about your project below and our South Florida team will get in touch to schedule your consultation and provide transparent pricing.
+              </p>
+            </div>
+            <div className="bg-[#F7F8FA] rounded-2xl p-4 sm:p-8 border border-[#1A2B44]/10 shadow-crisp">
+              <GHLFormEmbed instanceId="home-section" minHeight={874} />
+            </div>
+          </div>
+        </section>
 
         {/* Final High-Impact CTA */}
         <FinalCta onOpenEstimate={handleOpenEstimate} />

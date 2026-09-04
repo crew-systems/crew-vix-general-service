@@ -182,10 +182,16 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         {/* Carousel Pagination Dots & All Services Link */}
         <div className="flex flex-col sm:flex-row items-center justify-between mt-10 gap-4 pt-6 border-t border-[#1A2B44]/10">
           <div className="flex items-center gap-2">
-            {Array.from({ length: count }).map((_, i) => (
+            {Array.from({ length: Math.max(0, count || 0) }).map((_, i) => (
               <button
                 key={i}
-                onClick={() => api?.scrollTo(i)}
+                onClick={() => {
+                  try {
+                    api?.scrollTo(i);
+                  } catch {
+                    // safe
+                  }
+                }}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
                   current === i
                     ? "w-8 bg-[#C99A55]"

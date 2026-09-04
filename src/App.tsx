@@ -10,6 +10,7 @@ import { ServiceAreasIndex } from "./pages/ServiceAreasIndex";
 import { ServiceAreaPage } from "./pages/ServiceAreaPage";
 import { ServicesIndex } from "./pages/ServicesIndex";
 import { ServiceDetailPage } from "./pages/ServiceDetailPage";
+import { ContactPage } from "./pages/ContactPage";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 import { ErrorBoundary } from "./components/ErrorBoundary";
@@ -31,6 +32,10 @@ const App = () => (
               <Route path="/services/:slug" element={<ServiceDetailPage />} />
               <Route path="/service-areas" element={<ServiceAreasIndex />} />
               <Route path="/service-areas/:slug" element={<ServiceAreaPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/estimate" element={<ContactPage />} />
+              <Route path="/quote" element={<ContactPage />} />
+              <Route path="/free-estimate" element={<ContactPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

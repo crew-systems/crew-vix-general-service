@@ -7,20 +7,20 @@ describe("App Render Test", () => {
   beforeAll(() => {
     // Mock browser APIs not present in jsdom
     global.IntersectionObserver = class {
-      root = null;
-      rootMargin = "";
-      thresholds = [];
+      readonly root: Element | Document | null = null;
+      readonly rootMargin: string = "";
+      readonly thresholds: ReadonlyArray<number> = [];
       observe() {}
       unobserve() {}
       disconnect() {}
-      takeRecords() { return []; }
-    } as any;
+      takeRecords(): IntersectionObserverEntry[] { return []; }
+    } as unknown as typeof IntersectionObserver;
 
     global.ResizeObserver = class {
       observe() {}
       unobserve() {}
       disconnect() {}
-    } as any;
+    } as unknown as typeof ResizeObserver;
 
     window.scrollTo = () => {};
   });
@@ -28,6 +28,7 @@ describe("App Render Test", () => {
   it("renders without crashing", () => {
     const { container } = render(<App />);
     expect(container).toBeDefined();
-    expect(container.innerHTML).not.toBe("");
+    expect(container.innerHTML).not.toContain("An unexpected error occurred");
+    expect(container.innerHTML).toContain("VIX General Services");
   });
 });
