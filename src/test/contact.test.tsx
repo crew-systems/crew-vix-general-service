@@ -83,5 +83,22 @@ describe("Contact and Form Embed Tests", () => {
     expect(container.textContent).toContain("Outdoor & Landscape Lighting");
     const modalIframe = container.querySelector("#inline-ZPe9ADAkmygEVDdixGlE-modal");
     expect(modalIframe).not.toBeNull();
+    const dialog = container.querySelector('[role="dialog"]');
+    expect(dialog).not.toBeNull();
+    expect(dialog?.getAttribute("aria-modal")).toBe("true");
+  });
+
+  it("closes EstimateModal when Escape key is pressed", () => {
+    let closed = false;
+    render(
+      <EstimateModal
+        isOpen={true}
+        onClose={() => {
+          closed = true;
+        }}
+      />
+    );
+    fireEvent.keyDown(window, { key: "Escape" });
+    expect(closed).toBe(true);
   });
 });

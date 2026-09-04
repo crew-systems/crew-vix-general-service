@@ -39,7 +39,7 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
     <div className={`relative w-full rounded-xl overflow-hidden ${className}`}>
       {/* Loading state skeleton */}
       {!isLoaded && (
-        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center p-8 bg-white/80 backdrop-blur-sm rounded-xl min-h-[420px]">
+        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center p-8 bg-white/80 backdrop-blur-sm rounded-xl min-h-[360px]">
           <div className="w-8 h-8 border-3 border-[#C99A55] border-t-transparent rounded-full animate-spin mb-3" />
           <p className="text-xs font-bold text-[#1A2B44] uppercase tracking-wider">
             Loading Official VIX Form...
@@ -65,7 +65,7 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name="Website Form"
-        data-height="874"
+        data-height={typeof minHeight === "number" ? `${minHeight}` : "874"}
         data-layout-iframe-id={iframeId}
         data-form-id="ZPe9ADAkmygEVDdixGlE"
         data-cookie-consent="true"
