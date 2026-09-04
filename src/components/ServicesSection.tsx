@@ -24,12 +24,19 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   useEffect(() => {
     if (!api) return;
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
+    try {
+      const snapList = typeof api.scrollSnapList === "function" ? api.scrollSnapList() : [];
+      setCount(snapList.length);
+      setCurrent(typeof api.selectedScrollSnap === "function" ? api.selectedScrollSnap() : 0);
 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
+      api.on?.("select", () => {
+        if (typeof api.selectedScrollSnap === "function") {
+          setCurrent(api.selectedScrollSnap());
+        }
+      });
+    } catch (e) {
+      console.warn("Carousel initialization check:", e);
+    }
   }, [api]);
 
   // Autoplay: automatically scroll cards smoothly across services
@@ -37,7 +44,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
     if (!api || isPaused) return;
 
     const interval = setInterval(() => {
-      api.scrollNext();
+      try {
+        if (typeof api.scrollNext === "function") {
+          api.scrollNext();
+        }
+      } catch {
+        // ignore safe edge-cases
+      }
     }, 3200);
 
     return () => clearInterval(interval);

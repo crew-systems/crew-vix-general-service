@@ -3,7 +3,7 @@
 }
 
 :{$PORT:80} {
-    root * dist
+    root * /app/dist
     encode gzip zstd
     file_server
 
