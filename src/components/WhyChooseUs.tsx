@@ -91,7 +91,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenEstimate }) => {
                 return (
                   <div
                     key={index}
-                    className="bg-white p-5 rounded-lg border border-[#1A2B44]/12 shadow-crisp hover:border-[#C99A55]/50 transition-all"
+                    className="bg-white p-5 rounded-lg border border-[#1A2B44]/12 shadow-crisp hover:border-[#C99A55]/50 hover:-translate-y-1 hover:shadow-crisp-lg transition-all duration-300 ease-out"
                   >
                     <div className="w-10 h-10 rounded-md bg-[#C99A55]/10 text-[#C99A55] flex items-center justify-center mb-3 border border-[#C99A55]/25">
                       <Icon className="w-5 h-5" strokeWidth={1.75} />

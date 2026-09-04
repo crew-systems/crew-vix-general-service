@@ -51,7 +51,7 @@ export const ReviewsSection: React.FC = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-7 border border-[#1A2B44]/12 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-lg p-7 border border-[#1A2B44]/12 shadow-crisp hover:shadow-crisp-lg hover:-translate-y-1.5 transition-all duration-400 ease-out flex flex-col justify-between"
             >
               <div>
                 {/* Header info */}

@@ -103,7 +103,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                     className="pl-4 sm:pl-6 basis-[88%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex"
                   >
                     <div
-                      className={`rounded-xl overflow-hidden border shadow-crisp hover:shadow-crisp-lg transition-all duration-300 group flex flex-col w-full ${
+                      className={`rounded-xl overflow-hidden border shadow-crisp hover:shadow-crisp-lg hover:-translate-y-1.5 transition-all duration-400 ease-out group flex flex-col w-full ${
                         service.featured
                           ? "bg-[#1A2B44] border-[#C99A55]/40"
                           : "bg-white border-[#1A2B44]/12"
@@ -161,10 +161,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                         {service.featured ? (
                           <Link
                             to={`/services/${service.slug}`}
-                            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp group/link"
+                            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp group/link btn-sheen"
                           >
                             <span>LEARN MORE</span>
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1.5" />
                           </Link>
                         ) : (
                           <Link
@@ -172,7 +172,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                             className="inline-flex items-center text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors group/link pt-1"
                           >
                             <span>LEARN MORE</span>
-                            <ArrowRight className="ml-1.5 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                            <ArrowRight className="ml-1.5 w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1.5" />
                           </Link>
                         )}
                       </div>
@@ -195,7 +195,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   // safe
                 }
               }}
-              className="w-8 h-8 rounded-full border border-[#1A2B44]/15 bg-white text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#C99A55]"
+              className="w-8 h-8 rounded-full border border-[#1A2B44]/15 bg-white text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] hover:scale-105 active:scale-95 flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#C99A55]"
               aria-label="Previous service"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -212,9 +212,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                       // safe
                     }
                   }}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                  className={`h-2.5 rounded-full liquid-pill ${
                     current === i
-                      ? "w-8 bg-[#C99A55]"
+                      ? "w-8 bg-[#C99A55] shadow-sm shadow-[#C99A55]/30"
                       : "w-2.5 bg-[#1A2B44]/20 hover:bg-[#1A2B44]/40"
                   }`}
                   aria-label={`Go to slide ${i + 1}`}
@@ -230,7 +230,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   // safe
                 }
               }}
-              className="w-8 h-8 rounded-full border border-[#1A2B44]/15 bg-white text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#C99A55]"
+              className="w-8 h-8 rounded-full border border-[#1A2B44]/15 bg-white text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] hover:scale-105 active:scale-95 flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#C99A55]"
               aria-label="Next service"
             >
               <ArrowRight className="w-4 h-4" />
@@ -239,10 +239,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
 
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors group/overview"
           >
             <span>View All 7 Services Overview</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/overview:translate-x-1" />
           </Link>
         </div>
       </div>

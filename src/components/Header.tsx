@@ -232,7 +232,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
 
             <button
               onClick={onOpenEstimate}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp border border-[#1A2B44]/15"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp border border-[#1A2B44]/15 btn-sheen"
             >
               Free Estimate
             </button>

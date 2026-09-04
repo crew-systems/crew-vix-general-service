@@ -400,3 +400,71 @@
     mask-image: linear-gradient(to right, transparent 0%, black 3.5%, black 96.5%, transparent 100%);
   }
 }
+
+/* 21st.dev inspired button sheen reflection */
+.btn-sheen {
+  position: relative;
+  overflow: hidden;
+}
+.btn-sheen::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: none;
+}
+.btn-sheen:hover::after {
+  left: 130%;
+  transition: left 0.75s ease-in-out;
+}
+
+/* 21st.dev inspired spring scale modal transition */
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* 21st.dev inspired fade in backdrop transition */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.24s ease-out both;
+}
+
+/* 21st.dev liquid pill morph for active indicators */
+.liquid-pill {
+  transition: all 450ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 21st.dev magnetic card hover lift */
+.card-lift {
+  transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 380ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease;
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+}

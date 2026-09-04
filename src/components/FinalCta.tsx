@@ -36,10 +36,10 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenEstimate }) => {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
           <button
             onClick={onOpenEstimate}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15 btn-sheen group/btn"
           >
             <span>GET A FREE ESTIMATE</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
           </button>
         </div>
       </div>

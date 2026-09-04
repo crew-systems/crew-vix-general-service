@@ -56,10 +56,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
             <div className="hero-cta-row flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8">
               <button
                 onClick={onOpenEstimate}
-                className="hero-cta-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm sm:text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15"
+                className="hero-cta-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm sm:text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15 btn-sheen group/btn"
               >
                 <span>GET YOUR FREE ESTIMATE</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
               </button>
               <a
                 href="#services"

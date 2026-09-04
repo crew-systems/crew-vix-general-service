@@ -96,12 +96,12 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
             <div
               key={index}
               onClick={() => setSelectedImage(index)}
-              className="relative rounded-lg overflow-hidden shadow-crisp hover:shadow-crisp-lg transition-all duration-500 cursor-pointer group h-80 border border-[#1A2B44]/12 bg-[#1A2B44]/5"
+              className="relative rounded-lg overflow-hidden shadow-crisp hover:shadow-crisp-lg hover:-translate-y-1.5 transition-all duration-400 ease-out cursor-pointer group h-80 border border-[#1A2B44]/12 bg-[#1A2B44]/5"
             >
               <img
                 src={item.url}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300" />

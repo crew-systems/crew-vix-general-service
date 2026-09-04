@@ -58,7 +58,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/75 backdrop-blur-sm transition-opacity animate-fade-in"
+        className="fixed inset-0 bg-black/75 backdrop-blur-md transition-opacity animate-fade-in"
         onClick={onClose}
         aria-hidden="true"
       />
