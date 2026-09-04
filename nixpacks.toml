@@ -2,3 +2,13 @@
 [variables]
 NIXPACKS_NODE_VERSION = "20"
 NODE_VERSION = "20"
+NIXPACKS_STATIC_DIR = "dist"
+
+[phases.setup]
+nixPkgs = ["nodejs_20", "bun", "caddy"]
+
+[phases.build]
+cmds = ["bun run build"]
+
+[start]
+cmd = "caddy run --config Caddyfile --adapter caddyfile 2>&1"

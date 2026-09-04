@@ -12,29 +12,33 @@ import { ServicesIndex } from "./pages/ServicesIndex";
 import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 import { ScrollToTop } from "./components/ScrollToTop";
 
+import { ErrorBoundary } from "./components/ErrorBoundary";
+
 const queryClient = new QueryClient();
 
 const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/services" element={<ServicesIndex />} />
-            <Route path="/services/:slug" element={<ServiceDetailPage />} />
-            <Route path="/service-areas" element={<ServiceAreasIndex />} />
-            <Route path="/service-areas/:slug" element={<ServiceAreaPage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
+  <ErrorBoundary>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/services" element={<ServicesIndex />} />
+              <Route path="/services/:slug" element={<ServiceDetailPage />} />
+              <Route path="/service-areas" element={<ServiceAreasIndex />} />
+              <Route path="/service-areas/:slug" element={<ServiceAreaPage />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </ErrorBoundary>
 );
 
 export default App;
