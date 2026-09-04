@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
 import { SERVICES } from "../data/servicesData";
 import {
   Carousel,
@@ -39,19 +39,23 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
     }
   }, [api]);
 
-  // Autoplay: automatically scroll cards smoothly across services
+  // Autoplay: automatically advance to the next service every 5 seconds (5000ms)
   useEffect(() => {
     if (!api || isPaused) return;
 
     const interval = setInterval(() => {
       try {
         if (typeof api.scrollNext === "function") {
-          api.scrollNext();
+          if (typeof api.canScrollNext === "function" && !api.canScrollNext()) {
+            api.scrollTo?.(0);
+          } else {
+            api.scrollNext();
+          }
         }
       } catch {
         // ignore safe edge-cases
       }
-    }, 3200);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [api, isPaused]);
@@ -179,27 +183,57 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           </Carousel>
         </div>
 
-        {/* Carousel Pagination Dots & All Services Link */}
+        {/* Carousel Controls: Navigation Arrows, Pagination Dots & All Services Link */}
         <div className="flex flex-col sm:flex-row items-center justify-between mt-10 gap-4 pt-6 border-t border-[#1A2B44]/10">
-          <div className="flex items-center gap-2">
-            {Array.from({ length: Math.max(0, count || 0) }).map((_, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  try {
-                    api?.scrollTo(i);
-                  } catch {
-                    // safe
-                  }
-                }}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  current === i
-                    ? "w-8 bg-[#C99A55]"
-                    : "w-2.5 bg-[#1A2B44]/20 hover:bg-[#1A2B44]/40"
-                }`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => {
+                try {
+                  api?.scrollPrev();
+                } catch {
+                  // safe
+                }
+              }}
+              className="w-8 h-8 rounded-full border border-[#1A2B44]/15 bg-white text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#C99A55]"
+              aria-label="Previous service"
+            >
+              <ArrowLeft className="w-4 h-4" />
+            </button>
+
+            <div className="flex items-center gap-2">
+              {Array.from({ length: Math.max(0, count || 0) }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    try {
+                      api?.scrollTo(i);
+                    } catch {
+                      // safe
+                    }
+                  }}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    current === i
+                      ? "w-8 bg-[#C99A55]"
+                      : "w-2.5 bg-[#1A2B44]/20 hover:bg-[#1A2B44]/40"
+                  }`}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => {
+                try {
+                  api?.scrollNext();
+                } catch {
+                  // safe
+                }
+              }}
+              className="w-8 h-8 rounded-full border border-[#1A2B44]/15 bg-white text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#C99A55]"
+              aria-label="Next service"
+            >
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
 
           <Link

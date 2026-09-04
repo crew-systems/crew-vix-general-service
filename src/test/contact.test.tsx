@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { ContactPage } from "../pages/ContactPage";
 import { GHLFormEmbed } from "../components/GHLFormEmbed";
 import { EstimateModal } from "../components/EstimateModal";
+import { ServicesSection } from "../components/ServicesSection";
 
 describe("Contact and Form Embed Tests", () => {
   beforeAll(() => {
@@ -18,6 +19,12 @@ describe("Contact and Form Embed Tests", () => {
       disconnect() {}
       takeRecords(): IntersectionObserverEntry[] { return []; }
     } as unknown as typeof IntersectionObserver;
+
+    global.ResizeObserver = class {
+      observe() {}
+      unobserve() {}
+      disconnect() {}
+    } as unknown as typeof ResizeObserver;
 
     window.scrollTo = () => {};
     Element.prototype.scrollIntoView = () => {};
@@ -100,5 +107,17 @@ describe("Contact and Form Embed Tests", () => {
     );
     fireEvent.keyDown(window, { key: "Escape" });
     expect(closed).toBe(true);
+  });
+
+  it("renders ServicesSection carousel with navigation arrows and 7 services", () => {
+    const { container } = render(
+      <BrowserRouter>
+        <ServicesSection onOpenEstimate={() => {}} />
+      </BrowserRouter>
+    );
+    expect(container.textContent).toContain("Our Specialized Services");
+    expect(container.textContent).toContain("View All 7 Services Overview");
+    expect(container.querySelector('button[aria-label="Previous service"]')).not.toBeNull();
+    expect(container.querySelector('button[aria-label="Next service"]')).not.toBeNull();
   });
 });
