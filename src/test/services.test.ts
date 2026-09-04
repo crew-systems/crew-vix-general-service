@@ -75,13 +75,43 @@ describe("Sitemap & Robots.txt Parity", () => {
       expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/services/${slug}`);
     });
 
+    // Test that all city service areas are declared in sitemap.xml
+    ["boca-raton-fl", "coral-springs-fl", "parkland-fl"].forEach((city) => {
+      expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/service-areas/${city}`);
+    });
+
     expect(sitemapContent).not.toContain("mkfreitasllc.com");
   });
 
-  it("robots.txt should declare the official sitemap URL", () => {
+  it("robots.txt should declare the official sitemap URL and explicitly authorize AI bots", () => {
     const robotsPath = path.resolve(__dirname, "../../public/robots.txt");
     const robotsContent = fs.readFileSync(robotsPath, "utf8");
 
     expect(robotsContent).toContain("Sitemap: https://www.vixgeneralservices.com/sitemap.xml");
+    expect(robotsContent).toContain("User-agent: GPTBot");
+    expect(robotsContent).toContain("User-agent: PerplexityBot");
+    expect(robotsContent).toContain("User-agent: ClaudeBot");
+    expect(robotsContent).toContain("User-agent: Google-Extended");
+  });
+
+  it("llms.txt and llms-full.txt should exist and define core business knowledge", () => {
+    const llmsPath = path.resolve(__dirname, "../../public/llms.txt");
+    const llmsContent = fs.readFileSync(llmsPath, "utf8");
+    expect(llmsContent).toContain("# VIX General Services");
+    expect(llmsContent).toContain("(954) 330-9296");
+    expect(llmsContent).toContain("outdoor-lighting");
+    expect(llmsContent).toContain("security-cameras");
+
+    const llmsFullPath = path.resolve(__dirname, "../../public/llms-full.txt");
+    const llmsFullContent = fs.readFileSync(llmsFullPath, "utf8");
+    expect(llmsFullContent).toContain("VIX General Services - Comprehensive AI Knowledge Base");
+    expect(llmsFullContent).toContain("3000K warm white");
+    expect(llmsFullContent).toContain("Boca Raton");
+  });
+
+  it("_redirects should exist with SPA routing rule", () => {
+    const redirectsPath = path.resolve(__dirname, "../../public/_redirects");
+    const redirectsContent = fs.readFileSync(redirectsPath, "utf8");
+    expect(redirectsContent).toContain("/*    /index.html   200");
   });
 });

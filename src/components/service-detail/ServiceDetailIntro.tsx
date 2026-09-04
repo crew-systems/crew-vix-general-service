@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+import { Sparkles, CheckCircle2 } from "lucide-react";
 import { ServiceItem } from "../../data/servicesData";
 import { COMPANY_INFO } from "../../data/landscapingData";
 
@@ -22,6 +22,38 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#1A2B44] tracking-tight leading-tight">
               WHY SOUTH FLORIDA PROPERTY OWNERS CHOOSE VIX FOR {service.shortName.toUpperCase()}
             </h2>
+
+            {/* AI Search & Voice Answer Summary Block */}
+            <div
+              id="service-quick-answer"
+              className="p-5 rounded-xl bg-white border-2 border-[#C99A55]/30 shadow-crisp"
+            >
+              <div className="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-wider text-[#C99A55]">
+                <CheckCircle2 className="w-4 h-4" />
+                <span>Service Summary & Quick Facts</span>
+              </div>
+              <p className="text-sm font-medium text-[#1A2B44] leading-relaxed mb-4">
+                VIX General Services provides licensed, code-compliant {service.shortName.toLowerCase()} solutions for residential and commercial properties across Boca Raton, Coral Springs, Parkland, and surrounding South Florida communities. All projects include free on-site consultations, transparent written estimates, and guaranteed craftsmanship.
+              </p>
+              <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs border-t border-[#1A2B44]/10 pt-3">
+                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+                  <dt className="text-muted-foreground font-medium">Service Area:</dt>
+                  <dd className="text-[#1A2B44] font-bold text-right">Boca Raton, Coral Springs, Parkland & S. FL</dd>
+                </div>
+                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+                  <dt className="text-muted-foreground font-medium">Licensing & Ins:</dt>
+                  <dd className="text-[#1A2B44] font-bold text-right">Licensed & Insured in Florida</dd>
+                </div>
+                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+                  <dt className="text-muted-foreground font-medium">Consultation & Quote:</dt>
+                  <dd className="text-[#C99A55] font-bold text-right">Free On-Site Estimate ($0)</dd>
+                </div>
+                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+                  <dt className="text-muted-foreground font-medium">Workmanship Warranty:</dt>
+                  <dd className="text-[#1A2B44] font-bold text-right">1-Year Labor + Manufacturer Warranty</dd>
+                </div>
+              </dl>
+            </div>
 
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               {service.longDesc}

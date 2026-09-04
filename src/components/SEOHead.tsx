@@ -18,7 +18,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   description,
   canonical,
   ogImage,
-  ogImageAlt = "VIX General Services - HVAC, Electrical, Solar & EV Charging",
+  ogImageAlt = "VIX General Services - Outdoor Lighting, Security Cameras, Smart Automation, HVAC & Electrical",
   noIndex = false,
   schemaJson,
 }) => {
@@ -53,6 +53,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:url" content={fullCanonical} />
       {fullOgImage && <meta property="og:image" content={fullOgImage} />}
       {fullOgImage && <meta property="og:image:alt" content={ogImageAlt} />}
+      {fullOgImage && <meta property="og:image:width" content="1200" />}
+      {fullOgImage && <meta property="og:image:height" content="630" />}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

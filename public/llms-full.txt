@@ -1,0 +1,128 @@
+# VIX General Services - Comprehensive AI Knowledge Base (llms-full.txt)
+
+> Authoritative reference on VIX General Services operations, service offerings, equipment specifications, warranty policies, and service areas across South Florida.
+
+## Entity Details
+- **Legal Entity**: VIX General Services
+- **Business Type**: HomeAndConstructionBusiness, Electrical Contractor, HVAC Contractor
+- **Headquarters Region**: South Florida (Broward County & Palm Beach County)
+- **Primary Phone**: (954) 330-9296
+- **Primary Email**: info@vixgeneralservices.com
+- **Website URL**: https://www.vixgeneralservices.com/
+- **Hours of Operation**: Monday - Friday: 08:00 - 18:00, Saturday: 09:00 - 16:00, Sunday: Closed (Emergency dispatch available)
+- **Licenses**: Licensed & Insured in the State of Florida
+- **Experience**: 9+ years serving South Florida, 1,200+ completed projects, 5.0 customer satisfaction rating
+
+---
+
+## Detailed Service Catalog
+
+### 1. Outdoor & Landscape Lighting
+- **Canonical URL**: https://www.vixgeneralservices.com/services/outdoor-lighting
+- **Primary Equipment**:
+  - Cast-brass spotlights (6W 3000K warm white, IP65 waterproof rated with dual silicone O-rings).
+  - Architectural double-head pole fixtures with integrated dusk-to-dawn photocell automation.
+  - Commercial outdoor-rated 12V magnetic transformers (100W and 300W outputs with secondary circuit breaker protection).
+  - Direct-burial 12/2 UV-resistant landscape wiring encased in Schedule 40 PVC conduit sleeves beneath hardscapes and walkways.
+  - 3M DBR/Y-6 waterproof silicone gel wire connectors.
+- **Zoning Architecture**:
+  - Zone 1: Driveway & Entrance Lighting (Pole lights & pathway fixtures)
+  - Zone 2: Pool & Patio Lounge Illumination
+  - Zone 3: Pergola & Deck Illumination
+  - Zone 4: House Facade & Architectural Columns
+  - Zone 5: Garden, Trees & Palm Uplighting
+  - Zone 6: Perimeter Fence & Boundary Illumination
+- **Annual Maintenance Plan**: $780/year covering multi-point fixture checks, lens calcium cleaning, beam realignment, wire voltage verification, smart controller firmware updates, and minor repairs.
+- **Warranty**: 1-Year warranty on installation labor; up to 5-Year manufacturer warranty on brass fixtures and LED lamps.
+
+### 2. Security Camera & Surveillance Systems
+- **Canonical URL**: https://www.vixgeneralservices.com/services/security-cameras
+- **Primary Equipment**:
+  - Motorized 360° Pan-Tilt-Zoom (PTZ) 4MP/4K outdoor cameras with IP66 weatherproof aluminum alloy housing and starlight infrared night vision.
+  - Centralized 4K Network Video Recorders (NVR) with 2TB to 8TB surveillance-grade local hard drives (no recurring monthly cloud fees).
+  - Industrial 8-port Gigabit Power over Ethernet (PoE) distribution switches.
+  - Direct-burial, UV-shielded Cat6 outdoor camera cables.
+- **System Features**:
+  - Real-time 24/7 continuous local recording (unlike battery-powered Wi-Fi cameras that record only short 10-second clips).
+  - AI human and vehicle smart motion detection with instant smartphone push alerts.
+  - Dedicated iOS and Android mobile apps for global remote viewing and video export.
+  - Complete data privacy: video data remains encrypted on your own local NVR.
+- **Warranty**: 1-Year installation labor warranty; 3-Year manufacturer warranty on PTZ cameras and NVR units.
+
+### 3. Smart Control Hub & Automation Systems
+- **Canonical URL**: https://www.vixgeneralservices.com/services/smart-automation
+- **Primary Equipment**:
+  - AquaLink RS and commercial-grade smart automation controllers.
+  - Heavy-duty NEMA 3R weatherproof galvanized steel outdoor distribution panels with lockable doors.
+  - Eaton CHSPT2ULTRA Type 2 Surge Protective Devices (SPD) with up to 108kA surge current rating.
+  - High-gain external Wi-Fi transceivers and antennas for estate-wide wireless range.
+- **Automation Capabilities**:
+  - Astronomical sunrise/sunset clock synchronization that automatically tracks seasonal changes.
+  - Multi-zone independent circuit scheduling and precision dimming.
+  - One-tap custom scenes (e.g., 'Evening Entertaining', 'Late Night Security', 'Vacation Away Mode').
+  - Non-volatile memory and battery-backed real-time clocks ensuring timers persist through power outages.
+
+### 4. HVAC & Air Conditioning Services
+- **Canonical URL**: https://www.vixgeneralservices.com/services/hvac
+- **Primary Capabilities**:
+  - Emergency AC repair: refrigerant leak detection, digital pressure testing, compressor replacement, capacitor and motor servicing.
+  - High-efficiency central air conditioning and heat pump replacements with SEER2 ratings from 15.2 to 20+.
+  - Manual J heating/cooling load calculations tailored to South Florida solar heat gain and high humidity.
+  - Air duct repair, mastic sealing, return air plenum redesign, and R-8 attic insulation wraps.
+  - Whole-home indoor air quality: germicidal UV lights, MERV 13+ filtration, and dehumidification.
+
+### 5. Licensed Electrical Services
+- **Canonical URL**: https://www.vixgeneralservices.com/services/electrical
+- **Primary Capabilities**:
+  - 200-Amp and 400-Amp main breaker service panel upgrades replacing obsolete or hazardous Federal Pacific Electric (FPE Stab-Lok) and Zinsco panels.
+  - Whole-home rewiring, aluminum wiring remediation with Copalum/AlumiConn connectors.
+  - Whole-home Type 1 and Type 2 surge suppression installed at the main panel to protect against lightning spikes.
+  - Recessed ultra-thin LED wafer downlights with Lutron smart dimmers.
+  - Insurance 4-Point safety inspection compliance and municipal permit handling.
+
+### 6. Custom Solar Energy Systems
+- **Canonical URL**: https://www.vixgeneralservices.com/services/solar
+- **Primary Capabilities**:
+  - High-efficiency Tier-1 monocrystalline black-on-black rooftop solar arrays with 25-year performance warranties.
+  - Battery backup storage systems (Tesla Powerwall / Enphase IQ Battery) with automatic transfer switches for grid-blackout and hurricane power.
+  - Full management of Florida Power & Light (FPL) net-metering applications and utility bi-directional meter installations.
+  - High-Velocity Hurricane Zone (HVHZ) certified racking engineered for wind speeds up to 175+ MPH.
+  - Assistance with the 30% Federal Residential Clean Energy Tax Credit (Section 25D).
+
+### 7. EV Charging Station Installation
+- **Canonical URL**: https://www.vixgeneralservices.com/services/ev-charging
+- **Primary Capabilities**:
+  - Turnkey Level 2 (240V) charging stations: Tesla Universal Wall Connector, ChargePoint Home Flex, Emporia, JuiceBox.
+  - Dedicated 50A and 60A circuits with heavy 6 AWG copper wire and industrial-grade receptacles (Hubbell/Bryant).
+  - Fast overnight charging: adds 30 to 45 miles of driving range per hour of charge (7x faster than a standard 120V wall outlet).
+  - Panel capacity audits, load-shedding energy management systems, and municipal electrical permit sign-off.
+
+---
+
+## Service Areas & Municipalities
+
+1. **Boca Raton, FL** (33431, 33432, 33433, 33434, 33486, 33487)
+   - Communities: Downtown Boca Raton, Boca Del Mar, Royal Palm Yacht & Country Club, West Boca, Boca Bridges, Mizner Park.
+   - Coordinates: Latitude 26.3683, Longitude -80.1289
+2. **Coral Springs, FL** (33065, 33067, 33071, 33076)
+   - Communities: Eagle Trace, Coral Springs Country Club, Ramblewood, Turtle Run, Cypress Run.
+   - Coordinates: Latitude 26.2711, Longitude -80.2706
+3. **Parkland, FL** (33067, 33076)
+   - Communities: Heron Bay, Parkland Golf & Country Club, Pine Tree Estates, Parkland Reserve, Cypress Head.
+   - Coordinates: Latitude 26.3104, Longitude -80.2377
+
+---
+
+## Frequently Asked Questions (Verified Facts)
+
+**Q: Does VIX General Services offer free estimates?**  
+A: Yes. All residential and commercial consultations include a complimentary, no-obligation written estimate detailing equipment specifications, scope, timelines, and warranty terms.
+
+**Q: Are wired PoE security cameras better than wireless battery cameras?**  
+A: Yes. Hardwired PoE cameras record 24/7 in 4K resolution, receive continuous power via Cat6 cabling, cannot be defeated by Wi-Fi jammers, and store footage on a private local NVR with zero monthly cloud subscription fees.
+
+**Q: Why use solid brass landscape lighting in Florida?**  
+A: Aluminum fixtures oxidize and corrode rapidly when exposed to South Florida salt air, lawn fertilizers, and irrigation water. Cast brass fixtures naturally resist corrosion, carry IP65 waterproof ratings, and last for decades without pitting or failing.
+
+**Q: Do you pull permits for electrical, HVAC, and solar installations?**  
+A: Yes. VIX General Services handles all municipal building permits, engineering plans, utility coordination (with FPL), and final city inspections across Broward and Palm Beach counties.

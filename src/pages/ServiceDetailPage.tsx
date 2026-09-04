@@ -85,17 +85,19 @@ export const ServiceDetailPage: React.FC = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${SITE_BASE}/services/${service.slug}#service`,
     serviceType: service.schemaServiceType,
     name: service.name,
     description: service.shortDesc,
     provider: {
-      "@type": "HomeAndConstructionBusiness",
-      name: COMPANY_INFO.name,
-      telephone: COMPANY_INFO.phone,
-      email: COMPANY_INFO.email,
-      url: SITE_BASE,
-      image: service.heroImage,
-      priceRange: "$$",
+      "@id": `${SITE_BASE}/#organization`,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      description: "Free on-site consultation and written estimate",
+      availability: "https://schema.org/InStock",
     },
     areaServed: SERVICE_AREAS.map((a) => ({
       "@type": "City",
@@ -145,6 +147,20 @@ export const ServiceDetailPage: React.FC = () => {
     ],
   };
 
+  // Schema 4: WebPage with SpeakableSpecification for AI Assistants & Voice Search
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_BASE}/services/${service.slug}#webpage`,
+    url: `${SITE_BASE}/services/${service.slug}`,
+    name: service.name,
+    description: service.shortDesc,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#service-quick-answer"],
+    },
+  };
+
   const handleOpenEstimate = () => setIsEstimateModalOpen(true);
 
   return (
@@ -155,7 +171,7 @@ export const ServiceDetailPage: React.FC = () => {
         canonical={`/services/${service.slug}`}
         ogImage={service.heroImage}
         ogImageAlt={`${service.name} by VIX General Services`}
-        schemaJson={[serviceSchema, faqSchema, breadcrumbSchema]}
+        schemaJson={[serviceSchema, faqSchema, breadcrumbSchema, webPageSchema]}
       />
 
       <ServiceAreaHeader

@@ -66,18 +66,62 @@ export const ServiceAreaPage: React.FC = () => {
     );
   }
 
+  const cityCoordinates: Record<string, { lat: number; lng: number }> = {
+    "boca-raton-fl": { lat: 26.3683, lng: -80.1289 },
+    "coral-springs-fl": { lat: 26.2711, lng: -80.2706 },
+    "parkland-fl": { lat: 26.3104, lng: -80.2377 },
+  };
+
+  const coords = cityCoordinates[area.slug] || { lat: 26.3683, lng: -80.1289 };
+
   const areaSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: COMPANY_INFO.name,
+    "@id": `https://www.vixgeneralservices.com/service-areas/${area.slug}#localbusiness`,
+    name: `${COMPANY_INFO.name} - ${area.city}`,
     description: area.shortDesc,
     telephone: COMPANY_INFO.phone,
+    email: COMPANY_INFO.email,
+    parentOrganization: {
+      "@id": "https://www.vixgeneralservices.com/#organization",
+    },
     areaServed: {
       "@type": "City",
       name: area.fullName,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: coords.lat,
+        longitude: coords.lng,
+      },
     },
     url: `https://www.vixgeneralservices.com/service-areas/${area.slug}`,
     image: area.heroImage,
+    priceRange: "$$",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.vixgeneralservices.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Service Areas",
+        item: "https://www.vixgeneralservices.com/service-areas",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: area.city,
+        item: `https://www.vixgeneralservices.com/service-areas/${area.slug}`,
+      },
+    ],
   };
 
   const handleOpenEstimate = (service?: string) => {
@@ -92,7 +136,7 @@ export const ServiceAreaPage: React.FC = () => {
         description={area.metaDescription}
         canonical={`/service-areas/${area.slug}`}
         ogImage={area.heroImage}
-        schemaJson={areaSchema}
+        schemaJson={[areaSchema, breadcrumbSchema]}
       />
 
       <ServiceAreaHeader

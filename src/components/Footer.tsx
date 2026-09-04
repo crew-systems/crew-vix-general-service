@@ -219,16 +219,17 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
               Contact & Location
             </h4>
 
-            <div className="space-y-2.5 text-xs text-[#EDE4D6]/75">
+            <address className="not-italic space-y-2.5 text-xs text-[#EDE4D6]/75">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#C99A55] shrink-0 mt-0.5" />
-                <span>Serving South Florida & Surrounding Areas</span>
+                <span itemProp="addressLocality">Serving South Florida (Boca Raton, Coral Springs, Parkland & Surrounding Areas)</span>
               </div>
 
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#C99A55] shrink-0" />
                 <a
                   href={`tel:${COMPANY_INFO.phone}`}
+                  itemProp="telephone"
                   className="hover:text-white transition-colors font-bold"
                 >
                   {COMPANY_INFO.phone}
@@ -239,16 +240,17 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
                 <Mail className="w-4 h-4 text-[#C99A55] shrink-0" />
                 <a
                   href={`mailto:${COMPANY_INFO.email}`}
+                  itemProp="email"
                   className="hover:text-white transition-colors"
                 >
                   {COMPANY_INFO.email}
                 </a>
               </div>
               <p className="text-[11px] text-[#EDE4D6]/60 leading-relaxed pt-1 border-t border-white/10 mt-3 pt-3">
-                Mon-Fri: 9:00 AM to 5:00 PM &middot; Licensed & Insured &middot;
+                Mon-Fri: 8:00 AM to 6:00 PM &middot; Sat: 9:00 AM to 4:00 PM &middot; Licensed & Insured &middot;
                 Fast Response Times
               </p>
-            </div>
+            </address>
           </div>
         </div>
 

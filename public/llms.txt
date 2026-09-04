@@ -1,0 +1,55 @@
+# VIX General Services
+
+> Licensed, Insured Residential & Commercial Contracting in South Florida. Specializing in Architectural Outdoor Lighting, 4K Security Camera Systems, Smart Home Automation Hubs, Licensed Electrical, HVAC, Solar, and EV Charging.
+
+## Organization & Contact Information
+- **Company Name**: VIX General Services
+- **Phone**: (954) 330-9296
+- **Email**: info@vixgeneralservices.com
+- **Website**: https://www.vixgeneralservices.com/
+- **Primary Service Areas**: South Florida (Boca Raton, FL; Coral Springs, FL; Parkland, FL; Broward County; Palm Beach County)
+- **Licensing**: Licensed & Insured in Florida
+- **Experience**: 9+ years in South Florida, 1,200+ completed projects, 5.0 rating
+
+## Core Services & Canonical URLs
+
+### 1. Outdoor & Landscape Lighting
+- **URL**: https://www.vixgeneralservices.com/services/outdoor-lighting
+- **Summary**: Architectural and landscape low-voltage (12V) LED lighting systems. Solid cast-brass IP65 fixtures (6W 3000K warm white), double-head pole lights with dusk-to-dawn sensors, 6-zone layout distribution, 100W–300W weatherproof transformers, Schedule 40 PVC conduit underground trenching, and annual maintenance plans ($780/year).
+- **Slogan**: "Lighting that enhances your lifestyle"
+
+### 2. Security Camera & Surveillance Systems
+- **URL**: https://www.vixgeneralservices.com/services/security-cameras
+- **Summary**: Professional wired Power over Ethernet (PoE) security systems. Motorized 360° pan-tilt-zoom (PTZ) 4MP/4K IP66 outdoor cameras, 4K network video recorders (NVR) with 2TB+ local storage, zero monthly cloud subscription fees, infrared night vision, direct-burial Cat6 cabling, and 24/7 remote viewing via iOS and Android apps.
+
+### 3. Smart Control Hub & Automation Systems
+- **URL**: https://www.vixgeneralservices.com/services/smart-automation
+- **Summary**: Centralized smart automation for outdoor lighting, pool systems, and electrical circuits. AquaLink RS and smart Wi-Fi gateways, NEMA 3R commercial-grade outdoor distribution panels, Eaton Type 2 surge protective devices (SPD), astronomical sunset/sunrise clock scheduling, and multi-zone smartphone control.
+
+### 4. HVAC & Air Conditioning Services
+- **URL**: https://www.vixgeneralservices.com/services/hvac
+- **Summary**: Full-spectrum residential and commercial cooling and heating. Rapid emergency diagnostics, high-efficiency SEER2 heat pump and central AC installations, ductwork repair, indoor air quality filtration, UV germicidal lamps, and seasonal preventative maintenance.
+
+### 5. Licensed Electrical Services
+- **URL**: https://www.vixgeneralservices.com/services/electrical
+- **Summary**: Comprehensive electrical contracting to strict NEC and Florida Building Code standards. 200A and 400A breaker panel upgrades, aluminum wire mitigation, whole-home surge protection, recessed canless LED lighting, subpanels, and insurance 4-Point inspection code corrections.
+
+### 6. Custom Solar Energy Systems
+- **URL**: https://www.vixgeneralservices.com/services/solar
+- **Summary**: Turnkey residential and commercial rooftop solar panel systems. High-output Tier-1 monocrystalline panels with 25-year warranties, Tesla Powerwall and Enphase battery storage, FPL bi-directional net metering approvals, and Category 5 hurricane-rated structural racking.
+
+### 7. EV Charging Station Installation
+- **URL**: https://www.vixgeneralservices.com/services/ev-charging
+- **Summary**: Certified Level 2 (240V) electric vehicle charger installations. Tesla Universal Wall Connector, ChargePoint, JuiceBox, dedicated 50A/60A circuits, industrial NEMA 14-50 receptacles, load calculation audits, and utility rebate assistance.
+
+## Service Areas
+- **Boca Raton, FL**: https://www.vixgeneralservices.com/service-areas/boca-raton-fl (Downtown Boca, Boca Del Mar, Royal Palm Yacht Club, West Boca, Boca Bridges, Mizner Park)
+- **Coral Springs, FL**: https://www.vixgeneralservices.com/service-areas/coral-springs-fl (Eagle Trace, Coral Springs Country Club, Ramblewood, Turtle Run, Cypress Run)
+- **Parkland, FL**: https://www.vixgeneralservices.com/service-areas/parkland-fl (Heron Bay, Parkland Golf & Country Club, Pine Tree Estates, Parkland Reserve, Cypress Head)
+- **Full Directory**: https://www.vixgeneralservices.com/service-areas
+
+## Pricing & Estimates
+- **Consultation**: 100% Free on-site evaluations with detailed, transparent written estimates.
+- **Annual Maintenance Plan**: $780/year for comprehensive outdoor lighting, security camera lens calibration, controller updates, and fixture adjustments.
+
+For comprehensive technical specifications, refer to https://www.vixgeneralservices.com/llms-full.txt

@@ -13,6 +13,7 @@ import { Footer } from "../components/Footer";
 import { EstimateModal } from "../components/EstimateModal";
 import { SEOHead } from "../components/SEOHead";
 import { IMAGES, COMPANY_INFO } from "../data/landscapingData";
+import { SERVICES } from "../data/servicesData";
 
 const Index: React.FC = () => {
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
@@ -49,15 +50,89 @@ const Index: React.FC = () => {
 
   const homeSchema = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    name: COMPANY_INFO.name,
-    description: COMPANY_INFO.tagline,
-    telephone: COMPANY_INFO.phone,
-    email: COMPANY_INFO.email,
-    areaServed: COMPANY_INFO.location,
-    url: "https://www.vixgeneralservices.com/",
-    image: IMAGES.ogMeta,
-    priceRange: "$$",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.vixgeneralservices.com/#organization",
+        name: COMPANY_INFO.name,
+        description: COMPANY_INFO.tagline,
+        url: "https://www.vixgeneralservices.com/",
+        telephone: COMPANY_INFO.phone,
+        email: COMPANY_INFO.email,
+        image: IMAGES.ogMeta,
+        priceRange: "$$",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "08:00",
+            closes: "18:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Saturday",
+            opens: "09:00",
+            closes: "16:00",
+          },
+        ],
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Boca Raton",
+            containedInPlace: { "@type": "State", name: "Florida" },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 26.3683,
+              longitude: -80.1289,
+            },
+          },
+          {
+            "@type": "City",
+            name: "Coral Springs",
+            containedInPlace: { "@type": "State", name: "Florida" },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 26.2711,
+              longitude: -80.2706,
+            },
+          },
+          {
+            "@type": "City",
+            name: "Parkland",
+            containedInPlace: { "@type": "State", name: "Florida" },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 26.3104,
+              longitude: -80.2377,
+            },
+          },
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "VIX General Contracting Services",
+          itemListElement: SERVICES.map((s, idx) => ({
+            "@type": "Offer",
+            position: idx + 1,
+            itemOffered: {
+              "@type": "Service",
+              name: s.name,
+              url: `https://www.vixgeneralservices.com/services/${s.slug}`,
+              description: s.shortDesc,
+            },
+          })),
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.vixgeneralservices.com/#website",
+        url: "https://www.vixgeneralservices.com/",
+        name: "VIX General Services",
+        description: COMPANY_INFO.tagline,
+        publisher: {
+          "@id": "https://www.vixgeneralservices.com/#organization",
+        },
+      },
+    ],
   };
 
   return (

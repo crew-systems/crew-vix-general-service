@@ -47,12 +47,12 @@ export const ServiceAreaHero: React.FC<ServiceAreaHeroProps> = ({
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 backdrop-blur-md border border-white/20 mb-5 text-white text-xs sm:text-sm font-semibold tracking-wide">
             <MapPin className="w-4 h-4 text-[#C99A55]" />
             <span>
-              Professional HVAC & Electrical Services in {area.fullName}
+              Home & Commercial Contracting in {area.fullName}
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white leading-[1.08] mb-5 tracking-tight">
-            HVAC & ELECTRICAL SERVICES IN{" "}
+            LIGHTING, SECURITY & HOME SERVICES IN{" "}
             <span className="text-[#C99A55] ">{area.city.toUpperCase()}</span>
           </h1>
 
