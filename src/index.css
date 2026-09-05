@@ -294,7 +294,7 @@ section[data-section-blend="true"]::after {
   background: #c99a55;
   border-radius: 5px;
 }
-::webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: #d4a55c;
 }
 

@@ -2,7 +2,7 @@ import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const SECTION_SELECTOR =
-  'section:not([data-section-transition="off"])';
+  'section:not(#hero):not([data-section-transition="off"])';
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 const isVisibleColor = (color: string) =>

@@ -7,6 +7,31 @@
 :{$PORT:80} {
     root * /app/dist
     encode zstd gzip
-    try_files {path} /index.html
-    file_server
+
+    # Hashed static assets - cache forever, never fallback to index.html
+    @assets path /assets/*
+    handle @assets {
+        header Cache-Control "public, max-age=31536000, immutable"
+        file_server
+    }
+
+    # Static root files (favicon, robots, sitemap)
+    @static path /favicon.* /robots.txt /sitemap.xml
+    handle @static {
+        header Cache-Control "public, max-age=86400"
+        file_server
+    }
+
+    # SPA Entrypoint - never cache so clients always get latest asset hashes
+    handle /index.html {
+        header Cache-Control "no-store, no-cache, must-revalidate"
+        file_server
+    }
+
+    # SPA Fallback for client-side routes (/services, /thank-you, etc.)
+    handle {
+        header Cache-Control "no-store, no-cache, must-revalidate"
+        try_files {path} /index.html
+        file_server
+    }
 }

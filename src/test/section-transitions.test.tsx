@@ -85,4 +85,22 @@ describe("SectionTransitions", () => {
 
     await waitFor(() => expect(getByTestId("section")).toHaveClass("is-visible"));
   });
+
+  it("never marks #hero for section transition hiding to guarantee immediate above-the-fold render", async () => {
+    const { getByTestId } = render(
+      <MemoryRouter>
+        <section id="hero" data-testid="hero-section">Hero</section>
+        <section data-testid="other-section">Other</section>
+        <SectionTransitions />
+      </MemoryRouter>,
+    );
+
+    const hero = getByTestId("hero-section");
+    const other = getByTestId("other-section");
+
+    await waitFor(() => {
+      expect(hero).not.toHaveAttribute("data-section-transition");
+      expect(other).toHaveAttribute("data-section-transition", "true");
+    });
+  });
 });
