@@ -7,6 +7,7 @@ import { ContactPage } from "../pages/ContactPage";
 import { GHLFormEmbed } from "../components/GHLFormEmbed";
 import { EstimateModal } from "../components/EstimateModal";
 import { ServicesSection } from "../components/ServicesSection";
+import { ThankYouPage } from "../pages/ThankYouPage";
 
 describe("Contact and Form Embed Tests", () => {
   beforeAll(() => {
@@ -119,5 +120,21 @@ describe("Contact and Form Embed Tests", () => {
     expect(container.textContent).toContain("View All 7 Services Overview");
     expect(container.querySelector('button[aria-label="Previous service"]')).not.toBeNull();
     expect(container.querySelector('button[aria-label="Next service"]')).not.toBeNull();
+  });
+
+  it("renders ThankYouPage with confirmation message, next steps, and direct contact", () => {
+    const { container } = render(
+      <HelmetProvider>
+        <BrowserRouter>
+          <ThankYouPage />
+        </BrowserRouter>
+      </HelmetProvider>
+    );
+    expect(container.textContent).toContain("Thank You! We Received Your Request");
+    expect(container.textContent).toContain("Your answers have been successfully submitted");
+    expect(container.textContent).toContain("will reach out to you shortly");
+    expect(container.textContent).toContain("What Happens Next?");
+    expect(container.textContent).toContain("(954) 330-9296");
+    expect(container.querySelector('a[href^="tel:"]')).not.toBeNull();
   });
 });

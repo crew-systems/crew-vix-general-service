@@ -11,6 +11,7 @@ import { ServiceAreaPage } from "./pages/ServiceAreaPage";
 import { ServicesIndex } from "./pages/ServicesIndex";
 import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 import { ContactPage } from "./pages/ContactPage";
+import { ThankYouPage } from "./pages/ThankYouPage";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SectionTransitions } from "./components/SectionTransitions";
 
@@ -37,6 +38,10 @@ const App = () => (
               <Route path="/estimate" element={<ContactPage />} />
               <Route path="/quote" element={<ContactPage />} />
               <Route path="/free-estimate" element={<ContactPage />} />
+              <Route path="/thank-you" element={<ThankYouPage />} />
+              <Route path="/thank-you/" element={<ThankYouPage />} />
+              <Route path="/obrigado" element={<ThankYouPage />} />
+              <Route path="/thanks" element={<ThankYouPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

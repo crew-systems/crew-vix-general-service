@@ -32,7 +32,66 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
       setIsLoaded(true);
     }, 1200);
 
-    return () => clearTimeout(timer);
+    // Listen for GoHighLevel form submission postMessages to redirect to /thank-you
+    const handleMessage = (event: MessageEvent) => {
+      const origin = event.origin || "";
+      const isFromGHL =
+        origin.includes("leadconnectorhq.com") ||
+        origin.includes("msgsndr.com") ||
+        origin.includes("leadconnector") ||
+        origin === window.location.origin;
+
+      if (!isFromGHL) return;
+
+      const data = event.data;
+      let isFormSuccess = false;
+
+      if (typeof data === "string") {
+        const lower = data.toLowerCase();
+        if (
+          lower.includes("form_success") ||
+          lower.includes("form-submitted") ||
+          lower.includes("formsubmit") ||
+          lower.includes("thank-you") ||
+          lower.includes("thankyou")
+        ) {
+          isFormSuccess = true;
+        }
+      } else if (data && typeof data === "object") {
+        const type = String(data.type || "").toLowerCase();
+        const action = String(data.action || "").toLowerCase();
+        const message = String(data.message || "").toLowerCase();
+        const status = String(data.status || "").toLowerCase();
+        const redirectUrl = String(
+          data.redirectUrl || data.url || "",
+        ).toLowerCase();
+
+        if (
+          type.includes("submit") ||
+          action.includes("submit") ||
+          message.includes("success") ||
+          status.includes("success") ||
+          redirectUrl.includes("thank-you") ||
+          redirectUrl.includes("thankyou") ||
+          data.formId === "ZPe9ADAkmygEVDdixGlE"
+        ) {
+          isFormSuccess = true;
+        }
+      }
+
+      if (isFormSuccess) {
+        if (window.location.pathname !== "/thank-you") {
+          window.location.assign("/thank-you");
+        }
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("message", handleMessage);
+    };
   }, []);
 
   return (
