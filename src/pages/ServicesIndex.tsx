@@ -78,10 +78,10 @@ export const ServicesIndex: React.FC = () => {
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title="Our Services | Outdoor Lighting, Security, Smart Automation, HVAC & Electrical | VIX"
-        description="Explore VIX General Services' residential and commercial energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security, and smart technology solutions in Massachusetts and Vermont."
+        description="Explore VIX General Services' residential and commercial energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security, and smart technology solutions across New England."
         canonical="/services"
         ogImage={SERVICES[0].heroImage}
-        ogImageAlt="VIX General Services - Massachusetts and Vermont Specialized Services"
+        ogImageAlt="VIX General Services - New England Specialized Services"
         schemaJson={[itemListSchema, breadcrumbSchema]}
       />
 
@@ -127,7 +127,8 @@ export const ServicesIndex: React.FC = () => {
               From energy-efficiency upgrades and HVAC to electrical panels,
               solar, EV charging, outdoor lighting, security, and smart
               technology, our technicians provide reliable, code-compliant
-              solutions across Massachusetts and Vermont.
+              solutions across Massachusetts, Maine, New Hampshire, Rhode
+              Island, and Vermont.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-white/90">
@@ -244,8 +245,8 @@ export const ServicesIndex: React.FC = () => {
               LOOKING FOR SERVICES IN A SPECIFIC CITY?
             </h2>
             <p className="text-sm sm:text-base text-[#EDE4D6]/85 max-w-xl mx-auto mb-8">
-              We provide dedicated service across Massachusetts, surrounding
-              areas within 100 miles, and Vermont.
+              We provide dedicated service across Massachusetts, Maine, New
+              Hampshire, Rhode Island, and Vermont.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {SERVICE_AREAS.map((area) => (

@@ -33,8 +33,8 @@ export const ThankYouPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white flex flex-col justify-between">
       <SEOHead
-        title="Thank You | VIX General Services | MA & VT"
-        description="Thank you for your estimate request. Our Massachusetts and Vermont team has received your information and will contact you shortly."
+        title="Thank You | VIX General Services | New England"
+        description="Thank you for your estimate request. Our New England team has received your information and will contact you shortly."
         canonical="/thank-you"
         schemaJson={thankYouSchema}
       />

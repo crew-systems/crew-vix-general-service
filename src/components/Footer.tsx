@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
             <p className="text-xs text-[#EDE4D6]/70 leading-relaxed max-w-sm pt-1">
               Energy-efficiency solutions spanning HVAC, electrical, solar, EV
               charging, and smart technology for homes and businesses in
-              Massachusetts, surrounding areas within 100 miles, and Vermont.
+              Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont.
             </p>
 
             {/* Social Links */}

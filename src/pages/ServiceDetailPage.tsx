@@ -51,7 +51,7 @@ export const ServiceDetailPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-[#F5F6F8] p-6">
         <SEOHead
           title="Service Not Found | VIX General Services"
-          description="The service you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services in Massachusetts and Vermont."
+          description="The service you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services across New England."
           canonical="/services"
           noIndex
         />

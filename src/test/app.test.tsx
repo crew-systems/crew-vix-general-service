@@ -33,7 +33,7 @@ describe("App Render Test", () => {
     expect(container.textContent).toContain("SMARTER ENERGY USE");
     expect(container.textContent).toContain("LASTING EFFICIENCY");
     expect(container.textContent).toContain(
-      "Serving Massachusetts & Surrounding Areas Within 100 Miles, Plus Vermont",
+      "Serving Massachusetts, Maine, New Hampshire, Rhode Island & Vermont",
     );
   });
 

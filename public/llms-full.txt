@@ -1,11 +1,13 @@
 # VIX General Services - Comprehensive AI Knowledge Base (llms-full.txt)
 
-> Authoritative reference on VIX General Services operations, service offerings, equipment specifications, warranty policies, and service areas across Massachusetts and Vermont.
+> Authoritative reference on VIX General Services operations, service offerings, equipment specifications, warranty policies, and service areas across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont.
 
 ## Entity Details
-- **Legal Entity**: VIX General Services
+- **Brand Name**: VIX General Services
+- **Legal Entity**: VIX CONSTRUCTION AND LANDSCAPE INC
+- **Owner**: Kristyan Martins
 - **Business Type**: HomeAndConstructionBusiness, Electrical Contractor, HVAC Contractor
-- **Service Region**: Massachusetts and surrounding areas within 100 miles; Vermont
+- **Service Region**: Massachusetts; Maine; New Hampshire; Rhode Island; Vermont
 - **Primary Phone**: (954) 330-9296
 - **Primary Email**: info@vixgeneralservices.com
 - **Website URL**: https://www.vixgeneralservices.com/
@@ -101,9 +103,15 @@
 
 ## Service Areas & Municipalities
 
-1. **Massachusetts & Surrounding Areas Within 100 Miles**
+1. **Massachusetts**
    - URL: https://www.vixgeneralservices.com/service-areas/massachusetts
-2. **Vermont**
+2. **Maine**
+   - URL: https://www.vixgeneralservices.com/service-areas/maine
+3. **New Hampshire**
+   - URL: https://www.vixgeneralservices.com/service-areas/new-hampshire
+4. **Rhode Island**
+   - URL: https://www.vixgeneralservices.com/service-areas/rhode-island
+5. **Vermont**
    - URL: https://www.vixgeneralservices.com/service-areas/vermont
 
 ---

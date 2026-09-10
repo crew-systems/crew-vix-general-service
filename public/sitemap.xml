@@ -61,6 +61,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.vixgeneralservices.com/service-areas/maine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vixgeneralservices.com/service-areas/new-hampshire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vixgeneralservices.com/service-areas/rhode-island</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.vixgeneralservices.com/service-areas/vermont</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

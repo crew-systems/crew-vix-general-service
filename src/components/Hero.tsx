@@ -32,8 +32,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
             <div className="hero-badge inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/10 backdrop-blur-md border border-white/25 mb-3 sm:mb-5 text-white text-xs font-semibold tracking-wide w-fit">
               <MapPin className="w-4 h-4 text-[#C99A55]" />
               <span>
-                Serving Massachusetts &amp; Surrounding Areas Within 100 Miles,
-                Plus Vermont
+                Serving Massachusetts, Maine, New Hampshire, Rhode Island
+                &amp; Vermont
               </span>
             </div>
 

@@ -16,7 +16,7 @@ const NotFound = () => {
     <div className="flex min-h-screen items-center justify-center bg-muted">
       <SEOHead
         title="Page Not Found | VIX General Services"
-        description="The page you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services in Massachusetts and Vermont."
+        description="The page you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services across New England."
         canonical="/404"
         noIndex
       />

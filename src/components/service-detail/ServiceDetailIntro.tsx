@@ -20,7 +20,7 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#1A2B44] tracking-tight leading-tight">
-              WHY MASSACHUSETTS &amp; VERMONT PROPERTY OWNERS CHOOSE VIX FOR {service.shortName.toUpperCase()}
+              WHY NEW ENGLAND PROPERTY OWNERS CHOOSE VIX FOR {service.shortName.toUpperCase()}
             </h2>
 
             {/* AI Search & Voice Answer Summary Block */}
@@ -33,12 +33,12 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
                 <span>Service Summary & Quick Facts</span>
               </div>
               <p className="text-sm font-medium text-[#1A2B44] leading-relaxed mb-4">
-                VIX General Services provides licensed, code-compliant {service.shortName.toLowerCase()} solutions for residential and commercial properties across Massachusetts, surrounding areas within 100 miles, and Vermont. All projects include free on-site consultations, transparent written estimates, and guaranteed craftsmanship.
+                VIX General Services provides licensed, code-compliant {service.shortName.toLowerCase()} solutions for residential and commercial properties across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. All projects include free on-site consultations, transparent written estimates, and guaranteed craftsmanship.
               </p>
               <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs border-t border-[#1A2B44]/10 pt-3">
                 <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
                   <dt className="text-muted-foreground font-medium">Service Area:</dt>
-                  <dd className="text-[#1A2B44] font-bold text-right">Massachusetts &amp; Vermont</dd>
+                  <dd className="text-[#1A2B44] font-bold text-right">Five New England States</dd>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
                   <dt className="text-muted-foreground font-medium">Licensing & Ins:</dt>
@@ -97,7 +97,7 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
             <div className="rounded-xl overflow-hidden shadow-crisp-lg border-2 border-white">
               <img
                 src={service.heroImage}
-                alt={`${service.name} project in Massachusetts or Vermont`}
+                alt={`${service.name} project in New England`}
                 className="w-full h-80 object-cover"
               />
             </div>

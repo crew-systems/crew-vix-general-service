@@ -1,13 +1,15 @@
 # VIX General Services
 
-> Residential & Commercial Energy-Efficiency and Property Services in Massachusetts, surrounding areas within 100 miles, and Vermont. Services include HVAC, electrical, solar, EV charging, smart technology, outdoor lighting, and security systems.
+> Residential & Commercial Energy-Efficiency and Property Services in Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Services include HVAC, electrical, solar, EV charging, smart technology, outdoor lighting, and security systems.
 
 ## Organization & Contact Information
 - **Company Name**: VIX General Services
+- **Legal Business Name**: VIX CONSTRUCTION AND LANDSCAPE INC
+- **Owner**: Kristyan Martins
 - **Phone**: (954) 330-9296
 - **Email**: info@vixgeneralservices.com
 - **Website**: https://www.vixgeneralservices.com/
-- **Primary Service Areas**: Massachusetts and surrounding areas within 100 miles; Vermont
+- **Primary Service Areas**: Massachusetts; Maine; New Hampshire; Rhode Island; Vermont
 - **Licensing**: Licensed & Insured
 - **Experience**: 9+ years, 1,200+ completed projects, 5.0 rating
 
@@ -43,7 +45,10 @@
 - **Summary**: Certified Level 2 (240V) electric vehicle charger installations. Tesla Universal Wall Connector, ChargePoint, JuiceBox, dedicated 50A/60A circuits, industrial NEMA 14-50 receptacles, load calculation audits, and utility rebate assistance.
 
 ## Service Areas
-- **Massachusetts & Surrounding Areas Within 100 Miles**: https://www.vixgeneralservices.com/service-areas/massachusetts
+- **Massachusetts**: https://www.vixgeneralservices.com/service-areas/massachusetts
+- **Maine**: https://www.vixgeneralservices.com/service-areas/maine
+- **New Hampshire**: https://www.vixgeneralservices.com/service-areas/new-hampshire
+- **Rhode Island**: https://www.vixgeneralservices.com/service-areas/rhode-island
 - **Vermont**: https://www.vixgeneralservices.com/service-areas/vermont
 - **Full Directory**: https://www.vixgeneralservices.com/service-areas
 

@@ -21,7 +21,7 @@ export const ServiceDetailHero: React.FC<ServiceDetailHeroProps> = ({
       <div className="absolute inset-0 z-0">
         <img
           src={service.heroImage}
-          alt={`${service.name} in Massachusetts and Vermont - VIX General Services`}
+          alt={`${service.name} across New England - VIX General Services`}
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/98 via-[#1A2B44]/85 to-[#1A2B44]/65" />

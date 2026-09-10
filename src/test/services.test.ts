@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { SERVICES, getServiceBySlug, getAllServiceSlugs } from "../data/servicesData";
-import { IMAGES, SERVICE_AREAS } from "../data/landscapingData";
+import { COMPANY_INFO, IMAGES, SERVICE_AREAS } from "../data/landscapingData";
 import fs from "fs";
 import path from "path";
 
@@ -77,7 +77,13 @@ describe("Sitemap & Robots.txt Parity", () => {
     });
 
     // Test that every service area is declared in sitemap.xml
-    ["massachusetts", "vermont"].forEach((area) => {
+    [
+      "massachusetts",
+      "maine",
+      "new-hampshire",
+      "rhode-island",
+      "vermont",
+    ].forEach((area) => {
       expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/service-areas/${area}`);
     });
 
@@ -118,12 +124,14 @@ describe("Sitemap & Robots.txt Parity", () => {
 });
 
 describe("Official Service Area Source", () => {
-  it("uses only the locations supplied in the client form", () => {
+  it("uses the confirmed five-state service area", () => {
     expect(SERVICE_AREAS.map((area) => area.slug)).toEqual([
       "massachusetts",
+      "maine",
+      "new-hampshire",
+      "rhode-island",
       "vermont",
     ]);
-    expect(SERVICE_AREAS[0].fullName).toContain("100 Miles");
   });
 
   it("does not publish the previous Florida locations", () => {
@@ -141,6 +149,19 @@ describe("Official Service Area Source", () => {
         expect(content).not.toContain(location);
       });
     });
+  });
+});
+
+describe("Business Identity", () => {
+  it("uses the business and owner names supplied in the client form", () => {
+    expect(COMPANY_INFO.name).toBe("VIX General Services");
+    expect(COMPANY_INFO.legalName).toBe("VIX CONSTRUCTION AND LANDSCAPE INC");
+    expect(COMPANY_INFO.ownerName).toBe("Kristyan Martins");
+  });
+
+  it("does not confuse the photo-delivery address with the business email", () => {
+    expect(COMPANY_INFO.email).toBe("info@vixgeneralservices.com");
+    expect(COMPANY_INFO.email).not.toBe("crewsystems.io@gmail.com");
   });
 });
 

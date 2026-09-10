@@ -50,7 +50,7 @@ export const ServiceAreaPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-[#F5F6F8]">
         <SEOHead
           title="Area Not Found | VIX General Services"
-          description="The service area you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services in Massachusetts and Vermont."
+          description="The service area you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services across New England."
           canonical="/service-areas"
           noIndex
         />

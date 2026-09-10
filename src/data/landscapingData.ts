@@ -133,7 +133,7 @@ export const SERVICE_AREAS = [
     slug: "massachusetts",
     city: "Massachusetts",
     state: "MA",
-    fullName: "Massachusetts & Surrounding Areas Within 100 Miles",
+    fullName: "Massachusetts",
     heroImage: IMAGES.services.outdoorLighting,
     galleryImages: [
       IMAGES.services.outdoorLighting,
@@ -141,17 +141,89 @@ export const SERVICE_AREAS = [
       IMAGES.services.electrical,
     ],
     shortDesc:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts and surrounding areas within 100 miles.",
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts.",
     longDesc:
-      "VIX General Services supports residential and commercial properties throughout Massachusetts and surrounding areas within a 100-mile radius. Our team delivers energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services with reliable workmanship and long-term value in mind.",
-    neighborhoods: ["Massachusetts", "Surrounding areas within 100 miles"],
+      "VIX General Services supports residential and commercial properties throughout Massachusetts. Our team delivers energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services with reliable workmanship and long-term value in mind.",
+    neighborhoods: ["Massachusetts"],
     zipCodes: [],
     metaTitle: "Energy Efficiency & Property Services Massachusetts | VIX",
     metaDescription:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts and surrounding areas within 100 miles.",
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts.",
     reviewName: "Michael R.",
     reviewText:
       "VIX designed and installed our complete landscape lighting and outdoor security cameras. The transformation at night is stunning, and the app control is effortless!",
+  },
+  {
+    slug: "maine",
+    city: "Maine",
+    state: "ME",
+    fullName: "Maine",
+    heroImage: IMAGES.services.solar,
+    galleryImages: [
+      IMAGES.services.solar,
+      IMAGES.services.hvac,
+      IMAGES.services.electrical,
+    ],
+    shortDesc:
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Maine.",
+    longDesc:
+      "VIX General Services serves residential and commercial customers throughout Maine with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Every project is planned for dependable performance through New England's changing seasons.",
+    neighborhoods: ["Maine"],
+    zipCodes: [],
+    metaTitle: "Energy Efficiency & Property Services Maine | VIX",
+    metaDescription:
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Maine.",
+    reviewName: "Michael R.",
+    reviewText:
+      "VIX delivered a clean, well-planned installation and kept us informed throughout the project. The finished system performs exactly as promised.",
+  },
+  {
+    slug: "new-hampshire",
+    city: "New Hampshire",
+    state: "NH",
+    fullName: "New Hampshire",
+    heroImage: IMAGES.services.hvac,
+    galleryImages: [
+      IMAGES.services.hvac,
+      IMAGES.services.electrical,
+      IMAGES.services.evCharging,
+    ],
+    shortDesc:
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across New Hampshire.",
+    longDesc:
+      "VIX General Services serves residential and commercial customers throughout New Hampshire with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Our team focuses on code-compliant work, reliable systems, and lasting value.",
+    neighborhoods: ["New Hampshire"],
+    zipCodes: [],
+    metaTitle: "Energy Efficiency & Property Services New Hampshire | VIX",
+    metaDescription:
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across New Hampshire.",
+    reviewName: "Michael R.",
+    reviewText:
+      "VIX delivered a clean, well-planned installation and kept us informed throughout the project. The finished system performs exactly as promised.",
+  },
+  {
+    slug: "rhode-island",
+    city: "Rhode Island",
+    state: "RI",
+    fullName: "Rhode Island",
+    heroImage: IMAGES.services.evCharging,
+    galleryImages: [
+      IMAGES.services.evCharging,
+      IMAGES.services.electrical,
+      IMAGES.services.smartAutomation,
+    ],
+    shortDesc:
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Rhode Island.",
+    longDesc:
+      "VIX General Services serves residential and commercial customers throughout Rhode Island with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Every project is approached with reliable workmanship and practical long-term performance in mind.",
+    neighborhoods: ["Rhode Island"],
+    zipCodes: [],
+    metaTitle: "Energy Efficiency & Property Services Rhode Island | VIX",
+    metaDescription:
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Rhode Island.",
+    reviewName: "Jessica T.",
+    reviewText:
+      "The VIX team communicated clearly, worked carefully, and left us with a dependable system that is easy to use.",
   },
   {
     slug: "vermont",
@@ -181,11 +253,13 @@ export const SERVICE_AREAS = [
 
 export const COMPANY_INFO = {
   name: "VIX General Services",
+  legalName: "VIX CONSTRUCTION AND LANDSCAPE INC",
+  ownerName: "Kristyan Martins",
   tagline: "Energy-Efficiency Solutions for Homes and Businesses",
   phone: "(954) 330-9296",
   email: "info@vixgeneralservices.com",
   location:
-    "Massachusetts & Surrounding Areas Within 100 Miles, Plus Vermont",
+    "Massachusetts, Maine, New Hampshire, Rhode Island & Vermont",
   stats: {
     rating: "5.0",
     reviewsCount: "150+",

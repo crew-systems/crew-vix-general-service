@@ -58,6 +58,11 @@ const Index: React.FC = () => {
         "@type": "HomeAndConstructionBusiness",
         "@id": "https://www.vixgeneralservices.com/#organization",
         name: COMPANY_INFO.name,
+        legalName: COMPANY_INFO.legalName,
+        founder: {
+          "@type": "Person",
+          name: COMPANY_INFO.ownerName,
+        },
         description: COMPANY_INFO.tagline,
         url: "https://www.vixgeneralservices.com/",
         telephone: COMPANY_INFO.phone,
@@ -82,6 +87,18 @@ const Index: React.FC = () => {
           {
             "@type": "State",
             name: "Massachusetts",
+          },
+          {
+            "@type": "State",
+            name: "Maine",
+          },
+          {
+            "@type": "State",
+            name: "New Hampshire",
+          },
+          {
+            "@type": "State",
+            name: "Rhode Island",
           },
           {
             "@type": "State",
@@ -120,7 +137,7 @@ const Index: React.FC = () => {
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title="VIX General Services | Energy-Efficiency Solutions"
-        description="Energy-efficiency upgrades, HVAC, electrical, solar, EV charging, and smart technology across Massachusetts, surrounding areas within 100 miles, and Vermont."
+        description="Energy-efficiency upgrades, HVAC, electrical, solar, EV charging, and smart technology across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
         canonical="/"
         ogImage={IMAGES.ogMeta}
         schemaJson={homeSchema}

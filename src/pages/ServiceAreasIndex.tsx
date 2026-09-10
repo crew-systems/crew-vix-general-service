@@ -55,8 +55,8 @@ export const ServiceAreasIndex: React.FC = () => {
   return (
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="Service Areas in Massachusetts & Vermont | VIX General Services"
-        description="VIX General Services serves Massachusetts, surrounding areas within 100 miles, and Vermont with energy-efficiency, HVAC, electrical, solar, EV charging, and smart technology solutions."
+        title="Service Areas Across New England | VIX General Services"
+        description="VIX General Services serves Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont with energy-efficiency, HVAC, electrical, solar, EV charging, and smart technology solutions."
         canonical="/service-areas"
         ogImage={SERVICE_AREAS[0].heroImage}
         schemaJson={areasSchema}
@@ -173,7 +173,7 @@ export const ServiceAreasIndex: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={SERVICE_AREAS[0].heroImage}
-            alt="VIX General Services service areas across Massachusetts and Vermont"
+            alt="VIX General Services service areas across New England"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/95 via-[#1A2B44]/70 to-[#1A2B44]/40" />
@@ -190,14 +190,14 @@ export const ServiceAreasIndex: React.FC = () => {
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 backdrop-blur-md border border-white/20 mb-5 text-white text-xs sm:text-sm font-semibold tracking-wide">
               <MapPin className="w-4 h-4 text-[#C99A55]" />
-              <span>Serving Massachusetts &amp; Vermont</span>
+              <span>Serving Five New England States</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white leading-[1.08] mb-5 tracking-tight">
               OUR <span className="text-[#C99A55] ">SERVICE AREAS</span>
             </h1>
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-7 max-w-2xl leading-relaxed">
-              VIX General Services proudly serves Massachusetts, surrounding
-              areas within 100 miles, and Vermont. Explore our coverage below
+              VIX General Services proudly serves Massachusetts, Maine, New
+              Hampshire, Rhode Island, and Vermont. Explore our coverage below
               and discover energy-efficiency, HVAC, electrical, solar, EV
               charging, and smart technology solutions for your property.
             </p>

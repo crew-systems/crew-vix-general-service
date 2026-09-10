@@ -79,13 +79,13 @@ export const SERVICES: ServiceItem[] = [
     name: "HVAC & Air Conditioning Services",
     shortName: "HVAC",
     tagline: "High-Efficiency Cooling & Heating Solutions",
-    headline: "PREMIER HVAC & AIR CONDITIONING SERVICES IN MASSACHUSETTS & VERMONT",
+    headline: "PREMIER HVAC & AIR CONDITIONING SERVICES ACROSS NEW ENGLAND",
     subheadline:
       "Keep your property energy-efficient and comfortable year-round with skilled technicians, responsive service, and dependable equipment suited to New England seasons.",
     shortDesc:
       "Heating, cooling, and indoor air quality solutions engineered for year-round comfort and maximum energy efficiency.",
     longDesc:
-      "New England's changing seasons demand dependable heating and cooling. VIX General Services provides residential and commercial HVAC services across Massachusetts, surrounding areas within 100 miles, and Vermont. Whether your system needs emergency troubleshooting, seasonal maintenance, or a high-efficiency replacement, our technicians diagnose the root cause and deliver lasting solutions backed by comprehensive warranties.",
+      "New England's changing seasons demand dependable heating and cooling. VIX General Services provides residential and commercial HVAC services across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Whether your system needs emergency troubleshooting, seasonal maintenance, or a high-efficiency replacement, our technicians diagnose the root cause and deliver lasting solutions backed by comprehensive warranties.",
     whyChooseText:
       "With over 9 years of hands-on experience, our HVAC specialists recommend properly sized, high-efficiency equipment designed to reduce energy use while maintaining dependable comfort through hot summers and cold winters.",
     heroImage: IMAGES.services.hvac,
@@ -95,9 +95,9 @@ export const SERVICES: ServiceItem[] = [
     featured: true,
     estimateServiceKey: "hvac",
     metaTitle:
-      "HVAC & Air Conditioning Services Massachusetts & Vermont | VIX",
+      "HVAC & Air Conditioning Services New England | VIX",
     metaDescription:
-      "HVAC repair, heating and AC replacement, ductwork, and maintenance in Massachusetts and Vermont. Fast diagnostics, energy-efficient systems, and upfront pricing.",
+      "HVAC repair, heating and AC replacement, ductwork, and maintenance across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont.",
     schemaServiceType: "HVAC Repair and Installation Services",
     keywords: [
       "HVAC Massachusetts",
@@ -181,7 +181,7 @@ export const SERVICES: ServiceItem[] = [
         icon: Clock,
         title: "Fast Response Times",
         description:
-          "Responsive dispatch across our Massachusetts and Vermont service areas when your heating or cooling goes down.",
+          "Responsive dispatch across our five-state New England service area when your heating or cooling goes down.",
       },
       {
         icon: Award,
@@ -235,7 +235,7 @@ export const SERVICES: ServiceItem[] = [
           "As a general rule, if your cooling system is over 10 to 12 years old, uses phased-out R-22 Freon, or requires frequent costly repairs approaching half the cost of a new unit, replacement is usually more cost-effective. Modern high-efficiency systems also cut monthly cooling bills by 25% to 40%. We always give an honest assessment so you can choose what fits your budget.",
       },
       {
-        question: "How often should HVAC systems in Massachusetts and Vermont be serviced?",
+        question: "How often should HVAC systems in New England be serviced?",
         answer:
           "We recommend professional preventative maintenance twice a year: once before the cooling season and once before the heating season. Regular service helps preserve efficiency, catches developing issues, and reduces the risk of breakdowns during temperature extremes.",
       },
@@ -266,13 +266,13 @@ export const SERVICES: ServiceItem[] = [
     name: "Licensed Electrical Services",
     shortName: "Electrical",
     tagline: "Safe, Code-Compliant Residential & Commercial Power",
-    headline: "EXPERT ELECTRICAL SERVICES IN MASSACHUSETTS & VERMONT",
+    headline: "EXPERT ELECTRICAL SERVICES ACROSS NEW ENGLAND",
     subheadline:
       "Protect your property and power modern appliances with professional electrical panel upgrades, rewiring, surge protection, and custom lighting executed to strict NEC code.",
     shortDesc:
       "Safe, reliable electrical solutions including 200A panel upgrades, rewiring, lighting, and surge protection for ultimate peace of mind.",
     longDesc:
-      "Modern households run high-draw appliances, heat pumps, EV chargers, and smart home technology that outdated electrical panels were never designed to handle. VIX General Services provides end-to-end electrical solutions across Massachusetts and Vermont, from resolving hazardous legacy panels to complete home rewiring, dedicated circuits, and decorative architectural lighting. Safety, precision, and longevity guide every wire we run.",
+      "Modern households run high-draw appliances, heat pumps, EV chargers, and smart home technology that outdated electrical panels were never designed to handle. VIX General Services provides end-to-end electrical solutions across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont, from resolving hazardous legacy panels to complete home rewiring, dedicated circuits, and decorative architectural lighting. Safety, precision, and longevity guide every wire we run.",
     whyChooseText:
       "Electrical systems leave zero room for error. Our team works to applicable electrical codes and modern high-load panel standards, helping properties stay safe, efficient, and ready for heat pumps, EV charging, and other electrification upgrades.",
     heroImage: IMAGES.services.electrical,
@@ -281,9 +281,9 @@ export const SERVICES: ServiceItem[] = [
     badgeColor: "bg-[#F2B705]/10 text-[#B38300] border-[#F2B705]/30",
     estimateServiceKey: "electrical",
     metaTitle:
-      "Electrical Services Massachusetts & Vermont | VIX General Services",
+      "Electrical Services New England | VIX General Services",
     metaDescription:
-      "Expert electrical services in Massachusetts and Vermont. Panel upgrades, rewiring, surge protection, lighting installation, and troubleshooting.",
+      "Expert electrical services across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Panel upgrades, rewiring, surge protection, and lighting.",
     schemaServiceType: "Electrical Services and Panel Upgrades",
     keywords: [
       "electrician Massachusetts",
@@ -452,7 +452,7 @@ export const SERVICES: ServiceItem[] = [
     name: "Custom Solar Energy Systems",
     shortName: "Solar",
     tagline: "Turn Available Sunlight into Clean, Lower-Cost Power",
-    headline: "PREMIUM SOLAR ENERGY & BATTERY STORAGE IN MASSACHUSETTS & VERMONT",
+    headline: "PREMIUM SOLAR ENERGY & BATTERY STORAGE ACROSS NEW ENGLAND",
     subheadline:
       "Reduce rising electric bills, add resilient backup power, and invest in sustainable energy with custom-engineered solar systems.",
     shortDesc:
@@ -467,9 +467,9 @@ export const SERVICES: ServiceItem[] = [
     badgeColor: "bg-[#3FA65B]/10 text-[#2C7A43] border-[#3FA65B]/30",
     estimateServiceKey: "solar",
     metaTitle:
-      "Solar Panels & Battery Backup Massachusetts & Vermont | VIX",
+      "Solar Panels & Battery Backup New England | VIX",
     metaDescription:
-      "Turnkey solar panel installation and battery storage in Massachusetts and Vermont. Reduce utility costs with a system designed around your property and energy use.",
+      "Turnkey solar panel installation and battery storage across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont.",
     schemaServiceType: "Solar Panel Installation and Renewable Energy Services",
     keywords: [
       "solar panel installation Massachusetts",
@@ -638,7 +638,7 @@ export const SERVICES: ServiceItem[] = [
     name: "EV Charging Station Installation",
     shortName: "EV Charging",
     tagline: "Fast, Convenient Level 2 Charging at Your Home or Business",
-    headline: "EV CHARGING STATION INSTALLATION IN MASSACHUSETTS & VERMONT",
+    headline: "EV CHARGING STATION INSTALLATION ACROSS NEW ENGLAND",
     subheadline:
       "Charge your electric vehicle up to 7x faster than standard wall outlets. We provide turnkey Level 2 EV charger installation for Tesla, Rivian, Ford, and all universal electric vehicles.",
     shortDesc:
@@ -653,9 +653,9 @@ export const SERVICES: ServiceItem[] = [
     badgeColor: "bg-[#7C5CFC]/10 text-[#7C5CFC] border-[#7C5CFC]/30",
     estimateServiceKey: "ev-charging",
     metaTitle:
-      "Home & Commercial EV Charger Installation Massachusetts & Vermont | VIX",
+      "Home & Commercial EV Charger Installation New England | VIX",
     metaDescription:
-      "Level 2 EV charger installation in Massachusetts and Vermont. Tesla Wall Connector, universal chargers, 240V dedicated circuits, and load management options.",
+      "Level 2 EV charger installation across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Tesla and universal chargers available.",
     schemaServiceType: "Electric Vehicle Charging Station Installation Services",
     keywords: [
       "EV charger installation Massachusetts",
@@ -824,13 +824,13 @@ export const SERVICES: ServiceItem[] = [
     name: "Outdoor & Landscape Lighting",
     shortName: "Outdoor Lighting",
     tagline: "Lighting that enhances your lifestyle",
-    headline: "ARCHITECTURAL OUTDOOR & LANDSCAPE LIGHTING IN MASSACHUSETTS & VERMONT",
+    headline: "ARCHITECTURAL OUTDOOR & LANDSCAPE LIGHTING ACROSS NEW ENGLAND",
     subheadline:
       "Transform your home into a nighttime showpiece with commercial-grade brass LED spotlights, double-head pole fixtures, multi-zone control, and durable low-voltage infrastructure.",
     shortDesc:
       "Custom outdoor, pathway, facade, pool, and landscape lighting systems engineered with weatherproof brass fixtures, dusk-to-dawn sensors, and smart zone controls.",
     longDesc:
-      "A professionally engineered outdoor lighting system elevates curb appeal, increases evening safety, and extends outdoor living into the night. VIX General Services specializes in turnkey low-voltage architectural and landscape illumination across Massachusetts and Vermont. From gardens and pathways to patios, pergolas, and boundary lighting, we design balanced systems that blend warmth, visibility, and energy efficiency.",
+      "A professionally engineered outdoor lighting system elevates curb appeal, increases evening safety, and extends outdoor living into the night. VIX General Services specializes in turnkey low-voltage architectural and landscape illumination across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. From gardens and pathways to patios, pergolas, and boundary lighting, we design balanced systems that blend warmth, visibility, and energy efficiency.",
     whyChooseText:
       "New England rain, snow, freeze-thaw cycles, and seasonal temperature changes demand durable exterior equipment. We install weather-resistant fixtures, sealed connectors, protected conduit, and dependable transformers selected for year-round performance.",
     heroImage: IMAGES.services.outdoorLighting,
@@ -840,9 +840,9 @@ export const SERVICES: ServiceItem[] = [
     featured: true,
     estimateServiceKey: "outdoor-lighting",
     metaTitle:
-      "Landscape & Outdoor Lighting Massachusetts & Vermont | VIX",
+      "Landscape & Outdoor Lighting New England | VIX",
     metaDescription:
-      "Custom architectural and landscape lighting in Massachusetts and Vermont. Durable fixtures, pathway lighting, pole lights, and multi-zone controls. Free estimate.",
+      "Custom architectural and landscape lighting across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Free estimate.",
     schemaServiceType: "Landscape Lighting and Outdoor Illumination Services",
     keywords: [
       "landscape lighting Massachusetts",
@@ -1011,13 +1011,13 @@ export const SERVICES: ServiceItem[] = [
     name: "Security Camera & Surveillance Systems",
     shortName: "Security Cameras",
     tagline: "24/7 High-Definition Property Protection",
-    headline: "ADVANCED 360° PTZ & 4K CCTV SECURITY CAMERA SYSTEMS IN MASSACHUSETTS & VERMONT",
+    headline: "ADVANCED 360° PTZ & 4K CCTV SECURITY CAMERA SYSTEMS ACROSS NEW ENGLAND",
     subheadline:
       "Protect your estate with commercial-grade 360° pan-tilt-zoom cameras, 4K network video recorders, smart AI human detection, and private local storage with remote smartphone viewing.",
     shortDesc:
       "Professional wired 4K security camera installations with 360° PTZ coverage, continuous local NVR recording, infrared night vision, and mobile app monitoring.",
     longDesc:
-      "True perimeter security requires dependable, high-resolution surveillance that never misses a detail—day or night. VIX General Services designs and installs residential and commercial security camera systems across Massachusetts and Vermont. Unlike battery-powered Wi-Fi cameras that can suffer from delayed alerts and recurring cloud fees, our hardwired PoE systems support continuous recording, optical zoom, and pan-tilt-zoom coverage.",
+      "True perimeter security requires dependable, high-resolution surveillance that never misses a detail—day or night. VIX General Services designs and installs residential and commercial security camera systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Unlike battery-powered Wi-Fi cameras that can suffer from delayed alerts and recurring cloud fees, our hardwired PoE systems support continuous recording, optical zoom, and pan-tilt-zoom coverage.",
     whyChooseText:
       "Rain, snow, cold, summer heat, and storms challenge exterior electronics. We use outdoor-rated cameras, protected cabling, dependable PoE distribution, and surge protection options to help your surveillance system stay online when you need it most.",
     heroImage: IMAGES.services.securityCameras,
@@ -1026,9 +1026,9 @@ export const SERVICES: ServiceItem[] = [
     badgeColor: "bg-[#C0392B]/10 text-[#C0392B] border-[#C0392B]/30",
     estimateServiceKey: "security-cameras",
     metaTitle:
-      "Security Camera Installation Massachusetts & Vermont | VIX",
+      "Security Camera Installation New England | VIX",
     metaDescription:
-      "Professional security camera installation in Massachusetts and Vermont. PTZ and 4K cameras, local NVR storage, PoE wiring, and mobile access. Free consultation.",
+      "Professional security camera installation across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. PTZ, 4K, NVR, and PoE systems.",
     schemaServiceType: "Security Camera Installation and Video Surveillance Services",
     keywords: [
       "security camera installation Massachusetts",
@@ -1197,13 +1197,13 @@ export const SERVICES: ServiceItem[] = [
     name: "Smart Control Hub & Automation Systems",
     shortName: "Smart Automation",
     tagline: "Centralized Smart Control for Lighting, Power & Security",
-    headline: "CENTRALIZED SMART HOME AUTOMATION & CONTROL HUBS IN MASSACHUSETTS & VERMONT",
+    headline: "CENTRALIZED SMART HOME AUTOMATION & CONTROL HUBS ACROSS NEW ENGLAND",
     subheadline:
       "Control your outdoor lighting zones, security cameras, pool illumination, and power distribution from a single intuitive smartphone app with automated scheduling.",
     shortDesc:
       "Centralized smart controllers, Wi-Fi gateways, and NEMA 3R distribution panels offering seamless smartphone control, dimming, and automation.",
     longDesc:
-      "Modern properties benefit from control systems that bring lighting, security, and electrical management into one connected experience. VIX General Services designs and installs centralized smart control hubs, Wi-Fi gateways, and automated power distribution systems across Massachusetts and Vermont. Scheduling, remote control, and coordinated devices can make a property more intuitive, secure, and energy-efficient.",
+      "Modern properties benefit from control systems that bring lighting, security, and electrical management into one connected experience. VIX General Services designs and installs centralized smart control hubs, Wi-Fi gateways, and automated power distribution systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Scheduling, remote control, and coordinated devices can make a property more intuitive, secure, and energy-efficient.",
     whyChooseText:
       "Consumer smart devices can struggle in demanding exterior environments. We install dependable centralized controllers inside suitable weather-resistant enclosures, paired with appropriate network coverage and surge protection for reliable operation.",
     heroImage: IMAGES.services.smartAutomation,
@@ -1212,9 +1212,9 @@ export const SERVICES: ServiceItem[] = [
     badgeColor: "bg-[#17A2B8]/10 text-[#17A2B8] border-[#17A2B8]/30",
     estimateServiceKey: "smart-automation",
     metaTitle:
-      "Smart Home Automation Massachusetts & Vermont | VIX",
+      "Smart Home Automation New England | VIX",
     metaDescription:
-      "Centralized smart home automation and lighting control in Massachusetts and Vermont. Multi-zone app control, dimming, scheduling, and surge protection.",
+      "Centralized smart home automation and lighting control across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont.",
     schemaServiceType: "Home Automation and Smart Control Installation Services",
     keywords: [
       "smart home automation Massachusetts",
