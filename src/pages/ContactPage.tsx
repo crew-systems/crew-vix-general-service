@@ -108,7 +108,7 @@ export const ContactPage: React.FC = () => {
               </div>
 
               {/* Embedded GoHighLevel Form */}
-              <GHLFormEmbed instanceId="contact-page" minHeight={874} />
+              <GHLFormEmbed instanceId="contact-page" minHeight={625} />
             </div>
 
             {/* Right Column: Direct Contact Details & Trust Badges */}

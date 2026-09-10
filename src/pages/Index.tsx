@@ -187,7 +187,7 @@ const Index: React.FC = () => {
               </p>
             </div>
             <div className="bg-[#F7F8FA] rounded-2xl p-4 sm:p-8 border border-[#1A2B44]/10 shadow-crisp">
-              <GHLFormEmbed instanceId="home-section" minHeight={874} />
+              <GHLFormEmbed instanceId="home-section" minHeight={625} />
             </div>
           </div>
         </section>

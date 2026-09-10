@@ -6,13 +6,17 @@ interface GHLFormEmbedProps {
   instanceId?: string;
 }
 
+const GHL_FORM_ID = "xCsxxTefyGz05iGmy5el";
+
 export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
   className = "",
-  minHeight = 874,
+  minHeight = 625,
   instanceId = "main",
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const iframeId = instanceId ? `inline-ZPe9ADAkmygEVDdixGlE-${instanceId}` : "inline-ZPe9ADAkmygEVDdixGlE";
+  const iframeId = instanceId
+    ? `inline-${GHL_FORM_ID}-${instanceId}`
+    : `inline-${GHL_FORM_ID}`;
 
   useEffect(() => {
     // Check if GoHighLevel form embed script already exists
@@ -73,7 +77,7 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
           status.includes("success") ||
           redirectUrl.includes("thank-you") ||
           redirectUrl.includes("thankyou") ||
-          data.formId === "ZPe9ADAkmygEVDdixGlE"
+          data.formId === GHL_FORM_ID
         ) {
           isFormSuccess = true;
         }
@@ -107,7 +111,7 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
       )}
 
       <iframe
-        src="https://api.leadconnectorhq.com/widget/form/ZPe9ADAkmygEVDdixGlE"
+        src={`https://api.leadconnectorhq.com/widget/form/${GHL_FORM_ID}`}
         style={{
           width: "100%",
           height: "100%",
@@ -124,9 +128,9 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name="Website Form"
-        data-height={typeof minHeight === "number" ? `${minHeight}` : "874"}
+        data-height={typeof minHeight === "number" ? `${minHeight}` : "625"}
         data-layout-iframe-id={iframeId}
-        data-form-id="ZPe9ADAkmygEVDdixGlE"
+        data-form-id={GHL_FORM_ID}
         data-cookie-consent="true"
         data-cookie-consent-provider="auto"
         title="Website Form"

@@ -36,13 +36,14 @@ describe("Contact and Form Embed Tests", () => {
     const iframe = container.querySelector("iframe");
     expect(iframe).not.toBeNull();
     expect(iframe?.getAttribute("src")).toBe(
-      "https://api.leadconnectorhq.com/widget/form/ZPe9ADAkmygEVDdixGlE"
+      "https://api.leadconnectorhq.com/widget/form/xCsxxTefyGz05iGmy5el"
     );
-    expect(iframe?.getAttribute("id")).toBe("inline-ZPe9ADAkmygEVDdixGlE-test-form");
+    expect(iframe?.getAttribute("id")).toBe("inline-xCsxxTefyGz05iGmy5el-test-form");
     expect(iframe?.getAttribute("data-layout-iframe-id")).toBe(
-      "inline-ZPe9ADAkmygEVDdixGlE-test-form"
+      "inline-xCsxxTefyGz05iGmy5el-test-form"
     );
-    expect(iframe?.getAttribute("data-form-id")).toBe("ZPe9ADAkmygEVDdixGlE");
+    expect(iframe?.getAttribute("data-form-id")).toBe("xCsxxTefyGz05iGmy5el");
+    expect(iframe?.getAttribute("data-height")).toBe("625");
   });
 
   it("deduplicates GHL form script when multiple embeds are rendered", () => {
@@ -89,7 +90,7 @@ describe("Contact and Form Embed Tests", () => {
       />
     );
     expect(container.textContent).toContain("Outdoor & Landscape Lighting");
-    const modalIframe = container.querySelector("#inline-ZPe9ADAkmygEVDdixGlE-modal");
+    const modalIframe = container.querySelector("#inline-xCsxxTefyGz05iGmy5el-modal");
     expect(modalIframe).not.toBeNull();
     const dialog = container.querySelector('[role="dialog"]');
     expect(dialog).not.toBeNull();

@@ -43,6 +43,6 @@ describe("App Render Test", () => {
     expect(buttons.length).toBeGreaterThan(0);
     fireEvent.click(buttons[0]);
     expect(container.innerHTML).not.toContain("An unexpected error occurred");
-    expect(container.querySelector("#inline-ZPe9ADAkmygEVDdixGlE-modal")).not.toBeNull();
+    expect(container.querySelector("#inline-xCsxxTefyGz05iGmy5el-modal")).not.toBeNull();
   });
 });

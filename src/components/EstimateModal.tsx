@@ -91,7 +91,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
 
         {/* Embedded Official GoHighLevel Form */}
         <div className="p-3 sm:p-4 pt-4 sm:pt-5">
-          <GHLFormEmbed instanceId="modal" minHeight={510} />
+          <GHLFormEmbed instanceId="modal" minHeight={625} />
         </div>
       </div>
     </div>

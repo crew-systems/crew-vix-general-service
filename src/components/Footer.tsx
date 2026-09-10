@@ -9,7 +9,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
-  // Chat widget is loaded in index.html with data-widget-id="6a8f24ef67138e3df68b3f12"
+  // Chat widget is loaded once in index.html with the active LeadConnector widget ID.
   // No additional injection needed here to avoid conflicts
 
   return (
