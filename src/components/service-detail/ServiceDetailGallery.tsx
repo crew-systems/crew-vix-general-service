@@ -42,7 +42,7 @@ export const ServiceDetailGallery: React.FC<ServiceDetailGalleryProps> = ({ serv
             RECENT {service.shortName.toUpperCase()} SHOWCASE & EXAMPLES
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Explore project examples and system architecture designed and installed by our licensed technicians across South Florida.
+            Explore project examples and system architecture designed and installed by our licensed technicians across Massachusetts and Vermont.
           </p>
         </div>
 

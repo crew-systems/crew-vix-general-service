@@ -33,8 +33,8 @@ export const ThankYouPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white flex flex-col justify-between">
       <SEOHead
-        title="Thank You | VIX General Services | South Florida"
-        description="Thank you for your estimate request. Our South Florida team has received your information and will contact you shortly."
+        title="Thank You | VIX General Services | MA & VT"
+        description="Thank you for your estimate request. Our Massachusetts and Vermont team has received your information and will contact you shortly."
         canonical="/thank-you"
         schemaJson={thankYouSchema}
       />
@@ -63,7 +63,7 @@ export const ThankYouPage: React.FC = () => {
             {/* Subtitle fulfilling the user's requirement */}
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
               Your answers have been successfully submitted to our team. Our licensed
-              South Florida specialists are reviewing your project details and will
+              Our specialists are reviewing your project details and will
               reach out to you shortly with next steps.
             </p>
 
@@ -124,7 +124,7 @@ export const ThankYouPage: React.FC = () => {
                     Need Immediate Assistance?
                   </h4>
                   <p className="text-xs text-[#EDE4D6]/80 mt-0.5">
-                    Speak with our South Florida team directly by phone or text.
+                    Speak with our team directly by phone or text.
                   </p>
                 </div>
               </div>

@@ -50,7 +50,7 @@ export const ServiceAreaPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-[#F5F6F8]">
         <SEOHead
           title="Area Not Found | VIX General Services"
-          description="The service area you are looking for could not be found. Explore our HVAC, electrical, solar, and EV charging services in South Florida."
+          description="The service area you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services in Massachusetts and Vermont."
           canonical="/service-areas"
           noIndex
         />
@@ -66,14 +66,6 @@ export const ServiceAreaPage: React.FC = () => {
     );
   }
 
-  const cityCoordinates: Record<string, { lat: number; lng: number }> = {
-    "boca-raton-fl": { lat: 26.3683, lng: -80.1289 },
-    "coral-springs-fl": { lat: 26.2711, lng: -80.2706 },
-    "parkland-fl": { lat: 26.3104, lng: -80.2377 },
-  };
-
-  const coords = cityCoordinates[area.slug] || { lat: 26.3683, lng: -80.1289 };
-
   const areaSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -86,13 +78,8 @@ export const ServiceAreaPage: React.FC = () => {
       "@id": "https://www.vixgeneralservices.com/#organization",
     },
     areaServed: {
-      "@type": "City",
+      "@type": "State",
       name: area.fullName,
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: coords.lat,
-        longitude: coords.lng,
-      },
     },
     url: `https://www.vixgeneralservices.com/service-areas/${area.slug}`,
     image: area.heroImage,

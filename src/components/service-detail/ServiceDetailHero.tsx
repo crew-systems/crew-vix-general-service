@@ -21,7 +21,7 @@ export const ServiceDetailHero: React.FC<ServiceDetailHeroProps> = ({
       <div className="absolute inset-0 z-0">
         <img
           src={service.heroImage}
-          alt={`${service.name} in South Florida - VIX General Services`}
+          alt={`${service.name} in Massachusetts and Vermont - VIX General Services`}
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/98 via-[#1A2B44]/85 to-[#1A2B44]/65" />
@@ -80,7 +80,7 @@ export const ServiceDetailHero: React.FC<ServiceDetailHeroProps> = ({
 
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#C99A55]" />
-              <span>{COMPANY_INFO.stats.experienceYears} Years in South Florida</span>
+              <span>{COMPANY_INFO.stats.experienceYears} Years of Experience</span>
             </div>
           </div>
 

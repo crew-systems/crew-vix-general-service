@@ -23,14 +23,11 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   const categories = [
     "All",
     "HVAC",
-    "COMMERCIAL HVAC",
     "ELECTRICAL",
-    "Solar",
-    "FLOORING",
-    "BATHROOM",
-    "KITCHEN",
-    "ELECTRICAL CONTROLS",
-    "COMMERCIAL INTERIOR",
+    "LIGHTING",
+    "EV CHARGING",
+    "ENERGY EFFICIENCY",
+    "COMMERCIAL ENERGY",
   ];
 
   const filteredGallery =
@@ -68,8 +65,9 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
             OUR PROJECT PORTFOLIO
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Explore our recent residential projects. From HVAC installations to
-            electrical panel upgrades, solar systems, and EV charging stations.
+            Explore recent residential and commercial work, including HVAC
+            replacements, electrical upgrades, lighting, EV charging, solar,
+            and complete energy-efficiency projects.
           </p>
         </div>
 
@@ -101,6 +99,8 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
               <img
                 src={item.url}
                 alt={item.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               {/* Overlay */}

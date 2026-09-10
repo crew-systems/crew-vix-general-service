@@ -79,15 +79,15 @@ export const SERVICES: ServiceItem[] = [
     name: "HVAC & Air Conditioning Services",
     shortName: "HVAC",
     tagline: "High-Efficiency Cooling & Heating Solutions",
-    headline: "PREMIER HVAC & AIR CONDITIONING SERVICES IN SOUTH FLORIDA",
+    headline: "PREMIER HVAC & AIR CONDITIONING SERVICES IN MASSACHUSETTS & VERMONT",
     subheadline:
-      "Keep your home cool, energy-efficient, and comfortable year-round with licensed technicians, rapid response times, and premium equipment engineered for Florida heat and humidity.",
+      "Keep your property energy-efficient and comfortable year-round with skilled technicians, responsive service, and dependable equipment suited to New England seasons.",
     shortDesc:
-      "Cooling, heating, and indoor air quality solutions engineered for year-round South Florida comfort and maximum energy efficiency.",
+      "Heating, cooling, and indoor air quality solutions engineered for year-round comfort and maximum energy efficiency.",
     longDesc:
-      "In South Florida relentless heat and humidity, a reliable air conditioning system is not a luxury—it is essential. VIX General Services provides full-spectrum residential and commercial HVAC services across Boca Raton, Coral Springs, Parkland, and neighboring communities. Whether your system needs emergency troubleshooting, routine seasonal maintenance, or a complete high-efficiency replacement, our licensed and insured technicians diagnose the root cause and deliver lasting solutions backed by comprehensive warranties.",
+      "New England's changing seasons demand dependable heating and cooling. VIX General Services provides residential and commercial HVAC services across Massachusetts, surrounding areas within 100 miles, and Vermont. Whether your system needs emergency troubleshooting, seasonal maintenance, or a high-efficiency replacement, our technicians diagnose the root cause and deliver lasting solutions backed by comprehensive warranties.",
     whyChooseText:
-      "With over 9 years of hands-on experience handling South Florida coastal salt air, extreme humidity, and peak-summer demand, our HVAC specialists specify equipment with high SEER2 ratings, anti-corrosion coil treatments, and variable-speed compressors designed to slash monthly electric bills.",
+      "With over 9 years of hands-on experience, our HVAC specialists recommend properly sized, high-efficiency equipment designed to reduce energy use while maintaining dependable comfort through hot summers and cold winters.",
     heroImage: IMAGES.services.hvac,
     icon: Snowflake,
     iconBg: "bg-[#2F6FED]",
@@ -95,19 +95,19 @@ export const SERVICES: ServiceItem[] = [
     featured: true,
     estimateServiceKey: "hvac",
     metaTitle:
-      "HVAC & Air Conditioning Services South Florida | VIX General Services",
+      "HVAC & Air Conditioning Services Massachusetts & Vermont | VIX",
     metaDescription:
-      "Licensed HVAC repair, AC replacement, ductwork, and maintenance in South Florida. Fast diagnostics, energy-efficient systems, and upfront transparent pricing.",
+      "HVAC repair, heating and AC replacement, ductwork, and maintenance in Massachusetts and Vermont. Fast diagnostics, energy-efficient systems, and upfront pricing.",
     schemaServiceType: "HVAC Repair and Installation Services",
     keywords: [
-      "HVAC South Florida",
-      "AC repair Boca Raton",
-      "air conditioning replacement Coral Springs",
-      "HVAC contractor Parkland FL",
-      "emergency AC service Broward County",
+      "HVAC Massachusetts",
+      "AC repair Massachusetts",
+      "heating and cooling Vermont",
+      "HVAC contractor Vermont",
+      "energy-efficient HVAC New England",
       "high efficiency AC installation",
     ],
-    galleryCategories: ["HVAC", "COMMERCIAL HVAC"],
+    galleryCategories: ["HVAC"],
     offerings: [
       {
         title: "AC Repair & Accurate Diagnostics",
@@ -127,7 +127,7 @@ export const SERVICES: ServiceItem[] = [
         features: [
           "Manual J load calculations",
           "Top brands with manufacturer warranty",
-          "FPL energy rebate assistance",
+          "Utility energy rebate assistance",
           "Clean, code-compliant install",
         ],
       },
@@ -181,13 +181,13 @@ export const SERVICES: ServiceItem[] = [
         icon: Clock,
         title: "Fast Response Times",
         description:
-          "Quick dispatch across Boca Raton, Coral Springs, and Parkland when your cooling goes down.",
+          "Responsive dispatch across our Massachusetts and Vermont service areas when your heating or cooling goes down.",
       },
       {
         icon: Award,
         title: "Licensed & Insured Experts",
         description:
-          "Certified technicians with 9+ years of proven South Florida experience and 1,200+ completed projects.",
+          "Experienced technicians with 9+ years of proven service and 1,200+ completed projects.",
       },
       {
         icon: DollarSign,
@@ -235,19 +235,19 @@ export const SERVICES: ServiceItem[] = [
           "As a general rule, if your cooling system is over 10 to 12 years old, uses phased-out R-22 Freon, or requires frequent costly repairs approaching half the cost of a new unit, replacement is usually more cost-effective. Modern high-efficiency systems also cut monthly cooling bills by 25% to 40%. We always give an honest assessment so you can choose what fits your budget.",
       },
       {
-        question: "How often should HVAC systems in South Florida be serviced?",
+        question: "How often should HVAC systems in Massachusetts and Vermont be serviced?",
         answer:
-          "Because air conditioning systems in South Florida run almost 10 months out of the year, we strongly recommend professional preventative maintenance at least twice a year—ideally in spring before peak summer heat and in autumn. Regular maintenance cleans coils, flushes algae from condensate drain lines, and prevents sudden mid-summer compressor failure.",
+          "We recommend professional preventative maintenance twice a year: once before the cooling season and once before the heating season. Regular service helps preserve efficiency, catches developing issues, and reduces the risk of breakdowns during temperature extremes.",
       },
       {
-        question: "What SEER2 rating should I choose for my South Florida home?",
+        question: "What efficiency rating should I choose for my home?",
         answer:
-          "In Florida, the legal minimum requirement is 14.3 SEER2 for split systems. However, for optimum efficiency and humidity reduction in our tropical climate, we typically recommend 15.2 to 18+ SEER2 two-stage or variable-speed systems. These units run at lower speeds longer, keeping indoor humidity comfortably below 50% while consuming substantially less electricity.",
+          "The right SEER2 or heat-pump efficiency rating depends on your property, system design, local requirements, and energy goals. We compare properly sized options and operating costs so you can choose an efficient system without overbuying equipment.",
       },
       {
-        question: "Are your technicians licensed and insured in Florida?",
+        question: "Are your technicians licensed and insured?",
         answer:
-          "Yes. VIX General Services is fully licensed and carries comprehensive liability insurance and workers compensation. All work complies strictly with Florida Building Code standards and local municipal permit guidelines.",
+          "VIX General Services carries appropriate licensing and insurance for the work performed. Projects are completed according to applicable state and local code and permit requirements.",
       },
       {
         question: "How long does a new air conditioning installation take?",
@@ -266,41 +266,41 @@ export const SERVICES: ServiceItem[] = [
     name: "Licensed Electrical Services",
     shortName: "Electrical",
     tagline: "Safe, Code-Compliant Residential & Commercial Power",
-    headline: "EXPERT LICENSED ELECTRICAL SERVICES IN SOUTH FLORIDA",
+    headline: "EXPERT ELECTRICAL SERVICES IN MASSACHUSETTS & VERMONT",
     subheadline:
       "Protect your property and power modern appliances with professional electrical panel upgrades, rewiring, surge protection, and custom lighting executed to strict NEC code.",
     shortDesc:
       "Safe, reliable electrical solutions including 200A panel upgrades, rewiring, lighting, and surge protection for ultimate peace of mind.",
     longDesc:
-      "Modern households run high-draw appliances, heat pumps, EV chargers, and smart home technology that outdated electrical panels were never designed to handle. VIX General Services provides end-to-end electrical solutions throughout South Florida, from resolving hazardous legacy panels (such as Federal Pacific or Zinsco) to complete home rewiring, dedicated circuits, and decorative architectural lighting. Safety, precision, and longevity guide every wire we run.",
+      "Modern households run high-draw appliances, heat pumps, EV chargers, and smart home technology that outdated electrical panels were never designed to handle. VIX General Services provides end-to-end electrical solutions across Massachusetts and Vermont, from resolving hazardous legacy panels to complete home rewiring, dedicated circuits, and decorative architectural lighting. Safety, precision, and longevity guide every wire we run.",
     whyChooseText:
-      "Electrical systems leave zero room for error. Our electricians hold deep expertise in Florida electrical codes, hurricane surge mitigation, and modern high-load panel distribution, ensuring your home remains completely safe and insurer-compliant.",
+      "Electrical systems leave zero room for error. Our team works to applicable electrical codes and modern high-load panel standards, helping properties stay safe, efficient, and ready for heat pumps, EV charging, and other electrification upgrades.",
     heroImage: IMAGES.services.electrical,
     icon: Zap,
     iconBg: "bg-[#F2B705]",
     badgeColor: "bg-[#F2B705]/10 text-[#B38300] border-[#F2B705]/30",
     estimateServiceKey: "electrical",
     metaTitle:
-      "Licensed Electrical Contractor South Florida | VIX General Services",
+      "Electrical Services Massachusetts & Vermont | VIX General Services",
     metaDescription:
-      "Expert electrical services in South Florida. 200A panel upgrades, rewiring, surge protection, lighting installation, and troubleshooting. Licensed & insured.",
+      "Expert electrical services in Massachusetts and Vermont. Panel upgrades, rewiring, surge protection, lighting installation, and troubleshooting.",
     schemaServiceType: "Electrical Services and Panel Upgrades",
     keywords: [
-      "electrician South Florida",
-      "electrical panel upgrade Boca Raton",
-      "licensed electrician Coral Springs",
-      "breaker panel replacement Parkland FL",
-      "home surge protection Broward",
+      "electrician Massachusetts",
+      "electrical panel upgrade Massachusetts",
+      "licensed electrician Vermont",
+      "breaker panel replacement Vermont",
+      "home surge protection New England",
       "recessed lighting installation",
     ],
-    galleryCategories: ["ELECTRICAL", "ELECTRICAL CONTROLS"],
+    galleryCategories: ["ELECTRICAL", "COMMERCIAL ENERGY"],
     offerings: [
       {
         title: "200-Amp Electrical Panel Upgrades",
         description:
           "Replace antiquated 100A or hazardous fuse panels with modern 200A or 400A breaker panels capable of supporting today high electrical demands.",
         features: [
-          "Permit filing & FPL coordination",
+          "Permit filing & utility coordination",
           "Brand-new copper busbar panels",
           "Whole-panel arc-fault & GFCI breakers",
           "Dedicated labeling & clean wire management",
@@ -367,7 +367,7 @@ export const SERVICES: ServiceItem[] = [
         icon: ShieldCheck,
         title: "Safety First Standards",
         description:
-          "Strict adherence to National Electrical Code (NEC) and South Florida municipal building guidelines.",
+          "Strict adherence to the National Electrical Code (NEC) and applicable state and municipal guidelines.",
       },
       {
         icon: Award,
@@ -418,7 +418,7 @@ export const SERVICES: ServiceItem[] = [
       {
         question: "Why do insurance companies require replacing Federal Pacific or Zinsco panels?",
         answer:
-          "Federal Pacific Electric (Stab-Lok) and Zinsco panels have documented failure rates where circuit breakers fail to trip during an overload or short circuit, causing extreme fire hazards. Many Florida homeowners insurance providers will either deny coverage or drastically increase premiums until the panel is upgraded to a modern Square D or Siemens panel.",
+          "Federal Pacific Electric (Stab-Lok) and Zinsco panels have documented safety concerns, including breakers that may fail to trip during an overload or short circuit. Some insurers may require these legacy panels to be evaluated or replaced with modern equipment.",
       },
       {
         question: "When should I upgrade to a 200-amp electrical panel?",
@@ -428,17 +428,17 @@ export const SERVICES: ServiceItem[] = [
       {
         question: "How long does an electrical panel upgrade take?",
         answer:
-          "Most residential panel replacements take between 4 to 8 hours. We coordinate closely with the local utility provider (such as FPL) so that power is shut off, the new panel is installed and grounded, and power is restored the very same afternoon.",
+          "Many residential panel replacements can be completed in one working day. We coordinate with the local utility and inspection authority so power can be safely disconnected, the new panel installed and grounded, and service restored after required approvals.",
       },
       {
-        question: "Is surge protection really necessary in South Florida?",
+        question: "Is whole-property surge protection worthwhile?",
         answer:
-          "Absolutely. South Florida has some of the highest lightning strike densities in North America. In addition, utility grid switching during storms causes power spikes that can instantly ruin inverter AC compressors, smart refrigerators, computers, and EV chargers. A whole-home surge protector installed at the main panel stops these surges before they reach internal wiring.",
+          "Whole-property surge protection can reduce damage from lightning, grid switching, and other voltage spikes that threaten HVAC equipment, appliances, computers, and EV chargers. A properly installed device at the main panel adds a valuable layer of protection.",
       },
       {
         question: "Do you handle city permits for electrical work?",
         answer:
-          "Yes. All panel upgrades, rewires, and major circuit installations are permitted through your local municipality (such as City of Boca Raton, Coral Springs, Parkland) to protect your property value and ensure compliance.",
+          "Required permits and inspections are coordinated with the applicable local authority to protect your property and ensure code compliance.",
       },
       {
         question: "Can you install recessed lighting in rooms without existing fixtures?",
@@ -451,35 +451,35 @@ export const SERVICES: ServiceItem[] = [
     slug: "solar",
     name: "Custom Solar Energy Systems",
     shortName: "Solar",
-    tagline: "Harness South Florida Sunshine for Clean, Low-Cost Power",
-    headline: "PREMIUM SOLAR ENERGY & BATTERY STORAGE IN SOUTH FLORIDA",
+    tagline: "Turn Available Sunlight into Clean, Lower-Cost Power",
+    headline: "PREMIUM SOLAR ENERGY & BATTERY STORAGE IN MASSACHUSETTS & VERMONT",
     subheadline:
-      "Slash or eliminate rising electric bills, secure hurricane backup power, and invest in sustainable energy with custom-engineered Tier-1 solar systems.",
+      "Reduce rising electric bills, add resilient backup power, and invest in sustainable energy with custom-engineered solar systems.",
     shortDesc:
       "Custom residential and commercial solar solutions with battery backup to save money, hedge against utility inflation, and power your home sustainably.",
     longDesc:
-      "With over 240 days of brilliant sunshine each year, South Florida is the premier location to invest in solar energy. VIX General Services engineers custom solar panel systems and battery backup configurations tailored to your roof geometry, energy consumption, and long-term financial goals. We manage the entire lifecycle—from drone roof analysis and structural engineering to utility net-metering approval with FPL and high-wind-rated installation.",
+      "VIX General Services engineers custom solar panel systems and battery backup configurations tailored to your roof geometry, energy consumption, seasonal production, and long-term financial goals. We manage the project lifecycle from site analysis and system design to permitting, utility interconnection, and installation.",
     whyChooseText:
-      "Unlike high-pressure solar marketing brokerages, VIX General Services is a licensed local contractor with proven building and electrical expertise. We use only Tier-1 monocrystalline panels with 25-year performance warranties and hurricane-rated racking tested up to Category 5 wind speeds.",
+      "Unlike high-pressure solar marketing brokerages, VIX General Services brings practical building and electrical expertise to each project. We specify dependable panels, inverters, batteries, and mounting systems selected for long-term performance in New England conditions.",
     heroImage: IMAGES.services.solar,
     icon: Sun,
     iconBg: "bg-[#3FA65B]",
     badgeColor: "bg-[#3FA65B]/10 text-[#2C7A43] border-[#3FA65B]/30",
     estimateServiceKey: "solar",
     metaTitle:
-      "Solar Panel Installation & Battery Backup South Florida | VIX",
+      "Solar Panels & Battery Backup Massachusetts & Vermont | VIX",
     metaDescription:
-      "Turnkey solar panel installation and battery storage in South Florida. Lower your FPL electric bills with hurricane-rated Tier 1 solar systems. Free quote.",
+      "Turnkey solar panel installation and battery storage in Massachusetts and Vermont. Reduce utility costs with a system designed around your property and energy use.",
     schemaServiceType: "Solar Panel Installation and Renewable Energy Services",
     keywords: [
-      "solar panel installation South Florida",
-      "residential solar Boca Raton",
-      "solar battery storage Coral Springs",
-      "solar power contractor Parkland FL",
-      "FPL net metering solar",
-      "hurricane rated solar panels",
+      "solar panel installation Massachusetts",
+      "residential solar Massachusetts",
+      "solar battery storage Vermont",
+      "solar power contractor Vermont",
+      "utility interconnection solar",
+      "cold climate solar panels",
     ],
-    galleryCategories: ["SOLAR", "COMMERCIAL HVAC"],
+    galleryCategories: ["ENERGY EFFICIENCY", "COMMERCIAL ENERGY"],
     offerings: [
       {
         title: "Residential Rooftop Solar Systems",
@@ -495,7 +495,7 @@ export const SERVICES: ServiceItem[] = [
       {
         title: "Solar Battery Backup & Energy Storage",
         description:
-          "Keep essential circuits, lights, refrigeration, and air conditioning running seamlessly during grid blackouts and hurricane power outages.",
+          "Keep essential circuits, lights, refrigeration, and critical heating or cooling equipment running during grid outages.",
         features: [
           "Tesla Powerwall / Enphase IQ battery options",
           "Instantaneous automatic transfer switch",
@@ -504,11 +504,11 @@ export const SERVICES: ServiceItem[] = [
         ],
       },
       {
-        title: "FPL Net Metering & Utility Interconnection",
+        title: "Net Metering & Utility Interconnection",
         description:
-          "Full management of Florida Power & Light (FPL) net metering applications, bi-directional meter installation, and Tier 1 / Tier 2 utility interconnection.",
+          "Support for applicable utility interconnection and net-metering applications, bi-directional meter requirements, and system approval.",
         features: [
-          "FPL bi-directional net-meter setup",
+          "Bi-directional net-meter setup",
           "Credits earned for excess power sent to grid",
           "All utility engineering paperwork handled",
           "Quick PTO (Permission to Operate) timeline",
@@ -537,9 +537,9 @@ export const SERVICES: ServiceItem[] = [
         ],
       },
       {
-        title: "Hurricane-Resistant Structural Racking",
+        title: "Weather-Resistant Structural Racking",
         description:
-          "Engineered racking and mounting systems certified to withstand South Florida High-Velocity Hurricane Zone (HVHZ) wind ratings up to 175+ MPH.",
+          "Engineered racking and mounting systems selected for applicable wind, snow-load, roof, and local building requirements.",
         features: [
           "HVHZ compliant structural attachments",
           "Tile, shingle, and standing-seam metal roofs",
@@ -559,7 +559,7 @@ export const SERVICES: ServiceItem[] = [
         icon: ShieldCheck,
         title: "Category 5 Wind Rated",
         description:
-          "Engineered with heavy-duty flashing and mounts designed to withstand extreme South Florida hurricane winds.",
+          "Engineered with heavy-duty flashing and mounts designed for local wind, snow, and weather conditions.",
       },
       {
         icon: Award,
@@ -579,7 +579,7 @@ export const SERVICES: ServiceItem[] = [
         step: "01",
         title: "Solar Feasibility & Shading Analysis",
         description:
-          "We evaluate your historical FPL utility bills, roof orientation, pitch, and satellite solar irradiance data.",
+          "We evaluate your historical utility bills, roof orientation, pitch, shading, and solar irradiance data.",
       },
       {
         step: "02",
@@ -597,34 +597,34 @@ export const SERVICES: ServiceItem[] = [
         step: "04",
         title: "Inspection & Utility PTO",
         description:
-          "We pass city building/electrical inspections, coordinate FPL net-meter swap, and turn on your clean power.",
+          "We complete required building and electrical inspections, coordinate utility interconnection, and commission your system.",
       },
     ],
     faqs: [
       {
-        question: "How does net metering work with FPL in Florida?",
+        question: "How does net metering work with my utility?",
         answer:
-          "Under Florida net metering rules, your solar system sends any excess electricity you generate during peak sunny hours back into the FPL grid. Your electric meter spins backward, banking kWh credits on your account that offset the electricity you pull from the grid at night or during overcast days.",
+          "When your utility offers net metering, excess solar production can flow back to the grid and may earn bill credits under that utility's current tariff. Program rules vary by location, so we review the applicable requirements during system design.",
       },
       {
         question: "Will solar panels damage my roof or cause leaks?",
         answer:
-          "Not when installed by licensed professionals. We use specialized engineered mounting brackets with waterproof flashing systems and lag-seal compounds specifically designed for Florida tile, shingle, and metal roofs. In fact, solar panels actually protect the shaded portion of your roof from harsh UV degradation and direct rainfall.",
+          "A properly designed installation uses engineered mounting brackets, waterproof flashing, and roof-specific sealing methods. We evaluate the roof condition and structure before installation and follow applicable manufacturer and code requirements.",
       },
       {
-        question: "Can I still have power during a hurricane blackout?",
+        question: "Can I still have power during a grid outage?",
         answer:
           "Standard grid-tied solar systems without a battery will automatically shut down during a grid outage for utility worker safety. However, when you pair your solar array with a battery storage system (such as Tesla Powerwall or Enphase IQ Battery), the system forms a microgrid, powering your refrigerators, lights, medical devices, and air conditioning automatically without any interruption.",
       },
       {
-        question: "What financial incentives exist for solar in Florida?",
+        question: "What financial incentives may be available for solar?",
         answer:
-          "Homeowners benefit from the 30% Federal Clean Energy Tax Credit, Florida 100% property tax exemption on the added home value of renewable energy equipment, and 100% state sales tax exemption on solar purchases.",
+          "Federal, state, and utility incentives can change. We help identify programs that may apply to your property, and recommend confirming tax eligibility with a qualified tax professional before making a financial decision.",
       },
       {
         question: "Can my HOA prohibit me from installing solar panels?",
         answer:
-          "No. Under Florida Statute 163.04 (the Florida Energy Fair Defense Act), Homeowners Associations (HOAs) are legally prohibited from forbidding the installation of solar collectors or renewable energy devices on your property.",
+          "Solar permissions depend on your property, municipality, utility, and any applicable association rules. We review known project requirements during planning, but property owners should confirm private restrictions that may apply.",
       },
       {
         question: "How long do solar panels last?",
@@ -638,7 +638,7 @@ export const SERVICES: ServiceItem[] = [
     name: "EV Charging Station Installation",
     shortName: "EV Charging",
     tagline: "Fast, Convenient Level 2 Charging at Your Home or Business",
-    headline: "CERTIFIED EV CHARGING STATION INSTALLATION IN SOUTH FLORIDA",
+    headline: "EV CHARGING STATION INSTALLATION IN MASSACHUSETTS & VERMONT",
     subheadline:
       "Charge your electric vehicle up to 7x faster than standard wall outlets. We provide turnkey Level 2 EV charger installation for Tesla, Rivian, Ford, and all universal electric vehicles.",
     shortDesc:
@@ -653,19 +653,19 @@ export const SERVICES: ServiceItem[] = [
     badgeColor: "bg-[#7C5CFC]/10 text-[#7C5CFC] border-[#7C5CFC]/30",
     estimateServiceKey: "ev-charging",
     metaTitle:
-      "Home & Commercial EV Charger Installation South Florida | VIX",
+      "Home & Commercial EV Charger Installation Massachusetts & Vermont | VIX",
     metaDescription:
-      "Certified Level 2 EV charger installation in South Florida. Tesla Wall Connector, universal chargers, 240V dedicated circuits. Fast, licensed & insured.",
+      "Level 2 EV charger installation in Massachusetts and Vermont. Tesla Wall Connector, universal chargers, 240V dedicated circuits, and load management options.",
     schemaServiceType: "Electric Vehicle Charging Station Installation Services",
     keywords: [
-      "EV charger installation South Florida",
-      "Tesla Wall Connector installer Boca Raton",
-      "Level 2 EV charging Coral Springs",
-      "electric car charger electrician Parkland FL",
-      "home EV charger 240V Broward",
+      "EV charger installation Massachusetts",
+      "Tesla Wall Connector installer Massachusetts",
+      "Level 2 EV charging Vermont",
+      "electric car charger electrician Vermont",
+      "home EV charger 240V New England",
       "commercial EV charging station",
     ],
-    galleryCategories: ["ELECTRICAL", "ELECTRICAL CONTROLS"],
+    galleryCategories: ["EV CHARGING", "COMMERCIAL ENERGY"],
     offerings: [
       {
         title: "Tesla Wall Connector Installation",
@@ -725,10 +725,10 @@ export const SERVICES: ServiceItem[] = [
       {
         title: "Smart Scheduling & Utility Rebate Assistance",
         description:
-          "Setup of smart charging timers to take advantage of off-peak electric utility rates, plus assistance with FPL EVolution rebate programs.",
+          "Setup of smart charging timers to take advantage of applicable off-peak utility rates, plus assistance identifying available rebate programs.",
         features: [
           "Time-of-Use (TOU) off-peak charging schedules",
-          "FPL EV program documentation support",
+          "Utility EV program documentation support",
           "Federal Alternative Fuel Vehicle Refueling Property credit",
           "Wi-Fi signal extension to garages if needed",
         ],
@@ -805,7 +805,7 @@ export const SERVICES: ServiceItem[] = [
       {
         question: "Can you install an EV charger outdoors if I do not have a garage?",
         answer:
-          "Yes! High-quality chargers like the Tesla Universal Wall Connector and ChargePoint Home Flex carry NEMA 3R or NEMA 4 weather-resistant ratings designed to endure direct Florida rain, humidity, and sunshine. We use UV-resistant conduit and weatherproof seals for outdoor installs.",
+          "Yes. Outdoor-rated chargers such as the Tesla Universal Wall Connector and ChargePoint Home Flex carry weather-resistant enclosure ratings. We use suitable conduit, fittings, and weatherproof seals for exterior installations.",
       },
       {
         question: "Is there a tax credit for installing a home EV charger?",
@@ -813,7 +813,7 @@ export const SERVICES: ServiceItem[] = [
           "Yes. Under the Inflation Reduction Act, the Section 30C Alternative Fuel Vehicle Refueling Property Credit offers eligible homeowners a federal tax credit of up to 30% of the hardware and installation cost (up to $1,000 max for residential properties).",
       },
       {
-        question: "Do I need a city permit to install an EV charger in Florida?",
+        question: "Do I need a permit to install an EV charger?",
         answer:
           "Yes. Installing a new 240V high-amperage dedicated circuit requires an electrical permit from your city or county building department. VIX General Services handles the permit application, plans, and final city inspection.",
       },
@@ -824,15 +824,15 @@ export const SERVICES: ServiceItem[] = [
     name: "Outdoor & Landscape Lighting",
     shortName: "Outdoor Lighting",
     tagline: "Lighting that enhances your lifestyle",
-    headline: "ARCHITECTURAL OUTDOOR & LANDSCAPE LIGHTING IN SOUTH FLORIDA",
+    headline: "ARCHITECTURAL OUTDOOR & LANDSCAPE LIGHTING IN MASSACHUSETTS & VERMONT",
     subheadline:
       "Transform your home into a nighttime showpiece with commercial-grade brass LED spotlights, double-head pole fixtures, multi-zone control, and durable low-voltage infrastructure.",
     shortDesc:
       "Custom outdoor, pathway, facade, pool, and landscape lighting systems engineered with weatherproof brass fixtures, dusk-to-dawn sensors, and smart zone controls.",
     longDesc:
-      "A professionally engineered outdoor lighting system elevates your home curb appeal, increases evening safety, and extends luxury outdoor living into the night. VIX General Services specializes in turn-key low-voltage architectural and landscape illumination across Boca Raton, Coral Springs, Parkland, and surrounding communities. From illuminating mature palms and garden features to poolside lounges, pergolas, and boundary pole lights, we design balanced lighting schemes that blend warmth, drama, and energy efficiency.",
+      "A professionally engineered outdoor lighting system elevates curb appeal, increases evening safety, and extends outdoor living into the night. VIX General Services specializes in turnkey low-voltage architectural and landscape illumination across Massachusetts and Vermont. From gardens and pathways to patios, pergolas, and boundary lighting, we design balanced systems that blend warmth, visibility, and energy efficiency.",
     whyChooseText:
-      "South Florida coastal salt air, extreme summer downpours, and high humidity destroy cheap aluminum fixtures within months. We exclusively install heavy-duty solid brass and marine-grade IP65 fixtures, sealed silicone gel wire connectors, Schedule 40 PVC conduit sleeves, and stainless-steel 12V transformers built to perform reliably year after year.",
+      "New England rain, snow, freeze-thaw cycles, and seasonal temperature changes demand durable exterior equipment. We install weather-resistant fixtures, sealed connectors, protected conduit, and dependable transformers selected for year-round performance.",
     heroImage: IMAGES.services.outdoorLighting,
     icon: Lightbulb,
     iconBg: "bg-[#D98E3E]",
@@ -840,19 +840,19 @@ export const SERVICES: ServiceItem[] = [
     featured: true,
     estimateServiceKey: "outdoor-lighting",
     metaTitle:
-      "Landscape & Outdoor Lighting Installation South Florida | VIX",
+      "Landscape & Outdoor Lighting Massachusetts & Vermont | VIX",
     metaDescription:
-      "Custom architectural outdoor lighting and landscape lighting in South Florida. Solid brass spotlights, double-head pole lights, multi-zone control. Free estimate.",
+      "Custom architectural and landscape lighting in Massachusetts and Vermont. Durable fixtures, pathway lighting, pole lights, and multi-zone controls. Free estimate.",
     schemaServiceType: "Landscape Lighting and Outdoor Illumination Services",
     keywords: [
-      "landscape lighting South Florida",
-      "outdoor lighting installation Boca Raton",
-      "landscape spotlights Coral Springs",
-      "low voltage outdoor lighting Parkland FL",
-      "architectural lighting Broward County",
-      "pole light installation South Florida",
+      "landscape lighting Massachusetts",
+      "outdoor lighting installation Massachusetts",
+      "landscape spotlights Vermont",
+      "low voltage outdoor lighting Vermont",
+      "architectural lighting New England",
+      "pole light installation Massachusetts",
     ],
-    galleryCategories: ["OUTDOOR LIGHTING", "ELECTRICAL CONTROLS"],
+    galleryCategories: ["LIGHTING"],
     offerings: [
       {
         title: "Commercial-Grade Brass Landscape Spotlights",
@@ -926,7 +926,7 @@ export const SERVICES: ServiceItem[] = [
         icon: Award,
         title: "Solid Brass & Marine Grade",
         description:
-          "Fixtures forged from solid brass that develop an attractive natural patina and never rust or crack in Florida salt air.",
+          "Durable fixtures selected to resist moisture, temperature changes, and seasonal outdoor conditions.",
       },
       {
         icon: ShieldCheck,
@@ -980,9 +980,9 @@ export const SERVICES: ServiceItem[] = [
           "Low-voltage 12V landscape lighting is vastly safer around children, pets, pool areas, and wet garden soil. It poses zero electric shock hazard if a wire is accidentally nicked by lawn equipment, consumes a fraction of the electricity, and allows flexible repositioning as your palms and landscape plants grow over time.",
       },
       {
-        question: "How do your brass fixtures hold up against South Florida weather and irrigation?",
+        question: "How do your fixtures hold up against New England weather and irrigation?",
         answer:
-          "Standard aluminum landscape lights corrode and peel when exposed to sprinkler water, fertilizers, and salty Florida air. Our cast brass fixtures feature IP65 watertight silicone O-ring seals and non-corrosive brass construction that will never rust, pit, or disintegrate.",
+          "We select weather-resistant fixtures and sealed connections suited to irrigation, rain, snow, and freeze-thaw cycles. Material and enclosure choices are matched to each location for reliable long-term performance.",
       },
       {
         question: "What areas of my yard can be illuminated?",
@@ -1011,34 +1011,34 @@ export const SERVICES: ServiceItem[] = [
     name: "Security Camera & Surveillance Systems",
     shortName: "Security Cameras",
     tagline: "24/7 High-Definition Property Protection",
-    headline: "ADVANCED 360° PTZ & 4K CCTV SECURITY CAMERA SYSTEMS IN SOUTH FLORIDA",
+    headline: "ADVANCED 360° PTZ & 4K CCTV SECURITY CAMERA SYSTEMS IN MASSACHUSETTS & VERMONT",
     subheadline:
       "Protect your estate with commercial-grade 360° pan-tilt-zoom cameras, 4K network video recorders, smart AI human detection, and private local storage with remote smartphone viewing.",
     shortDesc:
       "Professional wired 4K security camera installations with 360° PTZ coverage, continuous local NVR recording, infrared night vision, and mobile app monitoring.",
     longDesc:
-      "True perimeter security requires dependable, high-resolution surveillance that never misses a detail—day or night. VIX General Services designs and installs commercial-grade residential and business security camera systems across Boca Raton, Coral Springs, Parkland, and neighboring regions. Unlike fragile battery-powered Wi-Fi cameras that suffer from delayed alerts and monthly cloud fees, our hardwired PoE (Power over Ethernet) systems deliver 24/7 continuous 4K recording, optical zoom, and 360° pan-tilt-zoom motorization.",
+      "True perimeter security requires dependable, high-resolution surveillance that never misses a detail—day or night. VIX General Services designs and installs residential and commercial security camera systems across Massachusetts and Vermont. Unlike battery-powered Wi-Fi cameras that can suffer from delayed alerts and recurring cloud fees, our hardwired PoE systems support continuous recording, optical zoom, and pan-tilt-zoom coverage.",
     whyChooseText:
-      "South Florida intense sun, driving rains, and lightning storms challenge exterior electronics. We use IP66 outdoor-rated aluminum-alloy dome cameras, direct-burial UV-shielded Cat6 cabling, Gigabit PoE distribution switches, and main-panel surge protection to ensure your surveillance system stays online when you need it most.",
+      "Rain, snow, cold, summer heat, and storms challenge exterior electronics. We use outdoor-rated cameras, protected cabling, dependable PoE distribution, and surge protection options to help your surveillance system stay online when you need it most.",
     heroImage: IMAGES.services.securityCameras,
     icon: Camera,
     iconBg: "bg-[#C0392B]",
     badgeColor: "bg-[#C0392B]/10 text-[#C0392B] border-[#C0392B]/30",
     estimateServiceKey: "security-cameras",
     metaTitle:
-      "Security Camera Installation South Florida | 4K PTZ & CCTV | VIX",
+      "Security Camera Installation Massachusetts & Vermont | VIX",
     metaDescription:
-      "Professional security camera installation in South Florida. 360° PTZ 4MP/4K cameras, NVR with 2TB storage, PoE wiring, 24/7 mobile access. Free consultation.",
+      "Professional security camera installation in Massachusetts and Vermont. PTZ and 4K cameras, local NVR storage, PoE wiring, and mobile access. Free consultation.",
     schemaServiceType: "Security Camera Installation and Video Surveillance Services",
     keywords: [
-      "security camera installation South Florida",
-      "PTZ camera installer Boca Raton",
-      "CCTV installation Coral Springs FL",
-      "wired security cameras Parkland FL",
-      "4K NVR security system Broward",
+      "security camera installation Massachusetts",
+      "PTZ camera installer Massachusetts",
+      "CCTV installation Vermont",
+      "wired security cameras Vermont",
+      "4K NVR security system New England",
       "commercial security camera contractor",
     ],
-    galleryCategories: ["SECURITY", "ELECTRICAL CONTROLS"],
+    galleryCategories: ["SECURITY"],
     offerings: [
       {
         title: "360° Pan-Tilt-Zoom (PTZ) 4MP/4K Cameras",
@@ -1176,9 +1176,9 @@ export const SERVICES: ServiceItem[] = [
           "With efficient H.265+ video compression, a 2TB to 4TB hard drive typically retains 2 to 4 weeks of continuous 24/7 recording across multiple cameras. Once full, the NVR automatically overwrites the oldest footage unless specific incident clips have been locked or exported.",
       },
       {
-        question: "Are these cameras weatherproof against Florida rain and hurricanes?",
+        question: "Are these cameras weatherproof for New England conditions?",
         answer:
-          "Yes. All external cameras feature heavy-duty IP66 or IP67 weatherproof aluminum housings engineered to withstand tropical downpours, hurricane-force winds, and direct high-temperature sunlight.",
+          "Exterior cameras use weather-resistant housings selected for rain, snow, wind, and temperature changes. Placement, sealing, and cable protection are planned for the exposure at each property.",
       },
       {
         question: "What does PTZ mean and why is it useful?",
@@ -1197,34 +1197,34 @@ export const SERVICES: ServiceItem[] = [
     name: "Smart Control Hub & Automation Systems",
     shortName: "Smart Automation",
     tagline: "Centralized Smart Control for Lighting, Power & Security",
-    headline: "CENTRALIZED SMART HOME AUTOMATION & CONTROL HUBS IN SOUTH FLORIDA",
+    headline: "CENTRALIZED SMART HOME AUTOMATION & CONTROL HUBS IN MASSACHUSETTS & VERMONT",
     subheadline:
       "Control your outdoor lighting zones, security cameras, pool illumination, and power distribution from a single intuitive smartphone app with automated scheduling.",
     shortDesc:
       "Centralized smart controllers, Wi-Fi gateways, and NEMA 3R distribution panels offering seamless smartphone control, dimming, and automation.",
     longDesc:
-      "Modern luxury properties require sophisticated control systems that bring together lighting, security, and electrical management into one harmonious experience. VIX General Services designs and installs centralized smart control hubs, smart Wi-Fi gateways, and automated power distribution systems throughout South Florida. Whether you want your outdoor lights to turn on automatically at sunset, dim to 50% at midnight, or sync with your security cameras, our smart automation makes your home intuitive, secure, and energy-efficient.",
+      "Modern properties benefit from control systems that bring lighting, security, and electrical management into one connected experience. VIX General Services designs and installs centralized smart control hubs, Wi-Fi gateways, and automated power distribution systems across Massachusetts and Vermont. Scheduling, remote control, and coordinated devices can make a property more intuitive, secure, and energy-efficient.",
     whyChooseText:
-      "Consumer smart plugs and Wi-Fi light bulbs frequently drop offline in outdoor Florida environments. We install commercial-grade AquaLink and centralized smart controllers inside weatherproof NEMA 3R enclosures, paired with external high-gain Wi-Fi gateways and main-panel surge protection for rock-solid reliability.",
+      "Consumer smart devices can struggle in demanding exterior environments. We install dependable centralized controllers inside suitable weather-resistant enclosures, paired with appropriate network coverage and surge protection for reliable operation.",
     heroImage: IMAGES.services.smartAutomation,
     icon: Smartphone,
     iconBg: "bg-[#17A2B8]",
     badgeColor: "bg-[#17A2B8]/10 text-[#17A2B8] border-[#17A2B8]/30",
     estimateServiceKey: "smart-automation",
     metaTitle:
-      "Smart Home Automation & Control Hub Installation South Florida | VIX",
+      "Smart Home Automation Massachusetts & Vermont | VIX",
     metaDescription:
-      "Centralized smart home automation and lighting control hubs in South Florida. Multi-zone Wi-Fi app control, dimming, surge protection. Free consultation.",
+      "Centralized smart home automation and lighting control in Massachusetts and Vermont. Multi-zone app control, dimming, scheduling, and surge protection.",
     schemaServiceType: "Home Automation and Smart Control Installation Services",
     keywords: [
-      "smart home automation South Florida",
-      "smart lighting control hub Boca Raton",
-      "home automation contractor Coral Springs",
-      "smart control system Parkland FL",
+      "smart home automation Massachusetts",
+      "smart lighting control Massachusetts",
+      "home automation contractor Vermont",
+      "smart control system Vermont",
       "NEMA 3R outdoor distribution panel",
       "AquaLink smart controller installer",
     ],
-    galleryCategories: ["SMART AUTOMATION", "ELECTRICAL CONTROLS"],
+    galleryCategories: ["LIGHTING", "ENERGY EFFICIENCY"],
     offerings: [
       {
         title: "Centralized Smart Lighting Controllers",
@@ -1304,7 +1304,7 @@ export const SERVICES: ServiceItem[] = [
         icon: ShieldCheck,
         title: "Surge & Weather Shielded",
         description:
-          "Commercial NEMA 3R enclosures and Eaton surge suppressors keep your investment safe from extreme Florida lightning and tropical storms.",
+          "Suitable weather-resistant enclosures and surge suppressors help protect equipment from moisture, storms, and electrical disturbances.",
       },
       {
         icon: Award,
@@ -1359,7 +1359,7 @@ export const SERVICES: ServiceItem[] = [
       {
         question: "Is surge protection really included with the automation panel?",
         answer:
-          "Yes! We install heavy-duty Type 2 Surge Protective Devices (such as Eaton CHSPT2ULTRA) directly inside or adjacent to the distribution panel. This prevents South Florida lightning strikes from destroying sensitive controller boards, Wi-Fi gateways, and low-voltage transformers.",
+          "We can install Type 2 surge protective devices inside or adjacent to the distribution panel. This helps protect sensitive controller boards, Wi-Fi gateways, and low-voltage transformers from damaging voltage spikes.",
       },
       {
         question: "Can I add more zones or lights to the controller in the future?",

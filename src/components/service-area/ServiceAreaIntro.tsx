@@ -26,15 +26,14 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-7">
               When you hire VIX General Services, you're working with a local
-              team that knows {area.city}, local home conditions, ideal
-              equipment for South Florida's climate, and regional homeowner
-              preferences.
+              team focused on local conditions, energy performance, reliable
+              equipment, and the needs of properties in {area.city}.
             </p>
 
             {/* Neighborhoods Served */}
             <div className="bg-white rounded-lg p-6 border border-[#1A2B44]/10 shadow-crisp">
               <h3 className="text-sm font-heading font-extrabold uppercase tracking-wider text-[#C99A55] mb-4">
-                Neighborhoods We Serve in {area.city}
+                Coverage in {area.city}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {area.neighborhoods.map((n) => (
@@ -46,12 +45,14 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
                   </span>
                 ))}
               </div>
-              <div className="mt-4 pt-4 border-t border-border/60">
-                <p className="text-xs text-muted-foreground">
-                  <strong className="text-[#1A2B44]">Zip Codes Served:</strong>{" "}
-                  {area.zipCodes.join(", ")}
-                </p>
-              </div>
+              {area.zipCodes.length > 0 && (
+                <div className="mt-4 pt-4 border-t border-border/60">
+                  <p className="text-xs text-muted-foreground">
+                    <strong className="text-[#1A2B44]">Zip Codes Served:</strong>{" "}
+                    {area.zipCodes.join(", ")}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
 

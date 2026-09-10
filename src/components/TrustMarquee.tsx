@@ -11,7 +11,7 @@ import {
 export const TrustMarquee: React.FC = () => {
   const highlights = [
     { icon: Shield, text: "Licensed & Insured" },
-    { icon: ThumbsUp, text: "Serving South Florida" },
+    { icon: ThumbsUp, text: "Serving Massachusetts & Vermont" },
     { icon: Award, text: "9+ Years Experience" },
     { icon: Calendar, text: "Fast Response" },
     { icon: CheckCircle, text: "100% Free Estimates" },

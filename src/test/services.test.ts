@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { SERVICES, getServiceBySlug, getAllServiceSlugs } from "../data/servicesData";
+import { IMAGES, SERVICE_AREAS } from "../data/landscapingData";
 import fs from "fs";
 import path from "path";
 
@@ -75,9 +76,9 @@ describe("Sitemap & Robots.txt Parity", () => {
       expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/services/${slug}`);
     });
 
-    // Test that all city service areas are declared in sitemap.xml
-    ["boca-raton-fl", "coral-springs-fl", "parkland-fl"].forEach((city) => {
-      expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/service-areas/${city}`);
+    // Test that every service area is declared in sitemap.xml
+    ["massachusetts", "vermont"].forEach((area) => {
+      expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/service-areas/${area}`);
     });
 
     expect(sitemapContent).not.toContain("mkfreitasllc.com");
@@ -106,12 +107,68 @@ describe("Sitemap & Robots.txt Parity", () => {
     const llmsFullContent = fs.readFileSync(llmsFullPath, "utf8");
     expect(llmsFullContent).toContain("VIX General Services - Comprehensive AI Knowledge Base");
     expect(llmsFullContent).toContain("3000K warm white");
-    expect(llmsFullContent).toContain("Boca Raton");
+    expect(llmsFullContent).toContain("Massachusetts");
   });
 
   it("_redirects should exist with SPA routing rule", () => {
     const redirectsPath = path.resolve(__dirname, "../../public/_redirects");
     const redirectsContent = fs.readFileSync(redirectsPath, "utf8");
     expect(redirectsContent).toContain("/*    /index.html   200");
+  });
+});
+
+describe("Official Service Area Source", () => {
+  it("uses only the locations supplied in the client form", () => {
+    expect(SERVICE_AREAS.map((area) => area.slug)).toEqual([
+      "massachusetts",
+      "vermont",
+    ]);
+    expect(SERVICE_AREAS[0].fullName).toContain("100 Miles");
+  });
+
+  it("does not publish the previous Florida locations", () => {
+    const publicFiles = ["llms.txt", "llms-full.txt", "sitemap.xml"];
+    const staleLocations = [
+      "South Florida",
+      "Boca Raton",
+      "Coral Springs",
+      "Parkland",
+    ];
+
+    publicFiles.forEach((file) => {
+      const content = fs.readFileSync(path.resolve(__dirname, `../../public/${file}`), "utf8");
+      staleLocations.forEach((location) => {
+        expect(content).not.toContain(location);
+      });
+    });
+  });
+});
+
+describe("Project Gallery", () => {
+  it("uses the 18 unique supplied project photos with descriptive titles and categories", () => {
+    expect(IMAGES.gallery).toHaveLength(18);
+
+    IMAGES.gallery.forEach((item) => {
+      expect(item.title.length).toBeGreaterThan(10);
+      expect(item.category).toBeTruthy();
+      expect(item.url).toMatch(/^\/images\/projects\/.+\.jpg$/);
+
+      const assetPath = path.resolve(__dirname, `../../public${item.url}`);
+      expect(fs.existsSync(assetPath)).toBe(true);
+    });
+  });
+
+  it("covers the requested project procedures", () => {
+    const categories = new Set(IMAGES.gallery.map((item) => item.category));
+    expect(categories).toEqual(
+      new Set([
+        "HVAC",
+        "ELECTRICAL",
+        "LIGHTING",
+        "EV CHARGING",
+        "ENERGY EFFICIENCY",
+        "COMMERCIAL ENERGY",
+      ]),
+    );
   });
 });

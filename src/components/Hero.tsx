@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
       <div className="absolute inset-0 z-0">
         <img
           src={IMAGES.hero}
-          alt="HVAC technician servicing an outdoor air conditioning unit - VIX General Services"
+          alt="Energy-efficiency services for homes and businesses - VIX General Services"
           className="w-full h-full object-cover object-center scale-105 brightness-[0.95] contrast-[1.02]"
         />
         <div className="absolute inset-0 bg-black/10" />
@@ -32,24 +32,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
             <div className="hero-badge inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/10 backdrop-blur-md border border-white/25 mb-3 sm:mb-5 text-white text-xs font-semibold tracking-wide w-fit">
               <MapPin className="w-4 h-4 text-[#C99A55]" />
               <span>
-                Serving South Florida (Boca Raton, Coral Springs, Parkland &amp;
-                Surrounding Areas)
+                Serving Massachusetts &amp; Surrounding Areas Within 100 Miles,
+                Plus Vermont
               </span>
             </div>
 
             {/* Main Headline */}
             <h1 className="hero-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-[1.08] mb-5 sm:mb-6 tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-              EXPERT HVAC SERVICE.{" "}
+              SMARTER ENERGY USE.{" "}
               <span className="text-[#C99A55] drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-                TOTAL HOME COMFORT.
+                LASTING EFFICIENCY.
               </span>
             </h1>
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-6 sm:mb-8 max-w-xl leading-relaxed text-shadow-sm font-normal">
-              Installation, repair, and maintenance to keep your home cool,
-              efficient and worry-free. We also provide electrical, solar, and
-              EV charging solutions for total home comfort.
+              Energy-efficiency upgrades for homes and businesses, from HVAC
+              and electrical improvements to solar, EV charging, and smart
+              technology - all designed to reduce waste, improve comfort, and
+              deliver long-term value.
             </p>
 
             {/* Primary & Secondary CTAs */}

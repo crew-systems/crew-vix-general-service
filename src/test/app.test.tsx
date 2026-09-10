@@ -30,6 +30,11 @@ describe("App Render Test", () => {
     expect(container).toBeDefined();
     expect(container.innerHTML).not.toContain("An unexpected error occurred");
     expect(container.innerHTML).toContain("VIX General Services");
+    expect(container.textContent).toContain("SMARTER ENERGY USE");
+    expect(container.textContent).toContain("LASTING EFFICIENCY");
+    expect(container.textContent).toContain(
+      "Serving Massachusetts & Surrounding Areas Within 100 Miles, Plus Vermont",
+    );
   });
 
   it("opens estimate modal on clicking Free Estimate button without crashing", () => {

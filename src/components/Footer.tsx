@@ -24,9 +24,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
             </Link>
 
             <p className="text-xs text-[#EDE4D6]/70 leading-relaxed max-w-sm pt-1">
-              Specialists in HVAC installation and repair, electrical services,
-              solar solutions, and EV charging stations. 9 years of excellence
-              serving South Florida.
+              Energy-efficiency solutions spanning HVAC, electrical, solar, EV
+              charging, and smart technology for homes and businesses in
+              Massachusetts, surrounding areas within 100 miles, and Vermont.
             </p>
 
             {/* Social Links */}
@@ -222,7 +222,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
             <address className="not-italic space-y-2.5 text-xs text-[#EDE4D6]/75">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#C99A55] shrink-0 mt-0.5" />
-                <span itemProp="addressLocality">Serving South Florida (Boca Raton, Coral Springs, Parkland & Surrounding Areas)</span>
+                <span itemProp="areaServed">{COMPANY_INFO.location}</span>
               </div>
 
               <div className="flex items-center gap-2">

@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: "Solar Energy Systems",
-    desc: "Turnkey Tier-1 solar panel installation, FPL net-metering, and battery backup storage.",
+    desc: "Turnkey solar panel installation, utility interconnection support, and battery backup storage.",
     slug: "solar",
   },
   {
@@ -145,7 +145,7 @@ export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
                   <CheckCircle2 className="w-4 h-4 text-[#C99A55]" />
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  {area.city}, {area.state}
+                  VIX General Services Customer
                 </p>
               </div>
             </div>

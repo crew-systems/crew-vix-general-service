@@ -27,64 +27,94 @@ export const IMAGES = {
 
   gallery: [
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/b00e954c-0b88-4988-a84f-07ede90c828a.jpg",
-      title: "HVAC Control Board Service",
+      url: "/images/projects/joana-mini-split-replacement.jpg",
+      title: "Ductless Mini-Split Replacement",
       category: "HVAC",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/490bbfb2-081e-4766-9d81-c36f91ff74e9.jpg",
-      title: "Commercial HVAC Ceiling Installation",
-      category: "COMMERCIAL HVAC",
+      url: "/images/projects/newton-air-handler-installation.jpg",
+      title: "High-Efficiency Air Handler Installation",
+      category: "HVAC",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/fc492be7-4b60-4017-a185-ef7428e6d3a0.png",
+      url: "/images/projects/saugus-furnace-ductwork-replacement.jpg",
+      title: "Furnace & Ductwork Replacement",
+      category: "HVAC",
+    },
+    {
+      url: "/images/projects/saugus-heat-pump-replacement.jpg",
+      title: "Outdoor Heat Pump Replacement",
+      category: "HVAC",
+    },
+    {
+      url: "/images/projects/exterior-electrical-service-upgrade.jpg",
+      title: "Exterior Electrical Service & Meter Upgrade",
+      category: "ELECTRICAL",
+    },
+    {
+      url: "/images/projects/residential-panel-replacement.jpg",
+      title: "Residential Electrical Panel Replacement",
+      category: "ELECTRICAL",
+    },
+    {
+      url: "/images/projects/orga-new-construction-rough-in.jpg",
       title: "New Construction Electrical Rough-In",
       category: "ELECTRICAL",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/c832fc82-0506-4c73-b2dd-85500c723aef.jpg",
-      title: "Electrical Panel Upgrade",
+      url: "/images/projects/orga-interior-panel-installation.jpg",
+      title: "Finished Interior Electrical Panel Installation",
       category: "ELECTRICAL",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/8f13b03d-38ff-4294-89f0-796070bcc524.jpg",
-      title: "Hardwood Floor Refinishing",
-      category: "FLOORING",
+      url: "/images/projects/orga-finished-electrical-panel.jpg",
+      title: "Electrical Panel & Interior Fit-Out",
+      category: "ELECTRICAL",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/95c644ca-1790-480f-9659-aac995c1c477.jpg",
-      title: "Bathroom Tile Installation",
-      category: "BATHROOM",
+      url: "/images/projects/jack-cove-lighting-upgrade.jpg",
+      title: "Recessed & Cove Lighting Upgrade",
+      category: "LIGHTING",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/7d4ed0a8-52d1-4f9d-a916-b0d529cd3f1c.jpg",
-      title: "Kitchen Remodeling",
-      category: "KITCHEN",
+      url: "/images/projects/jhonny-media-wall-lighting.jpg",
+      title: "Custom Media Wall Lighting Installation",
+      category: "LIGHTING",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/72eab755-f17b-40a4-8de7-95f6a55d0683.jpg",
-      title: "Timer Control Installation",
-      category: "ELECTRICAL CONTROLS",
+      url: "/images/projects/joseph-garage-ev-charger.jpg",
+      title: "Garage EV Charger Installation",
+      category: "EV CHARGING",
     },
     {
-      url: "https://vibe.filesafe.space/1787931819686809992/attachments/38de8e80-7296-4629-8d66-f8063a219817.jpg",
-      title: "Commercial Interior Renovation",
-      category: "COMMERCIAL INTERIOR",
+      url: "/images/projects/joseph-exterior-ev-charger.jpg",
+      title: "Exterior EV Charger Installation",
+      category: "EV CHARGING",
     },
     {
-      url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop",
-      title: "Pool & Landscape Architectural Lighting",
-      category: "OUTDOOR LIGHTING",
+      url: "/images/projects/joseph-commercial-ev-charging.jpg",
+      title: "Commercial EV Charging Station Installation",
+      category: "EV CHARGING",
     },
     {
-      url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
-      title: "Estate Pathway & Palm Tree Uplighting",
-      category: "OUTDOOR LIGHTING",
+      url: "/images/projects/peny-whole-home-electrification.jpg",
+      title: "Whole-Home Energy Efficiency & Electrification",
+      category: "ENERGY EFFICIENCY",
     },
     {
-      url: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=1200&auto=format&fit=crop",
-      title: "360° PTZ 4K Security Camera Setup",
-      category: "SECURITY",
+      url: "/images/projects/commercial-energy-site-assessment.jpg",
+      title: "Commercial Energy Site Assessment",
+      category: "COMMERCIAL ENERGY",
+    },
+    {
+      url: "/images/projects/commercial-power-distribution-installation.jpg",
+      title: "Commercial Power Distribution Installation",
+      category: "COMMERCIAL ENERGY",
+    },
+    {
+      url: "/images/projects/commercial-solar-energy-upgrade.jpg",
+      title: "Commercial Solar & Energy Infrastructure Upgrade",
+      category: "COMMERCIAL ENERGY",
     },
   ],
 
@@ -100,10 +130,10 @@ export const IMAGES = {
 
 export const SERVICE_AREAS = [
   {
-    slug: "boca-raton-fl",
-    city: "Boca Raton",
-    state: "FL",
-    fullName: "Boca Raton, Florida",
+    slug: "massachusetts",
+    city: "Massachusetts",
+    state: "MA",
+    fullName: "Massachusetts & Surrounding Areas Within 100 Miles",
     heroImage: IMAGES.services.outdoorLighting,
     galleryImages: [
       IMAGES.services.outdoorLighting,
@@ -111,31 +141,23 @@ export const SERVICE_AREAS = [
       IMAGES.services.electrical,
     ],
     shortDesc:
-      "Premier outdoor landscape lighting, security camera systems, electrical, and HVAC services for Boca Raton estates.",
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts and surrounding areas within 100 miles.",
     longDesc:
-      "From prestigious coastal estates to inland gated communities, Boca Raton homeowners choose VIX General Services for turnkey architectural outdoor lighting, 360° PTZ security cameras, smart home automation hubs, 200A electrical panel upgrades, and high-efficiency HVAC solutions. We understand Boca Raton architectural guidelines, coastal building codes, and tropical weather demands, delivering luxury results backed by comprehensive warranties.",
-    neighborhoods: [
-      "Downtown Boca Raton",
-      "Boca Del Mar",
-      "Royal Palm Yacht & Country Club",
-      "West Boca",
-      "Boca Bridges",
-      "Mizner Park Area",
-    ],
-    zipCodes: ["33431", "33432", "33433", "33434", "33486", "33487"],
-    metaTitle:
-      "Outdoor Lighting, Security, Electrical & HVAC Boca Raton FL | VIX",
+      "VIX General Services supports residential and commercial properties throughout Massachusetts and surrounding areas within a 100-mile radius. Our team delivers energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services with reliable workmanship and long-term value in mind.",
+    neighborhoods: ["Massachusetts", "Surrounding areas within 100 miles"],
+    zipCodes: [],
+    metaTitle: "Energy Efficiency & Property Services Massachusetts | VIX",
     metaDescription:
-      "Premier outdoor landscape lighting, security camera installation, electrical, HVAC, and solar services in Boca Raton, FL. Licensed & insured. Free estimates.",
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts and surrounding areas within 100 miles.",
     reviewName: "Michael R.",
     reviewText:
       "VIX designed and installed our complete landscape lighting and outdoor security cameras. The transformation at night is stunning, and the app control is effortless!",
   },
   {
-    slug: "coral-springs-fl",
-    city: "Coral Springs",
-    state: "FL",
-    fullName: "Coral Springs, Florida",
+    slug: "vermont",
+    city: "Vermont",
+    state: "VT",
+    fullName: "Vermont",
     heroImage: IMAGES.services.securityCameras,
     galleryImages: [
       IMAGES.services.securityCameras,
@@ -143,65 +165,27 @@ export const SERVICE_AREAS = [
       IMAGES.services.electrical,
     ],
     shortDesc:
-      "Trusted outdoor landscape lighting, 4K security camera installations, licensed electrical, and HVAC services for Coral Springs families.",
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services for residential and commercial customers in Vermont.",
     longDesc:
-      "Coral Springs homeowners trust VIX General Services for dependable outdoor lighting, 4K security camera installations, smart automation, electrical panel replacements, and high-efficiency air conditioning. Our licensed technicians serve neighborhoods throughout Coral Springs with transparent upfront pricing, durable materials, and guaranteed craftsmanship.",
-    neighborhoods: [
-      "Eagle Trace",
-      "Coral Springs Country Club",
-      "Ramblewood",
-      "Turtle Run",
-      "Cypress Run",
-    ],
-    zipCodes: ["33065", "33067", "33071", "33076"],
-    metaTitle:
-      "Outdoor Lighting, Security Cameras & Electrical Coral Springs FL | VIX",
+      "VIX General Services serves residential and commercial customers in Vermont with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Every project is approached with quality workmanship, reliable service, and practical long-term performance in mind.",
+    neighborhoods: ["Vermont"],
+    zipCodes: [],
+    metaTitle: "Energy Efficiency & Property Services Vermont | VIX",
     metaDescription:
-      "Expert outdoor lighting, 4K security camera installation, electrical, HVAC, and solar solutions in Coral Springs, FL. Licensed & insured. Free estimates available.",
+      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services for residential and commercial customers in Vermont.",
     reviewName: "Jessica T.",
     reviewText:
       "They installed our 4K security camera system and outdoor lighting. Excellent communication, clean installation, and no monthly cloud fees!",
-  },
-  {
-    slug: "parkland-fl",
-    city: "Parkland",
-    state: "FL",
-    fullName: "Parkland, Florida",
-    heroImage: IMAGES.services.smartAutomation,
-    galleryImages: [
-      IMAGES.services.smartAutomation,
-      IMAGES.services.outdoorLighting,
-      IMAGES.services.hvac,
-    ],
-    shortDesc:
-      "Luxury landscape lighting, security surveillance, smart home automation, and HVAC services for Parkland equestrian and golf estates.",
-    longDesc:
-      "Located in northwest Broward County, Parkland luxury estates and golf communities rely on VIX General Services for custom low-voltage landscape lighting, motorized 360° PTZ security cameras, centralized smart control hubs, electrical infrastructure, and high-SEER2 climate control. We bring 9+ years of Florida craftsmanship and attention to detail to every Parkland home.",
-    neighborhoods: [
-      "Heron Bay",
-      "Parkland Golf & Country Club",
-      "Pine Tree Estates",
-      "Parkland Reserve",
-      "Cypress Head",
-    ],
-    zipCodes: ["33067", "33076"],
-    metaTitle:
-      "Landscape Lighting, Security & Smart Automation Parkland FL | VIX",
-    metaDescription:
-      "Custom landscape lighting, 4K security camera systems, smart automation, electrical, and HVAC company serving Parkland, FL. Free estimates.",
-    reviewName: "Daniel S.",
-    reviewText:
-      "The multi-zone outdoor lighting and smart automation controller work seamlessly together. Highly recommend VIX General Services for luxury home projects.",
   },
 ];
 
 export const COMPANY_INFO = {
   name: "VIX General Services",
-  tagline: "Expert Outdoor Lighting, Security Cameras, Smart Automation, HVAC & Electrical",
+  tagline: "Energy-Efficiency Solutions for Homes and Businesses",
   phone: "(954) 330-9296",
   email: "info@vixgeneralservices.com",
   location:
-    "South Florida (Boca Raton, Coral Springs, Parkland & Surrounding Areas)",
+    "Massachusetts & Surrounding Areas Within 100 Miles, Plus Vermont",
   stats: {
     rating: "5.0",
     reviewsCount: "150+",

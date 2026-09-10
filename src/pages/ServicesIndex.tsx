@@ -78,10 +78,10 @@ export const ServicesIndex: React.FC = () => {
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title="Our Services | Outdoor Lighting, Security, Smart Automation, HVAC & Electrical | VIX"
-        description="Explore VIX General Services full range of residential and commercial solutions in South Florida: outdoor landscape lighting, 4K security cameras, smart automation hubs, electrical, HVAC, solar, and EV charging."
+        description="Explore VIX General Services' residential and commercial energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security, and smart technology solutions in Massachusetts and Vermont."
         canonical="/services"
         ogImage={SERVICES[0].heroImage}
-        ogImageAlt="VIX General Services - South Florida Specialized Services"
+        ogImageAlt="VIX General Services - Massachusetts and Vermont Specialized Services"
         schemaJson={[itemListSchema, breadcrumbSchema]}
       />
 
@@ -124,7 +124,10 @@ export const ServicesIndex: React.FC = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-7 max-w-2xl leading-relaxed">
-              From architectural outdoor lighting and 4K security surveillance to smart automation, electrical panels, HVAC, solar, and EV charging, our licensed technicians provide reliable, code-compliant solutions throughout South Florida.
+              From energy-efficiency upgrades and HVAC to electrical panels,
+              solar, EV charging, outdoor lighting, security, and smart
+              technology, our technicians provide reliable, code-compliant
+              solutions across Massachusetts and Vermont.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-white/90">
@@ -139,7 +142,7 @@ export const ServicesIndex: React.FC = () => {
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C99A55]" />
-                <span>9+ Years Serving South Florida</span>
+                <span>9+ Years of Experience</span>
               </div>
             </div>
           </div>
@@ -241,7 +244,8 @@ export const ServicesIndex: React.FC = () => {
               LOOKING FOR SERVICES IN A SPECIFIC CITY?
             </h2>
             <p className="text-sm sm:text-base text-[#EDE4D6]/85 max-w-xl mx-auto mb-8">
-              We provide dedicated local crews across Boca Raton, Coral Springs, Parkland, and neighboring South Florida communities.
+              We provide dedicated service across Massachusetts, surrounding
+              areas within 100 miles, and Vermont.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {SERVICE_AREAS.map((area) => (

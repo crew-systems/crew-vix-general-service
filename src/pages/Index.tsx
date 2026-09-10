@@ -80,34 +80,12 @@ const Index: React.FC = () => {
         ],
         areaServed: [
           {
-            "@type": "City",
-            name: "Boca Raton",
-            containedInPlace: { "@type": "State", name: "Florida" },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: 26.3683,
-              longitude: -80.1289,
-            },
+            "@type": "State",
+            name: "Massachusetts",
           },
           {
-            "@type": "City",
-            name: "Coral Springs",
-            containedInPlace: { "@type": "State", name: "Florida" },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: 26.2711,
-              longitude: -80.2706,
-            },
-          },
-          {
-            "@type": "City",
-            name: "Parkland",
-            containedInPlace: { "@type": "State", name: "Florida" },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: 26.3104,
-              longitude: -80.2377,
-            },
+            "@type": "State",
+            name: "Vermont",
           },
         ],
         hasOfferCatalog: {
@@ -141,8 +119,8 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="VIX General Services | Outdoor Lighting, Security Cameras, Smart Automation, HVAC & Electrical"
-        description="Expert architectural outdoor lighting, 4K security cameras, smart home automation, licensed electrical, HVAC, solar, and EV charging in South Florida. Free estimates."
+        title="VIX General Services | Energy-Efficiency Solutions"
+        description="Energy-efficiency upgrades, HVAC, electrical, solar, EV charging, and smart technology across Massachusetts, surrounding areas within 100 miles, and Vermont."
         canonical="/"
         ogImage={IMAGES.ogMeta}
         schemaJson={homeSchema}
@@ -187,7 +165,8 @@ const Index: React.FC = () => {
                 Request Your Free Estimate
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto">
-                Tell us about your project below and our South Florida team will get in touch to schedule your consultation and provide transparent pricing.
+                Tell us about your project below and our team will get in touch
+                to schedule your consultation and provide transparent pricing.
               </p>
             </div>
             <div className="bg-[#F7F8FA] rounded-2xl p-4 sm:p-8 border border-[#1A2B44]/10 shadow-crisp">

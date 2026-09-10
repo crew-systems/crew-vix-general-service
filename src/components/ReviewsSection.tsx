@@ -6,21 +6,21 @@ export const ReviewsSection: React.FC = () => {
   const reviews = [
     {
       name: "Michael R.",
-      location: "Boca Raton, FL",
+      location: "VIX General Services Customer",
       service: "AC Installation & Repair",
       avatar: IMAGES.avatars[0],
       text: "VIX installed our new AC system and did an amazing job. Professional, on time and very fair pricing! Highly recommend for any HVAC work.",
     },
     {
       name: "Jessica T.",
-      location: "Coral Springs, FL",
+      location: "VIX General Services Customer",
       service: "Solar Panel Installation",
       avatar: IMAGES.avatars[1],
       text: "They installed our solar panels and the savings are real. Great team and excellent communication throughout the entire project.",
     },
     {
       name: "Daniel S.",
-      location: "Parkland, FL",
+      location: "VIX General Services Customer",
       service: "EV Charger Installation",
       avatar: IMAGES.avatars[2],
       text: "The EV charger installation was quick and flawless. Highly recommend VIX General Services!",

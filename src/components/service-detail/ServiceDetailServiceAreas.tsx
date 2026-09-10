@@ -23,7 +23,8 @@ export const ServiceDetailServiceAreas: React.FC<ServiceDetailServiceAreasProps>
             WHERE WE PROVIDE {service.shortName.toUpperCase()} SERVICES
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Our specialized crews proudly serve property owners across South Florida, including these prime service areas:
+            Our specialized crews serve property owners across Massachusetts,
+            surrounding areas within 100 miles, and Vermont:
           </p>
         </div>
 
@@ -62,7 +63,7 @@ export const ServiceDetailServiceAreas: React.FC<ServiceDetailServiceAreasProps>
             to="/service-areas"
             className="inline-flex items-center gap-2 text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors"
           >
-            <span>View All South Florida Service Areas</span>
+            <span>View All Massachusetts &amp; Vermont Service Areas</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

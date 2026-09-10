@@ -25,7 +25,7 @@ export const ServiceDetailFAQ: React.FC<ServiceDetailFAQProps> = ({ service }) =
             FREQUENTLY ASKED QUESTIONS ABOUT {service.shortName.toUpperCase()}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Get clear, straightforward answers about our {service.name.toLowerCase()}, pricing, warranties, and South Florida code requirements.
+            Get clear, straightforward answers about our {service.name.toLowerCase()}, pricing, warranties, and regional code requirements.
           </p>
         </div>
 

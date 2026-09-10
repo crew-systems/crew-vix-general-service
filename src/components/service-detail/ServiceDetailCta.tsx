@@ -30,7 +30,7 @@ export const ServiceDetailCta: React.FC<ServiceDetailCtaProps> = ({
           </h2>
 
           <p className="text-base sm:text-lg text-[#EDE4D6]/85 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Contact VIX General Services for reliable, licensed {service.name.toLowerCase()}. Upfront pricing, clear timelines, and dedicated South Florida craftsmanship.
+            Contact VIX General Services for reliable, licensed {service.name.toLowerCase()}. Upfront pricing, clear timelines, and dedicated regional craftsmanship.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

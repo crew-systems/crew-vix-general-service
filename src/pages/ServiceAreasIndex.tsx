@@ -55,8 +55,8 @@ export const ServiceAreasIndex: React.FC = () => {
   return (
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="Service Areas in South Florida | VIX General Services"
-        description="VIX General Services proudly serves Boca Raton, Coral Springs, Parkland FL and surrounding South Florida areas with outdoor lighting, security cameras, smart automation, electrical, HVAC, and solar."
+        title="Service Areas in Massachusetts & Vermont | VIX General Services"
+        description="VIX General Services serves Massachusetts, surrounding areas within 100 miles, and Vermont with energy-efficiency, HVAC, electrical, solar, EV charging, and smart technology solutions."
         canonical="/service-areas"
         ogImage={SERVICE_AREAS[0].heroImage}
         schemaJson={areasSchema}
@@ -173,7 +173,7 @@ export const ServiceAreasIndex: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={SERVICE_AREAS[0].heroImage}
-            alt="VIX General Services service areas across South Florida"
+            alt="VIX General Services service areas across Massachusetts and Vermont"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/95 via-[#1A2B44]/70 to-[#1A2B44]/40" />
@@ -190,16 +190,16 @@ export const ServiceAreasIndex: React.FC = () => {
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 backdrop-blur-md border border-white/20 mb-5 text-white text-xs sm:text-sm font-semibold tracking-wide">
               <MapPin className="w-4 h-4 text-[#C99A55]" />
-              <span>Serving South Florida & Surrounding Regions</span>
+              <span>Serving Massachusetts &amp; Vermont</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white leading-[1.08] mb-5 tracking-tight">
               OUR <span className="text-[#C99A55] ">SERVICE AREAS</span>
             </h1>
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-7 max-w-2xl leading-relaxed">
-              VIX General Services proudly serves homeowners across South
-              Florida. Find your city below and discover how we can support your
-              home with custom outdoor lighting, security camera systems, smart
-              automation, licensed electrical work, and high-efficiency HVAC.
+              VIX General Services proudly serves Massachusetts, surrounding
+              areas within 100 miles, and Vermont. Explore our coverage below
+              and discover energy-efficiency, HVAC, electrical, solar, EV
+              charging, and smart technology solutions for your property.
             </p>
           </div>
         </div>
@@ -258,11 +258,10 @@ export const ServiceAreasIndex: React.FC = () => {
           {/* CTA */}
           <div className="mt-14 text-center bg-[#1A2B44] rounded-lg p-9 sm:p-12 max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#EDE4D6] mb-4 tracking-tight">
-              DON'T SEE YOUR CITY?
+              HAVE A PROJECT OUTSIDE THESE AREAS?
             </h2>
             <p className="text-[#EDE4D6]/80 mb-6 max-w-xl mx-auto">
-              We're continuously expanding our service area across South
-              Florida. Contact us to check if we serve your neighborhood.
+              Contact us to confirm availability for your address and project.
             </p>
             <button
               onClick={() => setIsEstimateModalOpen(true)}

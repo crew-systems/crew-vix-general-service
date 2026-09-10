@@ -1,17 +1,17 @@
 # VIX General Services - Comprehensive AI Knowledge Base (llms-full.txt)
 
-> Authoritative reference on VIX General Services operations, service offerings, equipment specifications, warranty policies, and service areas across South Florida.
+> Authoritative reference on VIX General Services operations, service offerings, equipment specifications, warranty policies, and service areas across Massachusetts and Vermont.
 
 ## Entity Details
 - **Legal Entity**: VIX General Services
 - **Business Type**: HomeAndConstructionBusiness, Electrical Contractor, HVAC Contractor
-- **Headquarters Region**: South Florida (Broward County & Palm Beach County)
+- **Service Region**: Massachusetts and surrounding areas within 100 miles; Vermont
 - **Primary Phone**: (954) 330-9296
 - **Primary Email**: info@vixgeneralservices.com
 - **Website URL**: https://www.vixgeneralservices.com/
 - **Hours of Operation**: Monday - Friday: 08:00 - 18:00, Saturday: 09:00 - 16:00, Sunday: Closed (Emergency dispatch available)
-- **Licenses**: Licensed & Insured in the State of Florida
-- **Experience**: 9+ years serving South Florida, 1,200+ completed projects, 5.0 customer satisfaction rating
+- **Licenses**: Licensed & Insured
+- **Experience**: 9+ years, 1,200+ completed projects, 5.0 customer satisfaction rating
 
 ---
 
@@ -67,7 +67,7 @@
 - **Primary Capabilities**:
   - Emergency AC repair: refrigerant leak detection, digital pressure testing, compressor replacement, capacitor and motor servicing.
   - High-efficiency central air conditioning and heat pump replacements with SEER2 ratings from 15.2 to 20+.
-  - Manual J heating/cooling load calculations tailored to South Florida solar heat gain and high humidity.
+  - Manual J heating/cooling load calculations tailored to New England's heating and cooling seasons.
   - Air duct repair, mastic sealing, return air plenum redesign, and R-8 attic insulation wraps.
   - Whole-home indoor air quality: germicidal UV lights, MERV 13+ filtration, and dehumidification.
 
@@ -84,9 +84,9 @@
 - **Canonical URL**: https://www.vixgeneralservices.com/services/solar
 - **Primary Capabilities**:
   - High-efficiency Tier-1 monocrystalline black-on-black rooftop solar arrays with 25-year performance warranties.
-  - Battery backup storage systems (Tesla Powerwall / Enphase IQ Battery) with automatic transfer switches for grid-blackout and hurricane power.
-  - Full management of Florida Power & Light (FPL) net-metering applications and utility bi-directional meter installations.
-  - High-Velocity Hurricane Zone (HVHZ) certified racking engineered for wind speeds up to 175+ MPH.
+  - Battery backup storage systems with automatic transfer equipment for grid outages.
+  - Support for applicable net-metering applications and utility bi-directional meter installations.
+  - Structural racking designed for applicable wind, snow-load, roof, and building requirements.
   - Assistance with the 30% Federal Residential Clean Energy Tax Credit (Section 25D).
 
 ### 7. EV Charging Station Installation
@@ -101,15 +101,10 @@
 
 ## Service Areas & Municipalities
 
-1. **Boca Raton, FL** (33431, 33432, 33433, 33434, 33486, 33487)
-   - Communities: Downtown Boca Raton, Boca Del Mar, Royal Palm Yacht & Country Club, West Boca, Boca Bridges, Mizner Park.
-   - Coordinates: Latitude 26.3683, Longitude -80.1289
-2. **Coral Springs, FL** (33065, 33067, 33071, 33076)
-   - Communities: Eagle Trace, Coral Springs Country Club, Ramblewood, Turtle Run, Cypress Run.
-   - Coordinates: Latitude 26.2711, Longitude -80.2706
-3. **Parkland, FL** (33067, 33076)
-   - Communities: Heron Bay, Parkland Golf & Country Club, Pine Tree Estates, Parkland Reserve, Cypress Head.
-   - Coordinates: Latitude 26.3104, Longitude -80.2377
+1. **Massachusetts & Surrounding Areas Within 100 Miles**
+   - URL: https://www.vixgeneralservices.com/service-areas/massachusetts
+2. **Vermont**
+   - URL: https://www.vixgeneralservices.com/service-areas/vermont
 
 ---
 
@@ -121,8 +116,8 @@ A: Yes. All residential and commercial consultations include a complimentary, no
 **Q: Are wired PoE security cameras better than wireless battery cameras?**  
 A: Yes. Hardwired PoE cameras record 24/7 in 4K resolution, receive continuous power via Cat6 cabling, cannot be defeated by Wi-Fi jammers, and store footage on a private local NVR with zero monthly cloud subscription fees.
 
-**Q: Why use solid brass landscape lighting in Florida?**  
-A: Aluminum fixtures oxidize and corrode rapidly when exposed to South Florida salt air, lawn fertilizers, and irrigation water. Cast brass fixtures naturally resist corrosion, carry IP65 waterproof ratings, and last for decades without pitting or failing.
+**Q: Why use weather-resistant landscape lighting?**
+A: Durable fixtures and sealed connections are better suited to irrigation, rain, snow, and freeze-thaw cycles, helping exterior systems perform reliably through changing seasons.
 
 **Q: Do you pull permits for electrical, HVAC, and solar installations?**  
-A: Yes. VIX General Services handles all municipal building permits, engineering plans, utility coordination (with FPL), and final city inspections across Broward and Palm Beach counties.
+A: VIX General Services coordinates applicable municipal permits, engineering documents, utility requirements, and final inspections for projects in its service areas.

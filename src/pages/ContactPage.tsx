@@ -38,19 +38,13 @@ export const ContactPage: React.FC = () => {
     "@type": "ContactPage",
     name: "Contact & Free Estimate | VIX General Services",
     description:
-      "Get a free estimate from VIX General Services for HVAC, electrical, solar, EV charging, outdoor lighting, security cameras, and smart automation across South Florida.",
+      "Get a free estimate from VIX General Services for energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security cameras, and smart automation across Massachusetts and Vermont.",
     url: "https://www.vixgeneralservices.com/contact",
     mainEntity: {
       "@type": "HomeAndConstructionBusiness",
       name: COMPANY_INFO.name,
       telephone: COMPANY_INFO.phone,
       email: COMPANY_INFO.email,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Boca Raton",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
       areaServed: SERVICE_AREAS.map((a) => a.city),
     },
   };
@@ -58,8 +52,8 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased">
       <SEOHead
-        title="Get a Free Estimate | VIX General Services | South Florida"
-        description="Request a free, no-obligation estimate for HVAC, electrical, solar, EV charging, outdoor lighting, security cameras, and automation in South Florida. Fast response."
+        title="Get a Free Estimate | VIX General Services | MA & VT"
+        description="Request a free estimate for energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security cameras, and automation in Massachusetts and Vermont."
         canonical="/contact"
         schemaJson={contactSchema}
       />
@@ -181,10 +175,11 @@ export const ContactPage: React.FC = () => {
                         Service Coverage
                       </span>
                       <span className="text-xs font-semibold text-[#1A2B44] block">
-                        South Florida
+                        Massachusetts &amp; Vermont
                       </span>
                       <span className="text-xs text-muted-foreground block">
-                        Boca Raton, Coral Springs, Parkland &amp; Surrounding Areas
+                        Massachusetts &amp; surrounding areas within 100 miles,
+                        plus Vermont
                       </span>
                     </div>
                   </div>
