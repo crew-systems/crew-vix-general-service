@@ -6,7 +6,7 @@ interface HeroProps {
   onOpenEstimate: () => void;
 }
 
-// Posters are the first frame of each video so the fade-in is seamless.
+// Posters are the first frame of each video, so poster -> playback is seamless.
 // The mobile files are a 720x720 center crop: portrait phones only show the
 // middle of a 16:9 frame anyway.
 const HERO_MEDIA = {
@@ -22,32 +22,44 @@ const DESKTOP_MEDIA_QUERY = "(min-width: 768px), (orientation: landscape)";
 const HERO_MEDIA_CLASS =
   "absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[0.95] contrast-[1.02]";
 
-const canAutoplayHeroVideo = () => {
-  const connection = (
-    navigator as Navigator & { connection?: { saveData?: boolean } }
-  ).connection;
-
-  return (
-    !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
-    !connection?.saveData
-  );
-};
-
 export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [showVideo] = useState(canAutoplayHeroVideo);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [showVideo] = useState(
+    () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+  const [videoPoster] = useState(() =>
+    window.matchMedia(DESKTOP_MEDIA_QUERY).matches
+      ? HERO_MEDIA.desktopPoster
+      : HERO_MEDIA.mobilePoster,
+  );
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
+    const play = () => {
+      if (document.hidden || !video.paused) return;
+      video.play()?.catch(() => {
+        // Autoplay blocked (e.g. iOS Low Power Mode): the poster stays visible.
+      });
+    };
+
     // React only sets `muted` as a property; iOS checks it before autoplaying.
     video.muted = true;
     video.defaultMuted = true;
-    video.play()?.catch(() => {
-      // Autoplay blocked (e.g. iOS Low Power Mode): the poster stays visible.
-    });
+    play();
+
+    // Blocked autoplay is allowed after a tap, and mobile browsers can leave
+    // the video paused when the tab comes back to the foreground.
+    window.addEventListener("touchend", play, { passive: true });
+    window.addEventListener("click", play);
+    document.addEventListener("visibilitychange", play);
+
+    return () => {
+      window.removeEventListener("touchend", play);
+      window.removeEventListener("click", play);
+      document.removeEventListener("visibilitychange", play);
+    };
   }, []);
 
   return (
@@ -55,8 +67,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
       id="hero"
       className="hero-section relative flex items-center overflow-hidden bg-[#1A2B44]"
     >
-      {/* Poster paints first; the video fades in only once frames are playing.
-          Reduced-motion and data-saver visitors never download the video. */}
+      {/* The video is visible from the start (never gated on a `playing`
+          event) and shows the matching poster until frames arrive.
+          Reduced-motion visitors only get the still image. */}
       <div className="absolute inset-0 z-0">
         <picture>
           <source media={DESKTOP_MEDIA_QUERY} srcSet={HERO_MEDIA.desktopPoster} />
@@ -69,16 +82,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
         {showVideo && (
           <video
             ref={videoRef}
-            className={`${HERO_MEDIA_CLASS} transition-opacity duration-700 ${
-              isVideoPlaying ? "opacity-100" : "opacity-0"
-            }`}
+            className={`hero-video ${HERO_MEDIA_CLASS}`}
             autoPlay
             loop
             muted
             playsInline
             preload="auto"
+            poster={videoPoster}
             aria-hidden="true"
-            onPlaying={() => setIsVideoPlaying(true)}
           >
             <source
               media={DESKTOP_MEDIA_QUERY}

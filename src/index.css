@@ -194,6 +194,17 @@
   }
 }
 
+/* The hero video is decorative: never show iOS's start-playback button when
+   autoplay is blocked (Low Power Mode). A tap anywhere resumes playback.
+   Separate rules so browsers without these pseudo-elements keep the others. */
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.hero-video::-webkit-media-controls {
+  display: none !important;
+}
+
 /* Fluid headline: scales smoothly from small phones to desktop. */
 .hero-headline {
   font-size: clamp(1.6rem, 7.5vw, 2.25rem);

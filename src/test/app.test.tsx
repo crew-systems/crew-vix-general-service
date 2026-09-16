@@ -41,6 +41,13 @@ describe("App Render Test", () => {
     expect(heroVideo).toHaveAttribute("autoplay");
     expect(heroVideo).toHaveAttribute("loop");
     expect(heroVideo).toHaveAttribute("playsinline");
+    // Visible from the first paint: hiding it until `playing` left some
+    // phones stuck on the poster.
+    expect(heroVideo).toHaveAttribute(
+      "poster",
+      "/videos/vix-home-loop-mobile-poster.jpg",
+    );
+    expect(heroVideo?.className).not.toMatch(/opacity-0/);
     expect(
       Array.from(heroVideo?.querySelectorAll("source") ?? []).map((source) =>
         source.getAttribute("src"),
