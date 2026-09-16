@@ -75,7 +75,7 @@ export const ServiceDetailOfferings: React.FC<ServiceDetailOfferingsProps> = ({
               Need a Custom {service.shortName} Assessment?
             </h3>
             <p className="text-sm text-[#EDE4D6]/80 max-w-xl">
-              Every home and commercial facility has unique electrical and mechanical needs. Schedule a consultation with our licensed technicians today.
+              Every home and commercial facility has unique structural, electrical, and mechanical needs. Schedule a consultation with our project specialists today.
             </p>
           </div>
           <button

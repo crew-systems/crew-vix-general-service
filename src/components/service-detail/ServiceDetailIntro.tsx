@@ -8,6 +8,12 @@ interface ServiceDetailIntroProps {
 }
 
 export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service }) => {
+  const isCoordinatedBuildService = [
+    "general-construction",
+    "remodeling-interiors",
+    "plumbing",
+  ].includes(service.slug);
+
   return (
     <section className="section-pad bg-[#F5F6F8]">
       <div className="container mx-auto gutter-x">
@@ -33,7 +39,7 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
                 <span>Service Summary & Quick Facts</span>
               </div>
               <p className="text-sm font-medium text-[#1A2B44] leading-relaxed mb-4">
-                VIX General Services provides licensed, code-compliant {service.shortName.toLowerCase()} solutions for residential and commercial properties across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. All projects include free on-site consultations, transparent written estimates, and guaranteed craftsmanship.
+                VIX General Services {isCoordinatedBuildService ? "coordinates" : "provides"} {service.shortName.toLowerCase()} solutions for residential and commercial properties across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Work is planned around applicable codes, permits, inspections, and licensed-trade requirements. Projects include free consultations and transparent written estimates.
               </p>
               <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs border-t border-[#1A2B44]/10 pt-3">
                 <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
@@ -135,7 +141,7 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
                   100%
                 </div>
                 <p className="text-xs font-bold uppercase tracking-wider text-white/80 mt-1">
-                  Code Compliant
+                  Quality Focused
                 </p>
               </div>
             </div>

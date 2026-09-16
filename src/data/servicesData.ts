@@ -6,11 +6,19 @@ import {
   Lightbulb,
   Camera,
   Smartphone,
+  Hammer,
+  Home,
+  Wrench,
+  Building2,
+  Ruler,
+  Paintbrush,
+  Layers,
   LucideIcon,
   ShieldCheck,
   Clock,
   Award,
   DollarSign,
+  CheckCircle2,
 } from "lucide-react";
 import { IMAGES } from "./landscapingData";
 
@@ -38,6 +46,9 @@ export interface ServiceStep {
 }
 
 export type EstimateServiceKey =
+  | "general-construction"
+  | "remodeling"
+  | "plumbing"
   | "hvac"
   | "electrical"
   | "solar"
@@ -74,6 +85,465 @@ export interface ServiceItem {
 }
 
 export const SERVICES: ServiceItem[] = [
+  {
+    slug: "general-construction",
+    name: "General Construction & New Builds",
+    shortName: "General Construction",
+    tagline: "From Foundation to Final Walkthrough",
+    headline: "END-TO-END RESIDENTIAL & COMMERCIAL CONSTRUCTION",
+    subheadline:
+      "One coordinated team for planning, structural work, building systems, finishes, and the technology that makes a property perform better.",
+    shortDesc:
+      "Complete residential and commercial construction from site planning and foundation through framing, systems, finishes, and handover.",
+    longDesc:
+      "VIX General Services coordinates complete construction projects across New England, connecting each phase instead of treating the property as a collection of unrelated trades. From early planning and foundation work through framing, mechanical and electrical rough-in, interior finishes, and smart energy systems, we keep scope, communication, and quality aligned from start to finish.",
+    whyChooseText:
+      "Our construction approach combines practical project coordination with deep electrical, HVAC, energy, and smart-technology knowledge. That integrated perspective helps reduce rework, protect the design intent, and prepare the property for future-ready systems from the beginning.",
+    heroImage: IMAGES.services.generalConstruction,
+    icon: Hammer,
+    iconBg: "bg-[#B7793B]",
+    badgeColor: "bg-[#B7793B]/10 text-[#8A5625] border-[#B7793B]/30",
+    featured: true,
+    estimateServiceKey: "general-construction",
+    metaTitle: "General Construction & New Builds New England | VIX",
+    metaDescription:
+      "End-to-end residential and commercial construction across New England, including foundations, framing, building systems, interiors, and final finishes.",
+    schemaServiceType: "General Contracting and New Construction Services",
+    keywords: [
+      "general contractor New England",
+      "new home construction Massachusetts",
+      "commercial construction New Hampshire",
+      "foundation and framing contractor",
+      "end-to-end construction company",
+    ],
+    galleryCategories: ["CONSTRUCTION", "INTERIORS"],
+    offerings: [
+      {
+        title: "Preconstruction & Project Planning",
+        description:
+          "Early scope development, site coordination, sequencing, and practical constructability review before work begins.",
+        features: [
+          "Project scope and milestone planning",
+          "Trade and material coordination",
+          "Permit and inspection coordination",
+          "Transparent written estimates",
+        ],
+      },
+      {
+        title: "Foundation, Structure & Framing",
+        description:
+          "Core structural phases coordinated to create a precise, durable base for the complete building envelope and interior systems.",
+        features: [
+          "Foundation and basement coordination",
+          "Wood framing and structural layout",
+          "Openings, blocking, and system pathways",
+          "Quality checks before close-in",
+        ],
+      },
+      {
+        title: "Building Systems Integration",
+        description:
+          "Electrical, plumbing, HVAC, low-voltage, EV charging, and energy systems planned together before walls are closed.",
+        features: [
+          "Coordinated mechanical and electrical rough-in",
+          "Future-ready smart-home pathways",
+          "Solar and EV infrastructure planning",
+          "Code-conscious system placement",
+        ],
+      },
+      {
+        title: "Interior Completion & Handover",
+        description:
+          "Finish work, fixtures, controls, testing, and final walkthroughs that turn the structure into a complete, usable property.",
+        features: [
+          "Drywall, trim, paint, and finish coordination",
+          "Kitchen, bathroom, and living-space completion",
+          "System testing and commissioning",
+          "Final punch-list management",
+        ],
+      },
+    ],
+    benefits: [
+      {
+        icon: Building2,
+        title: "One Coordinated Build",
+        description:
+          "Structural, interior, and technical systems are planned as one connected project.",
+      },
+      {
+        icon: Ruler,
+        title: "Clear Scope & Sequencing",
+        description:
+          "Milestones and trade responsibilities are established before work advances.",
+      },
+      {
+        icon: Zap,
+        title: "Systems-First Expertise",
+        description:
+          "Electrical, HVAC, energy, and automation requirements are considered early.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Quality at Every Phase",
+        description:
+          "Work is reviewed at key checkpoints before the next layer conceals it.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Consultation & Scope",
+        description:
+          "We review the property, goals, priorities, budget expectations, and project constraints.",
+      },
+      {
+        step: "02",
+        title: "Plan & Coordinate",
+        description:
+          "We organize phases, trade interfaces, materials, permit requirements, and milestone timing.",
+      },
+      {
+        step: "03",
+        title: "Build & Integrate",
+        description:
+          "Construction advances from structure through rough-ins and finishes with coordinated quality checks.",
+      },
+      {
+        step: "04",
+        title: "Commission & Handover",
+        description:
+          "Systems are tested, the punch list is completed, and the finished property is reviewed with you.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can VIX manage a project from foundation through final finishes?",
+        answer:
+          "Yes. Our end-to-end approach is designed to coordinate structural phases, building systems, interior completion, and final commissioning under one organized project plan.",
+      },
+      {
+        question: "Do you handle both residential and commercial construction?",
+        answer:
+          "Yes. We evaluate residential and commercial opportunities based on location, scope, schedule, permit requirements, and the specialized trades involved.",
+      },
+      {
+        question: "Can smart-home, solar, and EV systems be planned during construction?",
+        answer:
+          "Absolutely. Planning conduit, panel capacity, network pathways, equipment locations, and structural provisions early is the most efficient way to prepare a property for these systems.",
+      },
+      {
+        question: "How do you keep a large construction scope understandable?",
+        answer:
+          "We divide the work into clear phases with written scope, milestone decisions, trade coordination, and progress communication so you always know what is happening next.",
+      },
+    ],
+  },
+  {
+    slug: "remodeling-interiors",
+    name: "Remodeling & Interior Construction",
+    shortName: "Remodeling & Interiors",
+    tagline: "Rebuild the Space Around the Way You Live",
+    headline: "COMPLETE REMODELING & HIGH-QUALITY INTERIOR FINISHES",
+    subheadline:
+      "Kitchens, bathrooms, bedrooms, living areas, basements, and commercial interiors coordinated from demolition through the final detail.",
+    shortDesc:
+      "Complete kitchen, bathroom, living-space, basement, and commercial interior remodeling with integrated lighting and building systems.",
+    longDesc:
+      "A successful remodel is more than a visual update. VIX General Services coordinates layout changes, framing, electrical, plumbing, HVAC impacts, lighting, finish carpentry, and smart controls so the space performs as well as it looks. We work across residential and commercial interiors, from focused room upgrades to comprehensive property transformations.",
+    whyChooseText:
+      "Because our team understands both finish work and the systems behind the walls, design decisions can be coordinated with power, plumbing, comfort, lighting, and future technology before costly rework occurs.",
+    heroImage: IMAGES.services.remodeling,
+    icon: Home,
+    iconBg: "bg-[#7C5A46]",
+    badgeColor: "bg-[#7C5A46]/10 text-[#6A4835] border-[#7C5A46]/30",
+    featured: true,
+    estimateServiceKey: "remodeling",
+    metaTitle: "Remodeling & Interior Construction New England | VIX",
+    metaDescription:
+      "Kitchen, bathroom, basement, living-space, and commercial interior remodeling across New England with coordinated electrical, plumbing, HVAC, and finishes.",
+    schemaServiceType: "Residential and Commercial Remodeling Services",
+    keywords: [
+      "home remodeling New England",
+      "kitchen renovation Massachusetts",
+      "bathroom remodeling contractor",
+      "commercial interior build-out",
+      "high-end interior renovation",
+    ],
+    galleryCategories: ["INTERIORS", "CONSTRUCTION"],
+    offerings: [
+      {
+        title: "Kitchen & Living-Space Remodeling",
+        description:
+          "Layout, cabinetry, lighting, electrical, finishes, and connected-home details planned as one cohesive transformation.",
+        features: [
+          "Kitchen and open-plan reconfiguration",
+          "Lighting and dedicated electrical circuits",
+          "Finish carpentry and trim coordination",
+          "Smart controls and integrated media",
+        ],
+      },
+      {
+        title: "Bathroom & Bedroom Renovation",
+        description:
+          "Comfort-focused upgrades that coordinate moisture control, plumbing, electrical safety, lighting, and finish selections.",
+        features: [
+          "Bathroom layout and fixture updates",
+          "Bedroom and closet improvements",
+          "Ventilation and comfort coordination",
+          "Tile, trim, paint, and finish work",
+        ],
+      },
+      {
+        title: "Basement & Whole-Home Transformation",
+        description:
+          "Underused or dated areas converted into finished, functional living space with properly planned systems.",
+        features: [
+          "Basement finishing and room creation",
+          "Whole-home modernization",
+          "Electrical and HVAC distribution updates",
+          "Energy-efficiency improvements",
+        ],
+      },
+      {
+        title: "Commercial Interior Build-Outs",
+        description:
+          "Organized interior construction for offices, retail, hospitality, and service businesses.",
+        features: [
+          "Partitions and functional layouts",
+          "Lighting, power, and low-voltage coordination",
+          "Durable commercial finishes",
+          "Punch-list and opening preparation",
+        ],
+      },
+    ],
+    benefits: [
+      {
+        icon: Paintbrush,
+        title: "Finish-Driven Detail",
+        description:
+          "Materials, transitions, lighting, and trim are coordinated for a resolved final result.",
+      },
+      {
+        icon: Layers,
+        title: "Behind-the-Wall Planning",
+        description:
+          "Power, plumbing, comfort, and technology are addressed before surfaces are closed.",
+      },
+      {
+        icon: Home,
+        title: "Spaces That Work Better",
+        description:
+          "Layouts and systems are shaped around how the space will actually be used.",
+      },
+      {
+        icon: CheckCircle2,
+        title: "One Cohesive Result",
+        description:
+          "Construction and technical trades follow the same design and project priorities.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Walkthrough & Priorities",
+        description:
+          "We review the existing space, pain points, desired use, and the systems affected by the remodel.",
+      },
+      {
+        step: "02",
+        title: "Scope & Selections",
+        description:
+          "Layout, finishes, fixtures, technical requirements, and sequencing are documented before construction.",
+      },
+      {
+        step: "03",
+        title: "Construction & Coordination",
+        description:
+          "Demolition, framing, rough-ins, surfaces, and finishes progress in a controlled sequence.",
+      },
+      {
+        step: "04",
+        title: "Detail & Final Review",
+        description:
+          "We test systems, resolve finish details, complete the punch list, and review the space with you.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can you coordinate electrical, plumbing, and HVAC during a remodel?",
+        answer:
+          "Yes. Coordinating these systems with the layout and finish plan is central to our remodeling approach and helps avoid preventable changes later.",
+      },
+      {
+        question: "Do you remodel individual rooms or complete properties?",
+        answer:
+          "Both. We evaluate focused kitchen, bathroom, bedroom, basement, and living-space projects as well as larger whole-property transformations and commercial build-outs.",
+      },
+      {
+        question: "Can smart lighting and automation be included in the renovation?",
+        answer:
+          "Yes. A remodel is an ideal time to plan control wiring, dimming, networking, security, and other connected-home infrastructure cleanly behind finished surfaces.",
+      },
+      {
+        question: "How is pricing handled when the scope changes?",
+        answer:
+          "The original scope is documented in writing. If concealed conditions or requested additions change the work, pricing and schedule impacts are reviewed before the added work proceeds.",
+      },
+    ],
+  },
+  {
+    slug: "plumbing",
+    name: "Plumbing & Water Systems",
+    shortName: "Plumbing",
+    tagline: "Clean, Coordinated, Dependable Water Systems",
+    headline: "PLUMBING FOR NEW CONSTRUCTION, REMODELING & UPGRADES",
+    subheadline:
+      "Supply, drainage, fixtures, water heating, and mechanical-room coordination designed to work cleanly with the complete property.",
+    shortDesc:
+      "Plumbing rough-ins, fixture installations, water-heating systems, and renovation coordination for residential and commercial properties.",
+    longDesc:
+      "VIX General Services coordinates plumbing needs as part of construction, remodeling, and property-system upgrades. From supply and drainage rough-ins to fixture connections and high-efficiency water-heating equipment, the goal is a clean installation that fits the framing, electrical plan, mechanical systems, and finish schedule around it.",
+    whyChooseText:
+      "Plumbing does not exist in isolation. Our coordinated approach considers structural pathways, electrical requirements, ventilation, equipment access, water efficiency, and the finish plan before installation begins.",
+    heroImage: IMAGES.services.plumbing,
+    icon: Wrench,
+    iconBg: "bg-[#287C8E]",
+    badgeColor: "bg-[#287C8E]/10 text-[#1F6877] border-[#287C8E]/30",
+    featured: false,
+    estimateServiceKey: "plumbing",
+    metaTitle: "Plumbing & Water Systems New England | VIX",
+    metaDescription:
+      "Plumbing for new construction and remodeling across New England, including rough-ins, fixtures, drainage, water heaters, and coordinated system upgrades.",
+    schemaServiceType: "Plumbing Installation and Remodeling Services",
+    keywords: [
+      "plumbing contractor New England",
+      "new construction plumbing",
+      "remodel plumbing rough-in",
+      "water heater installation",
+      "kitchen and bathroom plumbing",
+    ],
+    galleryCategories: ["CONSTRUCTION", "INTERIORS"],
+    offerings: [
+      {
+        title: "New Construction Plumbing Rough-In",
+        description:
+          "Supply, waste, vent, and equipment pathways coordinated with framing and the complete construction schedule.",
+        features: [
+          "Water-supply distribution",
+          "Drain, waste, and vent rough-in",
+          "Fixture and equipment locations",
+          "Pressure and installation checks",
+        ],
+      },
+      {
+        title: "Kitchen & Bathroom Plumbing",
+        description:
+          "Plumbing coordination for remodeled kitchens, bathrooms, laundry areas, and utility spaces.",
+        features: [
+          "Sink, faucet, and appliance connections",
+          "Shower, tub, and toilet plumbing",
+          "Layout-change coordination",
+          "Accessible shutoff planning",
+        ],
+      },
+      {
+        title: "Water Heating & Efficiency",
+        description:
+          "Water-heating equipment and distribution improvements selected around demand, space, and energy goals.",
+        features: [
+          "Tank and high-efficiency system coordination",
+          "Recirculation planning",
+          "Insulated hot-water distribution",
+          "Equipment access and service clearances",
+        ],
+      },
+      {
+        title: "Repairs, Replacements & Upgrades",
+        description:
+          "Targeted replacement of aging fixtures, valves, visible piping, and problem components during broader property work.",
+        features: [
+          "Fixture and shutoff replacement",
+          "Leak-source evaluation",
+          "Visible piping improvements",
+          "Construction-phase plumbing corrections",
+        ],
+      },
+    ],
+    benefits: [
+      {
+        icon: Wrench,
+        title: "Organized Installation",
+        description:
+          "Piping, valves, and equipment are arranged for access, clarity, and serviceability.",
+      },
+      {
+        icon: Layers,
+        title: "Trade Coordination",
+        description:
+          "Plumbing pathways are planned with framing, electrical, HVAC, and finish requirements.",
+      },
+      {
+        icon: DollarSign,
+        title: "Efficiency-Minded Options",
+        description:
+          "Equipment and distribution choices consider long-term water and energy performance.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Code-Conscious Work",
+        description:
+          "Applicable permit, inspection, and local plumbing requirements are addressed by the project team.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Evaluate the Scope",
+        description:
+          "We review fixtures, demand, existing conditions, equipment, and the surrounding construction plan.",
+      },
+      {
+        step: "02",
+        title: "Coordinate the Layout",
+        description:
+          "Supply, drainage, venting, shutoffs, and equipment access are aligned with other trades.",
+      },
+      {
+        step: "03",
+        title: "Install & Verify",
+        description:
+          "Rough-in and finish connections are installed and checked at the appropriate project milestones.",
+      },
+      {
+        step: "04",
+        title: "Finish & Handover",
+        description:
+          "Fixtures and equipment are tested, adjusted, documented, and reviewed before project completion.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can plumbing be included in a complete VIX construction or remodel project?",
+        answer:
+          "Yes. Plumbing can be coordinated alongside framing, electrical, HVAC, cabinetry, fixtures, and finish work so the complete scope follows one project sequence.",
+      },
+      {
+        question: "Do plumbing projects require permits and inspections?",
+        answer:
+          "Requirements vary by municipality and scope. When permits or licensed trade involvement are required, those requirements are identified during planning and coordinated before the work proceeds.",
+      },
+      {
+        question: "Can you relocate plumbing during a kitchen or bathroom remodel?",
+        answer:
+          "Potentially. Feasibility depends on framing, drainage slope, venting, access, and the existing system. We evaluate those conditions before finalizing the new layout.",
+      },
+      {
+        question: "Can water-heating upgrades be coordinated with electrical or energy work?",
+        answer:
+          "Yes. Electrical capacity, fuel source, ventilation, demand, equipment location, and energy goals should be reviewed together when selecting a water-heating solution.",
+      },
+    ],
+  },
 {
     slug: "hvac",
     name: "HVAC & Air Conditioning Services",

@@ -71,34 +71,34 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-5 tracking-tight">
-              FROM STANDARD LIGHTING TO
+              FROM FRAMING TO
               <br />
-              CUSTOM LED AMBIANCE
+              FINISHED, INTELLIGENT LIVING
             </h2>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-7 leading-relaxed">
-              See how our electricians transform a living space with custom
-              accent lighting, recessed fixtures, and smart controls.
+              Drag to see how coordinated construction, building systems, and
+              finish work turn an open frame into a completed interior.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-7">
               <div className="bg-[#F5F6F8] p-5 rounded-lg border border-[#1A2B44]/12">
                 <h4 className="font-heading font-bold text-[#1A2B44] text-base mb-1">
-                  STANDARD LIGHTING
+                  STRUCTURE &amp; ROUGH-IN
                 </h4>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  A functional but flat overhead fixture with no accent or
-                  ambient lighting options.
+                  Framing, panel placement, and service pathways coordinated
+                  before walls and finishes are installed.
                 </p>
               </div>
 
               <div className="bg-[#C99A55]/10 p-5 rounded-lg border border-[#C99A55]/30">
                 <h4 className="font-heading font-bold text-[#C99A55] text-base mb-1">
-                  CUSTOM LED INSTALLATION
+                  FINISHED &amp; CONNECTED
                 </h4>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  Recessed lighting, warm LED accents, and a smart control panel
-                  deliver a fully customized ambiance.
+                  Finished living spaces with integrated electrical systems,
+                  lighting, and future-ready infrastructure.
                 </p>
               </div>
             </div>
@@ -107,7 +107,7 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
               onClick={onOpenEstimate}
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] font-bold text-base hover:bg-[#243652] transition-all shadow-crisp border border-[#C99A55]/25"
             >
-              <span>See Our Process</span>
+              <span>Plan Your Transformation</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
@@ -128,13 +128,13 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                 {/* Custom LED Lighting Image (Base Layer, full-bleed) */}
                 <img
                   src={IMAGES.after}
-                  alt="Custom LED accent lighting installation - VIX General Services"
+                  alt="Completed interior with integrated electrical panel and finishes"
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                   draggable={false}
                 />
                 <span className="absolute top-2 right-2 sm:top-3.5 sm:right-3.5 z-10 bg-[#C99A55] text-[#1A2B44] px-2 sm:px-3 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider shadow-crisp select-none pointer-events-none border border-[#1A2B44]/15 whitespace-nowrap max-w-[45%] truncate">
                   <span className="sm:hidden">AFTER</span>
-                  <span className="hidden sm:inline">CUSTOM LED LIGHTING</span>
+                  <span className="hidden sm:inline">FINISHED INTERIOR</span>
                 </span>
 
                 {/* Before Image (full-bleed, revealed via clip-path so it never re-scales) */}
@@ -146,13 +146,13 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                 >
                   <img
                     src={IMAGES.before}
-                    alt="Standard overhead lighting before upgrade"
+                    alt="New construction framing and electrical rough-in"
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                     draggable={false}
                   />
                   <span className="absolute top-2 left-2 sm:top-3.5 sm:left-3.5 z-10 bg-black/75 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider shadow-crisp select-none pointer-events-none border border-white/15 whitespace-nowrap max-w-[45%] truncate">
                     <span className="sm:hidden">BEFORE</span>
-                    <span className="hidden sm:inline">STANDARD LIGHTING</span>
+                    <span className="hidden sm:inline">FRAMING &amp; ROUGH-IN</span>
                   </span>
                 </div>
 

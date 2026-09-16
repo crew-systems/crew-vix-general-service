@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { COMPANY_INFO, SERVICE_AREAS } from "../data/landscapingData";
+import { SERVICES } from "../data/servicesData";
 import { Logo } from "./Logo";
 
 interface FooterProps {
@@ -24,8 +25,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
             </Link>
 
             <p className="text-xs text-[#EDE4D6]/70 leading-relaxed max-w-sm pt-1">
-              Energy-efficiency solutions spanning HVAC, electrical, solar, EV
-              charging, and smart technology for homes and businesses in
+              End-to-end residential and commercial construction, remodeling,
+              essential building systems, and smart-energy solutions across
               Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont.
             </p>
 
@@ -146,68 +147,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
               Our Services
             </h4>
             <ul className="space-y-2 text-xs text-[#EDE4D6]/75 font-medium">
-              <li>
-                <Link
-                  to="/services/outdoor-lighting"
-                  className="hover:text-white transition-colors"
-                >
-                  Outdoor & Landscape Lighting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/security-cameras"
-                  className="hover:text-white transition-colors"
-                >
-                  Security Cameras & CCTV
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/smart-automation"
-                  className="hover:text-white transition-colors"
-                >
-                  Smart Control Automation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/electrical"
-                  className="hover:text-white transition-colors"
-                >
-                  Electrical Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/hvac"
-                  className="hover:text-white transition-colors"
-                >
-                  HVAC & Air Conditioning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/solar"
-                  className="hover:text-white transition-colors"
-                >
-                  Solar Energy Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/ev-charging"
-                  className="hover:text-white transition-colors"
-                >
-                  EV Charging Stations
-                </Link>
-              </li>
+              {SERVICES.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="hover:text-white transition-colors"
+                  >
+                    {service.shortName}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <Link
                   to="/services"
                   className="text-[#C99A55] hover:text-white transition-colors font-bold"
                 >
-                  All 7 Services →
+                  All Services →
                 </Link>
               </li>
             </ul>

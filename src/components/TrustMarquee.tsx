@@ -1,21 +1,14 @@
 import React from "react";
-import {
-  Shield,
-  ThumbsUp,
-  Calendar,
-  Award,
-  CheckCircle,
-  Percent,
-} from "lucide-react";
+import { Shield, Building2, Hammer, CircuitBoard, Zap, MapPin } from "lucide-react";
 
 export const TrustMarquee: React.FC = () => {
   const highlights = [
     { icon: Shield, text: "Licensed & Insured" },
-    { icon: ThumbsUp, text: "Serving Five New England States" },
-    { icon: Award, text: "9+ Years Experience" },
-    { icon: Calendar, text: "Fast Response" },
-    { icon: CheckCircle, text: "100% Free Estimates" },
-    { icon: Percent, text: "HVAC · Electrical · Solar · EV" },
+    { icon: Building2, text: "Residential & Commercial" },
+    { icon: Hammer, text: "Foundation to Finish" },
+    { icon: CircuitBoard, text: "Electrical · Plumbing · HVAC" },
+    { icon: Zap, text: "Smart Home · Solar · EV" },
+    { icon: MapPin, text: "Serving Five New England States" },
   ];
 
   return (

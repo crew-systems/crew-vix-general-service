@@ -25,7 +25,7 @@ export const ServiceDetailGallery: React.FC<ServiceDetailGalleryProps> = ({ serv
       : [
           {
             url: service.heroImage,
-            title: `${service.shortName} System Installation Showcase`,
+            title: `${service.shortName} Planning & Installation Reference`,
             category: service.shortName,
           },
         ];
@@ -36,13 +36,15 @@ export const ServiceDetailGallery: React.FC<ServiceDetailGalleryProps> = ({ serv
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
             <Camera className="w-3.5 h-3.5 text-[#C99A55]" />
-            <span>Project Showcase & Standards</span>
+            <span>Project References &amp; Installation Standards</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-4 tracking-tight">
-            RECENT {service.shortName.toUpperCase()} SHOWCASE & EXAMPLES
+            {service.shortName.toUpperCase()} PROJECT REFERENCES
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Explore project examples and system architecture designed and installed by our licensed technicians across our five-state New England service area.
+            Explore representative project photography and system references
+            that illustrate the planning, workmanship, and finish standards for
+            this capability across our five-state New England service area.
           </p>
         </div>
 

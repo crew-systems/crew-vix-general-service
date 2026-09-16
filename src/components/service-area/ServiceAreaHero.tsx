@@ -19,7 +19,7 @@ export const ServiceAreaHero: React.FC<ServiceAreaHeroProps> = ({
       <div className="absolute inset-0 z-0">
         <img
           src={area.heroImage}
-          alt={`HVAC, electrical, solar, and EV charging services in ${area.fullName}`}
+          alt={`Construction, building systems, and smart-energy services in ${area.fullName}`}
           className="w-full h-full object-cover object-center scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/95 via-[#1A2B44]/70 to-[#1A2B44]/40" />
@@ -52,7 +52,7 @@ export const ServiceAreaHero: React.FC<ServiceAreaHeroProps> = ({
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white leading-[1.08] mb-5 tracking-tight">
-            LIGHTING, SECURITY & HOME SERVICES IN{" "}
+            CONSTRUCTION &amp; SMART BUILDING SERVICES IN{" "}
             <span className="text-[#C99A55] ">{area.city.toUpperCase()}</span>
           </h1>
 

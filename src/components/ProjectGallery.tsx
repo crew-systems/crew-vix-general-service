@@ -22,6 +22,8 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
 
   const categories = [
     "All",
+    "CONSTRUCTION",
+    "INTERIORS",
     "HVAC",
     "ELECTRICAL",
     "LIGHTING",
@@ -65,9 +67,8 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
             OUR PROJECT PORTFOLIO
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Explore recent residential and commercial work, including HVAC
-            replacements, electrical upgrades, lighting, EV charging, solar,
-            and complete energy-efficiency projects.
+            Explore construction, interior transformations, essential building
+            systems, and smart-energy work for residential and commercial properties.
           </p>
         </div>
 
@@ -130,7 +131,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
         {/* Gallery CTA Bar */}
         <div className="mt-12 text-center bg-[#F5F6F8] p-8 rounded-lg border border-[#1A2B44]/12 max-w-2xl mx-auto">
           <p className="text-[#1A2B44] font-heading font-bold text-lg mb-3">
-            Want Results Like These For Your Home?
+            Ready To Transform Your Property?
           </p>
           <button
             onClick={onOpenEstimate}

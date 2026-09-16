@@ -5,9 +5,12 @@ import fs from "fs";
 import path from "path";
 
 describe("Services Data Registry", () => {
-  it("should define exactly all 7 services including outdoor lighting and security systems", () => {
+  it("should define all 10 construction, systems, and smart-energy services", () => {
     const slugs = getAllServiceSlugs();
     expect(slugs).toEqual([
+      "general-construction",
+      "remodeling-interiors",
+      "plumbing",
       "hvac",
       "electrical",
       "solar",
@@ -16,7 +19,7 @@ describe("Services Data Registry", () => {
       "security-cameras",
       "smart-automation",
     ]);
-    expect(slugs.length).toBe(7);
+    expect(slugs.length).toBe(10);
   });
 
   it("should have comprehensive SEO metadata for every service", () => {
@@ -53,6 +56,9 @@ describe("Services Data Registry", () => {
 
   it("should find service by slug case-insensitively and handle invalid slugs", () => {
     expect(getServiceBySlug("OUTDOOR-LIGHTING")?.slug).toBe("outdoor-lighting");
+    expect(getServiceBySlug("GENERAL-CONSTRUCTION")?.slug).toBe("general-construction");
+    expect(getServiceBySlug("remodeling-interiors")?.slug).toBe("remodeling-interiors");
+    expect(getServiceBySlug("PLUMBING")?.slug).toBe("plumbing");
     expect(getServiceBySlug("security-cameras")?.name).toBe("Security Camera & Surveillance Systems");
     expect(getServiceBySlug("smart-automation")?.slug).toBe("smart-automation");
     expect(getServiceBySlug("HVAC")?.slug).toBe("hvac");
@@ -64,7 +70,7 @@ describe("Services Data Registry", () => {
 });
 
 describe("Sitemap & Robots.txt Parity", () => {
-  it("sitemap.xml should reference vixgeneralservices.com and all 7 service subpages", () => {
+  it("sitemap.xml should reference vixgeneralservices.com and all service subpages", () => {
     const sitemapPath = path.resolve(__dirname, "../../public/sitemap.xml");
     const sitemapContent = fs.readFileSync(sitemapPath, "utf8");
 
@@ -185,6 +191,8 @@ describe("Project Gallery", () => {
       new Set([
         "HVAC",
         "ELECTRICAL",
+        "CONSTRUCTION",
+        "INTERIORS",
         "LIGHTING",
         "EV CHARGING",
         "ENERGY EFFICIENCY",

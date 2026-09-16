@@ -1,5 +1,5 @@
 import React from "react";
-import { ClipboardList, Compass, Layers, ArrowRight } from "lucide-react";
+import { ClipboardList, Compass, Layers, ArrowRight, BadgeCheck } from "lucide-react";
 
 interface ProcessSectionProps {
   onOpenEstimate: () => void;
@@ -12,23 +12,30 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
     {
       num: "01",
       icon: ClipboardList,
-      title: "REQUEST YOUR FREE ESTIMATE",
+      title: "CONSULTATION & SCOPE",
       description:
-        "Tell us about your HVAC, electrical, solar, or EV charging project and provide your contact information to get started.",
+        "Tell us what you are building, renovating, or upgrading so we can understand goals, site conditions, priorities, and timing.",
     },
     {
       num: "02",
       icon: Compass,
-      title: "SEND PHOTOS & PROJECT DETAILS",
+      title: "PLAN, BUDGET & COORDINATE",
       description:
-        "Upload photos of your equipment, panel, or project so we can better understand the scope of work.",
+        "We define the work, align systems and finishes, identify permit or licensed-trade requirements, and establish clear project milestones.",
     },
     {
       num: "03",
       icon: Layers,
-      title: "WE REVIEW & PROVIDE YOUR NEXT STEP",
+      title: "BUILD & INTEGRATE",
       description:
-        "Our team reviews your photos and project details. Many estimates can be discussed by phone, and an on-site visit is scheduled only when necessary.",
+        "Construction, rough-ins, equipment, and finishes are coordinated through the active build with consistent communication.",
+    },
+    {
+      num: "04",
+      icon: BadgeCheck,
+      title: "COMMISSION & FINAL WALKTHROUGH",
+      description:
+        "We review completed work, confirm system operation, address closeout details, and hand over a finished, ready-to-use property.",
     },
   ];
 
@@ -41,15 +48,15 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             Simple &amp; Hassle-Free
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#EDE4D6] mb-4 tracking-tight">
-            OUR 3-STEP PROCESS
+            FROM FIRST PLAN TO FINAL HANDOVER
           </h2>
           <p className="text-base sm:text-lg text-[#EDE4D6]/80 leading-relaxed">
-            We make transforming your home simple and stress-free from day one.
+            A practical four-phase process keeps scope, trades, and expectations aligned.
           </p>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 relative">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -77,7 +84,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
                 </div>
 
                 <div className="mt-5 pt-4 border-t border-white/10 flex items-center text-xs font-bold text-[#C99A55]">
-                  <span>Step {index + 1} of 3</span>
+                  <span>Step {index + 1} of {steps.length}</span>
                 </div>
               </div>
             );
@@ -90,7 +97,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             onClick={onOpenEstimate}
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15"
           >
-            <span>Start Step 1: Free Estimate</span>
+            <span>Start Your Project</span>
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>

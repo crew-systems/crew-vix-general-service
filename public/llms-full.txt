@@ -6,7 +6,7 @@
 - **Brand Name**: VIX General Services
 - **Legal Entity**: VIX CONSTRUCTION AND LANDSCAPE INC
 - **Owner**: Kristyan Martins
-- **Business Type**: HomeAndConstructionBusiness, Electrical Contractor, HVAC Contractor
+- **Business Type**: HomeAndConstructionBusiness, General Construction, Remodeling, Electrical, HVAC, Plumbing Coordination, and Smart-Energy Systems
 - **Service Region**: Massachusetts; Maine; New Hampshire; Rhode Island; Vermont
 - **Primary Phone**: (954) 330-9296
 - **Primary Email**: info@vixgeneralservices.com
@@ -18,6 +18,18 @@
 ---
 
 ## Detailed Service Catalog
+
+### General Construction & New Builds
+- **Canonical URL**: https://www.vixgeneralservices.com/services/general-construction
+- **Primary Capabilities**: Project scoping, additions, framing, structural coordination, building-envelope work, trade sequencing, rough-ins, interiors, closeout, and final walkthroughs for residential and commercial properties.
+
+### Remodeling & Interior Construction
+- **Canonical URL**: https://www.vixgeneralservices.com/services/remodeling-interiors
+- **Primary Capabilities**: Whole-property renovations, kitchens, bathrooms, custom living spaces, commercial interiors, finish carpentry, surfaces, lighting integration, and systems upgrades.
+
+### Plumbing & Water Systems
+- **Canonical URL**: https://www.vixgeneralservices.com/services/plumbing
+- **Primary Capabilities**: Plumbing rough-ins, water distribution, drainage and venting coordination, fixtures, water heating, remodel tie-ins, and permit or licensed-trade coordination where required.
 
 ### 1. Outdoor & Landscape Lighting
 - **Canonical URL**: https://www.vixgeneralservices.com/services/outdoor-lighting

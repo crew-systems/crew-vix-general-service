@@ -42,7 +42,7 @@ export const ReviewsSection: React.FC = () => {
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Read real reviews from homeowners who trusted VIX General Services
-            for their HVAC, electrical, solar, and EV charging projects.
+            for construction, electrical, HVAC, solar, and EV charging projects.
           </p>
         </div>
 

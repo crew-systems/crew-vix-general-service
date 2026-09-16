@@ -2,6 +2,8 @@ import React from "react";
 import { describe, it, expect, beforeAll } from "vitest";
 import { render, fireEvent } from "@testing-library/react";
 import App from "../App";
+import { SERVICES } from "../data/servicesData";
+import { SERVICE_AREAS } from "../data/landscapingData";
 
 describe("App Render Test", () => {
   beforeAll(() => {
@@ -30,10 +32,40 @@ describe("App Render Test", () => {
     expect(container).toBeDefined();
     expect(container.innerHTML).not.toContain("An unexpected error occurred");
     expect(container.innerHTML).toContain("VIX General Services");
-    expect(container.textContent).toContain("SMARTER ENERGY USE");
-    expect(container.textContent).toContain("LASTING EFFICIENCY");
-    expect(container.textContent).toContain(
-      "Serving Massachusetts, Maine, New Hampshire, Rhode Island & Vermont",
+    expect(container.textContent).toContain("FROM FOUNDATION TO A");
+    expect(container.textContent).toContain("SMARTER, ENERGY-EFFICIENT HOME");
+    expect(container.textContent).toContain("END-TO-END CONSTRUCTION");
+
+    const heroVideo = container.querySelector("#hero video");
+    expect(heroVideo).not.toBeNull();
+    expect(heroVideo).toHaveAttribute("autoplay");
+    expect(heroVideo).toHaveAttribute("loop");
+    expect(heroVideo).toHaveAttribute("playsinline");
+    expect(heroVideo?.querySelector("source")).toHaveAttribute(
+      "src",
+      "/videos/vix-energy-efficient-home-loop.mp4",
+    );
+
+    const header = container.querySelector("header");
+    const serviceLinks = new Set(
+      Array.from(
+        header?.querySelectorAll<HTMLAnchorElement>('a[href^="/services/"]') ??
+          [],
+      ).map((link) => link.getAttribute("href")),
+    );
+    const serviceAreaLinks = new Set(
+      Array.from(
+        header?.querySelectorAll<HTMLAnchorElement>(
+          'a[href^="/service-areas/"]',
+        ) ?? [],
+      ).map((link) => link.getAttribute("href")),
+    );
+
+    expect([...serviceLinks].sort()).toEqual(
+      SERVICES.map((service) => `/services/${service.slug}`).sort(),
+    );
+    expect([...serviceAreaLinks].sort()).toEqual(
+      SERVICE_AREAS.map((area) => `/service-areas/${area.slug}`).sort(),
     );
   });
 

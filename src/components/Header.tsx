@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { COMPANY_INFO, SERVICE_AREAS } from "../data/landscapingData";
+import { SERVICES } from "../data/servicesData";
 import { Logo } from "./Logo";
 
 interface HeaderProps {
@@ -42,23 +43,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
       href: "/services",
       hasDropdown: true,
       items: [
-        {
-          name: "Outdoor & Landscape Lighting",
-          href: "/services/outdoor-lighting",
-        },
-        {
-          name: "Security Camera Systems",
-          href: "/services/security-cameras",
-        },
-        {
-          name: "Smart Control Automation",
-          href: "/services/smart-automation",
-        },
-        { name: "Electrical Services", href: "/services/electrical" },
-        { name: "HVAC & Air Conditioning", href: "/services/hvac" },
-        { name: "Solar Energy Systems", href: "/services/solar" },
-        { name: "EV Charging Stations", href: "/services/ev-charging" },
-        { name: "View All 7 Services →", href: "/services" },
+        ...SERVICES.map((service) => ({
+          name: service.name,
+          href: `/services/${service.slug}`,
+        })),
+        { name: "View Every Service →", href: "/services" },
       ],
     },
     {
@@ -146,13 +135,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                     {/* Dropdown Menu */}
                     <div
                       onMouseEnter={() => openMenu(link.name)}
-                      className={`absolute top-full left-0 w-72 pt-2 transition-all duration-200 ${
+                      className={`absolute top-full pt-2 transition-all duration-200 ${
+                        link.name === "Services"
+                          ? "left-1/2 w-[38rem] -translate-x-1/2"
+                          : "left-0 w-72"
+                      } ${
                         openDropdown === link.name
                           ? "opacity-100 translate-y-0 pointer-events-auto"
                           : "opacity-0 translate-y-2 pointer-events-none"
                       }`}
                     >
-                      <div className="bg-[#F5F6F8] rounded-md shadow-crisp-lg border border-[#1A2B44]/12 p-2 space-y-0.5">
+                      <div
+                        className={`bg-[#F5F6F8] rounded-md shadow-crisp-lg border border-[#1A2B44]/12 p-2 ${
+                          link.name === "Services"
+                            ? "grid grid-cols-2 gap-0.5"
+                            : "space-y-0.5"
+                        }`}
+                      >
                         {link.items?.map((item) =>
                           item.href.startsWith("#") ? (
                             <a
@@ -177,7 +176,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                               key={item.name}
                               to={item.href}
                               onClick={() => setOpenDropdown(null)}
-                              className="block px-3 py-2 rounded-md text-xs font-semibold text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] transition-colors"
+                              className={`block px-3 py-2 rounded-md text-xs font-semibold text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] transition-colors ${
+                                link.name === "Services" &&
+                                item.href === "/services"
+                                  ? "col-span-2 mt-1 border-t border-[#1A2B44]/10 pt-2.5"
+                                  : ""
+                              }`}
                             >
                               {item.name}
                             </Link>

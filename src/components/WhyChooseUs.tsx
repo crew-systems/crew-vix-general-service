@@ -17,25 +17,25 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenEstimate }) => {
   const differentiators = [
     {
       icon: ShieldCheck,
-      title: "TRUSTED & RELIABLE",
+      title: "END-TO-END COORDINATION",
       description:
-        "Licensed, insured, and committed to providing dependable service you can count on.",
+        "One accountable team connects construction, interiors, core systems, and final commissioning.",
     },
     {
       icon: Users,
-      title: "EXPERT TECHNICIANS",
+      title: "SYSTEMS EXPERTISE",
       description:
-        "Skilled professionals delivering high-quality workmanship on every job.",
+        "Electrical, plumbing, HVAC, smart controls, solar, and EV infrastructure are planned together.",
     },
     {
       icon: Home,
-      title: "CUSTOMER FIRST",
+      title: "CLEAR PROJECT MILESTONES",
       description:
-        "We treat your home like our own and ensure you're 100% satisfied.",
+        "Defined phases, proactive updates, and practical next steps keep residential and commercial work moving.",
     },
     {
       icon: Sparkles,
-      title: "TRANSPARENT & FAIR PRICING",
+      title: "TRANSPARENT SCOPE & PRICING",
       description:
         "Detailed estimates with no hidden costs. You approve everything before we start any work.",
     },
@@ -75,12 +75,12 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenEstimate }) => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-5 tracking-tight">
-              WHY HOMEOWNERS CHOOSE VIX
+              WHY CLIENTS TRUST VIX WITH THE COMPLETE PROJECT
             </h2>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-7 leading-relaxed">
-              We know the common frustrations with home service contractors:
-              delays, poor communication, and rushed work. See how{" "}
+              Complex projects succeed when every trade understands the same
+              plan. See how{" "}
               <strong>VIX General Services</strong> does it differently:
             </p>
 

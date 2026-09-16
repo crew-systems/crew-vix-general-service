@@ -1,15 +1,18 @@
 export const IMAGES = {
-  hero: "https://vibe.filesafe.space/1787931819686809992/attachments/954fee4f-f53b-495b-be04-ca37a311e535.png",
+  hero: "/images/concepts/end-to-end-construction-hero.jpg",
   ogMeta:
-    "https://vibe.filesafe.space/1787931819686809992/assets/418747e7-2331-435e-ac06-87581cbbd726.png",
+    "https://www.vixgeneralservices.com/images/concepts/end-to-end-construction-hero.jpg",
   before:
-    "https://vibe.filesafe.space/1787931819686809992/attachments/2d8d7034-2f98-443a-ade6-7026bd34381c.png",
+    "/images/projects/orga-new-construction-rough-in.jpg",
   after:
-    "https://vibe.filesafe.space/1787931819686809992/attachments/6dfa5aab-9813-4d1f-9e5d-f3d9ab28aab9.png",
+    "/images/projects/orga-finished-electrical-panel.jpg",
   finalCta:
     "https://vibe.filesafe.space/1787931819686809992/assets/778aec5c-f1c3-4aa5-abb7-6c6197bd4b57.png",
 
   services: {
+    generalConstruction: "/images/concepts/end-to-end-construction-hero.jpg",
+    remodeling: "/images/projects/jack-cove-lighting-upgrade.jpg",
+    plumbing: "/images/concepts/plumbing-systems-hero.jpg",
     hvac: "https://vibe.filesafe.space/1787931819686809992/attachments/7beafb86-6a23-494f-be2f-e9a9e60d743b.png",
     electrical:
       "https://vibe.filesafe.space/1787931819686809992/attachments/0e98246b-2ec9-4201-a4f6-37b16b62e534.png",
@@ -58,27 +61,27 @@ export const IMAGES = {
     },
     {
       url: "/images/projects/orga-new-construction-rough-in.jpg",
-      title: "New Construction Electrical Rough-In",
-      category: "ELECTRICAL",
+      title: "New Construction Framing & Systems Rough-In",
+      category: "CONSTRUCTION",
     },
     {
       url: "/images/projects/orga-interior-panel-installation.jpg",
-      title: "Finished Interior Electrical Panel Installation",
-      category: "ELECTRICAL",
+      title: "Finished Interior Build-Out & Electrical Integration",
+      category: "INTERIORS",
     },
     {
       url: "/images/projects/orga-finished-electrical-panel.jpg",
-      title: "Electrical Panel & Interior Fit-Out",
-      category: "ELECTRICAL",
+      title: "Complete Interior Fit-Out & Systems Finish",
+      category: "INTERIORS",
     },
     {
       url: "/images/projects/jack-cove-lighting-upgrade.jpg",
-      title: "Recessed & Cove Lighting Upgrade",
-      category: "LIGHTING",
+      title: "Living Room Remodel & Integrated Cove Lighting",
+      category: "INTERIORS",
     },
     {
       url: "/images/projects/jhonny-media-wall-lighting.jpg",
-      title: "Custom Media Wall Lighting Installation",
+      title: "Custom Media Wall & Integrated Lighting",
       category: "LIGHTING",
     },
     {
@@ -141,14 +144,14 @@ export const SERVICE_AREAS = [
       IMAGES.services.electrical,
     ],
     shortDesc:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts.",
     longDesc:
-      "VIX General Services supports residential and commercial properties throughout Massachusetts. Our team delivers energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services with reliable workmanship and long-term value in mind.",
+      "VIX General Services supports residential and commercial properties throughout Massachusetts with coordinated construction, remodeling, essential building systems, and smart-energy solutions from concept through completion.",
     neighborhoods: ["Massachusetts"],
     zipCodes: [],
-    metaTitle: "Energy Efficiency & Property Services Massachusetts | VIX",
+    metaTitle: "Construction & Smart Energy Services Massachusetts | VIX",
     metaDescription:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Massachusetts.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts.",
     reviewName: "Michael R.",
     reviewText:
       "VIX designed and installed our complete landscape lighting and outdoor security cameras. The transformation at night is stunning, and the app control is effortless!",
@@ -165,14 +168,14 @@ export const SERVICE_AREAS = [
       IMAGES.services.electrical,
     ],
     shortDesc:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Maine.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Maine.",
     longDesc:
-      "VIX General Services serves residential and commercial customers throughout Maine with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Every project is planned for dependable performance through New England's changing seasons.",
+      "VIX General Services serves residential and commercial customers throughout Maine with coordinated construction, remodeling, essential building systems, and smart-energy solutions planned for New England conditions.",
     neighborhoods: ["Maine"],
     zipCodes: [],
-    metaTitle: "Energy Efficiency & Property Services Maine | VIX",
+    metaTitle: "Construction & Smart Energy Services Maine | VIX",
     metaDescription:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Maine.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Maine.",
     reviewName: "Michael R.",
     reviewText:
       "VIX delivered a clean, well-planned installation and kept us informed throughout the project. The finished system performs exactly as promised.",
@@ -189,14 +192,14 @@ export const SERVICE_AREAS = [
       IMAGES.services.evCharging,
     ],
     shortDesc:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across New Hampshire.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across New Hampshire.",
     longDesc:
-      "VIX General Services serves residential and commercial customers throughout New Hampshire with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Our team focuses on code-compliant work, reliable systems, and lasting value.",
+      "VIX General Services serves residential and commercial customers throughout New Hampshire with coordinated construction, remodeling, essential building systems, and smart-energy solutions focused on reliable long-term performance.",
     neighborhoods: ["New Hampshire"],
     zipCodes: [],
-    metaTitle: "Energy Efficiency & Property Services New Hampshire | VIX",
+    metaTitle: "Construction & Smart Energy Services New Hampshire | VIX",
     metaDescription:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across New Hampshire.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across New Hampshire.",
     reviewName: "Michael R.",
     reviewText:
       "VIX delivered a clean, well-planned installation and kept us informed throughout the project. The finished system performs exactly as promised.",
@@ -213,14 +216,14 @@ export const SERVICE_AREAS = [
       IMAGES.services.smartAutomation,
     ],
     shortDesc:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Rhode Island.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Rhode Island.",
     longDesc:
-      "VIX General Services serves residential and commercial customers throughout Rhode Island with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Every project is approached with reliable workmanship and practical long-term performance in mind.",
+      "VIX General Services serves residential and commercial customers throughout Rhode Island with coordinated construction, remodeling, essential building systems, and smart-energy solutions from first scope through final handover.",
     neighborhoods: ["Rhode Island"],
     zipCodes: [],
-    metaTitle: "Energy Efficiency & Property Services Rhode Island | VIX",
+    metaTitle: "Construction & Smart Energy Services Rhode Island | VIX",
     metaDescription:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services across Rhode Island.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Rhode Island.",
     reviewName: "Jessica T.",
     reviewText:
       "The VIX team communicated clearly, worked carefully, and left us with a dependable system that is easy to use.",
@@ -237,14 +240,14 @@ export const SERVICE_AREAS = [
       IMAGES.services.electrical,
     ],
     shortDesc:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services for residential and commercial customers in Vermont.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems for residential and commercial customers in Vermont.",
     longDesc:
-      "VIX General Services serves residential and commercial customers in Vermont with energy-efficiency upgrades, HVAC and electrical solutions, solar, EV charging, smart technology, and related property services. Every project is approached with quality workmanship, reliable service, and practical long-term performance in mind.",
+      "VIX General Services serves residential and commercial customers in Vermont with coordinated construction, remodeling, essential building systems, and smart-energy solutions designed for dependable long-term performance.",
     neighborhoods: ["Vermont"],
     zipCodes: [],
-    metaTitle: "Energy Efficiency & Property Services Vermont | VIX",
+    metaTitle: "Construction & Smart Energy Services Vermont | VIX",
     metaDescription:
-      "Energy-efficiency, HVAC, electrical, solar, EV charging, smart technology, and property services for residential and commercial customers in Vermont.",
+      "Construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems for residential and commercial customers in Vermont.",
     reviewName: "Jessica T.",
     reviewText:
       "They installed our 4K security camera system and outdoor lighting. Excellent communication, clean installation, and no monthly cloud fees!",
@@ -255,7 +258,7 @@ export const COMPANY_INFO = {
   name: "VIX General Services",
   legalName: "VIX CONSTRUCTION AND LANDSCAPE INC",
   ownerName: "Kristyan Martins",
-  tagline: "Energy-Efficiency Solutions for Homes and Businesses",
+  tagline: "End-to-End Construction, Smart Systems & Energy Solutions",
   phone: "(954) 330-9296",
   email: "info@vixgeneralservices.com",
   location:

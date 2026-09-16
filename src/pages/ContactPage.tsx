@@ -38,7 +38,7 @@ export const ContactPage: React.FC = () => {
     "@type": "ContactPage",
     name: "Contact & Free Estimate | VIX General Services",
     description:
-      "Get a free estimate from VIX General Services for energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security cameras, and smart automation across five New England states.",
+      "Get a free estimate from VIX General Services for construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across five New England states.",
     url: "https://www.vixgeneralservices.com/contact",
     mainEntity: {
       "@type": "HomeAndConstructionBusiness",
@@ -58,7 +58,7 @@ export const ContactPage: React.FC = () => {
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased">
       <SEOHead
         title="Get a Free Estimate | VIX General Services | New England"
-        description="Request a free estimate for energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security cameras, and automation across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
+        description="Request a free estimate for construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
         canonical="/contact"
         schemaJson={contactSchema}
       />
@@ -77,9 +77,9 @@ export const ContactPage: React.FC = () => {
               Get Your Free Estimate
             </h1>
             <p className="text-base sm:text-lg text-[#EDE4D6]/85 max-w-xl mx-auto leading-relaxed">
-              Tell us about your project. Our licensed HVAC, electrical, solar,
-              outdoor lighting, and security specialists will contact you with a
-              transparent, custom quote.
+              Tell us what you are building, remodeling, or upgrading. Our team
+              will review the scope and contact you with clear next steps and a
+              transparent, custom estimate.
             </p>
           </div>
         </section>

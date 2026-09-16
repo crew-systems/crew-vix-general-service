@@ -533,3 +533,13 @@ section[data-section-blend="true"]::after {
 .card-lift:hover {
   transform: translateY(-5px);
 }
+
+/* Subtle technical drawing grid used behind the construction journey. */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.45) 1px, transparent 1px),
+    linear-gradient(rgba(201, 154, 85, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 154, 85, 0.55) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
+}

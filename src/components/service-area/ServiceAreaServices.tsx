@@ -1,48 +1,11 @@
 import React from "react";
 import { Sparkles, Wrench, ArrowRight, Star, CheckCircle2 } from "lucide-react";
 import { type SERVICE_AREAS } from "../../data/landscapingData";
+import { SERVICES } from "../../data/servicesData";
 
 import { Link } from "react-router-dom";
 
 type Area = (typeof SERVICE_AREAS)[number];
-
-const services = [
-  {
-    title: "Outdoor & Landscape Lighting",
-    desc: "Custom architectural brass LED spotlights, pole fixtures, and multi-zone dusk-to-dawn illumination.",
-    slug: "outdoor-lighting",
-  },
-  {
-    title: "Security Cameras & 4K CCTV",
-    desc: "Commercial-grade 360° PTZ cameras, 4K local NVR recording, and 24/7 smartphone monitoring.",
-    slug: "security-cameras",
-  },
-  {
-    title: "Smart Control Hub & Automation",
-    desc: "Centralized smartphone app control, scheduling, and NEMA 3R weatherproof surge-protected panels.",
-    slug: "smart-automation",
-  },
-  {
-    title: "Licensed Electrical Services",
-    desc: "200A panel upgrades, rewiring, surge protection, and code-compliant installations.",
-    slug: "electrical",
-  },
-  {
-    title: "HVAC & Air Conditioning",
-    desc: "High-efficiency AC installation, emergency repair, and seasonal maintenance.",
-    slug: "hvac",
-  },
-  {
-    title: "Solar Energy Systems",
-    desc: "Turnkey solar panel installation, utility interconnection support, and battery backup storage.",
-    slug: "solar",
-  },
-  {
-    title: "EV Charging Station Installation",
-    desc: "Level 2 home and commercial EV charger installations for Tesla and universal vehicles.",
-    slug: "ev-charging",
-  },
-];
 
 interface ServiceAreaServicesProps {
   area: Area;
@@ -67,13 +30,13 @@ export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
               HOME SERVICES IN {area.city.toUpperCase()}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Complete residential HVAC, electrical, solar, and EV charging
-              services, from consultation to installation with superior quality.
+              Construction, remodeling, core building systems, and smart-energy
+              services coordinated from consultation through final delivery.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
+            {SERVICES.map((service, index) => (
               <div
                 key={index}
                 className="bg-[#F5F6F8] rounded-lg p-6 border border-[#1A2B44]/10 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 flex flex-col"
@@ -86,11 +49,11 @@ export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
                     to={`/services/${service.slug}`}
                     className="hover:text-[#C99A55] transition-colors"
                   >
-                    {service.title}
+                    {service.name}
                   </Link>
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
-                  {service.desc}
+                  {service.shortDesc}
                 </p>
                 <div className="flex items-center justify-between pt-2 border-t border-[#1A2B44]/10">
                   <Link
@@ -101,7 +64,7 @@ export const ServiceAreaServices: React.FC<ServiceAreaServicesProps> = ({
                     <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
                   </Link>
                   <button
-                    onClick={() => onOpenEstimate(service.slug)}
+                    onClick={() => onOpenEstimate(service.estimateServiceKey)}
                     className="text-xs font-bold text-[#C99A55] hover:underline"
                   >
                     Get Estimate

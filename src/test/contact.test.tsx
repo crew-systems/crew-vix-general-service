@@ -111,16 +111,17 @@ describe("Contact and Form Embed Tests", () => {
     expect(closed).toBe(true);
   });
 
-  it("renders ServicesSection carousel with navigation arrows and 7 services", () => {
+  it("renders the three grouped service pillars and full-services link", () => {
     const { container } = render(
       <BrowserRouter>
         <ServicesSection onOpenEstimate={() => {}} />
       </BrowserRouter>
     );
-    expect(container.textContent).toContain("Our Specialized Services");
-    expect(container.textContent).toContain("View All 7 Services Overview");
-    expect(container.querySelector('button[aria-label="Previous service"]')).not.toBeNull();
-    expect(container.querySelector('button[aria-label="Next service"]')).not.toBeNull();
+    expect(container.textContent).toContain("THREE CONNECTED CAPABILITIES");
+    expect(container.textContent).toContain("Construction & Remodeling");
+    expect(container.textContent).toContain("Essential Building Systems");
+    expect(container.textContent).toContain("Smart & Energy Solutions");
+    expect(container.textContent).toContain("Explore Every Service");
   });
 
   it("renders ThankYouPage with confirmation message, next steps, and direct contact", () => {

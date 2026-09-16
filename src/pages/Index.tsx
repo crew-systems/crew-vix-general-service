@@ -3,6 +3,7 @@ import { Sparkles } from "lucide-react";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { TrustMarquee } from "../components/TrustMarquee";
+import { BuildJourneySection } from "../components/BuildJourneySection";
 import { ServicesSection } from "../components/ServicesSection";
 import { BeforeAfterSection } from "../components/BeforeAfterSection";
 import { WhyChooseUs } from "../components/WhyChooseUs";
@@ -21,7 +22,7 @@ const Index: React.FC = () => {
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
 
   const [estimateService, setEstimateService] = useState<string | undefined>(
-    "hvac",
+    "general-construction",
   );
 
   // Hide chat widget when modal is open on mobile
@@ -136,8 +137,8 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="VIX General Services | Energy-Efficiency Solutions"
-        description="Energy-efficiency upgrades, HVAC, electrical, solar, EV charging, and smart technology across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
+        title="VIX General Services | End-to-End Construction & Smart Energy"
+        description="Residential and commercial construction, remodeling, plumbing, electrical, HVAC, solar, EV charging, and smart systems across five New England states."
         canonical="/"
         ogImage={IMAGES.ogMeta}
         schemaJson={homeSchema}
@@ -152,6 +153,9 @@ const Index: React.FC = () => {
 
         {/* Marquee Trust Highlights */}
         <TrustMarquee />
+
+        {/* From planning and structure through connected final spaces */}
+        <BuildJourneySection />
 
         {/* Services Overview */}
         <ServicesSection onOpenEstimate={handleOpenEstimate} />

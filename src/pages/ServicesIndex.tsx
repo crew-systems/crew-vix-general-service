@@ -12,7 +12,7 @@ const SITE_BASE = "https://www.vixgeneralservices.com";
 
 export const ServicesIndex: React.FC = () => {
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState<string>("hvac");
+  const [selectedService, setSelectedService] = useState<string>("general-construction");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -37,7 +37,7 @@ export const ServicesIndex: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleOpenEstimate = (serviceKey: string = "hvac") => {
+  const handleOpenEstimate = (serviceKey: string = "general-construction") => {
     setSelectedService(serviceKey);
     setIsEstimateModalOpen(true);
   };
@@ -77,8 +77,8 @@ export const ServicesIndex: React.FC = () => {
   return (
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
-        title="Our Services | Outdoor Lighting, Security, Smart Automation, HVAC & Electrical | VIX"
-        description="Explore VIX General Services' residential and commercial energy-efficiency, HVAC, electrical, solar, EV charging, outdoor lighting, security, and smart technology solutions across New England."
+        title="Construction, Remodeling & Building Systems | VIX General Services"
+        description="Explore end-to-end construction, remodeling, plumbing, electrical, HVAC, solar, EV charging, security, lighting, and smart systems across New England."
         canonical="/services"
         ogImage={SERVICES[0].heroImage}
         ogImageAlt="VIX General Services - New England Specialized Services"
@@ -89,7 +89,7 @@ export const ServicesIndex: React.FC = () => {
         isScrolled={isScrolled}
         isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
-        onOpenEstimate={() => handleOpenEstimate("outdoor-lighting")}
+        onOpenEstimate={() => handleOpenEstimate("general-construction")}
       />
 
       {/* Hero */}
@@ -120,15 +120,14 @@ export const ServicesIndex: React.FC = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white leading-[1.1] mb-5 tracking-tight">
-              OUR SPECIALIZED <span className="text-[#C99A55]">SERVICES</span>
+              FROM STRUCTURE TO <span className="text-[#C99A55]">SMART SYSTEMS</span>
             </h1>
 
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-7 max-w-2xl leading-relaxed">
-              From energy-efficiency upgrades and HVAC to electrical panels,
-              solar, EV charging, outdoor lighting, security, and smart
-              technology, our technicians provide reliable, code-compliant
-              solutions across Massachusetts, Maine, New Hampshire, Rhode
-              Island, and Vermont.
+              Build, remodel, and equip residential or commercial property with
+              one coordinated team. Our capabilities span construction and
+              interiors, plumbing, electrical, HVAC, solar, EV charging,
+              lighting, security, and automation across five New England states.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-white/90">
@@ -269,7 +268,7 @@ export const ServicesIndex: React.FC = () => {
         </div>
       </section>
 
-      <Footer onOpenEstimate={() => handleOpenEstimate("hvac")} />
+      <Footer onOpenEstimate={() => handleOpenEstimate("general-construction")} />
 
       <EstimateModal
         isOpen={isEstimateModalOpen}

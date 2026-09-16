@@ -29,8 +29,8 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenEstimate }) => {
         </h2>
 
         <p className="text-lg sm:text-xl text-[#EDE4D6]/90 mb-9 max-w-2xl mx-auto leading-relaxed font-normal">
-          Get a free estimate today and experience the VIX difference in HVAC,
-          electrical, solar, and EV charging service.
+          Start with one focused trade or coordinate the complete build. Tell us
+          about your project and receive a clear, no-obligation next step.
         </p>
 
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
@@ -38,7 +38,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenEstimate }) => {
             onClick={onOpenEstimate}
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15 btn-sheen group/btn"
           >
-            <span>GET A FREE ESTIMATE</span>
+            <span>PLAN YOUR PROJECT</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
           </button>
         </div>

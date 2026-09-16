@@ -171,7 +171,7 @@ export const ThankYouPage: React.FC = () => {
                 to="/services"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white border border-[#1A2B44]/15 text-[#1A2B44] font-bold text-sm hover:bg-[#F5F6F8] transition-colors shadow-crisp"
               >
-                <span>Explore All 7 Services</span>
+                <span>Explore All Services</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

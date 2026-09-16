@@ -1,6 +1,6 @@
 # VIX General Services
 
-> Residential & Commercial Energy-Efficiency and Property Services in Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Services include HVAC, electrical, solar, EV charging, smart technology, outdoor lighting, and security systems.
+> End-to-end residential and commercial construction in Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont—from structure and interiors through plumbing, electrical, HVAC, solar, EV charging, and smart systems.
 
 ## Organization & Contact Information
 - **Company Name**: VIX General Services
@@ -14,6 +14,18 @@
 - **Experience**: 9+ years, 1,200+ completed projects, 5.0 rating
 
 ## Core Services & Canonical URLs
+
+### General Construction & New Builds
+- **URL**: https://www.vixgeneralservices.com/services/general-construction
+- **Summary**: Coordinated residential and commercial construction, additions, structural work, framing, rough-ins, and project delivery from initial scope through final walkthrough.
+
+### Remodeling & Interior Construction
+- **URL**: https://www.vixgeneralservices.com/services/remodeling-interiors
+- **Summary**: Whole-property renovations, kitchens, bathrooms, living spaces, interior build-outs, finish carpentry, surfaces, lighting integration, and coordinated system upgrades.
+
+### Plumbing & Water Systems
+- **URL**: https://www.vixgeneralservices.com/services/plumbing
+- **Summary**: Plumbing rough-ins, fixture installation, water distribution, drain and vent coordination, water heating, and remodeling support with licensed-trade requirements coordinated where applicable.
 
 ### 1. Outdoor & Landscape Lighting
 - **URL**: https://www.vixgeneralservices.com/services/outdoor-lighting

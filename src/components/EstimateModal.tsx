@@ -11,6 +11,12 @@ interface EstimateModalProps {
 const mapServiceKeyToLabel = (key?: unknown): string => {
   if (!key || typeof key !== "string") return "General Consultation";
   const lower = key.toLowerCase();
+  if (lower.includes("construction") || lower.includes("build"))
+    return "General Construction & New Builds";
+  if (lower.includes("remodel") || lower.includes("interior"))
+    return "Remodeling & Interiors";
+  if (lower.includes("plumb") || lower.includes("water"))
+    return "Plumbing & Water Systems";
   if (lower.includes("light") || lower.includes("outdoor"))
     return "Outdoor & Landscape Lighting";
   if (lower.includes("camera") || lower.includes("security"))

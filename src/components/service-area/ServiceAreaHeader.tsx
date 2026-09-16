@@ -1,15 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, X, Menu } from "lucide-react";
-import { COMPANY_INFO } from "../../data/landscapingData";
+import { Phone, X, Menu, ChevronDown } from "lucide-react";
+import { COMPANY_INFO, SERVICE_AREAS } from "../../data/landscapingData";
+import { SERVICES } from "../../data/servicesData";
 import { Logo } from "../Logo";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Service Areas", href: "/service-areas" },
+  {
+    name: "Services",
+    href: "/services",
+    hasDropdown: true,
+    items: [
+      ...SERVICES.map((service) => ({
+        name: service.name,
+        href: `/services/${service.slug}`,
+      })),
+      { name: "View Every Service →", href: "/services" },
+    ],
+  },
+  {
+    name: "Service Areas",
+    href: "/service-areas",
+    hasDropdown: true,
+    items: [
+      ...SERVICE_AREAS.map((area) => ({
+        name: `${area.city}, ${area.state}`,
+        href: `/service-areas/${area.slug}`,
+      })),
+      { name: "View All Areas →", href: "/service-areas" },
+    ],
+  },
+  { name: "Why Choose Us", href: "/#why-us" },
   { name: "Projects", href: "/#gallery" },
   { name: "Reviews", href: "/#reviews" },
+  { name: "Contact", href: "/contact" },
 ];
 
 interface ServiceAreaHeaderProps {
@@ -25,6 +50,26 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
   setIsMobileMenuOpen,
   onOpenEstimate,
 }) => {
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = (name: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenDropdown(name);
+  };
+
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 180);
+  };
+
+  useEffect(
+    () => () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    },
+    [],
+  );
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
@@ -41,19 +86,74 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={`text-sm font-semibold transition-colors py-2 ${
-                  isScrolled
-                    ? "text-[#1A2B44] hover:text-[#C99A55]"
-                    : "text-white/90 hover:text-white"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const textClass = isScrolled
+                ? "text-[#1A2B44] hover:text-[#C99A55]"
+                : "text-white/90 hover:text-white";
+
+              return (
+                <div
+                  key={link.name}
+                  className="relative"
+                  onMouseEnter={() => link.hasDropdown && openMenu(link.name)}
+                  onMouseLeave={() => link.hasDropdown && scheduleClose()}
+                >
+                  <Link
+                    to={link.href}
+                    onClick={() => setOpenDropdown(null)}
+                    className={`flex items-center gap-1.5 text-sm font-semibold transition-colors py-2 ${textClass}`}
+                  >
+                    <span>{link.name}</span>
+                    {link.hasDropdown && (
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          openDropdown === link.name ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
+                  </Link>
+
+                  {link.hasDropdown && (
+                    <div
+                      onMouseEnter={() => openMenu(link.name)}
+                      className={`absolute top-full pt-2 transition-all duration-200 ${
+                        link.name === "Services"
+                          ? "left-1/2 w-[38rem] -translate-x-1/2"
+                          : "left-0 w-72"
+                      } ${
+                        openDropdown === link.name
+                          ? "opacity-100 translate-y-0 pointer-events-auto"
+                          : "opacity-0 translate-y-2 pointer-events-none"
+                      }`}
+                    >
+                      <div
+                        className={`bg-[#F5F6F8] rounded-md shadow-crisp-lg border border-[#1A2B44]/12 p-2 ${
+                          link.name === "Services"
+                            ? "grid grid-cols-2 gap-0.5"
+                            : "space-y-0.5"
+                        }`}
+                      >
+                        {link.items?.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            onClick={() => setOpenDropdown(null)}
+                            className={`block px-3 py-2 rounded-md text-xs font-semibold text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] transition-colors ${
+                              link.name === "Services" &&
+                              item.href === "/services"
+                                ? "col-span-2 mt-1 border-t border-[#1A2B44]/10 pt-2.5"
+                                : ""
+                            }`}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
@@ -112,14 +212,56 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
         <div className="lg:hidden bg-[#F5F6F8] border-b border-[#1A2B44]/10 shadow-crisp-lg py-5 px-5">
           <div className="space-y-2">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2.5 text-base font-bold text-[#1A2B44] hover:text-[#C99A55] border-b border-border/50"
-              >
-                {link.name}
-              </Link>
+              <div key={link.name}>
+                <div className="flex items-center justify-between border-b border-border/50">
+                  <Link
+                    to={link.href}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setOpenDropdown(null);
+                    }}
+                    className="block py-2.5 text-base font-bold text-[#1A2B44] hover:text-[#C99A55] flex-1"
+                  >
+                    {link.name}
+                  </Link>
+                  {link.hasDropdown && (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenDropdown(
+                          openDropdown === link.name ? null : link.name,
+                        )
+                      }
+                      className="p-2.5 text-[#1A2B44]"
+                      aria-label={`Toggle ${link.name}`}
+                    >
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          openDropdown === link.name ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  )}
+                </div>
+
+                {link.hasDropdown && openDropdown === link.name && (
+                  <div className="pl-4 py-1 space-y-0.5">
+                    {link.items?.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setOpenDropdown(null);
+                        }}
+                        className="block py-2 text-sm font-semibold text-[#C99A55] hover:text-[#1A2B44] transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <button
               onClick={() => {

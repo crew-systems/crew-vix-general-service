@@ -56,7 +56,7 @@ export const ServiceAreasIndex: React.FC = () => {
     <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title="Service Areas Across New England | VIX General Services"
-        description="VIX General Services serves Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont with energy-efficiency, HVAC, electrical, solar, EV charging, and smart technology solutions."
+        description="VIX General Services provides construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
         canonical="/service-areas"
         ogImage={SERVICE_AREAS[0].heroImage}
         schemaJson={areasSchema}
@@ -198,8 +198,8 @@ export const ServiceAreasIndex: React.FC = () => {
             <p className="text-base sm:text-lg text-[#EDE4D6]/90 mb-7 max-w-2xl leading-relaxed">
               VIX General Services proudly serves Massachusetts, Maine, New
               Hampshire, Rhode Island, and Vermont. Explore our coverage below
-              and discover energy-efficiency, HVAC, electrical, solar, EV
-              charging, and smart technology solutions for your property.
+              and discover end-to-end construction, remodeling, essential
+              building systems, and smart-energy solutions for your property.
             </p>
           </div>
         </div>
@@ -218,7 +218,7 @@ export const ServiceAreasIndex: React.FC = () => {
                 <div className="relative h-52 overflow-hidden">
                   <img
                     src={area.heroImage}
-                    alt={`HVAC, electrical, solar & EV charging services in ${area.fullName}`}
+                    alt={`Construction and smart-energy services in ${area.fullName}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

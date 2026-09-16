@@ -1,0 +1,17 @@
+# VIX visual generation prompts
+
+## Google Flow — animated website hero
+
+Create a cinematic, photorealistic 10-second website hero video in 16:9, 4K, 24 fps, designed to play silently behind text. Show one continuous New England residential construction journey using the exact same property and camera perspective throughout. Begin at early morning with architectural blueprints and precise white technical linework hovering subtly over a prepared building site and concrete foundation. In a seamless, physically believable time-lapse transformation, timber framing rises, roof and exterior walls assemble, then coordinated electrical conduit, plumbing lines, HVAC ductwork, and low-voltage pathways briefly appear as an elegant cutaway before the walls close. Continue into a refined finished home with premium interiors, warm architectural lighting, solar panels on the roof, a clean wall-mounted EV charger, and understated smart-home controls. End at blue hour with the completed energy-efficient home glowing warmly and the camera holding steady for one second.
+
+Use a slow, smooth dolly from left to right with subtle parallax. Keep the main construction action and finished house in the center-right of the frame and preserve darker, uncluttered negative space on the left for a website headline and buttons. Visual palette: deep navy, slate gray, natural timber, warm white, and restrained VIX gold accents. The mood is precise, capable, premium, trustworthy, and modern—not futuristic. Transitions must feel like one build evolving through real phases, with no jump cuts and no change in the property's geometry.
+
+Do not include people, spoken dialogue, sound, music, text, captions, logos, watermarks, company signs, unsafe work, floating tools, distorted framing, warped architecture, duplicated equipment, abrupt camera movement, oversaturated HDR, fantasy technology, or a generic tropical setting. Avoid palm trees; use subtle New England vegetation and architecture. Deliver a clean H.264 MP4 suitable for autoplay, with a version optimized below 8 MB if available.
+
+## Generated still — end-to-end construction hero
+
+Create a cinematic ultra-wide 16:9 architectural advertising photograph for a premium New England construction company website hero. A single property is shown as a seamless visual journey from left to right: architectural blueprint lines and concrete foundation at far left, clean timber framing and coordinated electrical/plumbing/HVAC rough-ins in the middle, and a fully finished modern New England home at right with subtle rooftop solar panels, warm interior lighting, and a wall-mounted EV charger. Photorealistic, plausible construction details, premium but restrained, overcast-to-golden-hour light, deep navy and warm gold visual mood, no workers, no text, no logos, no watermark. Leave darker negative space on the left for a headline while keeping the finished house as the visual focal point on the right.
+
+## Generated still — plumbing systems reference
+
+Create a clean photorealistic editorial photograph of a premium residential plumbing rough-in and mechanical room in a New England new-build: orderly copper and PEX water lines, properly supported drain and vent piping, modern high-efficiency water heater, labeled shutoffs without readable branding, immaculate framing and workmanship, warm neutral daylight, architectural composition, professional and trustworthy. No people, no text, no logos, no watermark, no unsafe or implausible plumbing. Vertical-friendly crop with room for website overlay.
