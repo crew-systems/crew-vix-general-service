@@ -63,7 +63,7 @@ describe("SectionTransitions", () => {
           {
             isIntersecting: true,
             target: secondSection,
-          } as IntersectionObserverEntry,
+          } as unknown as IntersectionObserverEntry,
         ],
         {} as IntersectionObserver,
       );
@@ -71,6 +71,86 @@ describe("SectionTransitions", () => {
 
     expect(secondSection).toHaveClass("is-visible");
     expect(unobserve).toHaveBeenCalledWith(secondSection);
+  });
+
+  it("reveals tall sections on the first visible pixel and sections already scrolled past", async () => {
+    let intersectionCallback: IntersectionObserverCallback | undefined;
+    let observerOptions: IntersectionObserverInit | undefined;
+
+    global.IntersectionObserver = class {
+      observe = vi.fn();
+      unobserve = vi.fn();
+      disconnect = vi.fn();
+      takeRecords = () => [];
+
+      constructor(
+        callback: IntersectionObserverCallback,
+        options?: IntersectionObserverInit,
+      ) {
+        intersectionCallback = callback;
+        observerOptions = options;
+      }
+    } as unknown as typeof IntersectionObserver;
+
+    const { getByTestId } = render(
+      <MemoryRouter>
+        <section data-testid="passed">Passed</section>
+        <section data-testid="below">Below</section>
+        <SectionTransitions />
+      </MemoryRouter>,
+    );
+
+    await waitFor(() => expect(intersectionCallback).toBeDefined());
+
+    // A ratio threshold can never be met by a section taller than the
+    // viewport / ratio (the one-column gallery on phones is ~7000px).
+    expect(observerOptions?.threshold).toBe(0);
+
+    const passed = getByTestId("passed");
+    const below = getByTestId("below");
+
+    act(() => {
+      intersectionCallback?.(
+        [
+          {
+            isIntersecting: false,
+            target: passed,
+            boundingClientRect: { bottom: -40 } as DOMRectReadOnly,
+            rootBounds: { top: 0 } as DOMRectReadOnly,
+          } as unknown as IntersectionObserverEntry,
+          {
+            isIntersecting: false,
+            target: below,
+            boundingClientRect: { bottom: 2400 } as DOMRectReadOnly,
+            rootBounds: { top: 0 } as DOMRectReadOnly,
+          } as unknown as IntersectionObserverEntry,
+        ],
+        {} as IntersectionObserver,
+      );
+    });
+
+    expect(passed).toHaveClass("is-visible");
+    expect(below).not.toHaveClass("is-visible");
+  });
+
+  it("does not hide live regions such as the toast container", async () => {
+    const { getByTestId } = render(
+      <MemoryRouter>
+        <section data-testid="toaster" aria-live="polite" />
+        <section data-testid="content">Content</section>
+        <SectionTransitions />
+      </MemoryRouter>,
+    );
+
+    await waitFor(() => {
+      expect(getByTestId("content")).toHaveAttribute(
+        "data-section-transition",
+        "true",
+      );
+    });
+    expect(getByTestId("toaster")).not.toHaveAttribute(
+      "data-section-transition",
+    );
   });
 
   it("shows all content immediately when IntersectionObserver is unavailable", async () => {

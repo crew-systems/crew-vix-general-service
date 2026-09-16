@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Star, Shield, ArrowRight, Hammer } from "lucide-react";
 import { COMPANY_INFO, IMAGES } from "../data/landscapingData";
 
@@ -6,34 +6,88 @@ interface HeroProps {
   onOpenEstimate: () => void;
 }
 
+// Posters are the first frame of each video so the fade-in is seamless.
+// The mobile files are a 720x720 center crop: portrait phones only show the
+// middle of a 16:9 frame anyway.
+const HERO_MEDIA = {
+  desktopVideo: "/videos/vix-home-loop-desktop.mp4",
+  mobileVideo: "/videos/vix-home-loop-mobile.mp4",
+  desktopPoster: "/videos/vix-home-loop-desktop-poster.jpg",
+  mobilePoster: "/videos/vix-home-loop-mobile-poster.jpg",
+};
+
+// Keep in sync with the poster preload links in index.html.
+const DESKTOP_MEDIA_QUERY = "(min-width: 768px), (orientation: landscape)";
+
+const HERO_MEDIA_CLASS =
+  "absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[0.95] contrast-[1.02]";
+
+const canAutoplayHeroVideo = () => {
+  const connection = (
+    navigator as Navigator & { connection?: { saveData?: boolean } }
+  ).connection;
+
+  return (
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+    !connection?.saveData
+  );
+};
+
 export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [showVideo] = useState(canAutoplayHeroVideo);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // React only sets `muted` as a property; iOS checks it before autoplaying.
+    video.muted = true;
+    video.defaultMuted = true;
+    video.play()?.catch(() => {
+      // Autoplay blocked (e.g. iOS Low Power Mode): the poster stays visible.
+    });
+  }, []);
+
   return (
     <section
       id="hero"
       className="hero-section relative flex items-center overflow-hidden bg-[#1A2B44]"
     >
-      {/* Animated build journey with a still fallback for reduced-motion users */}
+      {/* Poster paints first; the video fades in only once frames are playing.
+          Reduced-motion and data-saver visitors never download the video. */}
       <div className="absolute inset-0 z-0">
-        <video
-          className="h-full w-full scale-105 object-cover object-center brightness-[0.95] contrast-[1.02] motion-reduce:hidden"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster={IMAGES.hero}
-          aria-hidden="true"
-        >
-          <source
-            src="/videos/vix-energy-efficient-home-loop.mp4"
-            type="video/mp4"
+        <picture>
+          <source media={DESKTOP_MEDIA_QUERY} srcSet={HERO_MEDIA.desktopPoster} />
+          <img
+            src={HERO_MEDIA.mobilePoster}
+            alt="Conceptual construction journey from planning and framing to a finished energy-efficient property"
+            className={HERO_MEDIA_CLASS}
           />
-        </video>
-        <img
-          src={IMAGES.hero}
-          alt="Conceptual construction journey from planning and framing to a finished energy-efficient property"
-          className="hidden h-full w-full scale-105 object-cover object-center brightness-[0.95] contrast-[1.02] motion-reduce:block"
-        />
+        </picture>
+        {showVideo && (
+          <video
+            ref={videoRef}
+            className={`${HERO_MEDIA_CLASS} transition-opacity duration-700 ${
+              isVideoPlaying ? "opacity-100" : "opacity-0"
+            }`}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            onPlaying={() => setIsVideoPlaying(true)}
+          >
+            <source
+              media={DESKTOP_MEDIA_QUERY}
+              src={HERO_MEDIA.desktopVideo}
+              type="video/mp4"
+            />
+            <source src={HERO_MEDIA.mobileVideo} type="video/mp4" />
+          </video>
+        )}
         <div className="absolute inset-0 bg-black/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />

@@ -41,9 +41,17 @@ describe("App Render Test", () => {
     expect(heroVideo).toHaveAttribute("autoplay");
     expect(heroVideo).toHaveAttribute("loop");
     expect(heroVideo).toHaveAttribute("playsinline");
-    expect(heroVideo?.querySelector("source")).toHaveAttribute(
+    expect(
+      Array.from(heroVideo?.querySelectorAll("source") ?? []).map((source) =>
+        source.getAttribute("src"),
+      ),
+    ).toEqual([
+      "/videos/vix-home-loop-desktop.mp4",
+      "/videos/vix-home-loop-mobile.mp4",
+    ]);
+    expect(container.querySelector("#hero picture img")).toHaveAttribute(
       "src",
-      "/videos/vix-energy-efficient-home-loop.mp4",
+      "/videos/vix-home-loop-mobile-poster.jpg",
     );
 
     const header = container.querySelector("header");

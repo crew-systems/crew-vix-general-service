@@ -15,8 +15,18 @@
         file_server
     }
 
-    # Static root files (favicon, robots, sitemap)
-    @static path /favicon.* /robots.txt /sitemap.xml
+    # Public media (hero video, posters, project photos). Without this block
+    # they fell through to the SPA fallback: sent as no-store (phones re-downloaded
+    # the hero video on every visit) and missing files returned index.html.
+    # Names are not hashed, so cache for a week and revalidate via ETag after.
+    @media path /images/* /videos/*
+    handle @media {
+        header Cache-Control "public, max-age=604800"
+        file_server
+    }
+
+    # Static root files (favicon, robots, sitemap, llms)
+    @static path /favicon.* /robots.txt /sitemap.xml /llms.txt /llms-full.txt /placeholder.svg
     handle @static {
         header Cache-Control "public, max-age=86400"
         file_server

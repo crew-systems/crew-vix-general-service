@@ -1,9 +1,13 @@
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+// Live regions are skipped: the Sonner toaster also renders a <section>.
 const SECTION_SELECTOR =
-  'section:not(#hero):not([data-section-transition="off"])';
+  'section:not(#hero):not([aria-live]):not([data-section-transition="off"])';
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+
+const isAboveViewport = (entry: IntersectionObserverEntry) =>
+  entry.boundingClientRect.bottom <= (entry.rootBounds?.top ?? 0);
 
 const isVisibleColor = (color: string) =>
   color !== "transparent" &&
@@ -73,7 +77,9 @@ export const SectionTransitions = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
+          // Sections already scrolled past (anchor jumps, restored scroll
+          // position) must not stay hidden above the viewport.
+          if (!entry.isIntersecting && !isAboveViewport(entry)) return;
 
           const section = entry.target as HTMLElement;
           section.classList.add("is-visible");
@@ -81,7 +87,10 @@ export const SectionTransitions = () => {
         });
       },
       {
-        threshold: 0.12,
+        // Reveal on the first visible pixel. A ratio threshold never fires for
+        // sections taller than the viewport divided by that ratio, which hid
+        // the one-column project gallery (~7000px) on phones permanently.
+        threshold: 0,
         rootMargin: "0px 0px -8% 0px",
       },
     );
