@@ -24,9 +24,6 @@ const HERO_MEDIA_CLASS =
 
 export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [showVideo] = useState(
-    () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-  );
   const [videoPoster] = useState(() =>
     window.matchMedia(DESKTOP_MEDIA_QUERY).matches
       ? HERO_MEDIA.desktopPoster
@@ -69,7 +66,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
     >
       {/* The video is visible from the start (never gated on a `playing`
           event) and shows the matching poster until frames arrive.
-          Reduced-motion visitors only get the still image. */}
+          It plays even with prefers-reduced-motion: the motion is slow and
+          subtle, and Windows reports that preference whenever animation
+          effects are off (often for performance), which hid it on those PCs. */}
       <div className="absolute inset-0 z-0">
         <picture>
           <source media={DESKTOP_MEDIA_QUERY} srcSet={HERO_MEDIA.desktopPoster} />
@@ -79,26 +78,24 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
             className={HERO_MEDIA_CLASS}
           />
         </picture>
-        {showVideo && (
-          <video
-            ref={videoRef}
-            className={`hero-video ${HERO_MEDIA_CLASS}`}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            poster={videoPoster}
-            aria-hidden="true"
-          >
-            <source
-              media={DESKTOP_MEDIA_QUERY}
-              src={HERO_MEDIA.desktopVideo}
-              type="video/mp4"
-            />
-            <source src={HERO_MEDIA.mobileVideo} type="video/mp4" />
-          </video>
-        )}
+        <video
+          ref={videoRef}
+          className={`hero-video ${HERO_MEDIA_CLASS}`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={videoPoster}
+          aria-hidden="true"
+        >
+          <source
+            media={DESKTOP_MEDIA_QUERY}
+            src={HERO_MEDIA.desktopVideo}
+            type="video/mp4"
+          />
+          <source src={HERO_MEDIA.mobileVideo} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
