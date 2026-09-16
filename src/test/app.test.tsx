@@ -41,12 +41,8 @@ describe("App Render Test", () => {
     expect(heroVideo).toHaveAttribute("autoplay");
     expect(heroVideo).toHaveAttribute("loop");
     expect(heroVideo).toHaveAttribute("playsinline");
-    // Visible from the first paint: hiding it until `playing` left some
-    // phones stuck on the poster.
-    expect(heroVideo).toHaveAttribute(
-      "poster",
-      "/videos/vix-home-loop-mobile-poster.jpg",
-    );
+    // The previous hero artwork must never flash before playback starts.
+    expect(heroVideo).not.toHaveAttribute("poster");
     expect(heroVideo?.className).not.toMatch(/opacity-0/);
     expect(
       Array.from(heroVideo?.querySelectorAll("source") ?? []).map((source) =>
@@ -56,9 +52,14 @@ describe("App Render Test", () => {
       "/videos/vix-home-loop-desktop.mp4",
       "/videos/vix-home-loop-mobile.mp4",
     ]);
-    expect(container.querySelector("#hero picture img")).toHaveAttribute(
+    expect(container.querySelector("#hero picture")).toBeNull();
+
+    const brandLogo = container.querySelector<HTMLImageElement>(
+      'header img[alt="VIX General Services"]',
+    );
+    expect(brandLogo).toHaveAttribute(
       "src",
-      "/videos/vix-home-loop-mobile-poster.jpg",
+      "/images/vix-general-services-logo.webp",
     );
 
     const header = container.querySelector("header");

@@ -38,10 +38,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEstimate
   <section id="services" className="section-pad overflow-hidden bg-[#F5F6F8]">
     <div className="container mx-auto gutter-x">
       <div className="mx-auto mb-12 max-w-4xl text-center">
-        <div className="mb-4 inline-flex items-center gap-2 rounded-md border border-[#C99A55]/30 bg-[#C99A55]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#1A2B44]">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-md border border-[#C99A55]/30 bg-[#C99A55]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#00153F]">
           <Sparkles className="h-3.5 w-3.5 text-[#C99A55]" /> One Integrated Team
         </div>
-        <h2 className="mb-4 text-3xl font-heading font-extrabold tracking-tight text-[#1A2B44] sm:text-4xl md:text-5xl">
+        <h2 className="mb-4 text-3xl font-heading font-extrabold tracking-tight text-[#00153F] sm:text-4xl md:text-5xl">
           THREE CONNECTED CAPABILITIES. <span className="text-[#C99A55]">ONE COMPLETE PROJECT.</span>
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -57,10 +57,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEstimate
           const lead = services[0];
           const Icon = pillar.icon;
           return (
-            <article key={pillar.title} className="group overflow-hidden rounded-xl border border-[#1A2B44]/12 bg-white shadow-crisp transition-all duration-300 hover:-translate-y-1 hover:shadow-crisp-lg">
+            <article key={pillar.title} className="group overflow-hidden rounded-xl border border-[#00153F]/12 bg-white shadow-crisp transition-all duration-300 hover:-translate-y-1 hover:shadow-crisp-lg">
               <Link to={`/services/${lead.slug}`} className="relative block h-64 overflow-hidden">
                 <img src={lead.heroImage} alt={pillar.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101E31] via-[#101E31]/45 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#00153F] via-[#00153F]/45 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
                   <div>
                     <span className="mb-2 block text-[11px] font-extrabold tracking-[0.22em] text-[#E7B96F]">0{index + 1} · {pillar.eyebrow}</span>
@@ -71,9 +71,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEstimate
               </Link>
               <div className="p-6">
                 <p className="mb-5 min-h-[66px] text-sm leading-relaxed text-muted-foreground">{pillar.description}</p>
-                <div className="divide-y divide-[#1A2B44]/10 border-y border-[#1A2B44]/10">
+                <div className="divide-y divide-[#00153F]/10 border-y border-[#00153F]/10">
                   {services.map((service) => (
-                    <Link key={service.slug} to={`/services/${service.slug}`} className="flex items-center justify-between py-3 text-sm font-bold text-[#1A2B44] transition-colors hover:text-[#C08A3F]">
+                    <Link key={service.slug} to={`/services/${service.slug}`} className="flex items-center justify-between py-3 text-sm font-bold text-[#00153F] transition-colors hover:text-[#C08A3F]">
                       <span>{service.shortName}</span><ArrowRight className="h-4 w-4" />
                     </Link>
                   ))}
@@ -84,9 +84,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEstimate
         })}
       </div>
 
-      <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[#1A2B44]/10 pt-7 sm:flex-row">
-        <button onClick={onOpenEstimate} className="rounded-lg bg-[#1A2B44] px-7 py-3.5 text-sm font-bold text-white shadow-crisp transition-colors hover:bg-[#243652]">Discuss Your Project</button>
-        <Link to="/services" className="group inline-flex items-center gap-2 text-sm font-bold text-[#1A2B44] transition-colors hover:text-[#C99A55]">
+      <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[#00153F]/10 pt-7 sm:flex-row">
+        <button onClick={onOpenEstimate} className="rounded-lg bg-[#00153F] px-7 py-3.5 text-sm font-bold text-white shadow-crisp transition-colors hover:bg-[#0B2F64]">Discuss Your Project</button>
+        <Link to="/services" className="group inline-flex items-center gap-2 text-sm font-bold text-[#00153F] transition-colors hover:text-[#C99A55]">
           Explore Every Service <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>

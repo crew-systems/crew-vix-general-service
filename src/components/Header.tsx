@@ -27,8 +27,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 16);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -70,10 +71,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-2.5 lg:py-4 text-white site-header ${
-        isScrolled
-          ? "bg-[#1A2B44] border-b border-[#C99A55]/25 shadow-crisp"
-          : "bg-transparent border-b border-transparent"
+      className={`fixed top-0 left-0 right-0 z-40 vix-header-shell py-2.5 lg:py-4 text-white site-header border-b ${
+        isScrolled || isMobileMenuOpen
+          ? "vix-header-active border-[#C99A55]/25"
+          : "border-transparent"
       }`}
     >
       <div className="container mx-auto gutter-x">
@@ -87,7 +88,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }
             }}
-            className="flex items-center group shrink-0"
+            className="logo-lockup flex items-center group shrink-0"
           >
             <Logo size="lg" theme="dark" className="header-logo" />
           </Link>
@@ -146,7 +147,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                       }`}
                     >
                       <div
-                        className={`bg-[#F5F6F8] rounded-md shadow-crisp-lg border border-[#1A2B44]/12 p-2 ${
+                        className={`bg-[#F5F6F8] rounded-md shadow-crisp-lg border border-[#00153F]/12 p-2 ${
                           link.name === "Services"
                             ? "grid grid-cols-2 gap-0.5"
                             : "space-y-0.5"
@@ -167,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                                     block: "start",
                                   });
                               }}
-                              className="block px-3 py-2 rounded-md text-xs font-semibold text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] transition-colors"
+                              className="block px-3 py-2 rounded-md text-xs font-semibold text-[#00153F] hover:bg-[#00153F] hover:text-[#EDE4D6] transition-colors"
                             >
                               {item.name}
                             </a>
@@ -176,10 +177,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                               key={item.name}
                               to={item.href}
                               onClick={() => setOpenDropdown(null)}
-                              className={`block px-3 py-2 rounded-md text-xs font-semibold text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] transition-colors ${
+                              className={`block px-3 py-2 rounded-md text-xs font-semibold text-[#00153F] hover:bg-[#00153F] hover:text-[#EDE4D6] transition-colors ${
                                 link.name === "Services" &&
                                 item.href === "/services"
-                                  ? "col-span-2 mt-1 border-t border-[#1A2B44]/10 pt-2.5"
+                                  ? "col-span-2 mt-1 border-t border-[#00153F]/10 pt-2.5"
                                   : ""
                               }`}
                             >
@@ -236,7 +237,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
 
             <button
               onClick={onOpenEstimate}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp border border-[#1A2B44]/15 btn-sheen"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp border border-[#00153F]/15 btn-sheen"
             >
               Free Estimate
             </button>
@@ -246,7 +247,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
           <div className="flex items-center gap-2.5 lg:hidden">
             <a
               href={`tel:${COMPANY_INFO.phone}`}
-              className="p-2.5 rounded-full bg-[#C99A55] text-[#1A2B44] hover:bg-[#D4A55C] transition-colors border border-[#1A2B44]/15"
+              className="p-2.5 rounded-full bg-[#C99A55] text-[#00153F] hover:bg-[#D4A55C] transition-colors border border-[#00153F]/15"
               aria-label="Call"
             >
               <Phone className="w-4 h-4" />
@@ -269,7 +270,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#F5F6F8] border-b border-[#1A2B44]/12 shadow-crisp-lg py-5 px-5 animate-fade-in max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-[#F5F6F8] border-b border-[#00153F]/12 shadow-crisp-lg py-5 px-5 animate-fade-in max-h-[80vh] overflow-y-auto">
           <div className="space-y-0.5">
             {navLinks.map((link) => (
               <div key={link.name}>
@@ -293,7 +294,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                           });
                       }
                     }}
-                    className="block py-2.5 text-base font-bold text-[#1A2B44] hover:text-[#C99A55] border-b border-[#1A2B44]/12 flex-1"
+                    className="block py-2.5 text-base font-bold text-[#00153F] hover:text-[#C99A55] border-b border-[#00153F]/12 flex-1"
                   >
                     {link.name}
                   </Link>
@@ -304,7 +305,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                           openDropdown === link.name ? null : link.name,
                         )
                       }
-                      className="p-2.5 text-[#1A2B44]"
+                      className="p-2.5 text-[#00153F]"
                       aria-label={`Toggle ${link.name}`}
                     >
                       <ChevronDown
@@ -331,7 +332,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                                 block: "start",
                               });
                           }}
-                          className="block py-2 text-sm font-semibold text-[#C99A55] hover:text-[#1A2B44] transition-colors"
+                          className="block py-2 text-sm font-semibold text-[#C99A55] hover:text-[#00153F] transition-colors"
                         >
                           {item.name}
                         </a>
@@ -343,7 +344,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                             setIsMobileMenuOpen(false);
                             setOpenDropdown(null);
                           }}
-                          className="block py-2 text-sm font-semibold text-[#C99A55] hover:text-[#1A2B44] transition-colors"
+                          className="block py-2 text-sm font-semibold text-[#C99A55] hover:text-[#00153F] transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -359,7 +360,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
                   setIsMobileMenuOpen(false);
                   onOpenEstimate();
                 }}
-                className="inline-flex items-center justify-center gap-2 w-full px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base shadow-crisp border border-[#1A2B44]/15"
+                className="inline-flex items-center justify-center gap-2 w-full px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-base shadow-crisp border border-[#00153F]/15"
               >
                 Get Free Estimate
               </button>

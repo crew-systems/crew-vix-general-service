@@ -55,7 +55,7 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased">
+    <div className="min-h-screen bg-[#F5F6F8] text-[#00153F] font-sans antialiased">
       <SEOHead
         title="Get a Free Estimate | VIX General Services | New England"
         description="Request a free estimate for construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
@@ -67,7 +67,7 @@ export const ContactPage: React.FC = () => {
 
       <main className="pt-24 sm:pt-28 pb-16">
         {/* Banner */}
-        <section className="bg-[#1A2B44] text-white py-12 sm:py-16 relative overflow-hidden">
+        <section className="vix-navy-gradient text-white py-12 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/30 pointer-events-none" />
           <div className="container mx-auto gutter-x relative z-10 text-center max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#C99A55]/20 border border-[#C99A55]/40 text-[#C99A55] text-xs font-bold uppercase tracking-wider mb-4">
@@ -90,11 +90,11 @@ export const ContactPage: React.FC = () => {
             {/* Left Column: Official GoHighLevel Form Embed */}
             <div
               id="contact-form-card"
-              className="lg:col-span-7 xl:col-span-8 bg-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#1A2B44]/10 scroll-mt-28"
+              className="lg:col-span-7 xl:col-span-8 bg-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#00153F]/10 scroll-mt-28"
             >
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#1A2B44]/10">
+              <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#00153F]/10">
                 <div>
-                  <h2 className="text-2xl font-heading font-bold text-[#1A2B44]">
+                  <h2 className="text-2xl font-heading font-bold text-[#00153F]">
                     Project Request Form
                   </h2>
                   <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">
@@ -114,8 +114,8 @@ export const ContactPage: React.FC = () => {
             {/* Right Column: Direct Contact Details & Trust Badges */}
             <div className="lg:col-span-5 xl:col-span-4 space-y-6">
               {/* Direct Contact Card */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#1A2B44]/10">
-                <h3 className="text-xl font-heading font-bold text-[#1A2B44] mb-4">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#00153F]/10">
+                <h3 className="text-xl font-heading font-bold text-[#00153F] mb-4">
                   Direct Contact
                 </h3>
 
@@ -131,7 +131,7 @@ export const ContactPage: React.FC = () => {
                       <span className="block text-xs uppercase font-semibold text-muted-foreground">
                         Phone (Call or Text)
                       </span>
-                      <span className="text-base font-bold text-[#1A2B44] group-hover:text-[#C99A55] transition-colors">
+                      <span className="text-base font-bold text-[#00153F] group-hover:text-[#C99A55] transition-colors">
                         {COMPANY_INFO.phone}
                       </span>
                     </div>
@@ -148,7 +148,7 @@ export const ContactPage: React.FC = () => {
                       <span className="block text-xs uppercase font-semibold text-muted-foreground">
                         Email Us
                       </span>
-                      <span className="text-sm font-bold text-[#1A2B44] group-hover:text-[#C99A55] transition-colors break-all">
+                      <span className="text-sm font-bold text-[#00153F] group-hover:text-[#C99A55] transition-colors break-all">
                         {COMPANY_INFO.email}
                       </span>
                     </div>
@@ -162,7 +162,7 @@ export const ContactPage: React.FC = () => {
                       <span className="block text-xs uppercase font-semibold text-muted-foreground">
                         Hours of Operation
                       </span>
-                      <span className="text-xs font-semibold text-[#1A2B44] block">
+                      <span className="text-xs font-semibold text-[#00153F] block">
                         Mon – Fri: 8:00 AM – 6:00 PM
                       </span>
                       <span className="text-xs text-muted-foreground block">
@@ -179,7 +179,7 @@ export const ContactPage: React.FC = () => {
                       <span className="block text-xs uppercase font-semibold text-muted-foreground">
                         Service Coverage
                       </span>
-                      <span className="text-xs font-semibold text-[#1A2B44] block">
+                      <span className="text-xs font-semibold text-[#00153F] block">
                         Five-State New England Coverage
                       </span>
                       <span className="text-xs text-muted-foreground block">
@@ -192,7 +192,7 @@ export const ContactPage: React.FC = () => {
               </div>
 
               {/* Guarantees Card */}
-              <div className="bg-[#1A2B44] text-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#C99A55]/25">
+              <div className="vix-navy-gradient-panel text-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#C99A55]/25">
                 <h3 className="text-lg font-heading font-bold text-[#EDE4D6] mb-4 flex items-center gap-2">
                   <ShieldCheck className="w-5 h-5 text-[#C99A55]" />
                   The VIX Commitment

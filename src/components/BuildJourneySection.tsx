@@ -41,7 +41,7 @@ export const BuildJourneySection: React.FC = () => {
   return (
     <section
       id="build-journey"
-      className="relative overflow-hidden bg-[#101E31] text-white section-pad"
+      className="relative overflow-hidden vix-navy-gradient text-white section-pad"
     >
       <div className="absolute inset-0 opacity-[0.07] blueprint-grid" />
       <div className="container relative z-10 mx-auto gutter-x">
@@ -71,7 +71,7 @@ export const BuildJourneySection: React.FC = () => {
             return (
               <article
                 key={stage.step}
-                className="group relative min-h-[410px] overflow-hidden rounded-xl border border-white/15 bg-[#172A43] shadow-2xl"
+                className="group relative min-h-[410px] overflow-hidden rounded-xl border border-white/15 bg-[#0B2F64] shadow-2xl"
               >
                 <img
                   src={stage.image}
@@ -79,7 +79,7 @@ export const BuildJourneySection: React.FC = () => {
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1524] via-[#0A1524]/74 to-[#0A1524]/12" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000B22] via-[#000B22]/74 to-[#000B22]/12" />
                 <div className="absolute inset-x-0 top-0 h-1 bg-[#C99A55] origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100" />
 
                 <div className="relative z-10 flex h-full min-h-[410px] flex-col justify-between p-6">
@@ -112,7 +112,7 @@ export const BuildJourneySection: React.FC = () => {
           </p>
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 rounded-lg border border-[#C99A55]/45 bg-[#C99A55] px-6 py-3 text-sm font-extrabold text-[#14243A] shadow-crisp transition-all hover:bg-[#D6AB6B]"
+            className="inline-flex items-center gap-2 rounded-lg border border-[#C99A55]/45 bg-[#C99A55] px-6 py-3 text-sm font-extrabold text-[#00153F] shadow-crisp transition-all hover:bg-[#D6AB6B]"
           >
             Explore Every Capability
             <ArrowRight className="h-4 w-4" />

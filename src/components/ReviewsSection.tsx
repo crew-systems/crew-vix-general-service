@@ -37,7 +37,7 @@ export const ReviewsSection: React.FC = () => {
               <Star key={i} className="w-5 h-5 fill-[#fbbc04]" />
             ))}
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#00153F] mb-4 tracking-tight">
             5-STAR SERVICE. REAL REVIEWS.
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -51,7 +51,7 @@ export const ReviewsSection: React.FC = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-7 border border-[#1A2B44]/12 shadow-crisp hover:shadow-crisp-lg hover:-translate-y-1.5 transition-all duration-400 ease-out flex flex-col justify-between"
+              className="bg-white rounded-lg p-7 border border-[#00153F]/12 shadow-crisp hover:shadow-crisp-lg hover:-translate-y-1.5 transition-all duration-400 ease-out flex flex-col justify-between"
             >
               <div>
                 {/* Header info */}
@@ -70,14 +70,14 @@ export const ReviewsSection: React.FC = () => {
               </div>
 
               {/* Reviewer Bio */}
-              <div className="pt-4 border-t border-[#1A2B44]/12 flex items-center gap-3">
+              <div className="pt-4 border-t border-[#00153F]/12 flex items-center gap-3">
                 <img
                   src={review.avatar}
                   alt={review.name}
                   className="w-11 h-11 rounded-md object-cover border-2 border-[#C99A55]"
                 />
                 <div>
-                  <h4 className="font-heading font-extrabold text-[#1A2B44] text-sm flex items-center gap-1">
+                  <h4 className="font-heading font-extrabold text-[#00153F] text-sm flex items-center gap-1">
                     <span>{review.name}</span>
                     <CheckCircle className="w-3.5 h-3.5 text-[#C99A55]" />
                   </h4>

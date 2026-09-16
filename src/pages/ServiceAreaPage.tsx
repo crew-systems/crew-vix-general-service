@@ -40,7 +40,8 @@ export const ServiceAreaPage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [slug]);
@@ -55,7 +56,7 @@ export const ServiceAreaPage: React.FC = () => {
           noIndex
         />
         <div className="text-center">
-          <h1 className="text-4xl font-heading font-extrabold text-[#1A2B44] mb-4">
+          <h1 className="text-4xl font-heading font-extrabold text-[#00153F] mb-4">
             Area Not Found
           </h1>
           <Link to="/" className="text-[#C99A55] font-bold underline">
@@ -118,7 +119,7 @@ export const ServiceAreaPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
+    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#00153F] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title={area.metaTitle}
         description={area.metaDescription}

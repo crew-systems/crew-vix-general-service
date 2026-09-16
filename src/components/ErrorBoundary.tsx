@@ -28,8 +28,8 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-[#F5F6F8] flex items-center justify-center p-6 text-center font-sans">
-          <div className="max-w-md bg-white p-8 rounded-2xl shadow-crisp border border-[#1A2B44]/10">
-            <h1 className="text-2xl font-bold text-[#1A2B44] mb-3">
+          <div className="max-w-md bg-white p-8 rounded-2xl shadow-crisp border border-[#00153F]/10">
+            <h1 className="text-2xl font-bold text-[#00153F] mb-3">
               VIX General Services
             </h1>
             <p className="text-sm text-muted-foreground mb-6">
@@ -38,13 +38,13 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm shadow-crisp hover:bg-[#D4A55C] transition-all"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-sm shadow-crisp hover:bg-[#D4A55C] transition-all"
               >
                 Reload Page
               </button>
               <a
                 href="/"
-                className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] font-bold text-sm shadow-crisp hover:bg-[#243652] transition-all"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#00153F] text-[#EDE4D6] font-bold text-sm shadow-crisp hover:bg-[#0B2F64] transition-all"
               >
                 Go to Homepage
               </a>
@@ -53,7 +53,7 @@ export class ErrorBoundary extends Component<Props, State> {
               Need immediate help? Call us at{" "}
               <a
                 href={`tel:+1${COMPANY_INFO.phone.replace(/\D/g, "")}`}
-                className="font-bold text-[#1A2B44] underline"
+                className="font-bold text-[#00153F] underline"
               >
                 {COMPANY_INFO.phone}
               </a>

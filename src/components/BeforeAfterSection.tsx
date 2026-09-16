@@ -59,18 +59,18 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
   return (
     <section
       id="before-after"
-      className="section-pad bg-white overflow-hidden border-y border-[#1A2B44]/10"
+      className="section-pad bg-white overflow-hidden border-y border-[#00153F]/10"
     >
       <div className="container mx-auto gutter-x">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
           {/* Left Text Content */}
           <div className="w-full lg:w-5/12 order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/15 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/30">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/15 text-[#00153F] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/30">
               <Sparkles className="w-3.5 h-3.5 text-[#C99A55]" /> Our Work
               Process
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-5 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#00153F] mb-5 tracking-tight">
               FROM FRAMING TO
               <br />
               FINISHED, INTELLIGENT LIVING
@@ -82,8 +82,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-7">
-              <div className="bg-[#F5F6F8] p-5 rounded-lg border border-[#1A2B44]/12">
-                <h4 className="font-heading font-bold text-[#1A2B44] text-base mb-1">
+              <div className="bg-[#F5F6F8] p-5 rounded-lg border border-[#00153F]/12">
+                <h4 className="font-heading font-bold text-[#00153F] text-base mb-1">
                   STRUCTURE &amp; ROUGH-IN
                 </h4>
                 <p className="text-xs text-muted-foreground leading-relaxed">
@@ -105,7 +105,7 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
 
             <button
               onClick={onOpenEstimate}
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] font-bold text-base hover:bg-[#243652] transition-all shadow-crisp border border-[#C99A55]/25"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-lg bg-[#00153F] text-[#EDE4D6] font-bold text-base hover:bg-[#0B2F64] transition-all shadow-crisp border border-[#C99A55]/25"
             >
               <span>Plan Your Transformation</span>
               <ArrowRight className="w-5 h-5" />
@@ -116,7 +116,7 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
           <div className="w-full lg:w-7/12 order-1 lg:order-2">
             <div
               ref={containerRef}
-              className="relative rounded-lg overflow-hidden shadow-crisp-lg border-2 border-[#1A2B44]/15 select-none bg-[#1A2B44]/10"
+              className="relative rounded-lg overflow-hidden shadow-crisp-lg border-2 border-[#00153F]/15 select-none bg-[#00153F]/10"
             >
               <div
                 className="relative w-full aspect-[4/3] sm:aspect-video overflow-hidden"
@@ -132,7 +132,7 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                   draggable={false}
                 />
-                <span className="absolute top-2 right-2 sm:top-3.5 sm:right-3.5 z-10 bg-[#C99A55] text-[#1A2B44] px-2 sm:px-3 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider shadow-crisp select-none pointer-events-none border border-[#1A2B44]/15 whitespace-nowrap max-w-[45%] truncate">
+                <span className="absolute top-2 right-2 sm:top-3.5 sm:right-3.5 z-10 bg-[#C99A55] text-[#00153F] px-2 sm:px-3 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider shadow-crisp select-none pointer-events-none border border-[#00153F]/15 whitespace-nowrap max-w-[45%] truncate">
                   <span className="sm:hidden">AFTER</span>
                   <span className="hidden sm:inline">FINISHED INTERIOR</span>
                 </span>
@@ -177,7 +177,7 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                       setIsDragging(true);
                     }}
                   >
-                    <MoveHorizontal className="w-5 h-5 text-[#1A2B44]" />
+                    <MoveHorizontal className="w-5 h-5 text-[#00153F]" />
                   </div>
                 </div>
               </div>

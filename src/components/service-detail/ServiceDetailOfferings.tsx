@@ -12,15 +12,15 @@ export const ServiceDetailOfferings: React.FC<ServiceDetailOfferingsProps> = ({
   onOpenEstimate,
 }) => {
   return (
-    <section className="section-pad bg-white border-y border-[#1A2B44]/10">
+    <section className="section-pad bg-white border-y border-[#00153F]/10">
       <div className="container mx-auto gutter-x">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#00153F] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
             <Wrench className="w-3.5 h-3.5 text-[#C99A55]" />
             <span>Comprehensive Scope</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#00153F] mb-4 tracking-tight">
             OUR {service.shortName.toUpperCase()} SERVICES & SOLUTIONS
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -33,13 +33,13 @@ export const ServiceDetailOfferings: React.FC<ServiceDetailOfferingsProps> = ({
           {service.offerings.map((offering, idx) => (
             <div
               key={idx}
-              className="bg-[#F5F6F8] rounded-xl p-7 border border-[#1A2B44]/10 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 flex flex-col group"
+              className="bg-[#F5F6F8] rounded-xl p-7 border border-[#00153F]/10 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 flex flex-col group"
             >
               <div className="w-10 h-10 rounded-lg bg-[#C99A55]/15 text-[#C99A55] flex items-center justify-center font-bold text-sm mb-4 border border-[#C99A55]/30">
                 0{idx + 1}
               </div>
 
-              <h3 className="text-xl font-heading font-extrabold text-[#1A2B44] mb-3 group-hover:text-[#C99A55] transition-colors">
+              <h3 className="text-xl font-heading font-extrabold text-[#00153F] mb-3 group-hover:text-[#C99A55] transition-colors">
                 {offering.title}
               </h3>
 
@@ -48,9 +48,9 @@ export const ServiceDetailOfferings: React.FC<ServiceDetailOfferingsProps> = ({
               </p>
 
               {/* Bullet Features */}
-              <ul className="space-y-2.5 mb-6 pt-4 border-t border-[#1A2B44]/10">
+              <ul className="space-y-2.5 mb-6 pt-4 border-t border-[#00153F]/10">
                 {offering.features.map((feature, fIdx) => (
-                  <li key={fIdx} className="flex items-start gap-2 text-xs font-semibold text-[#1A2B44]">
+                  <li key={fIdx} className="flex items-start gap-2 text-xs font-semibold text-[#00153F]">
                     <CheckCircle2 className="w-4 h-4 text-[#C99A55] shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </li>
@@ -59,7 +59,7 @@ export const ServiceDetailOfferings: React.FC<ServiceDetailOfferingsProps> = ({
 
               <button
                 onClick={onOpenEstimate}
-                className="inline-flex items-center text-sm font-bold text-[#1A2B44] hover:text-[#C99A55] transition-colors mt-auto pt-2"
+                className="inline-flex items-center text-sm font-bold text-[#00153F] hover:text-[#C99A55] transition-colors mt-auto pt-2"
               >
                 <span>Request Service Quote</span>
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -69,7 +69,7 @@ export const ServiceDetailOfferings: React.FC<ServiceDetailOfferingsProps> = ({
         </div>
 
         {/* Bottom CTA Card */}
-        <div className="mt-14 p-8 rounded-2xl bg-[#1A2B44] text-[#EDE4D6] flex flex-col md:flex-row items-center justify-between gap-6 shadow-crisp-lg">
+        <div className="mt-14 p-8 rounded-2xl bg-[#00153F] text-[#EDE4D6] flex flex-col md:flex-row items-center justify-between gap-6 shadow-crisp-lg">
           <div>
             <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-white mb-2">
               Need a Custom {service.shortName} Assessment?
@@ -80,7 +80,7 @@ export const ServiceDetailOfferings: React.FC<ServiceDetailOfferingsProps> = ({
           </div>
           <button
             onClick={onOpenEstimate}
-            className="shrink-0 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp"
+            className="shrink-0 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-sm hover:bg-[#D4A55C] transition-all shadow-crisp"
           >
             Get Free Consultation
           </button>

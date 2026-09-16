@@ -16,7 +16,7 @@ export const ServiceDetailHero: React.FC<ServiceDetailHeroProps> = ({
   const Icon = service.icon;
 
   return (
-    <section className="relative min-h-[70vh] flex items-center pt-28 pb-16 overflow-hidden bg-[#1A2B44]">
+    <section className="relative min-h-[70vh] flex items-center pt-28 pb-16 overflow-hidden vix-navy-gradient">
       {/* Background Image & Overlays */}
       <div className="absolute inset-0 z-0">
         <img
@@ -24,8 +24,8 @@ export const ServiceDetailHero: React.FC<ServiceDetailHeroProps> = ({
           alt={`${service.name} across New England - VIX General Services`}
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/98 via-[#1A2B44]/85 to-[#1A2B44]/65" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A2B44] via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00153F]/98 via-[#00153F]/85 to-[#00153F]/65" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#00153F] via-transparent to-black/40" />
       </div>
 
       <div className="container relative z-10 mx-auto gutter-x">
@@ -88,7 +88,7 @@ export const ServiceDetailHero: React.FC<ServiceDetailHeroProps> = ({
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
               onClick={onOpenEstimate}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp hover:shadow-crisp-lg"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp hover:shadow-crisp-lg"
             >
               <span>Get Free Estimate</span>
               <ArrowRight className="w-5 h-5" />

@@ -135,7 +135,7 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
+    <div className="min-h-screen bg-[#F5F6F8] text-[#00153F] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title="VIX General Services | End-to-End Construction & Smart Energy"
         description="Residential and commercial construction, remodeling, plumbing, electrical, HVAC, solar, EV charging, and smart systems across five New England states."
@@ -176,13 +176,13 @@ const Index: React.FC = () => {
         <ReviewsSection />
 
         {/* On-Page Estimate Form Section */}
-        <section id="estimate" className="section-pad bg-white border-t border-[#1A2B44]/10">
+        <section id="estimate" className="section-pad bg-white border-t border-[#00153F]/10">
           <div className="container mx-auto gutter-x max-w-4xl">
             <div className="text-center mb-10">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#C99A55]/20 border border-[#C99A55]/40 text-[#C99A55] text-xs font-bold uppercase tracking-wider mb-3">
                 <Sparkles className="w-3.5 h-3.5" /> Free &amp; No Obligation
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-3">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#00153F] mb-3">
                 Request Your Free Estimate
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto">
@@ -190,7 +190,7 @@ const Index: React.FC = () => {
                 to schedule your consultation and provide transparent pricing.
               </p>
             </div>
-            <div className="bg-[#F7F8FA] rounded-2xl p-4 sm:p-8 border border-[#1A2B44]/10 shadow-crisp">
+            <div className="bg-[#F7F8FA] rounded-2xl p-4 sm:p-8 border border-[#00153F]/10 shadow-crisp">
               <GHLFormEmbed instanceId="home-section" minHeight={625} />
             </div>
           </div>

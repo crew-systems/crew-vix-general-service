@@ -31,14 +31,14 @@ export const ServiceDetailGallery: React.FC<ServiceDetailGalleryProps> = ({ serv
         ];
 
   return (
-    <section className="section-pad bg-white border-y border-[#1A2B44]/10">
+    <section className="section-pad bg-white border-y border-[#00153F]/10">
       <div className="container mx-auto gutter-x">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#00153F] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
             <Camera className="w-3.5 h-3.5 text-[#C99A55]" />
             <span>Project References &amp; Installation Standards</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#00153F] mb-4 tracking-tight">
             {service.shortName.toUpperCase()} PROJECT REFERENCES
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -53,7 +53,7 @@ export const ServiceDetailGallery: React.FC<ServiceDetailGalleryProps> = ({ serv
             <div
               key={idx}
               onClick={() => setSelectedImage(item.url)}
-              className="group relative rounded-xl overflow-hidden shadow-crisp hover:shadow-crisp-lg border border-[#1A2B44]/10 cursor-pointer bg-black/5"
+              className="group relative rounded-xl overflow-hidden shadow-crisp hover:shadow-crisp-lg border border-[#00153F]/10 cursor-pointer bg-black/5"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -68,7 +68,7 @@ export const ServiceDetailGallery: React.FC<ServiceDetailGalleryProps> = ({ serv
                 <ZoomIn className="w-4 h-4" />
               </div>
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-[#C99A55] text-[#1A2B44] mb-1.5">
+                <span className="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-[#C99A55] text-[#00153F] mb-1.5">
                   {item.category}
                 </span>
                 <h3 className="font-heading font-bold text-base text-white group-hover:text-[#EDE4D6] transition-colors">

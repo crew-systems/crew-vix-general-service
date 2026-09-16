@@ -32,7 +32,8 @@ export const ServicesIndex: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -75,7 +76,7 @@ export const ServicesIndex: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
+    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#00153F] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title="Construction, Remodeling & Building Systems | VIX General Services"
         description="Explore end-to-end construction, remodeling, plumbing, electrical, HVAC, solar, EV charging, security, lighting, and smart systems across New England."
@@ -93,14 +94,14 @@ export const ServicesIndex: React.FC = () => {
       />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center pt-28 pb-14 overflow-hidden bg-[#1A2B44]">
+      <section className="relative min-h-[50vh] flex items-center pt-28 pb-14 overflow-hidden vix-navy-gradient">
         <div className="absolute inset-0 z-0">
           <img
             src={SERVICES[0].heroImage}
             alt="VIX General Services comprehensive solutions"
             className="w-full h-full object-cover object-center opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44] via-[#1A2B44]/90 to-[#1A2B44]/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#00153F] via-[#00153F]/90 to-[#00153F]/70" />
         </div>
 
         <div className="container relative z-10 mx-auto gutter-x">
@@ -158,7 +159,7 @@ export const ServicesIndex: React.FC = () => {
               return (
                 <div
                   key={service.slug}
-                  className="bg-white rounded-2xl overflow-hidden border border-[#1A2B44]/12 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 flex flex-col group"
+                  className="bg-white rounded-2xl overflow-hidden border border-[#00153F]/12 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 flex flex-col group"
                 >
                   {/* Image container with link */}
                   <Link
@@ -166,7 +167,7 @@ export const ServicesIndex: React.FC = () => {
                     className="relative h-64 overflow-hidden block"
                   >
                     {service.featured && (
-                      <span className="absolute top-4 left-4 z-10 bg-[#C99A55] text-[#1A2B44] px-3.5 py-1.5 rounded-md text-xs font-extrabold uppercase tracking-wider shadow-crisp">
+                      <span className="absolute top-4 left-4 z-10 bg-[#C99A55] text-[#00153F] px-3.5 py-1.5 rounded-md text-xs font-extrabold uppercase tracking-wider shadow-crisp">
                         Most Requested
                       </span>
                     )}
@@ -189,7 +190,7 @@ export const ServicesIndex: React.FC = () => {
                       <span className="text-xs font-extrabold uppercase tracking-wider text-[#C99A55]">
                         {service.tagline}
                       </span>
-                      <h2 className="text-2xl font-heading font-extrabold text-[#1A2B44] mt-1 group-hover:text-[#C99A55] transition-colors">
+                      <h2 className="text-2xl font-heading font-extrabold text-[#00153F] mt-1 group-hover:text-[#C99A55] transition-colors">
                         <Link to={`/services/${service.slug}`}>
                           {service.name}
                         </Link>
@@ -201,11 +202,11 @@ export const ServicesIndex: React.FC = () => {
                     </p>
 
                     {/* Key Offerings Preview */}
-                    <div className="mb-6 pt-4 border-t border-[#1A2B44]/10">
-                      <h3 className="text-xs font-bold uppercase tracking-wider text-[#1A2B44] mb-3">
+                    <div className="mb-6 pt-4 border-t border-[#00153F]/10">
+                      <h3 className="text-xs font-bold uppercase tracking-wider text-[#00153F] mb-3">
                         Key Capabilities:
                       </h3>
-                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#1A2B44]">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#00153F]">
                         {service.offerings.slice(0, 4).map((offering, idx) => (
                           <li key={idx} className="flex items-start gap-1.5 font-medium">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#C99A55] shrink-0 mt-0.5" />
@@ -216,10 +217,10 @@ export const ServicesIndex: React.FC = () => {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="mt-auto pt-4 border-t border-[#1A2B44]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                    <div className="mt-auto pt-4 border-t border-[#00153F]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                       <Link
                         to={`/services/${service.slug}`}
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#1A2B44] text-[#EDE4D6] hover:bg-[#243652] font-bold text-sm shadow-crisp transition-all"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#00153F] text-[#EDE4D6] hover:bg-[#0B2F64] font-bold text-sm shadow-crisp transition-all"
                       >
                         <span>View {service.shortName} Details</span>
                         <ArrowRight className="w-4 h-4 text-[#C99A55]" />
@@ -227,7 +228,7 @@ export const ServicesIndex: React.FC = () => {
 
                       <button
                         onClick={() => handleOpenEstimate(service.estimateServiceKey)}
-                        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm hover:bg-[#D4A55C] shadow-crisp transition-all"
+                        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-sm hover:bg-[#D4A55C] shadow-crisp transition-all"
                       >
                         <span>Free Estimate</span>
                       </button>
@@ -239,7 +240,7 @@ export const ServicesIndex: React.FC = () => {
           </div>
 
           {/* Regional Cross-link banner */}
-          <div className="mt-16 p-8 sm:p-12 rounded-2xl bg-[#1A2B44] text-[#EDE4D6] shadow-crisp-lg text-center max-w-4xl mx-auto">
+          <div className="mt-16 p-8 sm:p-12 rounded-2xl vix-navy-gradient-panel text-[#EDE4D6] shadow-crisp-lg text-center max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-white mb-4">
               LOOKING FOR SERVICES IN A SPECIFIC CITY?
             </h2>
@@ -259,7 +260,7 @@ export const ServicesIndex: React.FC = () => {
               ))}
               <Link
                 to="/service-areas"
-                className="px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-xs sm:text-sm hover:bg-[#D4A55C] transition-all shadow-crisp"
+                className="px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-xs sm:text-sm hover:bg-[#D4A55C] transition-all shadow-crisp"
               >
                 All Service Areas
               </Link>

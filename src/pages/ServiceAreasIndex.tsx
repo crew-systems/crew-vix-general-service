@@ -31,7 +31,8 @@ export const ServiceAreasIndex: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -53,7 +54,7 @@ export const ServiceAreasIndex: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
+    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#00153F] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title="Service Areas Across New England | VIX General Services"
         description="VIX General Services provides construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
@@ -63,16 +64,16 @@ export const ServiceAreasIndex: React.FC = () => {
       />
       {/* Sticky Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#F5F6F8]/95 backdrop-blur-md shadow-crisp py-2.5 border-b border-[#1A2B44]/10"
-            : "bg-gradient-to-b from-[#1A2B44]/90 via-[#1A2B44]/40 to-transparent py-5 text-white"
+        className={`fixed top-0 left-0 right-0 z-40 vix-header-shell py-2.5 lg:py-4 text-white border-b ${
+          isScrolled || isMobileMenuOpen
+            ? "vix-header-active border-[#C99A55]/25"
+            : "border-transparent"
         }`}
       >
         <div className="container mx-auto gutter-x">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center group">
-              <Logo size="sm" theme={isScrolled ? "light" : "dark"} />
+            <Link to="/" className="logo-lockup flex items-center group">
+              <Logo size="sm" theme="dark" />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-6">
@@ -80,11 +81,7 @@ export const ServiceAreasIndex: React.FC = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`text-sm font-semibold transition-colors py-2 ${
-                    isScrolled
-                      ? "text-[#1A2B44] hover:text-[#C99A55]"
-                      : "text-white/90 hover:text-white"
-                  }`}
+                  className="text-sm font-semibold transition-colors py-2 text-white/90 hover:text-white"
                 >
                   {link.name}
                 </Link>
@@ -94,11 +91,7 @@ export const ServiceAreasIndex: React.FC = () => {
             <div className="hidden lg:flex items-center gap-4">
               <a
                 href={`tel:${COMPANY_INFO.phone}`}
-                className={`flex items-center gap-2 text-xs font-bold transition-colors ${
-                  isScrolled
-                    ? "text-[#1A2B44] hover:text-[#C99A55]"
-                    : "text-white hover:text-[#D4A55C]"
-                }`}
+                className="flex items-center gap-2 text-xs font-bold text-white hover:text-[#D4A55C] transition-colors"
               >
                 <div className="w-8 h-8 rounded-md bg-[#C99A55]/15 flex items-center justify-center">
                   <Phone className="w-4 h-4 text-[#C99A55]" />
@@ -112,7 +105,7 @@ export const ServiceAreasIndex: React.FC = () => {
               </a>
               <button
                 onClick={() => setIsEstimateModalOpen(true)}
-                className="px-5 py-2.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] hover:bg-[#243652] font-bold text-sm shadow-crisp hover:shadow-crisp-lg transition-all border border-[#C99A55]/25"
+                className="px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#00153F] hover:bg-[#D4A55C] font-bold text-sm shadow-crisp hover:shadow-crisp-lg transition-all border border-[#C99A55]"
               >
                 Free Estimate
               </button>
@@ -121,14 +114,14 @@ export const ServiceAreasIndex: React.FC = () => {
             <div className="flex items-center gap-2.5 lg:hidden">
               <a
                 href={`tel:${COMPANY_INFO.phone}`}
-                className="p-2.5 rounded-lg bg-[#1A2B44] text-white hover:bg-[#C99A55] transition-colors"
+                className="p-2.5 rounded-lg bg-[#C99A55] text-[#00153F] hover:bg-[#D4A55C] transition-colors"
                 aria-label="Call"
               >
                 <Phone className="w-4 h-4" />
               </a>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`p-2.5 rounded-lg transition-colors ${isScrolled ? "text-[#1A2B44] hover:bg-black/5" : "text-white hover:bg-white/10"}`}
+                className="p-2.5 rounded-lg text-white hover:bg-white/10 transition-colors"
                 aria-label="Toggle Menu"
               >
                 {isMobileMenuOpen ? (
@@ -142,14 +135,14 @@ export const ServiceAreasIndex: React.FC = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#F5F6F8] border-b border-[#1A2B44]/10 shadow-crisp-lg py-5 px-5">
+          <div className="lg:hidden bg-[#F5F6F8] border-b border-[#00153F]/10 shadow-crisp-lg py-5 px-5">
             <div className="space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-2.5 text-base font-bold text-[#1A2B44] hover:text-[#C99A55] border-b border-border/50"
+                  className="block py-2.5 text-base font-bold text-[#00153F] hover:text-[#C99A55] border-b border-border/50"
                 >
                   {link.name}
                 </Link>
@@ -159,7 +152,7 @@ export const ServiceAreasIndex: React.FC = () => {
                   setIsMobileMenuOpen(false);
                   setIsEstimateModalOpen(true);
                 }}
-                className="w-full py-3 rounded-lg bg-[#1A2B44] text-[#EDE4D6] font-bold text-center text-sm shadow-crisp"
+                className="w-full py-3 rounded-lg bg-[#00153F] text-[#EDE4D6] font-bold text-center text-sm shadow-crisp"
               >
                 Free Estimate
               </button>
@@ -169,15 +162,15 @@ export const ServiceAreasIndex: React.FC = () => {
       </header>
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center pt-28 pb-14 overflow-hidden bg-[#1A2B44]">
+      <section className="relative min-h-[50vh] flex items-center pt-28 pb-14 overflow-hidden vix-navy-gradient">
         <div className="absolute inset-0 z-0">
           <img
             src={SERVICE_AREAS[0].heroImage}
             alt="VIX General Services service areas across New England"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/95 via-[#1A2B44]/70 to-[#1A2B44]/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1A2B44] via-transparent to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#00153F]/95 via-[#00153F]/70 to-[#00153F]/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#00153F] via-transparent to-black/50" />
         </div>
         <div className="container relative z-10 mx-auto gutter-x">
           <div className="max-w-3xl">
@@ -213,7 +206,7 @@ export const ServiceAreasIndex: React.FC = () => {
               <Link
                 key={area.slug}
                 to={`/service-areas/${area.slug}`}
-                className="bg-white rounded-lg overflow-hidden border border-[#1A2B44]/8 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 group flex flex-col"
+                className="bg-white rounded-lg overflow-hidden border border-[#00153F]/8 shadow-crisp hover:shadow-crisp-lg transition-all duration-300 group flex flex-col"
               >
                 <div className="relative h-52 overflow-hidden">
                   <img
@@ -222,7 +215,7 @@ export const ServiceAreasIndex: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <span className="absolute top-3.5 left-3.5 bg-[#C99A55]/90 backdrop-blur-md text-[#1A2B44] px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider shadow-crisp">
+                  <span className="absolute top-3.5 left-3.5 bg-[#C99A55]/90 backdrop-blur-md text-[#00153F] px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider shadow-crisp">
                     {area.state}
                   </span>
                   <div className="absolute bottom-3.5 left-3.5 flex items-center gap-2 text-white">
@@ -245,7 +238,7 @@ export const ServiceAreasIndex: React.FC = () => {
                     </span>
                   </div>
                   <div className="mt-auto pt-2">
-                    <span className="inline-flex items-center text-sm font-bold text-[#1A2B44] group-hover:text-[#C99A55] transition-colors">
+                    <span className="inline-flex items-center text-sm font-bold text-[#00153F] group-hover:text-[#C99A55] transition-colors">
                       View Services in {area.city}
                       <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </span>
@@ -256,7 +249,7 @@ export const ServiceAreasIndex: React.FC = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-14 text-center bg-[#1A2B44] rounded-lg p-9 sm:p-12 max-w-4xl mx-auto">
+          <div className="mt-14 text-center vix-navy-gradient-panel rounded-lg p-9 sm:p-12 max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#EDE4D6] mb-4 tracking-tight">
               HAVE A PROJECT OUTSIDE THESE AREAS?
             </h2>
@@ -265,7 +258,7 @@ export const ServiceAreasIndex: React.FC = () => {
             </p>
             <button
               onClick={() => setIsEstimateModalOpen(true)}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp hover:shadow-crisp-lg"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp hover:shadow-crisp-lg"
             >
               <span>Check Your Area: Free Estimate</span>
               <ArrowRight className="w-5 h-5" />

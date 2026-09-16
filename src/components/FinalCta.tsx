@@ -8,7 +8,7 @@ interface FinalCtaProps {
 
 export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenEstimate }) => {
   return (
-    <section className="relative section-pad overflow-hidden bg-[#1A2B44]">
+    <section className="relative section-pad overflow-hidden vix-navy-gradient">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -16,7 +16,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenEstimate }) => {
           alt="Solar panel installation on a residential roof - VIX General Services"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-[#1A2B44]/85 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-[#00153F]/85 to-black/90" />
       </div>
 
       <div className="container relative z-10 mx-auto gutter-x text-center max-w-4xl">
@@ -36,7 +36,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenEstimate }) => {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
           <button
             onClick={onOpenEstimate}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15 btn-sheen group/btn"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#00153F]/15 btn-sheen group/btn"
           >
             <span>PLAN YOUR PROJECT</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />

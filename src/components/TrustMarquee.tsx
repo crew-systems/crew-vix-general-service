@@ -13,7 +13,7 @@ export const TrustMarquee: React.FC = () => {
 
   return (
     <section
-      className="bg-[#1A2B44] py-3.5 border-y border-[#C99A55]/25 relative z-20 overflow-hidden"
+      className="vix-navy-gradient-header py-3.5 border-y border-[#C99A55]/25 relative z-20 overflow-hidden"
       aria-label="Trust Highlights - VIX General Services"
     >
       <div className="flex w-max animate-marquee">

@@ -104,7 +104,7 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
       {!isLoaded && (
         <div className="absolute inset-0 z-0 flex flex-col items-center justify-center p-8 bg-white/80 backdrop-blur-sm rounded-xl min-h-[360px]">
           <div className="w-8 h-8 border-3 border-[#C99A55] border-t-transparent rounded-full animate-spin mb-3" />
-          <p className="text-xs font-bold text-[#1A2B44] uppercase tracking-wider">
+          <p className="text-xs font-bold text-[#00153F] uppercase tracking-wider">
             Loading Official VIX Form...
           </p>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Star, Shield, ArrowRight, Hammer } from "lucide-react";
 import { COMPANY_INFO, IMAGES } from "../data/landscapingData";
 
@@ -6,17 +6,14 @@ interface HeroProps {
   onOpenEstimate: () => void;
 }
 
-// Posters are the first frame of each video, so poster -> playback is seamless.
 // The mobile files are a 720x720 center crop: portrait phones only show the
 // middle of a 16:9 frame anyway.
 const HERO_MEDIA = {
   desktopVideo: "/videos/vix-home-loop-desktop.mp4",
   mobileVideo: "/videos/vix-home-loop-mobile.mp4",
-  desktopPoster: "/videos/vix-home-loop-desktop-poster.jpg",
-  mobilePoster: "/videos/vix-home-loop-mobile-poster.jpg",
 };
 
-// Keep in sync with the poster preload links in index.html.
+// Keep in sync with the video preload links in index.html.
 const DESKTOP_MEDIA_QUERY = "(min-width: 768px), (orientation: landscape)";
 
 const HERO_MEDIA_CLASS =
@@ -24,11 +21,6 @@ const HERO_MEDIA_CLASS =
 
 export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoPoster] = useState(() =>
-    window.matchMedia(DESKTOP_MEDIA_QUERY).matches
-      ? HERO_MEDIA.desktopPoster
-      : HERO_MEDIA.mobilePoster,
-  );
 
   useEffect(() => {
     const video = videoRef.current;
@@ -37,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
     const play = () => {
       if (document.hidden || !video.paused) return;
       video.play()?.catch(() => {
-        // Autoplay blocked (e.g. iOS Low Power Mode): the poster stays visible.
+        // Autoplay can be retried after the visitor's first interaction.
       });
     };
 
@@ -62,22 +54,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
   return (
     <section
       id="hero"
-      className="hero-section relative flex items-center overflow-hidden bg-[#1A2B44]"
+      className="hero-section relative flex items-center overflow-hidden bg-[#00153F]"
     >
-      {/* The video is visible from the start (never gated on a `playing`
-          event) and shows the matching poster until frames arrive.
-          It plays even with prefers-reduced-motion: the motion is slow and
-          subtle, and Windows reports that preference whenever animation
-          effects are off (often for performance), which hid it on those PCs. */}
+      {/* Video-only background. No poster or fallback image is rendered, so
+          the previous hero artwork cannot flash before the first video frame. */}
       <div className="absolute inset-0 z-0">
-        <picture>
-          <source media={DESKTOP_MEDIA_QUERY} srcSet={HERO_MEDIA.desktopPoster} />
-          <img
-            src={HERO_MEDIA.mobilePoster}
-            alt="Conceptual construction journey from planning and framing to a finished energy-efficient property"
-            className={HERO_MEDIA_CLASS}
-          />
-        </picture>
         <video
           ref={videoRef}
           className={`hero-video ${HERO_MEDIA_CLASS}`}
@@ -86,7 +67,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
           muted
           playsInline
           preload="auto"
-          poster={videoPoster}
           aria-hidden="true"
         >
           <source
@@ -130,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
             <div className="hero-cta-row flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8">
               <button
                 onClick={onOpenEstimate}
-                className="hero-cta-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm sm:text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15 btn-sheen group/btn"
+                className="hero-cta-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-sm sm:text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#00153F]/15 btn-sheen group/btn"
               >
                 <span>PLAN YOUR PROJECT</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -152,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
                       key={idx}
                       src={avatar}
                       alt="Happy VIX General Services customer"
-                      className="avatar-sm w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#1A2B44] object-cover shadow-crisp"
+                      className="avatar-sm w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#00153F] object-cover shadow-crisp"
                     />
                   ))}
                 </div>

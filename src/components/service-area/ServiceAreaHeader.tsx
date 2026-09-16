@@ -72,24 +72,22 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#F5F6F8]/95 backdrop-blur-md shadow-crisp py-2.5 border-b border-[#1A2B44]/10"
-          : "bg-gradient-to-b from-[#1A2B44]/90 via-[#1A2B44]/40 to-transparent py-5 text-white"
+      className={`fixed top-0 left-0 right-0 z-40 vix-header-shell py-2.5 lg:py-4 text-white border-b ${
+        isScrolled || isMobileMenuOpen
+          ? "vix-header-active border-[#C99A55]/25"
+          : "border-transparent"
       }`}
     >
       <div className="container mx-auto gutter-x">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center group">
-            <Logo size="sm" theme={isScrolled ? "light" : "dark"} />
+          <Link to="/" className="logo-lockup flex items-center group">
+            <Logo size="sm" theme="dark" />
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => {
-              const textClass = isScrolled
-                ? "text-[#1A2B44] hover:text-[#C99A55]"
-                : "text-white/90 hover:text-white";
+              const textClass = "text-white/90 hover:text-white";
 
               return (
                 <div
@@ -127,7 +125,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
                       }`}
                     >
                       <div
-                        className={`bg-[#F5F6F8] rounded-md shadow-crisp-lg border border-[#1A2B44]/12 p-2 ${
+                        className={`bg-[#F5F6F8] rounded-md shadow-crisp-lg border border-[#00153F]/12 p-2 ${
                           link.name === "Services"
                             ? "grid grid-cols-2 gap-0.5"
                             : "space-y-0.5"
@@ -138,10 +136,10 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
                             key={item.name}
                             to={item.href}
                             onClick={() => setOpenDropdown(null)}
-                            className={`block px-3 py-2 rounded-md text-xs font-semibold text-[#1A2B44] hover:bg-[#1A2B44] hover:text-[#EDE4D6] transition-colors ${
+                            className={`block px-3 py-2 rounded-md text-xs font-semibold text-[#00153F] hover:bg-[#00153F] hover:text-[#EDE4D6] transition-colors ${
                               link.name === "Services" &&
                               item.href === "/services"
-                                ? "col-span-2 mt-1 border-t border-[#1A2B44]/10 pt-2.5"
+                                ? "col-span-2 mt-1 border-t border-[#00153F]/10 pt-2.5"
                                 : ""
                             }`}
                           >
@@ -159,11 +157,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
           <div className="hidden lg:flex items-center gap-4">
             <a
               href={`tel:${COMPANY_INFO.phone}`}
-              className={`flex items-center gap-2 text-xs font-bold transition-colors ${
-                isScrolled
-                  ? "text-[#1A2B44] hover:text-[#C99A55]"
-                  : "text-white hover:text-[#D4A55C]"
-              }`}
+              className="flex items-center gap-2 text-xs font-bold text-white hover:text-[#D4A55C] transition-colors"
             >
               <div className="w-8 h-8 rounded-md bg-[#C99A55]/15 flex items-center justify-center">
                 <Phone className="w-4 h-4 text-[#C99A55]" />
@@ -177,7 +171,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
             </a>
             <button
               onClick={onOpenEstimate}
-              className="px-5 py-2.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] hover:bg-[#243652] font-bold text-sm shadow-crisp hover:shadow-crisp-lg transition-all border border-[#C99A55]/25"
+              className="px-5 py-2.5 rounded-lg bg-[#C99A55] text-[#00153F] hover:bg-[#D4A55C] font-bold text-sm shadow-crisp hover:shadow-crisp-lg transition-all border border-[#C99A55]"
             >
               Free Estimate
             </button>
@@ -187,14 +181,14 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
           <div className="flex items-center gap-2.5 lg:hidden">
             <a
               href={`tel:${COMPANY_INFO.phone}`}
-              className="p-2.5 rounded-lg bg-[#1A2B44] text-white hover:bg-[#C99A55] transition-colors"
+              className="p-2.5 rounded-lg bg-[#C99A55] text-[#00153F] hover:bg-[#D4A55C] transition-colors"
               aria-label="Call"
             >
               <Phone className="w-4 h-4" />
             </a>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2.5 rounded-lg transition-colors ${isScrolled ? "text-[#1A2B44] hover:bg-black/5" : "text-white hover:bg-white/10"}`}
+              className="p-2.5 rounded-lg text-white hover:bg-white/10 transition-colors"
               aria-label="Toggle Menu"
             >
               {isMobileMenuOpen ? (
@@ -209,7 +203,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#F5F6F8] border-b border-[#1A2B44]/10 shadow-crisp-lg py-5 px-5">
+        <div className="lg:hidden bg-[#F5F6F8] border-b border-[#00153F]/10 shadow-crisp-lg py-5 px-5">
           <div className="space-y-2">
             {navLinks.map((link) => (
               <div key={link.name}>
@@ -220,7 +214,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
                       setIsMobileMenuOpen(false);
                       setOpenDropdown(null);
                     }}
-                    className="block py-2.5 text-base font-bold text-[#1A2B44] hover:text-[#C99A55] flex-1"
+                    className="block py-2.5 text-base font-bold text-[#00153F] hover:text-[#C99A55] flex-1"
                   >
                     {link.name}
                   </Link>
@@ -232,7 +226,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
                           openDropdown === link.name ? null : link.name,
                         )
                       }
-                      className="p-2.5 text-[#1A2B44]"
+                      className="p-2.5 text-[#00153F]"
                       aria-label={`Toggle ${link.name}`}
                     >
                       <ChevronDown
@@ -254,7 +248,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
                           setIsMobileMenuOpen(false);
                           setOpenDropdown(null);
                         }}
-                        className="block py-2 text-sm font-semibold text-[#C99A55] hover:text-[#1A2B44] transition-colors"
+                        className="block py-2 text-sm font-semibold text-[#C99A55] hover:text-[#00153F] transition-colors"
                       >
                         {item.name}
                       </Link>
@@ -268,7 +262,7 @@ export const ServiceAreaHeader: React.FC<ServiceAreaHeaderProps> = ({
                 setIsMobileMenuOpen(false);
                 onOpenEstimate();
               }}
-              className="w-full py-3 rounded-lg bg-[#1A2B44] text-[#EDE4D6] font-bold text-center text-sm shadow-crisp"
+              className="w-full py-3 rounded-lg bg-[#00153F] text-[#EDE4D6] font-bold text-center text-sm shadow-crisp"
             >
               Free Estimate
             </button>

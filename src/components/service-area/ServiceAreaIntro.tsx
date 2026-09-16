@@ -14,11 +14,11 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
       <div className="container mx-auto gutter-x">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#00153F] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/20">
               <MapPin className="w-3.5 h-3.5 text-[#C99A55]" /> Serving{" "}
               {area.city}
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-5 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#00153F] mb-5 tracking-tight">
               YOUR LOCAL EXPERTS IN {area.city.toUpperCase()}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-5">
@@ -31,7 +31,7 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
             </p>
 
             {/* Neighborhoods Served */}
-            <div className="bg-white rounded-lg p-6 border border-[#1A2B44]/10 shadow-crisp">
+            <div className="bg-white rounded-lg p-6 border border-[#00153F]/10 shadow-crisp">
               <h3 className="text-sm font-heading font-extrabold uppercase tracking-wider text-[#C99A55] mb-4">
                 Coverage in {area.city}
               </h3>
@@ -39,7 +39,7 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
                 {area.neighborhoods.map((n) => (
                   <span
                     key={n}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] text-xs font-semibold border border-[#C99A55]/20"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#C99A55]/10 text-[#00153F] text-xs font-semibold border border-[#C99A55]/20"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#C99A55]" /> {n}
                   </span>
@@ -48,7 +48,7 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
               {area.zipCodes.length > 0 && (
                 <div className="mt-4 pt-4 border-t border-border/60">
                   <p className="text-xs text-muted-foreground">
-                    <strong className="text-[#1A2B44]">Zip Codes Served:</strong>{" "}
+                    <strong className="text-[#00153F]">Zip Codes Served:</strong>{" "}
                     {area.zipCodes.join(", ")}
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
               />
             </div>
             <div className="grid grid-cols-2 gap-3.5">
-              <div className="bg-[#1A2B44] text-[#EDE4D6] p-5 rounded-lg">
+              <div className="bg-[#00153F] text-[#EDE4D6] p-5 rounded-lg">
                 <div className="text-3xl font-heading font-extrabold text-[#C99A55]">
                   {COMPANY_INFO.stats.experienceYears}
                 </div>
@@ -74,15 +74,15 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
                   Years of Experience
                 </p>
               </div>
-              <div className="bg-[#C99A55] text-[#1A2B44] p-5 rounded-lg">
+              <div className="bg-[#C99A55] text-[#00153F] p-5 rounded-lg">
                 <div className="text-3xl font-heading font-extrabold">
                   {COMPANY_INFO.stats.projectsCompleted}
                 </div>
-                <p className="text-xs font-bold uppercase tracking-wider text-[#1A2B44]/80 mt-1">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#00153F]/80 mt-1">
                   Projects Completed
                 </p>
               </div>
-              <div className="bg-[#EDE4D6] text-[#1A2B44] p-5 rounded-lg border border-[#1A2B44]/10">
+              <div className="bg-[#EDE4D6] text-[#00153F] p-5 rounded-lg border border-[#00153F]/10">
                 <div className="text-3xl font-heading font-extrabold">
                   {COMPANY_INFO.stats.rating}★
                 </div>
@@ -90,7 +90,7 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
                   Average Rating
                 </p>
               </div>
-              <div className="bg-[#243652] text-white p-5 rounded-lg">
+              <div className="bg-[#0B2F64] text-white p-5 rounded-lg">
                 <div className="text-3xl font-heading font-extrabold">
                   {COMPANY_INFO.stats.reviewsCount}
                 </div>

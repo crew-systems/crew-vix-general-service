@@ -34,7 +34,7 @@ describe("SectionTransitions", () => {
 
     const { getByTestId } = render(
       <MemoryRouter>
-        <section data-testid="first" style={{ backgroundColor: "#1A2B44" }}>
+        <section data-testid="first" style={{ backgroundColor: "#00153F" }}>
           First
         </section>
         <section data-testid="second" style={{ backgroundColor: "#F5F6F8" }}>
@@ -53,7 +53,7 @@ describe("SectionTransitions", () => {
       expect(secondSection).toHaveAttribute("data-section-blend", "true");
       expect(
         secondSection.style.getPropertyValue("--section-blend-from"),
-      ).toBe("rgb(26, 43, 68)");
+      ).toBe("rgb(0, 21, 63)");
       expect(observe).toHaveBeenCalledTimes(2);
     });
 

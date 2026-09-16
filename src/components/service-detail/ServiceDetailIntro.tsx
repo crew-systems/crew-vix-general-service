@@ -20,12 +20,12 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Main Context Column */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider border border-[#C99A55]/20">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#00153F] font-bold text-xs uppercase tracking-wider border border-[#C99A55]/20">
               <Sparkles className="w-3.5 h-3.5 text-[#C99A55]" />
               <span>Specialized {service.shortName} Solutions</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#1A2B44] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#00153F] tracking-tight leading-tight">
               WHY NEW ENGLAND PROPERTY OWNERS CHOOSE VIX FOR {service.shortName.toUpperCase()}
             </h2>
 
@@ -38,25 +38,25 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
                 <CheckCircle2 className="w-4 h-4" />
                 <span>Service Summary & Quick Facts</span>
               </div>
-              <p className="text-sm font-medium text-[#1A2B44] leading-relaxed mb-4">
+              <p className="text-sm font-medium text-[#00153F] leading-relaxed mb-4">
                 VIX General Services {isCoordinatedBuildService ? "coordinates" : "provides"} {service.shortName.toLowerCase()} solutions for residential and commercial properties across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont. Work is planned around applicable codes, permits, inspections, and licensed-trade requirements. Projects include free consultations and transparent written estimates.
               </p>
-              <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs border-t border-[#1A2B44]/10 pt-3">
-                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+              <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs border-t border-[#00153F]/10 pt-3">
+                <div className="flex justify-between py-1 border-b border-[#00153F]/5">
                   <dt className="text-muted-foreground font-medium">Service Area:</dt>
-                  <dd className="text-[#1A2B44] font-bold text-right">Five New England States</dd>
+                  <dd className="text-[#00153F] font-bold text-right">Five New England States</dd>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+                <div className="flex justify-between py-1 border-b border-[#00153F]/5">
                   <dt className="text-muted-foreground font-medium">Licensing & Ins:</dt>
-                  <dd className="text-[#1A2B44] font-bold text-right">Licensed &amp; Insured</dd>
+                  <dd className="text-[#00153F] font-bold text-right">Licensed &amp; Insured</dd>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+                <div className="flex justify-between py-1 border-b border-[#00153F]/5">
                   <dt className="text-muted-foreground font-medium">Consultation & Quote:</dt>
                   <dd className="text-[#C99A55] font-bold text-right">Free On-Site Estimate ($0)</dd>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#1A2B44]/5">
+                <div className="flex justify-between py-1 border-b border-[#00153F]/5">
                   <dt className="text-muted-foreground font-medium">Workmanship Warranty:</dt>
-                  <dd className="text-[#1A2B44] font-bold text-right">1-Year Labor + Manufacturer Warranty</dd>
+                  <dd className="text-[#00153F] font-bold text-right">1-Year Labor + Manufacturer Warranty</dd>
                 </div>
               </dl>
             </div>
@@ -65,8 +65,8 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
               {service.longDesc}
             </p>
 
-            <div className="p-6 rounded-xl bg-white border border-[#1A2B44]/10 shadow-crisp">
-              <h3 className="text-base font-heading font-bold text-[#1A2B44] mb-2">
+            <div className="p-6 rounded-xl bg-white border border-[#00153F]/10 shadow-crisp">
+              <h3 className="text-base font-heading font-bold text-[#00153F] mb-2">
                 Engineered for Regional Climate &amp; Codes
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -81,12 +81,12 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
                 return (
                   <div
                     key={idx}
-                    className="p-5 rounded-lg bg-white border border-[#1A2B44]/8 shadow-crisp flex flex-col"
+                    className="p-5 rounded-lg bg-white border border-[#00153F]/8 shadow-crisp flex flex-col"
                   >
                     <div className="w-10 h-10 rounded-md bg-[#C99A55]/10 flex items-center justify-center text-[#C99A55] mb-3">
                       <BenefitIcon className="w-5 h-5" />
                     </div>
-                    <h4 className="font-heading font-bold text-[#1A2B44] text-base mb-1">
+                    <h4 className="font-heading font-bold text-[#00153F] text-base mb-1">
                       {b.title}
                     </h4>
                     <p className="text-xs text-muted-foreground leading-relaxed">
@@ -109,7 +109,7 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
             </div>
 
             <div className="grid grid-cols-2 gap-3.5">
-              <div className="bg-[#1A2B44] text-[#EDE4D6] p-5 rounded-lg shadow-crisp">
+              <div className="bg-[#00153F] text-[#EDE4D6] p-5 rounded-lg shadow-crisp">
                 <div className="text-3xl font-heading font-extrabold text-[#C99A55]">
                   {COMPANY_INFO.stats.experienceYears}
                 </div>
@@ -118,17 +118,17 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
                 </p>
               </div>
 
-              <div className="bg-[#C99A55] text-[#1A2B44] p-5 rounded-lg shadow-crisp">
+              <div className="bg-[#C99A55] text-[#00153F] p-5 rounded-lg shadow-crisp">
                 <div className="text-3xl font-heading font-extrabold">
                   {COMPANY_INFO.stats.projectsCompleted}
                 </div>
-                <p className="text-xs font-bold uppercase tracking-wider text-[#1A2B44]/80 mt-1">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#00153F]/80 mt-1">
                   Projects Done
                 </p>
               </div>
 
-              <div className="bg-white text-[#1A2B44] p-5 rounded-lg border border-[#1A2B44]/10 shadow-crisp">
-                <div className="text-3xl font-heading font-extrabold text-[#1A2B44]">
+              <div className="bg-white text-[#00153F] p-5 rounded-lg border border-[#00153F]/10 shadow-crisp">
+                <div className="text-3xl font-heading font-extrabold text-[#00153F]">
                   {COMPANY_INFO.stats.rating}★
                 </div>
                 <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mt-1">
@@ -136,7 +136,7 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
                 </p>
               </div>
 
-              <div className="bg-[#243652] text-white p-5 rounded-lg shadow-crisp">
+              <div className="bg-[#0B2F64] text-white p-5 rounded-lg shadow-crisp">
                 <div className="text-3xl font-heading font-extrabold text-[#C99A55]">
                   100%
                 </div>

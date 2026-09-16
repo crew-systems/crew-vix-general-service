@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
   // No additional injection needed here to avoid conflicts
 
   return (
-    <footer className="bg-[#1A2B44] text-[#EDE4D6] pt-16 pb-8 border-t border-[#C99A55]/25">
+    <footer className="vix-navy-gradient text-[#EDE4D6] pt-16 pb-8 border-t border-[#C99A55]/25">
       <div className="container mx-auto gutter-x">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">

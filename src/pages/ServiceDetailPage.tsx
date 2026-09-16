@@ -39,7 +39,8 @@ export const ServiceDetailPage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [slug]);
@@ -55,8 +56,8 @@ export const ServiceDetailPage: React.FC = () => {
           canonical="/services"
           noIndex
         />
-        <div className="text-center max-w-md bg-white p-8 rounded-xl shadow-crisp border border-[#1A2B44]/10">
-          <h1 className="text-3xl font-heading font-extrabold text-[#1A2B44] mb-3">
+        <div className="text-center max-w-md bg-white p-8 rounded-xl shadow-crisp border border-[#00153F]/10">
+          <h1 className="text-3xl font-heading font-extrabold text-[#00153F] mb-3">
             Service Not Found
           </h1>
           <p className="text-sm text-muted-foreground mb-6">
@@ -65,13 +66,13 @@ export const ServiceDetailPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               to="/services"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-sm shadow-crisp"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-sm shadow-crisp"
             >
               All Services
             </Link>
             <Link
               to="/"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] font-bold text-sm shadow-crisp"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#00153F] text-[#EDE4D6] font-bold text-sm shadow-crisp"
             >
               Back to Home
             </Link>
@@ -164,7 +165,7 @@ export const ServiceDetailPage: React.FC = () => {
   const handleOpenEstimate = () => setIsEstimateModalOpen(true);
 
   return (
-    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#141B2D] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
+    <div className="min-h-screen-dvh bg-[#F5F6F8] text-[#00153F] font-sans antialiased selection:bg-[#C99A55] selection:text-white">
       <SEOHead
         title={service.metaTitle}
         description={service.metaDescription}

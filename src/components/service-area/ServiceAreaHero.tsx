@@ -15,15 +15,15 @@ export const ServiceAreaHero: React.FC<ServiceAreaHeroProps> = ({
   onOpenEstimate,
 }) => {
   return (
-    <section className="relative min-h-[75vh] flex items-center pt-28 pb-16 overflow-hidden bg-[#1A2B44]">
+    <section className="relative min-h-[75vh] flex items-center pt-28 pb-16 overflow-hidden vix-navy-gradient">
       <div className="absolute inset-0 z-0">
         <img
           src={area.heroImage}
           alt={`Construction, building systems, and smart-energy services in ${area.fullName}`}
           className="w-full h-full object-cover object-center scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B44]/95 via-[#1A2B44]/70 to-[#1A2B44]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A2B44] via-transparent to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00153F]/95 via-[#00153F]/70 to-[#00153F]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#00153F] via-transparent to-black/50" />
       </div>
 
       <div className="container relative z-10 mx-auto gutter-x">
@@ -64,7 +64,7 @@ export const ServiceAreaHero: React.FC<ServiceAreaHeroProps> = ({
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
             <button
               onClick={onOpenEstimate}
-              className="px-8 py-4 sm:py-4.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-extrabold text-lg hover:bg-[#D4A55C] transition-all duration-300 shadow-crisp-lg flex items-center justify-center gap-3 group border border-white/20"
+              className="px-8 py-4 sm:py-4.5 rounded-lg bg-[#C99A55] text-[#00153F] font-extrabold text-lg hover:bg-[#D4A55C] transition-all duration-300 shadow-crisp-lg flex items-center justify-center gap-3 group border border-white/20"
             >
               <span>REQUEST FREE ESTIMATE</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

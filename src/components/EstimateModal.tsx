@@ -74,12 +74,12 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
         role="dialog"
         aria-modal="true"
         aria-label="Free Estimate Request"
-        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-[#1A2B44]/10 overflow-hidden z-10 my-auto animate-scale-up"
+        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-[#00153F]/10 overflow-hidden z-10 my-auto animate-scale-up"
       >
         {/* Floating Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-30 p-2 rounded-full bg-[#1A2B44]/5 hover:bg-[#1A2B44]/15 text-[#1A2B44] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C99A55] focus:ring-offset-1 border border-[#1A2B44]/10"
+          className="absolute top-3 right-3 z-30 p-2 rounded-full bg-[#00153F]/5 hover:bg-[#00153F]/15 text-[#00153F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C99A55] focus:ring-offset-1 border border-[#00153F]/10"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -87,7 +87,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
 
         {/* Selected Service Badge (if preselected) */}
         {isExplicitService && (
-          <div className="bg-[#1A2B44] text-[#EDE4D6] px-4 py-2 text-xs font-semibold flex items-center gap-2 pr-12">
+          <div className="bg-[#00153F] text-[#EDE4D6] px-4 py-2 text-xs font-semibold flex items-center gap-2 pr-12">
             <span className="inline-block w-2 h-2 rounded-full bg-[#C99A55]" />
             <span>
               Selected Service: <strong className="text-white">{serviceLabel}</strong>

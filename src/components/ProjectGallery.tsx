@@ -54,16 +54,16 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   return (
     <section
       id="gallery"
-      className="section-pad bg-white overflow-hidden border-t border-[#1A2B44]/10"
+      className="section-pad bg-white overflow-hidden border-t border-[#00153F]/10"
     >
       <div className="container mx-auto gutter-x">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#1A2B44] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/30">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-[#C99A55]/10 text-[#00153F] font-bold text-xs uppercase tracking-wider mb-4 border border-[#C99A55]/30">
             <Sparkles className="w-3.5 h-3.5 text-[#C99A55]" /> Project
             Portfolio
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#1A2B44] mb-5 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#00153F] mb-5 tracking-tight">
             OUR PROJECT PORTFOLIO
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -80,8 +80,8 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-md text-xs font-extrabold uppercase tracking-wider transition-all border ${
                 activeCategory === cat
-                  ? "bg-[#1A2B44] text-[#C99A55] border-[#C99A55]/50 shadow-crisp"
-                  : "bg-[#F5F6F8] text-[#1A2B44]/80 border-[#1A2B44]/15 hover:bg-[#1A2B44]/10"
+                  ? "bg-[#00153F] text-[#C99A55] border-[#C99A55]/50 shadow-crisp"
+                  : "bg-[#F5F6F8] text-[#00153F]/80 border-[#00153F]/15 hover:bg-[#00153F]/10"
               }`}
             >
               {cat}
@@ -95,7 +95,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
             <div
               key={index}
               onClick={() => setSelectedImage(index)}
-              className="relative rounded-lg overflow-hidden shadow-crisp hover:shadow-crisp-lg hover:-translate-y-1.5 transition-all duration-400 ease-out cursor-pointer group h-80 border border-[#1A2B44]/12 bg-[#1A2B44]/5"
+              className="relative rounded-lg overflow-hidden shadow-crisp hover:shadow-crisp-lg hover:-translate-y-1.5 transition-all duration-400 ease-out cursor-pointer group h-80 border border-[#00153F]/12 bg-[#00153F]/5"
             >
               <img
                 src={item.url}
@@ -116,7 +116,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
                 </div>
 
                 <div>
-                  <span className="inline-block px-3 py-1 rounded-md bg-[#C99A55] text-[#1A2B44] text-[11px] font-extrabold uppercase tracking-wider mb-2 border border-[#1A2B44]/15">
+                  <span className="inline-block px-3 py-1 rounded-md bg-[#C99A55] text-[#00153F] text-[11px] font-extrabold uppercase tracking-wider mb-2 border border-[#00153F]/15">
                     {item.category}
                   </span>
                   <h3 className="text-lg font-heading font-extrabold text-white">
@@ -129,13 +129,13 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
         </div>
 
         {/* Gallery CTA Bar */}
-        <div className="mt-12 text-center bg-[#F5F6F8] p-8 rounded-lg border border-[#1A2B44]/12 max-w-2xl mx-auto">
-          <p className="text-[#1A2B44] font-heading font-bold text-lg mb-3">
+        <div className="mt-12 text-center bg-[#F5F6F8] p-8 rounded-lg border border-[#00153F]/12 max-w-2xl mx-auto">
+          <p className="text-[#00153F] font-heading font-bold text-lg mb-3">
             Ready To Transform Your Property?
           </p>
           <button
             onClick={onOpenEstimate}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#1A2B44] text-[#EDE4D6] font-bold text-base hover:bg-[#243652] transition-all shadow-crisp border border-[#C99A55]/25"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#00153F] text-[#EDE4D6] font-bold text-base hover:bg-[#0B2F64] transition-all shadow-crisp border border-[#C99A55]/25"
           >
             <span>Start Your Project Today</span>
           </button>
@@ -173,7 +173,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
               className="max-h-[70vh] w-auto mx-auto rounded-lg shadow-2xl object-contain border border-white/20"
             />
             <div className="mt-4">
-              <span className="px-3 py-1 rounded-md bg-[#C99A55] text-[#1A2B44] text-xs font-bold uppercase tracking-wider border border-[#1A2B44]/15">
+              <span className="px-3 py-1 rounded-md bg-[#C99A55] text-[#00153F] text-xs font-bold uppercase tracking-wider border border-[#00153F]/15">
                 {filteredGallery[selectedImage].category}
               </span>
               <h3 className="text-xl font-heading font-bold text-white mt-2">

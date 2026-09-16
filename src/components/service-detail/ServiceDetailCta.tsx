@@ -13,7 +13,7 @@ export const ServiceDetailCta: React.FC<ServiceDetailCtaProps> = ({
   onOpenEstimate,
 }) => {
   return (
-    <section className="section-pad bg-[#1A2B44] text-[#EDE4D6] relative overflow-hidden">
+    <section className="section-pad vix-navy-gradient text-[#EDE4D6] relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#C99A55]/10 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-[#2F6FED]/10 blur-3xl pointer-events-none" />
@@ -36,7 +36,7 @@ export const ServiceDetailCta: React.FC<ServiceDetailCtaProps> = ({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <button
               onClick={onOpenEstimate}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-9 py-4 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp hover:shadow-crisp-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-9 py-4 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp hover:shadow-crisp-lg"
             >
               <span>Get Free {service.shortName} Estimate</span>
               <ArrowRight className="w-5 h-5" />

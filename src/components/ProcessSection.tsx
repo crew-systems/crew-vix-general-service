@@ -40,7 +40,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
   ];
 
   return (
-    <section className="section-pad bg-[#1A2B44] text-white overflow-hidden relative">
+    <section className="section-pad vix-navy-gradient text-white overflow-hidden relative">
       <div className="container mx-auto gutter-x relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
@@ -62,11 +62,11 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             return (
               <div
                 key={index}
-                className="bg-[#243652]/50 backdrop-blur-md rounded-lg p-7 border border-white/15 hover:border-[#C99A55]/50 transition-all relative flex flex-col justify-between"
+                className="bg-[#0B2F64]/50 backdrop-blur-md rounded-lg p-7 border border-white/15 hover:border-[#C99A55]/50 transition-all relative flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-lg bg-[#C99A55] text-[#1A2B44] flex items-center justify-center border border-[#1A2B44]/20 shadow-crisp">
+                    <div className="w-14 h-14 rounded-lg bg-[#C99A55] text-[#00153F] flex items-center justify-center border border-[#00153F]/20 shadow-crisp">
                       <Icon className="w-6 h-6" strokeWidth={1.75} />
                     </div>
                     <span className="text-3xl font-heading font-extrabold text-[#C99A55]/25">
@@ -95,7 +95,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
         <div className="mt-12 text-center">
           <button
             onClick={onOpenEstimate}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#1A2B44] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#1A2B44]/15"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#C99A55] text-[#00153F] font-bold text-base hover:bg-[#D4A55C] transition-all shadow-crisp-lg border border-[#00153F]/15"
           >
             <span>Start Your Project</span>
             <ArrowRight className="w-5 h-5" />
