@@ -166,7 +166,7 @@ describe("Business Identity", () => {
   });
 
   it("does not confuse the photo-delivery address with the business email", () => {
-    expect(COMPANY_INFO.email).toBe("info@vixgeneralservices.com");
+    expect(COMPANY_INFO.email).toBe("vixgeneralconstruction@gmail.com");
     expect(COMPANY_INFO.email).not.toBe("crewsystems.io@gmail.com");
   });
 });
