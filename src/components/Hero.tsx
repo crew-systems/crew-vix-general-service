@@ -31,6 +31,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
       ? HERO_MEDIA.desktopPoster
       : HERO_MEDIA.mobilePoster,
   );
+  // iOS draws its own play button over a video it refuses to autoplay (Low
+  // Power Mode, some in-app browsers) and ignores the CSS that should hide it.
+  // While blocked, the video is hidden and the identical poster image shows.
+  const [isAutoplayBlocked, setIsAutoplayBlocked] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -39,22 +43,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
     const play = () => {
       if (document.hidden || !video.paused) return;
       video.play()?.catch(() => {
-        // Autoplay can be retried after the visitor's first interaction.
+        // Retried on the visitor's next tap or when the tab regains focus.
+        setIsAutoplayBlocked(true);
       });
     };
+    const handlePlaying = () => setIsAutoplayBlocked(false);
 
     // React only sets `muted` as a property; iOS checks it before autoplaying.
     video.muted = true;
     video.defaultMuted = true;
     play();
 
-    // Blocked autoplay is allowed after a tap, and mobile browsers can leave
-    // the video paused when the tab comes back to the foreground.
+    // Blocked autoplay is allowed after a tap, and mobile browsers can pause
+    // the video (or leave it paused when the tab comes back to the foreground).
+    video.addEventListener("playing", handlePlaying);
+    video.addEventListener("pause", play);
     window.addEventListener("touchend", play, { passive: true });
     window.addEventListener("click", play);
     document.addEventListener("visibilitychange", play);
 
     return () => {
+      video.removeEventListener("playing", handlePlaying);
+      video.removeEventListener("pause", play);
       window.removeEventListener("touchend", play);
       window.removeEventListener("click", play);
       document.removeEventListener("visibilitychange", play);
@@ -69,9 +79,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
       {/* The poster (preloaded from index.html) paints right away instead of
           an empty navy block while the video downloads. */}
       <div className="absolute inset-0 z-0">
+        <img
+          src={videoPoster}
+          alt=""
+          aria-hidden="true"
+          className={HERO_MEDIA_CLASS}
+        />
         <video
           ref={videoRef}
-          className={`hero-video ${HERO_MEDIA_CLASS}`}
+          className={`hero-video ${HERO_MEDIA_CLASS} ${
+            isAutoplayBlocked ? "opacity-0" : ""
+          }`}
           autoPlay
           loop
           muted
