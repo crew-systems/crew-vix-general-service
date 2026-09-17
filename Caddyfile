@@ -18,10 +18,12 @@
     # Public media (hero video, posters, project photos). Without this block
     # they fell through to the SPA fallback: sent as no-store (phones re-downloaded
     # the hero video on every visit) and missing files returned index.html.
-    # Names are not hashed, so cache for a week and revalidate via ETag after.
+    # Names are not hashed: cache for one day, then revalidate via ETag.
+    # When replacing an image or video, give it a NEW file name - overwriting
+    # keeps returning visitors on the old file until the cache expires.
     @media path /images/* /videos/*
     handle @media {
-        header Cache-Control "public, max-age=604800"
+        header Cache-Control "public, max-age=86400"
         file_server
     }
 

@@ -103,6 +103,8 @@ export const ServiceDetailIntro: React.FC<ServiceDetailIntroProps> = ({ service 
             <div className="rounded-xl overflow-hidden shadow-crisp-lg border-2 border-white">
               <img
                 src={service.heroImage}
+                loading="lazy"
+                decoding="async"
                 alt={`${service.name} project in New England`}
                 className="w-full h-80 object-cover"
               />

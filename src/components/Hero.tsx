@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Star, Shield, ArrowRight, Hammer } from "lucide-react";
 import { COMPANY_INFO, IMAGES } from "../data/landscapingData";
 
@@ -7,13 +7,18 @@ interface HeroProps {
 }
 
 // The mobile files are a 720x720 center crop: portrait phones only show the
-// middle of a 16:9 frame anyway.
+// middle of a 16:9 frame anyway. Posters are each video's own first frame, so
+// nothing but this video's artwork ever shows before playback.
+// /videos is cached by browsers: give replaced media a NEW file name, or
+// returning visitors keep seeing the old file (see Caddyfile).
 const HERO_MEDIA = {
-  desktopVideo: "/videos/vix-home-loop-desktop.mp4",
-  mobileVideo: "/videos/vix-home-loop-mobile.mp4",
+  desktopVideo: "/videos/vix-hero-night-desktop.mp4",
+  mobileVideo: "/videos/vix-hero-night-mobile.mp4",
+  desktopPoster: "/videos/vix-hero-night-desktop-poster.jpg",
+  mobilePoster: "/videos/vix-hero-night-mobile-poster.jpg",
 };
 
-// Keep in sync with the video preload links in index.html.
+// Keep in sync with the poster preload links in index.html.
 const DESKTOP_MEDIA_QUERY = "(min-width: 768px), (orientation: landscape)";
 
 const HERO_MEDIA_CLASS =
@@ -21,6 +26,11 @@ const HERO_MEDIA_CLASS =
 
 export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoPoster] = useState(() =>
+    window.matchMedia(DESKTOP_MEDIA_QUERY).matches
+      ? HERO_MEDIA.desktopPoster
+      : HERO_MEDIA.mobilePoster,
+  );
 
   useEffect(() => {
     const video = videoRef.current;
@@ -56,8 +66,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
       id="hero"
       className="hero-section relative flex items-center overflow-hidden bg-[#00153F]"
     >
-      {/* Video-only background. No poster or fallback image is rendered, so
-          the previous hero artwork cannot flash before the first video frame. */}
+      {/* The poster (preloaded from index.html) paints right away instead of
+          an empty navy block while the video downloads. */}
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
@@ -67,6 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
           muted
           playsInline
           preload="auto"
+          poster={videoPoster}
           aria-hidden="true"
         >
           <source

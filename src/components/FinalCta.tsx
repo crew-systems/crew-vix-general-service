@@ -13,6 +13,8 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenEstimate }) => {
       <div className="absolute inset-0 z-0">
         <img
           src={IMAGES.finalCta}
+          loading="lazy"
+          decoding="async"
           alt="Solar panel installation on a residential roof - VIX General Services"
           className="w-full h-full object-cover object-center"
         />

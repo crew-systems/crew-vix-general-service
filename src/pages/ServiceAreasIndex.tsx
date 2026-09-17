@@ -211,6 +211,8 @@ export const ServiceAreasIndex: React.FC = () => {
                 <div className="relative h-52 overflow-hidden">
                   <img
                     src={area.heroImage}
+                    loading="lazy"
+                    decoding="async"
                     alt={`Construction and smart-energy services in ${area.fullName}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />

@@ -61,6 +61,8 @@ export const ServiceAreaIntro: React.FC<ServiceAreaIntroProps> = ({ area }) => {
             <div className="rounded-lg overflow-hidden shadow-crisp-lg border-2 border-white">
               <img
                 src={area.galleryImages[0]}
+                loading="lazy"
+                decoding="async"
                 alt={`Service project in ${area.city}`}
                 className="w-full h-72 object-cover"
               />

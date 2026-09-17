@@ -41,18 +41,32 @@ describe("App Render Test", () => {
     expect(heroVideo).toHaveAttribute("autoplay");
     expect(heroVideo).toHaveAttribute("loop");
     expect(heroVideo).toHaveAttribute("playsinline");
-    // The previous hero artwork must never flash before playback starts.
-    expect(heroVideo).not.toHaveAttribute("poster");
+    // Poster is the current video's own first frame (never older artwork),
+    // so the hero paints before the video has downloaded.
+    expect(heroVideo).toHaveAttribute(
+      "poster",
+      "/videos/vix-hero-night-mobile-poster.jpg",
+    );
     expect(heroVideo?.className).not.toMatch(/opacity-0/);
     expect(
       Array.from(heroVideo?.querySelectorAll("source") ?? []).map((source) =>
         source.getAttribute("src"),
       ),
     ).toEqual([
-      "/videos/vix-home-loop-desktop.mp4",
-      "/videos/vix-home-loop-mobile.mp4",
+      "/videos/vix-hero-night-desktop.mp4",
+      "/videos/vix-hero-night-mobile.mp4",
     ]);
     expect(container.querySelector("#hero picture")).toBeNull();
+
+    // Below-the-fold images must not compete with the hero video on load
+    // (eager loading pulled ~6MB of images on phones before this).
+    const eagerBelowFold = Array.from(
+      container.querySelectorAll<HTMLImageElement>("main img"),
+    )
+      .filter((img) => !img.closest("#hero"))
+      .filter((img) => img.getAttribute("loading") !== "lazy")
+      .map((img) => img.getAttribute("src"));
+    expect(eagerBelowFold).toEqual([]);
 
     const brandLogo = container.querySelector<HTMLImageElement>(
       'header img[alt="VIX General Services"]',

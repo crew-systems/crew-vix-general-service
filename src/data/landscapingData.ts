@@ -123,11 +123,13 @@ export const IMAGES = {
 
   team: "https://vibe.filesafe.space/1787931819686809992/assets/bc154887-f728-4e55-90d3-ebaf87cd526b.png",
 
+  // 144px square crops of the original uploads (~22KB total instead of ~490KB);
+  // they render at 40-44px in the hero and reviews.
   avatars: [
-    "https://vibe.filesafe.space/1787931819686809992/attachments/3ee2cf6d-1ba8-4320-9918-5b352aae4c07.png",
-    "https://vibe.filesafe.space/1787931819686809992/attachments/c96b8b0d-ee0d-4340-8b70-9457d85eee62.png",
-    "https://vibe.filesafe.space/1787931819686809992/attachments/3820b460-bdca-4bea-93ff-0d0743422829.png",
-    "https://vibe.filesafe.space/1787931819686809992/assets/fe22cd0f-bb2e-47ab-bf66-fafbcfdc9c8a.png",
+    "/images/avatars/client-1.webp",
+    "/images/avatars/client-2.webp",
+    "/images/avatars/client-3.webp",
+    "/images/avatars/client-4.webp",
   ],
 };
 

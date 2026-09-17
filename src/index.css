@@ -48,6 +48,13 @@
     --section-py: 5rem; /* 80px base */
     --section-py-lg: 6rem; /* 96px large screens */
     --section-gap: 2.5rem; /* 40px between header & content */
+
+    /* Fixed header height below 1024px: safe area + h-20 logo + py-2.5 bottom
+       + 1px border. The hero's top padding derives from it so the header logo
+       is never covered by hero content. */
+    --site-header-height: calc(
+      max(0.625rem, env(safe-area-inset-top)) + 5rem + 0.625rem + 1px
+    );
   }
 
   /* Fluid section padding: scales smoothly with viewport width.
@@ -287,7 +294,7 @@
     min-height: auto;
     height: auto;
     align-items: flex-start; /* top-align instead of vertical center */
-    padding-top: 5.5rem; /* clear fixed header */
+    padding-top: calc(var(--site-header-height) + 0.25rem); /* clear fixed header */
     padding-bottom: 1.75rem;
   }
   /* Left column: flow from top on mobile, not vertically centered */
@@ -454,6 +461,11 @@ section[data-section-blend="true"]::after {
 }
 
 @media (max-width: 359px) {
+  :root {
+    --site-header-height: calc(
+      max(0.5rem, env(safe-area-inset-top)) + 2.25rem + 0.5rem + 1px
+    );
+  }
   .site-header {
     padding-top: max(0.5rem, env(safe-area-inset-top));
     padding-bottom: 0.5rem;
@@ -510,7 +522,7 @@ section[data-section-blend="true"]::after {
    reduce vertical rhythm so nothing is clipped; allow natural scroll. */
 @media (max-width: 480px) and (max-height: 700px) {
   .hero-section {
-    padding-top: 5rem;
+    padding-top: calc(var(--site-header-height) + 0.25rem);
     padding-bottom: 1.25rem;
   }
   .hero-content {
@@ -587,7 +599,7 @@ section[data-section-blend="true"]::after {
   .hero-section {
     min-height: auto;
     height: auto;
-    padding-top: 5rem;
+    padding-top: calc(var(--site-header-height) + 0.25rem);
     padding-bottom: 1.5rem;
   }
 }

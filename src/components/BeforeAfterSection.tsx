@@ -128,6 +128,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                 {/* Custom LED Lighting Image (Base Layer, full-bleed) */}
                 <img
                   src={IMAGES.after}
+                  loading="lazy"
+                  decoding="async"
                   alt="Completed interior with integrated electrical panel and finishes"
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                   draggable={false}
@@ -146,6 +148,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                 >
                   <img
                     src={IMAGES.before}
+                    loading="lazy"
+                    decoding="async"
                     alt="New construction framing and electrical rough-in"
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                     draggable={false}

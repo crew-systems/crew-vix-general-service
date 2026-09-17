@@ -111,6 +111,8 @@ export const ServiceAreaWhyGallery: React.FC<ServiceAreaWhyGalleryProps> = ({
               >
                 <img
                   src={img}
+                  loading="lazy"
+                  decoding="async"
                   alt={`Project ${index + 1} near ${area.city}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
@@ -126,6 +128,8 @@ export const ServiceAreaWhyGallery: React.FC<ServiceAreaWhyGalleryProps> = ({
         <div className="absolute inset-0 z-0">
           <img
             src={IMAGES.finalCta}
+            loading="lazy"
+            decoding="async"
             alt={`Home services in ${area.city}`}
             className="w-full h-full object-cover object-center"
           />

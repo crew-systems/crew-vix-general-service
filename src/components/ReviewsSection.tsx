@@ -73,6 +73,8 @@ export const ReviewsSection: React.FC = () => {
               <div className="pt-4 border-t border-[#00153F]/12 flex items-center gap-3">
                 <img
                   src={review.avatar}
+                  loading="lazy"
+                  decoding="async"
                   alt={review.name}
                   className="w-11 h-11 rounded-md object-cover border-2 border-[#C99A55]"
                 />

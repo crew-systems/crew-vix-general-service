@@ -173,6 +173,8 @@ export const ServicesIndex: React.FC = () => {
                     )}
                     <img
                       src={service.heroImage}
+                      loading="lazy"
+                      decoding="async"
                       alt={`${service.name} - VIX General Services`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />

@@ -24,8 +24,8 @@ export const Logo: React.FC<LogoProps> = ({
     <img
       src="/images/vix-general-services-logo.webp"
       alt="VIX General Services"
-      width="720"
-      height="518"
+      width="400"
+      height="288"
       decoding="async"
       className={`vix-logo-mark w-auto object-contain select-none ${SIZE_MAP[size]} ${className}`}
     />

@@ -8,21 +8,20 @@
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Start the hero video download before the JS bundle runs.
-         Media queries must mirror the sources in src/components/Hero.tsx. -->
+    <!-- Start the hero poster download before the JS bundle runs (browsers
+         ignore preload as="video"). Media queries must mirror
+         DESKTOP_MEDIA_QUERY in src/components/Hero.tsx. -->
     <link
       rel="preload"
-      as="video"
-      type="video/mp4"
-      href="/videos/vix-home-loop-mobile.mp4"
+      as="image"
+      href="/videos/vix-hero-night-mobile-poster.jpg"
       media="(max-width: 767.98px) and (orientation: portrait)"
       fetchpriority="high"
     />
     <link
       rel="preload"
-      as="video"
-      type="video/mp4"
-      href="/videos/vix-home-loop-desktop.mp4"
+      as="image"
+      href="/videos/vix-hero-night-desktop-poster.jpg"
       media="(min-width: 768px), (orientation: landscape)"
       fetchpriority="high"
     />
