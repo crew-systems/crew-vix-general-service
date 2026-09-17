@@ -42,7 +42,6 @@ export const ServiceAreasIndex: React.FC = () => {
     { name: "Services", href: "/services" },
     { name: "Service Areas", href: "/service-areas" },
     { name: "Projects", href: "/#gallery" },
-    { name: "Reviews", href: "/#reviews" },
   ];
 
   const areasSchema = {

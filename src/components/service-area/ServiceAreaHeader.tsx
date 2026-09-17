@@ -33,7 +33,6 @@ const navLinks = [
   },
   { name: "Why Choose Us", href: "/#why-us" },
   { name: "Projects", href: "/#gallery" },
-  { name: "Reviews", href: "/#reviews" },
   { name: "Contact", href: "/contact" },
 ];
 

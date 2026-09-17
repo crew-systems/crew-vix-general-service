@@ -122,15 +122,6 @@ export const IMAGES = {
   ],
 
   team: "https://vibe.filesafe.space/1787931819686809992/assets/bc154887-f728-4e55-90d3-ebaf87cd526b.png",
-
-  // 144px square crops of the original uploads (~22KB total instead of ~490KB);
-  // they render at 40-44px in the hero and reviews.
-  avatars: [
-    "/images/avatars/client-1.webp",
-    "/images/avatars/client-2.webp",
-    "/images/avatars/client-3.webp",
-    "/images/avatars/client-4.webp",
-  ],
 };
 
 export const SERVICE_AREAS = [

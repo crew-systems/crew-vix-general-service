@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Star, Shield, ArrowRight, Hammer } from "lucide-react";
-import { COMPANY_INFO, IMAGES } from "../data/landscapingData";
+import { Shield, ArrowRight, Hammer } from "lucide-react";
 
 interface HeroProps {
   onOpenEstimate: () => void;
@@ -152,37 +151,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
               </a>
             </div>
 
-            {/* Social Proof Bar */}
+            {/* Trust line */}
             <div className="hero-social pt-5 border-t border-white/15 flex flex-wrap items-center gap-5">
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-3">
-                  {IMAGES.avatars.map((avatar, idx) => (
-                    <img
-                      key={idx}
-                      src={avatar}
-                      alt="Happy VIX General Services customer"
-                      className="avatar-sm w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#00153F] object-cover shadow-crisp"
-                    />
-                  ))}
-                </div>
-                <div>
-                  <div className="flex items-center gap-1 text-[#fbbc04] mb-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-[#fbbc04] text-[#fbbc04]"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-white text-sm font-bold">
-                    {COMPANY_INFO.stats.rating} Rating from{" "}
-                    {COMPANY_INFO.stats.reviewsCount} Clients
-                  </p>
-                </div>
-              </div>
-
-              <div className="hidden sm:block h-8 w-px bg-white/20" />
-
               <div className="flex items-center gap-2 text-white/90 text-xs font-semibold">
                 <Shield className="w-5 h-5 text-[#C99A55]" />
                 <span>Licensed &amp; Insured · Residential &amp; Commercial</span>

@@ -103,14 +103,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
                   Portfolio
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/#reviews"
-                  className="hover:text-white transition-colors"
-                >
-                  Reviews
-                </Link>
-              </li>
             </ul>
           </div>
 

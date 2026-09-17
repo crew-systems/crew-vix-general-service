@@ -582,10 +582,6 @@ section[data-section-blend="true"]::after {
     padding: 0.625rem 0.875rem;
     font-size: 0.78rem;
   }
-  .hero-compact .avatar-sm {
-    width: 1.75rem;
-    height: 1.75rem;
-  }
   .hero-compact .hero-social {
     gap: 0.625rem;
   }

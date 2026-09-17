@@ -58,6 +58,13 @@ describe("App Render Test", () => {
     ]);
     expect(container.querySelector("#hero picture")).toBeNull();
 
+    // The client asked to remove the rating strip and the reviews section.
+    expect(container.querySelector("#hero")?.textContent).not.toMatch(
+      /Rating from/,
+    );
+    expect(container.querySelector("#reviews")).toBeNull();
+    expect(container.querySelector('a[href="/#reviews"]')).toBeNull();
+
     // Below-the-fold images must not compete with the hero video on load
     // (eager loading pulled ~6MB of images on phones before this).
     const eagerBelowFold = Array.from(

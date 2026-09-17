@@ -9,7 +9,6 @@ import { BeforeAfterSection } from "../components/BeforeAfterSection";
 import { WhyChooseUs } from "../components/WhyChooseUs";
 import { ProjectGallery } from "../components/ProjectGallery";
 import { ProcessSection } from "../components/ProcessSection";
-import { ReviewsSection } from "../components/ReviewsSection";
 import { FinalCta } from "../components/FinalCta";
 import { Footer } from "../components/Footer";
 import { EstimateModal } from "../components/EstimateModal";
@@ -171,9 +170,6 @@ const Index: React.FC = () => {
 
         {/* 3-Step Simple Process */}
         <ProcessSection onOpenEstimate={handleOpenEstimate} />
-
-        {/* Homeowner Reviews */}
-        <ReviewsSection />
 
         {/* On-Page Estimate Form Section */}
         <section id="estimate" className="section-pad bg-white border-t border-[#00153F]/10">

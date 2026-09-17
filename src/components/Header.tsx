@@ -65,7 +65,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
     },
     { name: "Why Choose Us", href: "/#why-us" },
     { name: "Projects", href: "/#gallery" },
-    { name: "Reviews", href: "/#reviews" },
     { name: "Contact", href: "/contact" },
   ];
 
