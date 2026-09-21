@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { COMPANY_INFO, SERVICE_AREAS } from "../data/landscapingData";
 import { SERVICES } from "../data/servicesData";
 import { Logo } from "./Logo";
+import { legalLink } from "../lib/legalHosts";
 
 interface FooterProps {
   onOpenEstimate: () => void;
@@ -209,11 +210,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
           </p>
 
           <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-white transition-colors">
+            <a href={legalLink("privacy")} className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Terms of Service
+            <a href={legalLink("terms")} className="hover:text-white transition-colors">
+              Terms of Use
             </a>
           </div>
         </div>

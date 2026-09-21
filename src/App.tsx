@@ -12,12 +12,18 @@ import { ServicesIndex } from "./pages/ServicesIndex";
 import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ThankYouPage } from "./pages/ThankYouPage";
+import { TermsPage } from "./pages/TermsPage";
+import { PrivacyPage } from "./pages/PrivacyPage";
+import { getLegalHost } from "./lib/legalHosts";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SectionTransitions } from "./components/SectionTransitions";
 
 import { ErrorBoundary } from "./components/ErrorBoundary";
 
 const queryClient = new QueryClient();
+
+// terms.* and privacy.* subdomains serve the same build: every path renders that legal page.
+const legalHost = getLegalHost();
 
 const App = () => (
   <ErrorBoundary>
@@ -29,7 +35,15 @@ const App = () => (
           <BrowserRouter>
             <ScrollToTop />
             <Routes>
+              {legalHost && (
+                <Route
+                  path="*"
+                  element={legalHost === "terms" ? <TermsPage /> : <PrivacyPage />}
+                />
+              )}
               <Route path="/" element={<Index />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/services" element={<ServicesIndex />} />
               <Route path="/services/:slug" element={<ServiceDetailPage />} />
               <Route path="/service-areas" element={<ServiceAreasIndex />} />
