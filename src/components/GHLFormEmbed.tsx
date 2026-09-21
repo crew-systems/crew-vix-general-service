@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface GHLFormEmbedProps {
   className?: string;
@@ -8,12 +8,62 @@ interface GHLFormEmbedProps {
 
 const GHL_FORM_ID = "xCsxxTefyGz05iGmy5el";
 
+interface SubmitMessageContext {
+  fromOwnIframe: boolean;
+  iframeFocused: boolean;
+}
+
+export const isFormSubmittedMessage = (
+  data: unknown,
+  { fromOwnIframe, iframeFocused }: SubmitMessageContext,
+): boolean => {
+  // On a successful submit the GHL form posts ["set-sticky-contacts", ...] to the parent.
+  // It can also fire on load for returning contacts, so require that the visitor has
+  // actually interacted with (focused) this form before treating it as a submission.
+  if (Array.isArray(data)) {
+    return data[0] === "set-sticky-contacts" && fromOwnIframe && iframeFocused;
+  }
+
+  if (typeof data === "string") {
+    const lower = data.toLowerCase();
+    return (
+      lower.includes("form_success") ||
+      lower.includes("form-submitted") ||
+      lower.includes("formsubmit") ||
+      lower.includes("thank-you") ||
+      lower.includes("thankyou")
+    );
+  }
+
+  if (data && typeof data === "object") {
+    const d = data as Record<string, unknown>;
+    const type = String(d.type || "").toLowerCase();
+    const action = String(d.action || "").toLowerCase();
+    const message = String(d.message || "").toLowerCase();
+    const status = String(d.status || "").toLowerCase();
+    const redirectUrl = String(d.redirectUrl || d.url || "").toLowerCase();
+
+    return (
+      type.includes("submit") ||
+      action.includes("submit") ||
+      message.includes("success") ||
+      status.includes("success") ||
+      redirectUrl.includes("thank-you") ||
+      redirectUrl.includes("thankyou") ||
+      d.formId === GHL_FORM_ID
+    );
+  }
+
+  return false;
+};
+
 export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
   className = "",
   minHeight = 625,
   instanceId = "main",
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const iframeId = instanceId
     ? `inline-${GHL_FORM_ID}-${instanceId}`
     : `inline-${GHL_FORM_ID}`;
@@ -47,41 +97,11 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
 
       if (!isFromGHL) return;
 
-      const data = event.data;
-      let isFormSuccess = false;
-
-      if (typeof data === "string") {
-        const lower = data.toLowerCase();
-        if (
-          lower.includes("form_success") ||
-          lower.includes("form-submitted") ||
-          lower.includes("formsubmit") ||
-          lower.includes("thank-you") ||
-          lower.includes("thankyou")
-        ) {
-          isFormSuccess = true;
-        }
-      } else if (data && typeof data === "object") {
-        const type = String(data.type || "").toLowerCase();
-        const action = String(data.action || "").toLowerCase();
-        const message = String(data.message || "").toLowerCase();
-        const status = String(data.status || "").toLowerCase();
-        const redirectUrl = String(
-          data.redirectUrl || data.url || "",
-        ).toLowerCase();
-
-        if (
-          type.includes("submit") ||
-          action.includes("submit") ||
-          message.includes("success") ||
-          status.includes("success") ||
-          redirectUrl.includes("thank-you") ||
-          redirectUrl.includes("thankyou") ||
-          data.formId === GHL_FORM_ID
-        ) {
-          isFormSuccess = true;
-        }
-      }
+      const iframe = iframeRef.current;
+      const isFormSuccess = isFormSubmittedMessage(event.data, {
+        fromOwnIframe: !!iframe && event.source === iframe.contentWindow,
+        iframeFocused: !!iframe && document.activeElement === iframe,
+      });
 
       if (isFormSuccess) {
         if (window.location.pathname !== "/thank-you") {
@@ -111,6 +131,7 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
       )}
 
       <iframe
+        ref={iframeRef}
         src={`https://api.leadconnectorhq.com/widget/form/${GHL_FORM_ID}`}
         style={{
           width: "100%",

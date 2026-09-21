@@ -4,7 +4,7 @@ import { render, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ContactPage } from "../pages/ContactPage";
-import { GHLFormEmbed } from "../components/GHLFormEmbed";
+import { GHLFormEmbed, isFormSubmittedMessage } from "../components/GHLFormEmbed";
 import { EstimateModal } from "../components/EstimateModal";
 import { ServicesSection } from "../components/ServicesSection";
 import { ThankYouPage } from "../pages/ThankYouPage";
@@ -44,6 +44,22 @@ describe("Contact and Form Embed Tests", () => {
     );
     expect(iframe?.getAttribute("data-form-id")).toBe("xCsxxTefyGz05iGmy5el");
     expect(iframe?.getAttribute("data-height")).toBe("625");
+  });
+
+  it("detects the GHL sticky-contact array as a submit only when it comes from a focused own iframe", () => {
+    const msg = ["set-sticky-contacts", "_ud", "{}", "loc", "fp"];
+    expect(isFormSubmittedMessage(msg, { fromOwnIframe: true, iframeFocused: true })).toBe(true);
+    // load-time message for a returning contact: visitor never touched the form
+    expect(isFormSubmittedMessage(msg, { fromOwnIframe: true, iframeFocused: false })).toBe(false);
+    // message from some other frame
+    expect(isFormSubmittedMessage(msg, { fromOwnIframe: false, iframeFocused: true })).toBe(false);
+  });
+
+  it("ignores non-submit GHL array messages such as height and query-params", () => {
+    const ctx = { fromOwnIframe: true, iframeFocused: true };
+    expect(isFormSubmittedMessage(["highlevel.setHeight", { height: 600, id: "x" }], ctx)).toBe(false);
+    expect(isFormSubmittedMessage(["fetch-query-params", "id", "loc"], ctx)).toBe(false);
+    expect(isFormSubmittedMessage(["iframeLoaded"], ctx)).toBe(false);
   });
 
   it("deduplicates GHL form script when multiple embeds are rendered", () => {
@@ -136,7 +152,7 @@ describe("Contact and Form Embed Tests", () => {
     expect(container.textContent).toContain("Your answers have been successfully submitted");
     expect(container.textContent).toContain("will reach out to you shortly");
     expect(container.textContent).toContain("What Happens Next?");
-    expect(container.textContent).toContain("(978) 705-5562");
+    expect(container.textContent).toContain("+1 978-705-5562");
     expect(container.querySelector('a[href^="tel:"]')).not.toBeNull();
   });
 });
