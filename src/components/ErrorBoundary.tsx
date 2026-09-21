@@ -52,7 +52,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <p className="text-xs text-muted-foreground mt-5">
               Need immediate help? Call us at{" "}
               <a
-                href={`tel:+1${COMPANY_INFO.phone.replace(/\D/g, "")}`}
+                href={`tel:+${COMPANY_INFO.phone.replace(/\D/g, "")}`}
                 className="font-bold text-[#00153F] underline"
               >
                 {COMPANY_INFO.phone}

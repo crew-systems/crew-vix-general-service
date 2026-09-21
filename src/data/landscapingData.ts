@@ -252,8 +252,8 @@ export const COMPANY_INFO = {
   legalName: "VIX CONSTRUCTION AND LANDSCAPE INC",
   ownerName: "Kristyan Martins",
   tagline: "End-to-End Construction, Smart Systems & Energy Solutions",
-  phone: "(978) 705-5562",
-  email: "vixgeneralconstruction@gmail.com",
+  phone: "+1 978-705-5562",
+  email: "vixgeneralservices@gmail.com",
   location:
     "Massachusetts, Maine, New Hampshire, Rhode Island & Vermont",
   stats: {
