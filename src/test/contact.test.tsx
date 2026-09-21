@@ -150,7 +150,8 @@ describe("Contact and Form Embed Tests", () => {
     );
     expect(container.textContent).toContain("Thank You! We Received Your Request");
     expect(container.textContent).toContain("Your answers have been successfully submitted");
-    expect(container.textContent).toContain("will reach out to you shortly");
+    expect(container.textContent).toContain("will contact you within a few minutes from +1 978-705-5562");
+    expect(container.textContent).not.toContain("Top Rated in FL");
     expect(container.textContent).toContain("What Happens Next?");
     expect(container.textContent).toContain("+1 978-705-5562");
     expect(container.querySelector('a[href^="tel:"]')).not.toBeNull();

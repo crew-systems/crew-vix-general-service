@@ -4,13 +4,10 @@ import {
   CheckCircle2,
   Phone,
   Mail,
-  Clock,
-  Shield,
   ArrowRight,
   Home,
   Sparkles,
   Calendar,
-  Award,
 } from "lucide-react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -62,9 +59,9 @@ export const ThankYouPage: React.FC = () => {
 
             {/* Subtitle fulfilling the user's requirement */}
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
-              Your answers have been successfully submitted to our team. Our licensed
-              Our specialists are reviewing your project details and will
-              reach out to you shortly with next steps.
+              Your answers have been successfully submitted to our team. Our
+              specialists are reviewing your project details and will contact
+              you within a few minutes from {COMPANY_INFO.phone}.
             </p>
 
             {/* What Happens Next - 3 Steps Timeline */}
@@ -95,7 +92,7 @@ export const ThankYouPage: React.FC = () => {
                     Direct Contact
                   </h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    We will call or text you at the number provided within 1 business day (often within hours) to confirm details.
+                    We will call or text you within a few minutes from {COMPANY_INFO.phone} to confirm details.
                   </p>
                 </div>
 
@@ -136,25 +133,6 @@ export const ThankYouPage: React.FC = () => {
                 <span>CALL NOW: {COMPANY_INFO.phone}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="grid grid-cols-3 gap-3 pt-6 pb-6 border-t border-b border-[#00153F]/10 text-center mb-8">
-              <div className="flex flex-col items-center">
-                <Shield className="w-5 h-5 text-[#C99A55] mb-1.5" />
-                <span className="text-xs font-bold text-[#00153F]">Licensed &amp; Insured</span>
-                <span className="text-[11px] text-muted-foreground">State Certified</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Clock className="w-5 h-5 text-[#C99A55] mb-1.5" />
-                <span className="text-xs font-bold text-[#00153F]">Fast Response</span>
-                <span className="text-[11px] text-muted-foreground">Within 1 Business Day</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <Award className="w-5 h-5 text-[#C99A55] mb-1.5" />
-                <span className="text-xs font-bold text-[#00153F]">Top Rated in FL</span>
-                <span className="text-[11px] text-muted-foreground">5-Star Customer Reviews</span>
-              </div>
             </div>
 
             {/* Quick Navigation Links */}
