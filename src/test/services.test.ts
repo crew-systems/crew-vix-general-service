@@ -111,7 +111,7 @@ describe("Sitemap & Robots.txt Parity", () => {
     const llmsPath = path.resolve(__dirname, "../../public/llms.txt");
     const llmsContent = fs.readFileSync(llmsPath, "utf8");
     expect(llmsContent).toContain("# VIX General Services");
-    expect(llmsContent).toContain("(954) 330-9296");
+    expect(llmsContent).toContain("(978) 705-5562");
     expect(llmsContent).toContain("outdoor-lighting");
     expect(llmsContent).toContain("security-cameras");
 
