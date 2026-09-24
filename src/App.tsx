@@ -12,10 +12,13 @@ import { ServicesIndex } from "./pages/ServicesIndex";
 import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ThankYouPage } from "./pages/ThankYouPage";
+import { ReviewPage } from "./pages/ReviewPage";
+import { DiscountPage } from "./pages/DiscountPage";
 import { TermsPage } from "./pages/TermsPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { getLegalHost } from "./lib/legalHosts";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { ChatWidgetLoader } from "./components/ChatWidgetLoader";
 import { SectionTransitions } from "./components/SectionTransitions";
 
 import { ErrorBoundary } from "./components/ErrorBoundary";
@@ -34,6 +37,7 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
+            <ChatWidgetLoader />
             <Routes>
               {legalHost && (
                 <Route
@@ -49,6 +53,8 @@ const App = () => (
               <Route path="/service-areas" element={<ServiceAreasIndex />} />
               <Route path="/service-areas/:slug" element={<ServiceAreaPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/review" element={<ReviewPage />} />
+              <Route path="/get-your-discount" element={<DiscountPage />} />
               <Route path="/estimate" element={<ContactPage />} />
               <Route path="/quote" element={<ContactPage />} />
               <Route path="/free-estimate" element={<ContactPage />} />

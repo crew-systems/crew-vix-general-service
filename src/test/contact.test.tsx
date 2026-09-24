@@ -8,6 +8,7 @@ import { GHLFormEmbed, isFormSubmittedMessage } from "../components/GHLFormEmbed
 import { EstimateModal } from "../components/EstimateModal";
 import { ServicesSection } from "../components/ServicesSection";
 import { ThankYouPage } from "../pages/ThankYouPage";
+import { DiscountPage } from "../pages/DiscountPage";
 
 describe("Contact and Form Embed Tests", () => {
   beforeAll(() => {
@@ -76,7 +77,33 @@ describe("Contact and Form Embed Tests", () => {
     unmount();
   });
 
-  it("renders ContactPage with form and triggers scroll on CTA click", () => {
+  it("renders the supplied discount embed and hides the chat widget", () => {
+    const chat = document.createElement("div");
+    chat.id = "lc-chat-widget";
+    document.body.appendChild(chat);
+
+    const { container, unmount } = render(
+      <HelmetProvider>
+        <BrowserRouter>
+          <DiscountPage />
+        </BrowserRouter>
+      </HelmetProvider>,
+    );
+    const iframe = container.querySelector('iframe[data-form-id="T42tLOEScaBPGs3uHtht"]');
+    expect(iframe?.getAttribute("src")).toBe("https://api.leadconnectorhq.com/widget/form/T42tLOEScaBPGs3uHtht");
+    expect(iframe?.getAttribute("id")).toBe("inline-T42tLOEScaBPGs3uHtht");
+    expect(iframe?.getAttribute("data-layout-iframe-id")).toBe("inline-T42tLOEScaBPGs3uHtht");
+    expect(iframe?.getAttribute("data-height")).toBe("605");
+    expect(iframe?.getAttribute("title")).toBe("Discount Form ");
+    expect(container.querySelector("header, footer")).toBeNull();
+    expect(chat.style.display).toBe("none");
+
+    unmount();
+    expect(chat.style.display).toBe("");
+    chat.remove();
+  });
+
+  it("renders ContactPage with the shared form, service map, and scroll CTA", () => {
     const { container, getByText } = render(
       <HelmetProvider>
         <BrowserRouter>
@@ -84,8 +111,10 @@ describe("Contact and Form Embed Tests", () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(container.textContent).toContain("Get Your Free Estimate");
-    expect(container.querySelector("iframe")).not.toBeNull();
+    expect(container.textContent).toContain("Get Your Free Quote");
+    expect(container.querySelector('iframe[data-form-id="xCsxxTefyGz05iGmy5el"]')).not.toBeNull();
+    expect(container.querySelector('iframe[src^="https://www.openstreetmap.org/"]')).not.toBeNull();
+    expect(container.querySelector('a[href="/service-areas"]')).not.toBeNull();
 
     // Verify contact form card is present with scroll anchor
     const formCard = container.querySelector("#contact-form-card");
@@ -140,7 +169,7 @@ describe("Contact and Form Embed Tests", () => {
     expect(container.textContent).toContain("Explore Every Service");
   });
 
-  it("renders ThankYouPage with confirmation message, next steps, and direct contact", () => {
+  it("renders standalone ThankYouPage with confirmation and homepage link", () => {
     const { container } = render(
       <HelmetProvider>
         <BrowserRouter>
@@ -149,11 +178,9 @@ describe("Contact and Form Embed Tests", () => {
       </HelmetProvider>
     );
     expect(container.textContent).toContain("Thank You! We Received Your Request");
-    expect(container.textContent).toContain("Your answers have been successfully submitted");
     expect(container.textContent).toContain("will contact you within a few minutes from +1 978-705-5562");
-    expect(container.textContent).not.toContain("Top Rated in FL");
-    expect(container.textContent).toContain("What Happens Next?");
-    expect(container.textContent).toContain("+1 978-705-5562");
-    expect(container.querySelector('a[href^="tel:"]')).not.toBeNull();
+    expect(container.textContent).toContain("Your message has been received");
+    expect(container.querySelector('a[href="/"]')).not.toBeNull();
+    expect(container.querySelector("header, footer")).toBeNull();
   });
 });

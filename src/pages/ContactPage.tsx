@@ -1,229 +1,88 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  ShieldCheck,
-  Award,
-  Sparkles,
-  CheckCircle2,
-} from "lucide-react";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import { SEOHead } from "../components/SEOHead";
-import { GHLFormEmbed } from "../components/GHLFormEmbed";
-import { COMPANY_INFO, SERVICE_AREAS } from "../data/landscapingData";
-import { SERVICES } from "../data/servicesData";
+import { CheckCircle2, ShieldCheck, Timer, MapPin, ArrowRight } from "lucide-react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
+import { GHLFormEmbed } from "@/components/GHLFormEmbed";
+import { useStandaloneFormPage } from "@/hooks/useStandaloneFormPage";
 
-export const ContactPage: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+const trustPoints = [
+  { label: "Free estimates", Icon: CheckCircle2 },
+  { label: "Licensed & insured", Icon: ShieldCheck },
+  { label: "Fast response", Icon: Timer },
+];
 
-  const handleScrollToForm = () => {
-    const el = document.getElementById("contact-form-card");
-    if (el) {
-      if (typeof el.scrollIntoView === "function") {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        window.scrollTo(0, el.offsetTop || 0);
-      }
-    }
-  };
+export function ContactPage() {
+  useStandaloneFormPage(false);
+  useEffect(() => window.scrollTo(0, 0), []);
 
-  const contactSchema = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    name: "Contact & Free Estimate | VIX General Services",
-    description:
-      "Get a free estimate from VIX General Services for construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across five New England states.",
-    url: "https://www.vixgeneralservices.com/contact",
-    mainEntity: {
-      "@type": "HomeAndConstructionBusiness",
-      name: COMPANY_INFO.name,
-      legalName: COMPANY_INFO.legalName,
-      founder: {
-        "@type": "Person",
-        name: COMPANY_INFO.ownerName,
-      },
-      telephone: COMPANY_INFO.phone,
-      email: COMPANY_INFO.email,
-      areaServed: SERVICE_AREAS.map((a) => a.city),
-    },
+  const scrollToForm = () => {
+    document.getElementById("contact-form-card")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F6F8] text-[#00153F] font-sans antialiased">
+    <div className="min-h-screen bg-background text-foreground">
       <SEOHead
-        title="Get a Free Estimate | VIX General Services | New England"
-        description="Request a free estimate for construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
+        title="Get Your Free Quote | VIX General Services"
+        description="Tell VIX General Services about your project and request a free quote for work across New England."
         canonical="/contact"
-        schemaJson={contactSchema}
       />
-
-      <Header onOpenEstimate={handleScrollToForm} />
-
-      <main className="pt-24 sm:pt-28 pb-16">
-        {/* Banner */}
-        <section className="vix-navy-gradient text-white py-12 sm:py-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/30 pointer-events-none" />
-          <div className="container mx-auto gutter-x relative z-10 text-center max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#C99A55]/20 border border-[#C99A55]/40 text-[#C99A55] text-xs font-bold uppercase tracking-wider mb-4">
-              <Sparkles className="w-3.5 h-3.5" /> Free &amp; No Obligation
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#EDE4D6] tracking-tight mb-4">
-              Get Your Free Estimate
+      <Header onOpenEstimate={scrollToForm} />
+      <main className="px-4 pb-16 pt-28 sm:px-6 sm:pt-32">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-5 text-center sm:mb-7">
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-accent">VIX General Services</p>
+            <h1 className="font-heading text-3xl font-extrabold tracking-tight sm:text-5xl">
+              Get Your Free Quote
             </h1>
-            <p className="text-base sm:text-lg text-[#EDE4D6]/85 max-w-xl mx-auto leading-relaxed">
-              Tell us what you are building, remodeling, or upgrading. Our team
-              will review the scope and contact you with clear next steps and a
-              transparent, custom estimate.
+            <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground sm:text-base">
+              Tell us a little about your project and we'll get back to you shortly.
             </p>
           </div>
-        </section>
 
-        {/* Main Content: Form + Contact Info */}
-        <div className="container mx-auto gutter-x mt-10 sm:mt-14">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            {/* Left Column: Official GoHighLevel Form Embed */}
-            <div
-              id="contact-form-card"
-              className="lg:col-span-7 xl:col-span-8 bg-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#00153F]/10 scroll-mt-28"
-            >
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#00153F]/10">
-                <div>
-                  <h2 className="text-2xl font-heading font-bold text-[#00153F]">
-                    Project Request Form
-                  </h2>
-                  <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">
-                    Fill out the form below and our team will get back to you within 24 hours.
-                  </p>
-                </div>
-                <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  Instant Intake
-                </span>
+          <div id="contact-form-card" className="scroll-mt-28 rounded-2xl border border-border bg-card p-3 shadow-crisp sm:p-7">
+            <GHLFormEmbed instanceId="contact-page" minHeight={625} />
+          </div>
+
+          <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3" aria-label="Why contact VIX">
+            {trustPoints.map(({ label, Icon }) => (
+              <div key={label} className="flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-3 text-sm font-semibold">
+                <Icon className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                {label}
               </div>
+            ))}
+          </div>
 
-              {/* Embedded GoHighLevel Form */}
-              <GHLFormEmbed instanceId="contact-page" minHeight={625} />
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-crisp">
+            <div className="relative">
+              <iframe
+                title="Map of the New England service area"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-73.7%2C41.1%2C-69.4%2C45.4&layer=mapnik"
+                className="h-56 w-full border-0 sm:h-72"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-3 py-1.5 text-xs font-bold shadow-crisp">
+                <MapPin className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+                Serving New England
+              </span>
             </div>
-
-            {/* Right Column: Direct Contact Details & Trust Badges */}
-            <div className="lg:col-span-5 xl:col-span-4 space-y-6">
-              {/* Direct Contact Card */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#00153F]/10">
-                <h3 className="text-xl font-heading font-bold text-[#00153F] mb-4">
-                  Direct Contact
-                </h3>
-
-                <div className="space-y-4">
-                  <a
-                    href={`tel:${COMPANY_INFO.phone}`}
-                    className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F5F6F8] hover:bg-[#F0EDE6] transition-colors group"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-[#C99A55]/15 text-[#C99A55] flex items-center justify-center shrink-0 border border-[#C99A55]/30 group-hover:bg-[#C99A55] group-hover:text-white transition-colors">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="block text-xs uppercase font-semibold text-muted-foreground">
-                        Phone (Call or Text)
-                      </span>
-                      <span className="text-base font-bold text-[#00153F] group-hover:text-[#C99A55] transition-colors">
-                        {COMPANY_INFO.phone}
-                      </span>
-                    </div>
-                  </a>
-
-                  <a
-                    href={`mailto:${COMPANY_INFO.email}`}
-                    className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F5F6F8] hover:bg-[#F0EDE6] transition-colors group"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-[#C99A55]/15 text-[#C99A55] flex items-center justify-center shrink-0 border border-[#C99A55]/30 group-hover:bg-[#C99A55] group-hover:text-white transition-colors">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="block text-xs uppercase font-semibold text-muted-foreground">
-                        Email Us
-                      </span>
-                      <span className="text-sm font-bold text-[#00153F] group-hover:text-[#C99A55] transition-colors break-all">
-                        {COMPANY_INFO.email}
-                      </span>
-                    </div>
-                  </a>
-
-                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F5F6F8]">
-                    <div className="w-10 h-10 rounded-lg bg-[#C99A55]/15 text-[#C99A55] flex items-center justify-center shrink-0 border border-[#C99A55]/30">
-                      <Clock className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="block text-xs uppercase font-semibold text-muted-foreground">
-                        Hours of Operation
-                      </span>
-                      <span className="text-xs font-semibold text-[#00153F] block">
-                        Mon – Fri: 8:00 AM – 6:00 PM
-                      </span>
-                      <span className="text-xs text-muted-foreground block">
-                        Sat: 9:00 AM – 4:00 PM | Sun: Closed
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F5F6F8]">
-                    <div className="w-10 h-10 rounded-lg bg-[#C99A55]/15 text-[#C99A55] flex items-center justify-center shrink-0 border border-[#C99A55]/30">
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="block text-xs uppercase font-semibold text-muted-foreground">
-                        Service Coverage
-                      </span>
-                      <span className="text-xs font-semibold text-[#00153F] block">
-                        Five-State New England Coverage
-                      </span>
-                      <span className="text-xs text-muted-foreground block">
-                        Massachusetts, Maine, New Hampshire, Rhode Island, and
-                        Vermont
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Guarantees Card */}
-              <div className="vix-navy-gradient-panel text-white rounded-2xl p-6 sm:p-8 shadow-crisp border border-[#C99A55]/25">
-                <h3 className="text-lg font-heading font-bold text-[#EDE4D6] mb-4 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#C99A55]" />
-                  The VIX Commitment
-                </h3>
-                <ul className="space-y-3 text-sm text-[#EDE4D6]/85">
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#C99A55] shrink-0" />
-                    <span>100% Free Consultation &amp; Upfront Pricing</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#C99A55] shrink-0" />
-                    <span>Licensed, Insured &amp; Experienced Specialists</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#C99A55] shrink-0" />
-                    <span>Clean Job Sites &amp; Workmanship Guarantee</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#C99A55] shrink-0" />
-                    <span>Fast Response within 1 Business Day</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-4 text-sm sm:px-6">
+              <span className="text-muted-foreground">Based in Massachusetts · Serving five New England states</span>
+              <Link to="/service-areas" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
+                View all service areas <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </div>
       </main>
-
-      <Footer onOpenEstimate={handleScrollToForm} />
+      <Footer onOpenEstimate={scrollToForm} />
     </div>
   );
-};
+}
 
 export default ContactPage;
