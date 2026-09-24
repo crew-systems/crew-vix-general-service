@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const CHAT_SELECTOR =
-  '#lc-chat-widget, .lc-chat-widget, [id*="chat-widget"], [class*="lc-chat"], [data-widget-id]';
+  'chat-widget, #lc-chat-widget, .lc-chat-widget, [id*="chat-widget"], [class*="lc-chat"], [data-widget-id]';
 const EMBED_SCRIPT_ID = "ghl-form-embed-script";
 
 /** Keep SMS landing pages focused on their single embedded form. */

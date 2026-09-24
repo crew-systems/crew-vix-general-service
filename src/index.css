@@ -444,6 +444,16 @@ section[data-section-blend="true"]::after {
 }
 
 /* Hide LeadConnector / GHL chat widget when estimate modal is open on mobile */
+body.chat-suppressed chat-widget,
+body.chat-suppressed #lc-chat-widget,
+body.chat-suppressed .lc-chat-widget,
+body.chat-suppressed [id*="chat-widget"],
+body.chat-suppressed [class*="lc-chat"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 @media (max-width: 768px) {
   body.modal-open #lc-chat-widget,
   body.modal-open .lc-chat-widget,

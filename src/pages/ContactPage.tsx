@@ -31,7 +31,7 @@ export function ContactPage() {
         description="Tell VIX General Services about your project and request a free quote for work across New England."
         canonical="/contact"
       />
-      <Header onOpenEstimate={scrollToForm} />
+      <Header onOpenEstimate={scrollToForm} solid />
       <main className="px-4 pb-16 pt-28 sm:px-6 sm:pt-32">
         <div className="mx-auto max-w-3xl">
           <div className="mb-5 text-center sm:mb-7">

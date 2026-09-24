@@ -81,6 +81,9 @@ describe("Contact and Form Embed Tests", () => {
     const chat = document.createElement("div");
     chat.id = "lc-chat-widget";
     document.body.appendChild(chat);
+    const chatHost = document.createElement("chat-widget");
+    chatHost.id = "ghl-chat-loader";
+    document.body.appendChild(chatHost);
 
     const { container, unmount } = render(
       <HelmetProvider>
@@ -97,10 +100,13 @@ describe("Contact and Form Embed Tests", () => {
     expect(iframe?.getAttribute("title")).toBe("Discount Form ");
     expect(container.querySelector("header, footer")).toBeNull();
     expect(chat.style.display).toBe("none");
+    expect(chatHost.style.display).toBe("none");
 
     unmount();
     expect(chat.style.display).toBe("");
+    expect(chatHost.style.display).toBe("");
     chat.remove();
+    chatHost.remove();
   });
 
   it("renders ContactPage with the shared form, service map, and scroll CTA", () => {
@@ -119,6 +125,7 @@ describe("Contact and Form Embed Tests", () => {
     // Verify contact form card is present with scroll anchor
     const formCard = container.querySelector("#contact-form-card");
     expect(formCard).not.toBeNull();
+    expect(container.querySelector("header")?.classList.contains("vix-header-active")).toBe(true);
 
     // Test clicking Free Estimate CTA in Header
     const freeEstimateBtn = getByText("Free Estimate");

@@ -7,9 +7,10 @@ import { Logo } from "./Logo";
 
 interface HeaderProps {
   onOpenEstimate: () => void;
+  solid?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
+export const Header: React.FC<HeaderProps> = ({ onOpenEstimate, solid = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -71,7 +72,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimate }) => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 vix-header-shell py-2.5 lg:py-4 text-white site-header border-b ${
-        isScrolled || isMobileMenuOpen
+        solid || isScrolled || isMobileMenuOpen
           ? "vix-header-active border-[#C99A55]/25"
           : "border-transparent"
       }`}
