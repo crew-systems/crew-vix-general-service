@@ -25,7 +25,7 @@ const HERO_MEDIA_CLASS =
 
 export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoPoster] = useState(() =>
+  const [videoPoster, setVideoPoster] = useState(() =>
     window.matchMedia(DESKTOP_MEDIA_QUERY).matches
       ? HERO_MEDIA.desktopPoster
       : HERO_MEDIA.mobilePoster,
@@ -61,7 +61,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
     window.addEventListener("click", play);
     document.addEventListener("visibilitychange", play);
 
+    // Browsers pick a <source> only once. A page opened in a narrow or portrait
+    // window kept the square mobile crop after widening, stretched and zoomed.
+    const desktopQuery = window.matchMedia(DESKTOP_MEDIA_QUERY);
+    let isDesktop = desktopQuery.matches;
+    const handleBreakpoint = () => {
+      if (desktopQuery.matches === isDesktop) return;
+      isDesktop = desktopQuery.matches;
+      setVideoPoster(isDesktop ? HERO_MEDIA.desktopPoster : HERO_MEDIA.mobilePoster);
+      video.load(); // re-runs source selection against the current viewport
+      play();
+    };
+    desktopQuery.addEventListener("change", handleBreakpoint);
+    window.addEventListener("resize", handleBreakpoint);
+
     return () => {
+      desktopQuery.removeEventListener("change", handleBreakpoint);
+      window.removeEventListener("resize", handleBreakpoint);
       video.removeEventListener("playing", handlePlaying);
       video.removeEventListener("pause", play);
       window.removeEventListener("touchend", play);

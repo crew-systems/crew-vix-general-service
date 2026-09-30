@@ -11,7 +11,9 @@ import { SITE_URL } from "@/config/site";
 export function AboutPage() {
   const navigate = useNavigate();
   const openEstimate = () => navigate("/contact");
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const description = `${COMPANY_INFO.name} delivers end-to-end residential and commercial construction, remodeling, building systems, and smart-energy solutions across ${COMPANY_INFO.location}.`;
 
