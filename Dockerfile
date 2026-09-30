@@ -15,13 +15,28 @@ COPY . .
 # Build production assets into /app/dist
 RUN npm run build
 
+# Prerender: open every sitemap route (+ utility routes) in Chromium and save
+# the rendered HTML as dist/<route>/index.html, so crawlers get real content.
+FROM node:20-bookworm-slim AS prerender
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends chromium fonts-liberation \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /prerender
+COPY prerender/package.json ./
+RUN npm install --omit=dev
+COPY prerender/prerender.mjs ./
+COPY --from=builder /app/dist /app/dist
+RUN CHROME_PATH=/usr/bin/chromium node prerender.mjs /app/dist
+
 # Production server using lightweight Caddy
 FROM caddy:2-alpine
 
 WORKDIR /app
 
-# Copy compiled production assets
-COPY --from=builder /app/dist /app/dist
+# Copy compiled + prerendered production assets
+COPY --from=prerender /app/dist /app/dist
 
 # Copy Caddyfile
 COPY Caddyfile /etc/caddy/Caddyfile

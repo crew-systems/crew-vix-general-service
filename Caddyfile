@@ -8,6 +8,12 @@
     root * /app/dist
     encode zstd gzip
 
+    # Canonical URLs have no trailing slash: /page/ -> /page
+    @trailing path_regexp trailing ^(.+)/$
+    redir @trailing {re.trailing.1} 301
+
+    redir /privacy /privacy-policy 301
+
     # Hashed static assets - cache forever, never fallback to index.html
     @assets path /assets/*
     handle @assets {
@@ -40,10 +46,20 @@
         file_server
     }
 
-    # SPA Fallback for client-side routes (/services, /thank-you, etc.)
+    # Prerendered pages (/route -> /route/index.html). Routes that were not
+    # prerendered are real 404s (see handle_errors), not a soft 404.
     handle {
         header Cache-Control "no-store, no-cache, must-revalidate"
-        try_files {path} /index.html
+        try_files {path} {path}/index.html
         file_server
+    }
+
+    # Not found: prerendered 404 page (noindex) with HTTP status 404
+    handle_errors 404 {
+        header Cache-Control "no-store, no-cache, must-revalidate"
+        rewrite * /404.html
+        file_server {
+            status 404
+        }
     }
 }
