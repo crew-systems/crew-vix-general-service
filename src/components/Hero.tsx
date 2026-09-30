@@ -92,14 +92,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimate }) => {
       className="hero-section relative flex items-center overflow-hidden bg-[#00153F]"
     >
       {/* The poster (preloaded from index.html) paints right away instead of
-          an empty navy block while the video downloads. */}
+          an empty navy block while the video downloads. <picture> picks it in
+          plain HTML, so the prerendered page (rendered at desktop width) still
+          shows the mobile poster on phones before any JavaScript runs. */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={videoPoster}
-          alt=""
-          aria-hidden="true"
-          className={HERO_MEDIA_CLASS}
-        />
+        <picture>
+          <source media={DESKTOP_MEDIA_QUERY} srcSet={HERO_MEDIA.desktopPoster} />
+          <img
+            src={HERO_MEDIA.mobilePoster}
+            alt=""
+            aria-hidden="true"
+            fetchPriority="high"
+            decoding="async"
+            className={HERO_MEDIA_CLASS}
+          />
+        </picture>
         <video
           ref={videoRef}
           className={`hero-video ${HERO_MEDIA_CLASS} ${

@@ -9,7 +9,7 @@ const stages = [
     title: "PLAN & FOUNDATION",
     description:
       "Scope, constructability, site conditions, foundation work, and the pathways every building system will need later.",
-    image: "/images/concepts/end-to-end-construction-hero.jpg",
+    image: "/images/concepts/end-to-end-construction-hero.webp",
   },
   {
     step: "02",
@@ -17,7 +17,7 @@ const stages = [
     title: "STRUCTURE & ROUGH-IN",
     description:
       "Framing, electrical, plumbing, HVAC, low-voltage, and future-ready infrastructure coordinated before close-in.",
-    image: "/images/projects/orga-new-construction-rough-in.jpg",
+    image: "/images/projects/orga-new-construction-rough-in.webp",
   },
   {
     step: "03",
@@ -25,7 +25,7 @@ const stages = [
     title: "INTERIORS & FINISHES",
     description:
       "Kitchens, bathrooms, living areas, trim, lighting, surfaces, and the details that make the property feel complete.",
-    image: "/images/projects/jack-cove-lighting-upgrade.jpg",
+    image: "/images/projects/jack-cove-lighting-upgrade.webp",
   },
   {
     step: "04",
@@ -33,7 +33,7 @@ const stages = [
     title: "SMART & ENERGY READY",
     description:
       "Solar, EV charging, automation, efficient equipment, security, and connected controls designed as one system.",
-    image: "/images/projects/commercial-solar-energy-upgrade.jpg",
+    image: "/images/projects/commercial-solar-energy-upgrade.webp",
   },
 ];
 

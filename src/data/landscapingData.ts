@@ -1,27 +1,27 @@
 import { SITE_URL } from "../config/site";
 
 export const IMAGES = {
-  hero: "/images/concepts/end-to-end-construction-hero.jpg",
+  hero: "/images/concepts/end-to-end-construction-hero.webp",
   ogMeta:
-    `${SITE_URL}/images/concepts/end-to-end-construction-hero.jpg`,
+    `${SITE_URL}/images/concepts/end-to-end-construction-hero.webp`,
   before:
-    "/images/projects/orga-new-construction-rough-in.jpg",
+    "/images/projects/orga-new-construction-rough-in.webp",
   after:
-    "/images/projects/orga-finished-electrical-panel.jpg",
+    "/images/projects/orga-finished-electrical-panel.webp",
   finalCta:
-    "https://vibe.filesafe.space/1787931819686809992/assets/778aec5c-f1c3-4aa5-abb7-6c6197bd4b57.png",
+    "/images/site/final-cta.webp",
 
   services: {
-    generalConstruction: "/images/concepts/end-to-end-construction-hero.jpg",
-    remodeling: "/images/projects/jack-cove-lighting-upgrade.jpg",
-    plumbing: "/images/concepts/plumbing-systems-hero.jpg",
-    hvac: "https://vibe.filesafe.space/1787931819686809992/attachments/7beafb86-6a23-494f-be2f-e9a9e60d743b.png",
+    generalConstruction: "/images/concepts/end-to-end-construction-hero.webp",
+    remodeling: "/images/projects/jack-cove-lighting-upgrade.webp",
+    plumbing: "/images/concepts/plumbing-systems-hero.webp",
+    hvac: "/images/site/service-hvac.webp",
     electrical:
-      "https://vibe.filesafe.space/1787931819686809992/attachments/0e98246b-2ec9-4201-a4f6-37b16b62e534.png",
+      "/images/site/service-electrical.webp",
     solar:
-      "https://vibe.filesafe.space/1787931819686809992/attachments/a4ee8ea8-c755-4fb8-ac08-0e96c7c4a372.png",
+      "/images/site/service-solar.webp",
     evCharging:
-      "https://vibe.filesafe.space/1787931819686809992/attachments/20d8b716-5308-409a-88ce-d2e6584009a1.png",
+      "/images/site/service-ev-charging.webp",
     outdoorLighting:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
     securityCameras:
@@ -32,98 +32,98 @@ export const IMAGES = {
 
   gallery: [
     {
-      url: "/images/projects/joana-mini-split-replacement.jpg",
+      url: "/images/projects/joana-mini-split-replacement.webp",
       title: "Ductless Mini-Split Replacement",
       category: "HVAC",
     },
     {
-      url: "/images/projects/newton-air-handler-installation.jpg",
+      url: "/images/projects/newton-air-handler-installation.webp",
       title: "High-Efficiency Air Handler Installation",
       category: "HVAC",
     },
     {
-      url: "/images/projects/saugus-furnace-ductwork-replacement.jpg",
+      url: "/images/projects/saugus-furnace-ductwork-replacement.webp",
       title: "Furnace & Ductwork Replacement",
       category: "HVAC",
     },
     {
-      url: "/images/projects/saugus-heat-pump-replacement.jpg",
+      url: "/images/projects/saugus-heat-pump-replacement.webp",
       title: "Outdoor Heat Pump Replacement",
       category: "HVAC",
     },
     {
-      url: "/images/projects/exterior-electrical-service-upgrade.jpg",
+      url: "/images/projects/exterior-electrical-service-upgrade.webp",
       title: "Exterior Electrical Service & Meter Upgrade",
       category: "ELECTRICAL",
     },
     {
-      url: "/images/projects/residential-panel-replacement.jpg",
+      url: "/images/projects/residential-panel-replacement.webp",
       title: "Residential Electrical Panel Replacement",
       category: "ELECTRICAL",
     },
     {
-      url: "/images/projects/orga-new-construction-rough-in.jpg",
+      url: "/images/projects/orga-new-construction-rough-in.webp",
       title: "New Construction Framing & Systems Rough-In",
       category: "CONSTRUCTION",
     },
     {
-      url: "/images/projects/orga-interior-panel-installation.jpg",
+      url: "/images/projects/orga-interior-panel-installation.webp",
       title: "Finished Interior Build-Out & Electrical Integration",
       category: "INTERIORS",
     },
     {
-      url: "/images/projects/orga-finished-electrical-panel.jpg",
+      url: "/images/projects/orga-finished-electrical-panel.webp",
       title: "Complete Interior Fit-Out & Systems Finish",
       category: "INTERIORS",
     },
     {
-      url: "/images/projects/jack-cove-lighting-upgrade.jpg",
+      url: "/images/projects/jack-cove-lighting-upgrade.webp",
       title: "Living Room Remodel & Integrated Cove Lighting",
       category: "INTERIORS",
     },
     {
-      url: "/images/projects/jhonny-media-wall-lighting.jpg",
+      url: "/images/projects/jhonny-media-wall-lighting.webp",
       title: "Custom Media Wall & Integrated Lighting",
       category: "LIGHTING",
     },
     {
-      url: "/images/projects/joseph-garage-ev-charger.jpg",
+      url: "/images/projects/joseph-garage-ev-charger.webp",
       title: "Garage EV Charger Installation",
       category: "EV CHARGING",
     },
     {
-      url: "/images/projects/joseph-exterior-ev-charger.jpg",
+      url: "/images/projects/joseph-exterior-ev-charger.webp",
       title: "Exterior EV Charger Installation",
       category: "EV CHARGING",
     },
     {
-      url: "/images/projects/joseph-commercial-ev-charging.jpg",
+      url: "/images/projects/joseph-commercial-ev-charging.webp",
       title: "Commercial EV Charging Station Installation",
       category: "EV CHARGING",
     },
     {
-      url: "/images/projects/peny-whole-home-electrification.jpg",
+      url: "/images/projects/peny-whole-home-electrification.webp",
       title: "Whole-Home Energy Efficiency & Electrification",
       category: "ENERGY EFFICIENCY",
     },
     {
-      url: "/images/projects/commercial-energy-site-assessment.jpg",
+      url: "/images/projects/commercial-energy-site-assessment.webp",
       title: "Commercial Energy Site Assessment",
       category: "COMMERCIAL ENERGY",
     },
     {
-      url: "/images/projects/commercial-power-distribution-installation.jpg",
+      url: "/images/projects/commercial-power-distribution-installation.webp",
       title: "Commercial Power Distribution Installation",
       category: "COMMERCIAL ENERGY",
     },
     {
-      url: "/images/projects/commercial-solar-energy-upgrade.jpg",
+      url: "/images/projects/commercial-solar-energy-upgrade.webp",
       title: "Commercial Solar & Energy Infrastructure Upgrade",
       category: "COMMERCIAL ENERGY",
     },
   ],
 
-  team: "https://vibe.filesafe.space/1787931819686809992/assets/bc154887-f728-4e55-90d3-ebaf87cd526b.png",
+  team: "/images/site/team.webp",
 };
 
 export const SERVICE_AREAS = [

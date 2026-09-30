@@ -4,6 +4,8 @@ interface GHLFormEmbedProps {
   className?: string;
   minHeight?: number | string;
   instanceId?: string;
+  /** Below-the-fold placements: wait until the visitor scrolls near the form. */
+  lazy?: boolean;
 }
 
 const GHL_FORM_ID = "xCsxxTefyGz05iGmy5el";
@@ -61,14 +63,38 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
   className = "",
   minHeight = 625,
   instanceId = "main",
+  lazy = false,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  // The form (and the Cloudflare challenge it pulls in) is heavy: a lazy form
+  // loads once the visitor scrolls near it. Without IntersectionObserver, now.
+  const [isNear, setIsNear] = useState(
+    () => !lazy || typeof IntersectionObserver === "undefined",
+  );
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const iframeId = instanceId
     ? `inline-${GHL_FORM_ID}-${instanceId}`
     : `inline-${GHL_FORM_ID}`;
 
   useEffect(() => {
+    if (isNear || !wrapperRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setIsNear(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "800px 0px" },
+    );
+    observer.observe(wrapperRef.current);
+    return () => observer.disconnect();
+  }, [isNear]);
+
+  useEffect(() => {
+    if (!isNear) return;
+
     // Check if GoHighLevel form embed script already exists
     const existingScript =
       document.getElementById("ghl-form-embed-script") ||
@@ -116,10 +142,16 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
       clearTimeout(timer);
       window.removeEventListener("message", handleMessage);
     };
-  }, []);
+  }, [isNear]);
 
   return (
-    <div className={`relative w-full rounded-xl overflow-hidden ${className}`}>
+    <div
+      ref={wrapperRef}
+      className={`relative w-full rounded-xl overflow-hidden ${className}`}
+      style={{
+        minHeight: typeof minHeight === "number" ? `${minHeight}px` : minHeight,
+      }}
+    >
       {/* Loading state skeleton */}
       {!isLoaded && (
         <div className="absolute inset-0 z-0 flex flex-col items-center justify-center p-8 bg-white/80 backdrop-blur-sm rounded-xl min-h-[360px]">
@@ -130,33 +162,36 @@ export const GHLFormEmbed: React.FC<GHLFormEmbedProps> = ({
         </div>
       )}
 
-      <iframe
-        ref={iframeRef}
-        src={`https://api.leadconnectorhq.com/widget/form/${GHL_FORM_ID}`}
-        style={{
-          width: "100%",
-          height: "100%",
-          minHeight: typeof minHeight === "number" ? `${minHeight}px` : minHeight,
-          border: "none",
-          borderRadius: "10px",
-        }}
-        id={iframeId}
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Website Form"
-        data-height={typeof minHeight === "number" ? `${minHeight}` : "625"}
-        data-layout-iframe-id={iframeId}
-        data-form-id={GHL_FORM_ID}
-        data-cookie-consent="true"
-        data-cookie-consent-provider="auto"
-        title="Website Form"
-        onLoad={() => setIsLoaded(true)}
-      />
+      {isNear && (
+        <iframe
+          ref={iframeRef}
+          src={`https://api.leadconnectorhq.com/widget/form/${GHL_FORM_ID}`}
+          style={{
+            width: "100%",
+            height: "100%",
+            minHeight:
+              typeof minHeight === "number" ? `${minHeight}px` : minHeight,
+            border: "none",
+            borderRadius: "10px",
+          }}
+          id={iframeId}
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Website Form"
+          data-height={typeof minHeight === "number" ? `${minHeight}` : "625"}
+          data-layout-iframe-id={iframeId}
+          data-form-id={GHL_FORM_ID}
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
+          title="Website Form"
+          onLoad={() => setIsLoaded(true)}
+        />
+      )}
     </div>
   );
 };

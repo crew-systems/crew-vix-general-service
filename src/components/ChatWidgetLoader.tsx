@@ -19,13 +19,22 @@ export function ChatWidgetLoader() {
   useEffect(() => {
     if (chatless || document.getElementById(CHAT_SCRIPT_ID)) return;
 
-    const script = document.createElement("script");
-    script.id = CHAT_SCRIPT_ID;
-    script.src = "https://widgets.leadconnectorhq.com/loader.js";
-    script.dataset.resourcesUrl = "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
-    script.dataset.widgetId = "6aa306f0526fc17e70aa882c";
-    script.defer = true;
-    document.body.appendChild(script);
+    // The widget is heavy third-party JS: load it on the visitor's first
+    // interaction, not on page load, so it never delays the first paint.
+    const events = ["pointerdown", "keydown", "scroll", "touchstart"] as const;
+    const load = () => {
+      events.forEach((e) => window.removeEventListener(e, load));
+      if (document.getElementById(CHAT_SCRIPT_ID)) return;
+      const script = document.createElement("script");
+      script.id = CHAT_SCRIPT_ID;
+      script.src = "https://widgets.leadconnectorhq.com/loader.js";
+      script.dataset.resourcesUrl = "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
+      script.dataset.widgetId = "6aa306f0526fc17e70aa882c";
+      script.defer = true;
+      document.body.appendChild(script);
+    };
+    events.forEach((e) => window.addEventListener(e, load, { passive: true }));
+    return () => events.forEach((e) => window.removeEventListener(e, load));
   }, [chatless]);
 
   return null;

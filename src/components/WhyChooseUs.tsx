@@ -49,7 +49,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenEstimate }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-lg overflow-hidden shadow-crisp-lg border-2 border-white">
               <img
-                src="https://vibe.filesafe.space/1787931819686809992/attachments/c38e5709-9625-4b12-ada0-cc93b51fec10.png"
+                src="/images/site/why-choose-us.webp"
                 loading="lazy"
                 decoding="async"
                 alt="VIX General Services technician team"

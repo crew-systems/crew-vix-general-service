@@ -189,7 +189,7 @@ describe("Project Gallery", () => {
     IMAGES.gallery.forEach((item) => {
       expect(item.title.length).toBeGreaterThan(10);
       expect(item.category).toBeTruthy();
-      expect(item.url).toMatch(/^\/images\/projects\/.+\.jpg$/);
+      expect(item.url).toMatch(/^\/images\/projects\/.+\.webp$/);
 
       const assetPath = path.resolve(__dirname, `../../public${item.url}`);
       expect(fs.existsSync(assetPath)).toBe(true);

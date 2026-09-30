@@ -56,7 +56,17 @@ describe("App Render Test", () => {
       "/videos/vix-hero-night-desktop.mp4",
       "/videos/vix-hero-night-mobile.mp4",
     ]);
-    expect(container.querySelector("#hero picture")).toBeNull();
+    // The poster <img> is picked by <picture> in plain HTML, so the prerendered
+    // page (rendered at desktop width) still paints the mobile poster on phones
+    // before any JavaScript runs. It is the LCP image: fetched at high priority.
+    const heroPoster = container.querySelector("#hero picture img");
+    expect(heroPoster).toHaveAttribute("src", "/videos/vix-hero-night-mobile-poster.jpg");
+    expect(heroPoster).toHaveAttribute("fetchpriority", "high");
+    expect(heroPoster).not.toHaveAttribute("loading", "lazy");
+    expect(container.querySelector("#hero picture source")).toHaveAttribute(
+      "srcset",
+      "/videos/vix-hero-night-desktop-poster.jpg",
+    );
 
     // The client asked to remove the rating strip and the reviews section.
     expect(container.querySelector("#hero")?.textContent).not.toMatch(

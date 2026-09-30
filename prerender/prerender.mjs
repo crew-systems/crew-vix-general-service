@@ -78,6 +78,16 @@ async function render(browser, origin, route) {
       if (!s.getAttribute("src").startsWith("/")) s.remove();
     });
     document.querySelectorAll("chat-widget, [id^='lc-chat'], [class*='lcw-']").forEach((el) => el.remove());
+    // Vídeo fica sem fonte no HTML estático: o React recria o <video> ao carregar e,
+    // com autoplay aqui, o celular baixava o vídeo duas vezes (e disputava banda com
+    // o CSS/JS). O pôster em <picture> continua pintando o hero antes do JS.
+    document.querySelectorAll("video").forEach((v) => {
+      v.removeAttribute("autoplay");
+      v.removeAttribute("poster");
+      v.removeAttribute("src");
+      v.setAttribute("preload", "none");
+      v.querySelectorAll("source").forEach((s) => s.remove());
+    });
     return "<!doctype html>\n" + document.documentElement.outerHTML;
   });
   await page.close();
