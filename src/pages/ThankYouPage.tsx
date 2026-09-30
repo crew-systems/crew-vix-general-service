@@ -13,7 +13,7 @@ export function ThankYouPage() {
       <SEOHead
         title="Thank You | VIX General Services"
         description="Your message has been received by VIX General Services."
-        canonical="/thank-you"
+        noIndex
       />
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col justify-center px-4 py-12 text-center sm:px-6">
         <Logo size="md" className="mx-auto mb-8" />

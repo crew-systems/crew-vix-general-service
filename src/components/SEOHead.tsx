@@ -1,17 +1,17 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { siteUrl } from "../config/site";
 
 export interface SEOHeadProps {
   title: string;
   description: string;
-  canonical: string;
+  /** Page path (e.g. "/services"). Omitted on noindex pages. */
+  canonical?: string;
   ogImage?: string;
   ogImageAlt?: string;
   noIndex?: boolean;
   schemaJson?: Record<string, unknown> | Record<string, unknown>[];
 }
-
-const SITE_BASE = "https://www.vixgeneralservices.com";
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
@@ -22,13 +22,12 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   noIndex = false,
   schemaJson,
 }) => {
-  const fullCanonical = canonical.startsWith("http")
-    ? canonical
-    : `${SITE_BASE}${canonical}`;
+  // Utility pages are noindex and must not declare a canonical URL.
+  const fullCanonical = !noIndex && canonical ? siteUrl(canonical) : undefined;
   const fullOgImage = ogImage?.startsWith("http")
     ? ogImage
     : ogImage
-      ? `${SITE_BASE}${ogImage}`
+      ? siteUrl(ogImage)
       : undefined;
 
   const schemas = Array.isArray(schemaJson)
@@ -41,8 +40,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={fullCanonical} />
-      {noIndex && <meta name="robots" content="noindex, nofollow" />}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
+      {noIndex && <meta name="robots" content="noindex, follow" />}
 
       {/* Open Graph */}
       <meta property="og:site_name" content="VIX General Services" />
@@ -50,7 +49,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={fullCanonical} />
+      {fullCanonical && <meta property="og:url" content={fullCanonical} />}
       {fullOgImage && <meta property="og:image" content={fullOgImage} />}
       {fullOgImage && <meta property="og:image:alt" content={ogImageAlt} />}
       {fullOgImage && <meta property="og:image:width" content="1200" />}

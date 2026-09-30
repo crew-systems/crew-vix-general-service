@@ -14,8 +14,9 @@ import { Footer } from "../components/Footer";
 import { EstimateModal } from "../components/EstimateModal";
 import { GHLFormEmbed } from "../components/GHLFormEmbed";
 import { SEOHead } from "../components/SEOHead";
+import { SITE_URL } from "../config/site";
+import { businessSchema, businessRef } from "../data/businessSchema";
 import { IMAGES, COMPANY_INFO } from "../data/landscapingData";
-import { SERVICES } from "../data/servicesData";
 
 const Index: React.FC = () => {
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
@@ -51,84 +52,17 @@ const Index: React.FC = () => {
     setIsEstimateModalOpen(false);
   };
 
+  const { "@context": _context, ...businessNode } = businessSchema;
   const homeSchema = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "HomeAndConstructionBusiness",
-        "@id": "https://www.vixgeneralservices.com/#organization",
-        name: COMPANY_INFO.name,
-        legalName: COMPANY_INFO.legalName,
-        founder: {
-          "@type": "Person",
-          name: COMPANY_INFO.ownerName,
-        },
-        description: COMPANY_INFO.tagline,
-        url: "https://www.vixgeneralservices.com/",
-        telephone: COMPANY_INFO.phone,
-        email: COMPANY_INFO.email,
-        image: IMAGES.ogMeta,
-        priceRange: "$$",
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            opens: "08:00",
-            closes: "18:00",
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: "Saturday",
-            opens: "09:00",
-            closes: "16:00",
-          },
-        ],
-        areaServed: [
-          {
-            "@type": "State",
-            name: "Massachusetts",
-          },
-          {
-            "@type": "State",
-            name: "Maine",
-          },
-          {
-            "@type": "State",
-            name: "New Hampshire",
-          },
-          {
-            "@type": "State",
-            name: "Rhode Island",
-          },
-          {
-            "@type": "State",
-            name: "Vermont",
-          },
-        ],
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "VIX General Contracting Services",
-          itemListElement: SERVICES.map((s, idx) => ({
-            "@type": "Offer",
-            position: idx + 1,
-            itemOffered: {
-              "@type": "Service",
-              name: s.name,
-              url: `https://www.vixgeneralservices.com/services/${s.slug}`,
-              description: s.shortDesc,
-            },
-          })),
-        },
-      },
+      businessNode,
       {
         "@type": "WebSite",
-        "@id": "https://www.vixgeneralservices.com/#website",
-        url: "https://www.vixgeneralservices.com/",
-        name: "VIX General Services",
-        description: COMPANY_INFO.tagline,
-        publisher: {
-          "@id": "https://www.vixgeneralservices.com/#organization",
-        },
+        "@id": `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: COMPANY_INFO.name,
+        publisher: businessRef,
       },
     ],
   };

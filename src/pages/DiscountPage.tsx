@@ -16,7 +16,7 @@ export function DiscountPage() {
       <SEOHead
         title={`${HEADLINE} | ${BUSINESS_NAME}`}
         description={SUBTEXT}
-        canonical="/get-your-discount"
+        noIndex
       />
       <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6 sm:pt-12">
         <div className="mb-8 flex items-center gap-3 border-b border-border pb-5">

@@ -10,7 +10,7 @@
 - **Service Region**: Massachusetts; Maine; New Hampshire; Rhode Island; Vermont
 - **Primary Phone**: +1 978-705-5562
 - **Primary Email**: vixgeneralservices@gmail.com
-- **Website URL**: https://www.vixgeneralservices.com/
+- **Website URL**: https://vixgeneralservices.com/
 - **Hours of Operation**: Monday - Friday: 08:00 - 18:00, Saturday: 09:00 - 16:00, Sunday: Closed (Emergency dispatch available)
 - **Licenses**: Licensed & Insured
 - **Experience**: 9+ years, 1,200+ completed projects, 5.0 customer satisfaction rating
@@ -20,19 +20,19 @@
 ## Detailed Service Catalog
 
 ### General Construction & New Builds
-- **Canonical URL**: https://www.vixgeneralservices.com/services/general-construction
+- **Canonical URL**: https://vixgeneralservices.com/services/general-construction
 - **Primary Capabilities**: Project scoping, additions, framing, structural coordination, building-envelope work, trade sequencing, rough-ins, interiors, closeout, and final walkthroughs for residential and commercial properties.
 
 ### Remodeling & Interior Construction
-- **Canonical URL**: https://www.vixgeneralservices.com/services/remodeling-interiors
+- **Canonical URL**: https://vixgeneralservices.com/services/remodeling-interiors
 - **Primary Capabilities**: Whole-property renovations, kitchens, bathrooms, custom living spaces, commercial interiors, finish carpentry, surfaces, lighting integration, and systems upgrades.
 
 ### Plumbing & Water Systems
-- **Canonical URL**: https://www.vixgeneralservices.com/services/plumbing
+- **Canonical URL**: https://vixgeneralservices.com/services/plumbing
 - **Primary Capabilities**: Plumbing rough-ins, water distribution, drainage and venting coordination, fixtures, water heating, remodel tie-ins, and permit or licensed-trade coordination where required.
 
 ### 1. Outdoor & Landscape Lighting
-- **Canonical URL**: https://www.vixgeneralservices.com/services/outdoor-lighting
+- **Canonical URL**: https://vixgeneralservices.com/services/outdoor-lighting
 - **Primary Equipment**:
   - Cast-brass spotlights (6W 3000K warm white, IP65 waterproof rated with dual silicone O-rings).
   - Architectural double-head pole fixtures with integrated dusk-to-dawn photocell automation.
@@ -50,7 +50,7 @@
 - **Warranty**: 1-Year warranty on installation labor; up to 5-Year manufacturer warranty on brass fixtures and LED lamps.
 
 ### 2. Security Camera & Surveillance Systems
-- **Canonical URL**: https://www.vixgeneralservices.com/services/security-cameras
+- **Canonical URL**: https://vixgeneralservices.com/services/security-cameras
 - **Primary Equipment**:
   - Motorized 360° Pan-Tilt-Zoom (PTZ) 4MP/4K outdoor cameras with IP66 weatherproof aluminum alloy housing and starlight infrared night vision.
   - Centralized 4K Network Video Recorders (NVR) with 2TB to 8TB surveillance-grade local hard drives (no recurring monthly cloud fees).
@@ -64,7 +64,7 @@
 - **Warranty**: 1-Year installation labor warranty; 3-Year manufacturer warranty on PTZ cameras and NVR units.
 
 ### 3. Smart Control Hub & Automation Systems
-- **Canonical URL**: https://www.vixgeneralservices.com/services/smart-automation
+- **Canonical URL**: https://vixgeneralservices.com/services/smart-automation
 - **Primary Equipment**:
   - AquaLink RS and commercial-grade smart automation controllers.
   - Heavy-duty NEMA 3R weatherproof galvanized steel outdoor distribution panels with lockable doors.
@@ -77,7 +77,7 @@
   - Non-volatile memory and battery-backed real-time clocks ensuring timers persist through power outages.
 
 ### 4. HVAC & Air Conditioning Services
-- **Canonical URL**: https://www.vixgeneralservices.com/services/hvac
+- **Canonical URL**: https://vixgeneralservices.com/services/hvac
 - **Primary Capabilities**:
   - Emergency AC repair: refrigerant leak detection, digital pressure testing, compressor replacement, capacitor and motor servicing.
   - High-efficiency central air conditioning and heat pump replacements with SEER2 ratings from 15.2 to 20+.
@@ -86,7 +86,7 @@
   - Whole-home indoor air quality: germicidal UV lights, MERV 13+ filtration, and dehumidification.
 
 ### 5. Licensed Electrical Services
-- **Canonical URL**: https://www.vixgeneralservices.com/services/electrical
+- **Canonical URL**: https://vixgeneralservices.com/services/electrical
 - **Primary Capabilities**:
   - 200-Amp and 400-Amp main breaker service panel upgrades replacing obsolete or hazardous Federal Pacific Electric (FPE Stab-Lok) and Zinsco panels.
   - Whole-home rewiring, aluminum wiring remediation with Copalum/AlumiConn connectors.
@@ -95,7 +95,7 @@
   - Insurance 4-Point safety inspection compliance and municipal permit handling.
 
 ### 6. Custom Solar Energy Systems
-- **Canonical URL**: https://www.vixgeneralservices.com/services/solar
+- **Canonical URL**: https://vixgeneralservices.com/services/solar
 - **Primary Capabilities**:
   - High-efficiency Tier-1 monocrystalline black-on-black rooftop solar arrays with 25-year performance warranties.
   - Battery backup storage systems with automatic transfer equipment for grid outages.
@@ -104,7 +104,7 @@
   - Assistance with the 30% Federal Residential Clean Energy Tax Credit (Section 25D).
 
 ### 7. EV Charging Station Installation
-- **Canonical URL**: https://www.vixgeneralservices.com/services/ev-charging
+- **Canonical URL**: https://vixgeneralservices.com/services/ev-charging
 - **Primary Capabilities**:
   - Turnkey Level 2 (240V) charging stations: Tesla Universal Wall Connector, ChargePoint Home Flex, Emporia, JuiceBox.
   - Dedicated 50A and 60A circuits with heavy 6 AWG copper wire and industrial-grade receptacles (Hubbell/Bryant).
@@ -116,15 +116,15 @@
 ## Service Areas & Municipalities
 
 1. **Massachusetts**
-   - URL: https://www.vixgeneralservices.com/service-areas/massachusetts
+   - URL: https://vixgeneralservices.com/service-areas/massachusetts
 2. **Maine**
-   - URL: https://www.vixgeneralservices.com/service-areas/maine
+   - URL: https://vixgeneralservices.com/service-areas/maine
 3. **New Hampshire**
-   - URL: https://www.vixgeneralservices.com/service-areas/new-hampshire
+   - URL: https://vixgeneralservices.com/service-areas/new-hampshire
 4. **Rhode Island**
-   - URL: https://www.vixgeneralservices.com/service-areas/rhode-island
+   - URL: https://vixgeneralservices.com/service-areas/rhode-island
 5. **Vermont**
-   - URL: https://www.vixgeneralservices.com/service-areas/vermont
+   - URL: https://vixgeneralservices.com/service-areas/vermont
 
 ---
 

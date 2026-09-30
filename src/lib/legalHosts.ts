@@ -1,8 +1,10 @@
-export const MAIN_SITE = "https://www.vixgeneralservices.com";
-export const TERMS_URL = "https://terms.vixgeneralservices.com";
-export const PRIVACY_URL = "https://privacy.vixgeneralservices.com";
+import { SITE_URL } from "../config/site";
+
+export const MAIN_SITE = SITE_URL;
 
 export type LegalHost = "terms" | "privacy" | null;
+
+const LEGAL_PATHS = { terms: "/terms", privacy: "/privacy-policy" } as const;
 
 /** Which legal subdomain (terms.* / privacy.*) the app is being served from, if any. */
 export const getLegalHost = (hostname: string = window.location.hostname): LegalHost => {
@@ -12,10 +14,11 @@ export const getLegalHost = (hostname: string = window.location.hostname): Legal
   return null;
 };
 
-/** Legal-page links: real subdomains in production, in-app routes on localhost/previews. */
+/**
+ * Legal-page links: in-app paths on the main site. On the terms.* / privacy.* subdomains every
+ * path renders that one legal page, so links there point back to the main site.
+ */
 export const legalLink = (page: "terms" | "privacy"): string => {
-  const { hostname } = window.location;
-  const isProd = hostname.endsWith("vixgeneralservices.com");
-  if (!isProd) return `/${page}`;
-  return page === "terms" ? TERMS_URL : PRIVACY_URL;
+  const path = LEGAL_PATHS[page];
+  return getLegalHost() ? `${SITE_URL}${path}` : path;
 };

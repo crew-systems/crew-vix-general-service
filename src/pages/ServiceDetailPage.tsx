@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getServiceBySlug } from "../data/servicesData";
-import { COMPANY_INFO, SERVICE_AREAS } from "../data/landscapingData";
 import { EstimateModal } from "../components/EstimateModal";
 import { Footer } from "../components/Footer";
 import { SEOHead } from "../components/SEOHead";
+import { SITE_URL } from "../config/site";
+import { businessRef, STATES_SERVED } from "../data/businessSchema";
 import { ServiceAreaHeader } from "../components/service-area/ServiceAreaHeader";
 import { ServiceDetailHero } from "../components/service-detail/ServiceDetailHero";
 import { ServiceDetailIntro } from "../components/service-detail/ServiceDetailIntro";
@@ -14,8 +15,6 @@ import { ServiceDetailGallery } from "../components/service-detail/ServiceDetail
 import { ServiceDetailFAQ } from "../components/service-detail/ServiceDetailFAQ";
 import { ServiceDetailServiceAreas } from "../components/service-detail/ServiceDetailServiceAreas";
 import { ServiceDetailCta } from "../components/service-detail/ServiceDetailCta";
-
-const SITE_BASE = "https://www.vixgeneralservices.com";
 
 export const ServiceDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -53,7 +52,6 @@ export const ServiceDetailPage: React.FC = () => {
         <SEOHead
           title="Service Not Found | VIX General Services"
           description="The service you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services across New England."
-          canonical="/services"
           noIndex
         />
         <div className="text-center max-w-md bg-white p-8 rounded-xl shadow-crisp border border-[#00153F]/10">
@@ -86,26 +84,11 @@ export const ServiceDetailPage: React.FC = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${SITE_BASE}/services/${service.slug}#service`,
-    serviceType: service.schemaServiceType,
     name: service.name,
     description: service.shortDesc,
-    provider: {
-      "@id": `${SITE_BASE}/#organization`,
-    },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      description: "Free on-site consultation and written estimate",
-      availability: "https://schema.org/InStock",
-    },
-    areaServed: SERVICE_AREAS.map((a) => ({
-      "@type": "City",
-      name: a.fullName,
-    })),
-    url: `${SITE_BASE}/services/${service.slug}`,
-    image: service.heroImage,
+    url: `${SITE_URL}/services/${service.slug}`,
+    areaServed: STATES_SERVED,
+    provider: businessRef,
   };
 
   // Schema 2: FAQPage
@@ -131,19 +114,19 @@ export const ServiceDetailPage: React.FC = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: SITE_BASE,
+        item: `${SITE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: `${SITE_BASE}/services`,
+        item: `${SITE_URL}/services`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: service.name,
-        item: `${SITE_BASE}/services/${service.slug}`,
+        item: `${SITE_URL}/services/${service.slug}`,
       },
     ],
   };
@@ -152,8 +135,8 @@ export const ServiceDetailPage: React.FC = () => {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${SITE_BASE}/services/${service.slug}#webpage`,
-    url: `${SITE_BASE}/services/${service.slug}`,
+    "@id": `${SITE_URL}/services/${service.slug}#webpage`,
+    url: `${SITE_URL}/services/${service.slug}`,
     name: service.name,
     description: service.shortDesc,
     speakable: {

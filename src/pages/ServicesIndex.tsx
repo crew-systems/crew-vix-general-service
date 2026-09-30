@@ -6,9 +6,8 @@ import { COMPANY_INFO, SERVICE_AREAS } from "../data/landscapingData";
 import { EstimateModal } from "../components/EstimateModal";
 import { Footer } from "../components/Footer";
 import { SEOHead } from "../components/SEOHead";
+import { SITE_URL } from "../config/site";
 import { ServiceAreaHeader } from "../components/service-area/ServiceAreaHeader";
-
-const SITE_BASE = "https://www.vixgeneralservices.com";
 
 export const ServicesIndex: React.FC = () => {
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
@@ -51,7 +50,7 @@ export const ServicesIndex: React.FC = () => {
       "@type": "ListItem",
       position: index + 1,
       name: service.name,
-      url: `${SITE_BASE}/services/${service.slug}`,
+      url: `${SITE_URL}/services/${service.slug}`,
       description: service.shortDesc,
     })),
   };
@@ -64,13 +63,13 @@ export const ServicesIndex: React.FC = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: SITE_BASE,
+        item: `${SITE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: `${SITE_BASE}/services`,
+        item: `${SITE_URL}/services`,
       },
     ],
   };

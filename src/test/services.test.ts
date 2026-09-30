@@ -3,6 +3,8 @@ import { SERVICES, getServiceBySlug, getAllServiceSlugs } from "../data/services
 import { COMPANY_INFO, IMAGES, SERVICE_AREAS } from "../data/landscapingData";
 import fs from "fs";
 import path from "path";
+import { buildLlmsTxt } from "../lib/llmsTxt";
+import { businessSchema } from "../data/businessSchema";
 
 describe("Services Data Registry", () => {
   it("should define all 10 construction, systems, and smart-energy services", () => {
@@ -74,12 +76,12 @@ describe("Sitemap & Robots.txt Parity", () => {
     const sitemapPath = path.resolve(__dirname, "../../public/sitemap.xml");
     const sitemapContent = fs.readFileSync(sitemapPath, "utf8");
 
-    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/");
-    expect(sitemapContent).toContain("https://www.vixgeneralservices.com/services");
+    expect(sitemapContent).toContain("https://vixgeneralservices.com/");
+    expect(sitemapContent).toContain("https://vixgeneralservices.com/services");
     
     // Test that every service slug has its canonical URL declared in sitemap.xml
     getAllServiceSlugs().forEach((slug) => {
-      expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/services/${slug}`);
+      expect(sitemapContent).toContain(`https://vixgeneralservices.com/services/${slug}`);
     });
 
     // Test that every service area is declared in sitemap.xml
@@ -90,7 +92,7 @@ describe("Sitemap & Robots.txt Parity", () => {
       "rhode-island",
       "vermont",
     ].forEach((area) => {
-      expect(sitemapContent).toContain(`https://www.vixgeneralservices.com/service-areas/${area}`);
+      expect(sitemapContent).toContain(`https://vixgeneralservices.com/service-areas/${area}`);
     });
 
     expect(sitemapContent).not.toContain("mkfreitasllc.com");
@@ -100,11 +102,9 @@ describe("Sitemap & Robots.txt Parity", () => {
     const robotsPath = path.resolve(__dirname, "../../public/robots.txt");
     const robotsContent = fs.readFileSync(robotsPath, "utf8");
 
-    expect(robotsContent).toContain("Sitemap: https://www.vixgeneralservices.com/sitemap.xml");
-    expect(robotsContent).toContain("User-agent: GPTBot");
+    expect(robotsContent).toContain("Sitemap: https://vixgeneralservices.com/sitemap.xml");
+    expect(robotsContent).toContain("User-agent: OAI-SearchBot");
     expect(robotsContent).toContain("User-agent: PerplexityBot");
-    expect(robotsContent).toContain("User-agent: ClaudeBot");
-    expect(robotsContent).toContain("User-agent: Google-Extended");
   });
 
   it("llms.txt and llms-full.txt should exist and define core business knowledge", () => {
@@ -120,6 +120,17 @@ describe("Sitemap & Robots.txt Parity", () => {
     expect(llmsFullContent).toContain("VIX General Services - Comprehensive AI Knowledge Base");
     expect(llmsFullContent).toContain("3000K warm white");
     expect(llmsFullContent).toContain("Massachusetts");
+  });
+
+  it("llms.txt matches the site data it is generated from", () => {
+    const llmsContent = fs.readFileSync(path.resolve(__dirname, "../../public/llms.txt"), "utf8");
+    expect(llmsContent.replace(/\r\n/g, "\n")).toBe(buildLlmsTxt());
+    expect(llmsContent).not.toContain("www.");
+  });
+
+  it("business JSON-LD never carries ratings or reviews", () => {
+    const json = JSON.stringify(businessSchema);
+    expect(json).not.toMatch(/aggregateRating|"review"|priceRange/i);
   });
 
   it("_redirects should exist with SPA routing rule", () => {

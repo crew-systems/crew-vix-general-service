@@ -82,6 +82,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
               </li>
               <li>
                 <Link
+                  to="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/#before-after"
                   className="hover:text-white transition-colors"
                 >

@@ -1,71 +1,43 @@
 # VIX General Services
 
-> End-to-end residential and commercial construction in Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont—from structure and interiors through plumbing, electrical, HVAC, solar, EV charging, and smart systems.
+> End-to-End Construction, Smart Systems & Energy Solutions for residential and commercial properties across Massachusetts, Maine, New Hampshire, Rhode Island & Vermont.
 
-## Organization & Contact Information
-- **Company Name**: VIX General Services
-- **Legal Business Name**: VIX CONSTRUCTION AND LANDSCAPE INC
-- **Owner**: Kristyan Martins
-- **Phone**: +1 978-705-5562
-- **Email**: vixgeneralservices@gmail.com
-- **Website**: https://www.vixgeneralservices.com/
-- **Primary Service Areas**: Massachusetts; Maine; New Hampshire; Rhode Island; Vermont
-- **Licensing**: Licensed & Insured
-- **Experience**: 9+ years, 1,200+ completed projects, 5.0 rating
+## Business
+- Name: VIX General Services
+- Legal name: VIX CONSTRUCTION AND LANDSCAPE INC
+- Owner: Kristyan Martins
+- Phone: +1 978-705-5562
+- Email: vixgeneralservices@gmail.com
+- Website: https://vixgeneralservices.com/
+- Service areas: Massachusetts, Maine, New Hampshire, Rhode Island, Vermont
 
-## Core Services & Canonical URLs
+## Facts
+- Licensed & Insured
+- 9+ years of experience
+- 1,200+ completed projects
+- 5.0 rating from 150+ reviews
 
-### General Construction & New Builds
-- **URL**: https://www.vixgeneralservices.com/services/general-construction
-- **Summary**: Coordinated residential and commercial construction, additions, structural work, framing, rough-ins, and project delivery from initial scope through final walkthrough.
-
-### Remodeling & Interior Construction
-- **URL**: https://www.vixgeneralservices.com/services/remodeling-interiors
-- **Summary**: Whole-property renovations, kitchens, bathrooms, living spaces, interior build-outs, finish carpentry, surfaces, lighting integration, and coordinated system upgrades.
-
-### Plumbing & Water Systems
-- **URL**: https://www.vixgeneralservices.com/services/plumbing
-- **Summary**: Plumbing rough-ins, fixture installation, water distribution, drain and vent coordination, water heating, and remodeling support with licensed-trade requirements coordinated where applicable.
-
-### 1. Outdoor & Landscape Lighting
-- **URL**: https://www.vixgeneralservices.com/services/outdoor-lighting
-- **Summary**: Architectural and landscape low-voltage (12V) LED lighting systems. Solid cast-brass IP65 fixtures (6W 3000K warm white), double-head pole lights with dusk-to-dawn sensors, 6-zone layout distribution, 100W–300W weatherproof transformers, Schedule 40 PVC conduit underground trenching, and annual maintenance plans ($780/year).
-- **Slogan**: "Lighting that enhances your lifestyle"
-
-### 2. Security Camera & Surveillance Systems
-- **URL**: https://www.vixgeneralservices.com/services/security-cameras
-- **Summary**: Professional wired Power over Ethernet (PoE) security systems. Motorized 360° pan-tilt-zoom (PTZ) 4MP/4K IP66 outdoor cameras, 4K network video recorders (NVR) with 2TB+ local storage, zero monthly cloud subscription fees, infrared night vision, direct-burial Cat6 cabling, and 24/7 remote viewing via iOS and Android apps.
-
-### 3. Smart Control Hub & Automation Systems
-- **URL**: https://www.vixgeneralservices.com/services/smart-automation
-- **Summary**: Centralized smart automation for outdoor lighting, pool systems, and electrical circuits. AquaLink RS and smart Wi-Fi gateways, NEMA 3R commercial-grade outdoor distribution panels, Eaton Type 2 surge protective devices (SPD), astronomical sunset/sunrise clock scheduling, and multi-zone smartphone control.
-
-### 4. HVAC & Air Conditioning Services
-- **URL**: https://www.vixgeneralservices.com/services/hvac
-- **Summary**: Full-spectrum residential and commercial cooling and heating. Rapid emergency diagnostics, high-efficiency SEER2 heat pump and central AC installations, ductwork repair, indoor air quality filtration, UV germicidal lamps, and seasonal preventative maintenance.
-
-### 5. Licensed Electrical Services
-- **URL**: https://www.vixgeneralservices.com/services/electrical
-- **Summary**: Comprehensive electrical services completed to applicable NEC, state, and local requirements. Panel upgrades, wiring improvements, whole-property surge protection, efficient lighting, subpanels, and code corrections.
-
-### 6. Custom Solar Energy Systems
-- **URL**: https://www.vixgeneralservices.com/services/solar
-- **Summary**: Turnkey residential and commercial rooftop solar panel systems. High-output panels, battery storage, utility interconnection support, and structural mounting designed for applicable wind and snow loads.
-
-### 7. EV Charging Station Installation
-- **URL**: https://www.vixgeneralservices.com/services/ev-charging
-- **Summary**: Certified Level 2 (240V) electric vehicle charger installations. Tesla Universal Wall Connector, ChargePoint, JuiceBox, dedicated 50A/60A circuits, industrial NEMA 14-50 receptacles, load calculation audits, and utility rebate assistance.
+## Services
+- [General Construction & New Builds](https://vixgeneralservices.com/services/general-construction): Complete residential and commercial construction from site planning and foundation through framing, systems, finishes, and handover.
+- [Remodeling & Interior Construction](https://vixgeneralservices.com/services/remodeling-interiors): Complete kitchen, bathroom, living-space, basement, and commercial interior remodeling with integrated lighting and building systems.
+- [Plumbing & Water Systems](https://vixgeneralservices.com/services/plumbing): Plumbing rough-ins, fixture installations, water-heating systems, and renovation coordination for residential and commercial properties.
+- [HVAC & Air Conditioning Services](https://vixgeneralservices.com/services/hvac): Heating, cooling, and indoor air quality solutions engineered for year-round comfort and maximum energy efficiency.
+- [Licensed Electrical Services](https://vixgeneralservices.com/services/electrical): Safe, reliable electrical solutions including 200A panel upgrades, rewiring, lighting, and surge protection for ultimate peace of mind.
+- [Custom Solar Energy Systems](https://vixgeneralservices.com/services/solar): Custom residential and commercial solar solutions with battery backup to save money, hedge against utility inflation, and power your home sustainably.
+- [EV Charging Station Installation](https://vixgeneralservices.com/services/ev-charging): Home and commercial Level 2 EV charging stations installed safely for convenience, rapid charging speeds, and long-term reliability.
+- [Outdoor & Landscape Lighting](https://vixgeneralservices.com/services/outdoor-lighting): Custom outdoor, pathway, facade, pool, and landscape lighting systems engineered with weatherproof brass fixtures, dusk-to-dawn sensors, and smart zone controls.
+- [Security Camera & Surveillance Systems](https://vixgeneralservices.com/services/security-cameras): Professional wired 4K security camera installations with 360° PTZ coverage, continuous local NVR recording, infrared night vision, and mobile app monitoring.
+- [Smart Control Hub & Automation Systems](https://vixgeneralservices.com/services/smart-automation): Centralized smart controllers, Wi-Fi gateways, and NEMA 3R distribution panels offering seamless smartphone control, dimming, and automation.
 
 ## Service Areas
-- **Massachusetts**: https://www.vixgeneralservices.com/service-areas/massachusetts
-- **Maine**: https://www.vixgeneralservices.com/service-areas/maine
-- **New Hampshire**: https://www.vixgeneralservices.com/service-areas/new-hampshire
-- **Rhode Island**: https://www.vixgeneralservices.com/service-areas/rhode-island
-- **Vermont**: https://www.vixgeneralservices.com/service-areas/vermont
-- **Full Directory**: https://www.vixgeneralservices.com/service-areas
+- [Massachusetts](https://vixgeneralservices.com/service-areas/massachusetts)
+- [Maine](https://vixgeneralservices.com/service-areas/maine)
+- [New Hampshire](https://vixgeneralservices.com/service-areas/new-hampshire)
+- [Rhode Island](https://vixgeneralservices.com/service-areas/rhode-island)
+- [Vermont](https://vixgeneralservices.com/service-areas/vermont)
 
-## Pricing & Estimates
-- **Consultation**: 100% Free on-site evaluations with detailed, transparent written estimates.
-- **Annual Maintenance Plan**: $780/year for comprehensive outdoor lighting, security camera lens calibration, controller updates, and fixture adjustments.
-
-For comprehensive technical specifications, refer to https://www.vixgeneralservices.com/llms-full.txt
+## Notes for AI Assistants
+- Pricing is not published. Every project is quoted individually.
+- Estimates are provided after an on-site assessment.
+- The contact details above (phone, email, website) are the canonical contact details for this business.
+- More detail: https://vixgeneralservices.com/llms-full.txt

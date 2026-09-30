@@ -1,7 +1,9 @@
+import { SITE_URL } from "../config/site";
+
 export const IMAGES = {
   hero: "/images/concepts/end-to-end-construction-hero.jpg",
   ogMeta:
-    "https://www.vixgeneralservices.com/images/concepts/end-to-end-construction-hero.jpg",
+    `${SITE_URL}/images/concepts/end-to-end-construction-hero.jpg`,
   before:
     "/images/projects/orga-new-construction-rough-in.jpg",
   after:
@@ -254,6 +256,7 @@ export const COMPANY_INFO = {
   tagline: "End-to-End Construction, Smart Systems & Energy Solutions",
   phone: "+1 978-705-5562",
   email: "vixgeneralservices@gmail.com",
+  licensing: "Licensed & Insured",
   location:
     "Massachusetts, Maine, New Hampshire, Rhode Island & Vermont",
   stats: {

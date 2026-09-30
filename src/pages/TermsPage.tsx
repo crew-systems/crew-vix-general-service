@@ -1,7 +1,7 @@
 import React from "react";
 import { LegalLayout, LegalSection } from "../components/legal/LegalLayout";
 import { COMPANY_INFO } from "../data/landscapingData";
-import { TERMS_URL, legalLink } from "../lib/legalHosts";
+import { legalLink } from "../lib/legalHosts";
 
 const sections: LegalSection[] = [
   {
@@ -163,7 +163,7 @@ export const TermsPage: React.FC = () => (
     title="Terms of Use"
     seoTitle="Terms of Use | VIX General Services"
     description="Terms of Use for the VIX General Services website: estimate requests, acceptable use, intellectual property, and liability."
-    canonical={TERMS_URL}
+    canonical="/terms"
     updated="September 21, 2026"
     intro="Please read these Terms of Use carefully. They explain the rules for using our website and requesting information or estimates from VIX General Services."
     sections={sections}

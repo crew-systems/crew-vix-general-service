@@ -5,6 +5,7 @@ import { SERVICE_AREAS, COMPANY_INFO } from "../data/landscapingData";
 import { EstimateModal } from "../components/EstimateModal";
 import { Footer } from "../components/Footer";
 import { SEOHead } from "../components/SEOHead";
+import { SITE_URL } from "../config/site";
 import { Logo } from "../components/Logo";
 
 export const ServiceAreasIndex: React.FC = () => {
@@ -44,12 +45,13 @@ export const ServiceAreasIndex: React.FC = () => {
     { name: "Projects", href: "/#gallery" },
   ];
 
-  const areasSchema = {
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    name: COMPANY_INFO.name,
-    areaServed: SERVICE_AREAS.map((a) => a.fullName),
-    url: "https://www.vixgeneralservices.com/service-areas",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Service Areas", item: `${SITE_URL}/service-areas` },
+    ],
   };
 
   return (
@@ -59,7 +61,7 @@ export const ServiceAreasIndex: React.FC = () => {
         description="VIX General Services provides construction, remodeling, plumbing, HVAC, electrical, solar, EV charging, and smart systems across Massachusetts, Maine, New Hampshire, Rhode Island, and Vermont."
         canonical="/service-areas"
         ogImage={SERVICE_AREAS[0].heroImage}
-        schemaJson={areasSchema}
+        schemaJson={breadcrumbSchema}
       />
       {/* Sticky Header */}
       <header

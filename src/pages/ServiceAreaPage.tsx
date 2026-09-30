@@ -4,6 +4,8 @@ import { SERVICE_AREAS, COMPANY_INFO } from "../data/landscapingData";
 import { EstimateModal } from "../components/EstimateModal";
 import { Footer } from "../components/Footer";
 import { SEOHead } from "../components/SEOHead";
+import { SITE_URL } from "../config/site";
+import { businessSchema } from "../data/businessSchema";
 import { ServiceAreaHeader } from "../components/service-area/ServiceAreaHeader";
 import { ServiceAreaHero } from "../components/service-area/ServiceAreaHero";
 import { ServiceAreaIntro } from "../components/service-area/ServiceAreaIntro";
@@ -52,7 +54,6 @@ export const ServiceAreaPage: React.FC = () => {
         <SEOHead
           title="Area Not Found | VIX General Services"
           description="The service area you are looking for could not be found. Explore our energy-efficiency, HVAC, electrical, solar, and EV charging services across New England."
-          canonical="/service-areas"
           noIndex
         />
         <div className="text-center">
@@ -67,26 +68,6 @@ export const ServiceAreaPage: React.FC = () => {
     );
   }
 
-  const areaSchema = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "@id": `https://www.vixgeneralservices.com/service-areas/${area.slug}#localbusiness`,
-    name: `${COMPANY_INFO.name} - ${area.city}`,
-    description: area.shortDesc,
-    telephone: COMPANY_INFO.phone,
-    email: COMPANY_INFO.email,
-    parentOrganization: {
-      "@id": "https://www.vixgeneralservices.com/#organization",
-    },
-    areaServed: {
-      "@type": "State",
-      name: area.fullName,
-    },
-    url: `https://www.vixgeneralservices.com/service-areas/${area.slug}`,
-    image: area.heroImage,
-    priceRange: "$$",
-  };
-
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -95,19 +76,19 @@ export const ServiceAreaPage: React.FC = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.vixgeneralservices.com",
+        item: `${SITE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Service Areas",
-        item: "https://www.vixgeneralservices.com/service-areas",
+        item: `${SITE_URL}/service-areas`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: area.city,
-        item: `https://www.vixgeneralservices.com/service-areas/${area.slug}`,
+        item: `${SITE_URL}/service-areas/${area.slug}`,
       },
     ],
   };
@@ -125,7 +106,7 @@ export const ServiceAreaPage: React.FC = () => {
         description={area.metaDescription}
         canonical={`/service-areas/${area.slug}`}
         ogImage={area.heroImage}
-        schemaJson={[areaSchema, breadcrumbSchema]}
+        schemaJson={[businessSchema, breadcrumbSchema]}
       />
 
       <ServiceAreaHeader

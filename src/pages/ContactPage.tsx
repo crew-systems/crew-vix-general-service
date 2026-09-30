@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CheckCircle2, ShieldCheck, Timer, MapPin, ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { GHLFormEmbed } from "@/components/GHLFormEmbed";
 import { useStandaloneFormPage } from "@/hooks/useStandaloneFormPage";
+import { businessSchema } from "@/data/businessSchema";
 
 const trustPoints = [
   { label: "Free estimates", Icon: CheckCircle2 },
@@ -15,6 +16,8 @@ const trustPoints = [
 
 export function ContactPage() {
   useStandaloneFormPage(false);
+  // /quote, /estimate and /free-estimate reuse this page but must stay out of the index.
+  const isContactRoute = useLocation().pathname === "/contact";
   useEffect(() => window.scrollTo(0, 0), []);
 
   const scrollToForm = () => {
@@ -29,7 +32,9 @@ export function ContactPage() {
       <SEOHead
         title="Get Your Free Quote | VIX General Services"
         description="Tell VIX General Services about your project and request a free quote for work across New England."
-        canonical="/contact"
+        canonical={isContactRoute ? "/contact" : undefined}
+        noIndex={!isContactRoute}
+        schemaJson={isContactRoute ? businessSchema : undefined}
       />
       <Header onOpenEstimate={scrollToForm} solid />
       <main className="px-4 pb-16 pt-28 sm:px-6 sm:pt-32">

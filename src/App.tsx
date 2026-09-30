@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -16,6 +16,8 @@ import { ReviewPage } from "./pages/ReviewPage";
 import { DiscountPage } from "./pages/DiscountPage";
 import { TermsPage } from "./pages/TermsPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
+import { AboutPage } from "./pages/AboutPage";
+import { MarketingFormPage } from "./pages/MarketingFormPage";
 import { getLegalHost } from "./lib/legalHosts";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { ChatWidgetLoader } from "./components/ChatWidgetLoader";
@@ -47,7 +49,9 @@ const App = () => (
               )}
               <Route path="/" element={<Index />} />
               <Route path="/terms" element={<TermsPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPage />} />
+              <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/services" element={<ServicesIndex />} />
               <Route path="/services/:slug" element={<ServiceDetailPage />} />
               <Route path="/service-areas" element={<ServiceAreasIndex />} />
@@ -55,11 +59,11 @@ const App = () => (
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/review" element={<ReviewPage />} />
               <Route path="/get-your-discount" element={<DiscountPage />} />
+              <Route path="/marketing-form" element={<MarketingFormPage />} />
               <Route path="/estimate" element={<ContactPage />} />
               <Route path="/quote" element={<ContactPage />} />
               <Route path="/free-estimate" element={<ContactPage />} />
               <Route path="/thank-you" element={<ThankYouPage />} />
-              <Route path="/thank-you/" element={<ThankYouPage />} />
               <Route path="/obrigado" element={<ThankYouPage />} />
               <Route path="/thanks" element={<ThankYouPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

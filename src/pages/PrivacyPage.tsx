@@ -1,7 +1,7 @@
 import React from "react";
 import { LegalLayout, LegalSection } from "../components/legal/LegalLayout";
 import { COMPANY_INFO } from "../data/landscapingData";
-import { PRIVACY_URL, legalLink } from "../lib/legalHosts";
+import { legalLink } from "../lib/legalHosts";
 
 const sections: LegalSection[] = [
   {
@@ -69,14 +69,24 @@ const sections: LegalSection[] = [
   },
   {
     id: "sms",
-    title: "Calls and Text Messages",
+    title: "SMS / Text Messaging",
     body: (
-      <p>
-        If you provide your phone number, we may call or text you about your request. Consent to
-        marketing texts is never a condition of purchase. Message frequency varies and message and
-        data rates may apply. Reply STOP to opt out or HELP for help. We do not share mobile
-        numbers or SMS consent with third parties for their own marketing.
-      </p>
+      <>
+        <p>
+          If you provide your phone number, we may call or text you about your request. Consent to
+          marketing texts is never a condition of purchase.
+        </p>
+        <ul>
+          <li>
+            No mobile information will be shared with third parties or affiliates for marketing or
+            promotional purposes. Text messaging originator opt-in data and consent will not be
+            shared with any third parties.
+          </li>
+          <li>Message frequency varies.</li>
+          <li>Message and data rates may apply.</li>
+          <li>Reply STOP to opt out at any time. Reply HELP for help.</li>
+        </ul>
+      </>
     ),
   },
   {
@@ -167,8 +177,8 @@ export const PrivacyPage: React.FC = () => (
     title="Privacy Policy"
     seoTitle="Privacy Policy | VIX General Services"
     description="How VIX General Services collects, uses, and protects your information when you visit our website or request an estimate."
-    canonical={PRIVACY_URL}
-    updated="September 21, 2026"
+    canonical="/privacy-policy"
+    updated="September 30, 2026"
     intro="Your privacy matters to us. This policy describes the information we collect when you visit our website or request an estimate, and how we use and protect it."
     sections={sections}
   />
