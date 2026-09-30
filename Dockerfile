@@ -6,14 +6,16 @@ WORKDIR /app
 # Copy dependency files
 COPY package*.json bun.lock* ./
 
-# Install dependencies
-RUN npm install
+# Install the exact versions pinned in bun.lock (as the old Nixpacks build did).
+# There is no package-lock.json, so a plain `npm install` resolved "latest" at
+# build time and failed when the registry briefly 404'd a just-published package.
+RUN npm install -g bun@1 && bun install --frozen-lockfile
 
 # Copy application source
 COPY . .
 
 # Build production assets into /app/dist
-RUN npm run build
+RUN bun run build
 
 # Prerender: open every sitemap route (+ utility routes) in Chromium and save
 # the rendered HTML as dist/<route>/index.html, so crawlers get real content.
