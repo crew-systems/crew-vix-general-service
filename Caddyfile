@@ -13,6 +13,7 @@
     redir @trailing {re.trailing.1} 301
 
     redir /privacy /privacy-policy 301
+    redir /areas /service-areas 301
 
     # Hashed static assets - cache forever, never fallback to index.html
     @assets path /assets/*
